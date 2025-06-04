@@ -1,5 +1,5 @@
 ---
-title: ESM Modules and Bundling
+title: ES Modules and Bundling
 subtitle: Advanced JavaScript
 hideNav: false
 
@@ -8,7 +8,7 @@ dev: http://localhost:3006/appel/advanced-javascript/esm-and-bundling
 repo: https://github.com/rappel/courses
 ---
 
-# ESM Modules and Bundling
+# ES Modules and Bundling
 
 ## CommonJS Modules
 
@@ -29,9 +29,9 @@ module.exports = {
 
 CommonJS modules are synchronous and load dependencies on demand. This pattern works well for server-side applications, but have limited use in the browser.
 
-## ESM Modules
+## ES Modules
 
-In 2015, ECMAScript 6 introduced a new module system called ECMAScript Modules (ESM). This system is asynchronous and allows for static analysis of dependencies. You can recognize ESM modules by the `import` and `export` keywords:
+In 2015, ECMAScript 6 introduced a new module system called ECMAScript Modules (ESM). This system is asynchronous and allows for static analysis of dependencies. You can recognize ES modules by the `import` and `export` keywords:
 
 ```javascript
 // import a module
@@ -46,7 +46,7 @@ export default {
 }
 ```
 
-ESM modules are the standard for modern JavaScript applications, and as of around 2018, all major browsers support them, requiring only that you use the `type="module"` attribute in your script tags.
+ES Modules are the standard for modern JavaScript applications, and as of around 2018, all major browsers support them, requiring only that you use the `type="module"` attribute in your script tags.
 
 ```html
 <script type="module" src="app.js"></script>
@@ -92,7 +92,7 @@ Bundling is the process of combining multiple JavaScript files into a single fil
 
 ## Getting Started with Vite
 
-In this class we will be using Vite, a modern build tool that is fast and easy to use. Vite uses Rollup under the hood for bundling, and it supports ESM modules out of the box.
+In this class we will be using Vite, a modern build tool that is fast and easy to use. Vite uses Rollup under the hood for bundling, and it supports ES Modules out of the box.
 
 Let's turn our JavaScript files into a bundle using Vite.
 
@@ -138,7 +138,7 @@ npm run build
     </div>
 </details>
 
-In this exercise, you will create a simple ESM module that exports a function to calculate the area of a rectangle. You will then import this module into another file and use it to calculate the area of a rectangle with given width and height.
+In this exercise, you will create a simple ES Module that exports a function to calculate the area of a rectangle. You will then import this module into another file and use it to calculate the area of a rectangle with given width and height.
 
 Call the module `rectangle.js` and create a function called `calculateArea` that takes two parameters: `width` and `height`. The function should return the area of the rectangle (width * height).
 
