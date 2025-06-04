@@ -8,9 +8,7 @@ dev: http://localhost:3006/appel/advanced-javascript
 repo: https://github.com/rappel/courses
 ---
 
-# Advanced JavaScript
-
-## Week 1 - Modern JavaScript Review: Functions & Array Methods
+# Week 1 - Modern JavaScript Review: Functions & Array Methods
 
 Summary: You’ll refresh your understanding of JavaScript functions, array methods, and higher-order functions.
 
@@ -18,7 +16,7 @@ Summary: You’ll refresh your understanding of JavaScript functions, array meth
 
 [Assignment 1 - GitHub Account](/appel/advanced-javascript/assignments/github-account)
 
-## Week 2 - ESM Modules and Vite Setup
+# Week 2 - ESM Modules and Vite Setup
 
 Summary: You’ll set up Vite and learn how to organize modular JavaScript using ESM syntax.
 
@@ -28,7 +26,7 @@ Summary: You’ll set up Vite and learn how to organize modular JavaScript using
 
 [Assignment 2 - 22222](/appel/advanced-javascript/assignments/22222)
 
-## Week 3 - React Fundamentals: Components & Props
+# Week 3 - React Fundamentals: Components & Props
 
 Summary: You’ll create functional React components and use props to pass data.
 
@@ -38,7 +36,7 @@ Summary: You’ll create functional React components and use props to pass data.
 
 [Assignment 3 - 3333333](/appel/advanced-javascript/assignments/3333333)
 
-## Week 4 - Introducing Hooks & useState
+# Week 4 - Introducing Hooks & useState
 
 Summary: You’ll learn why hooks replaced class components and manage local state with useState.
 
@@ -48,7 +46,7 @@ Summary: You’ll learn why hooks replaced class components and manage local sta
 
 [Assignment 4 - 444444](/appel/advanced-javascript/assignments/444444)
 
-## Week 5 - Side Effects and Data Fetching with useEffect
+# Week 5 - Side Effects and Data Fetching with useEffect
 
 Summary: You’ll manage side effects in React components using the useEffect hook, including data fetching.
 
@@ -58,7 +56,7 @@ Summary: You’ll manage side effects in React components using the useEffect ho
 
 [Assignment 5 - 555555](/appel/advanced-javascript/assignments/555555)
 
-## Week 6 - Controlled Components and useRef
+# Week 6 - Controlled Components and useRef
 
 Summary: You’ll build forms using controlled inputs and use useRef to access DOM elements and persist values.
 
@@ -66,13 +64,13 @@ Summary: You’ll build forms using controlled inputs and use useRef to access D
 
 Review for Exam 1
 
-## Week 7 - Exam 1
+# Week 7 - Exam 1
 
 Summary: You’ll demonstrate your understanding of the concepts covered in the first half of the course.
 
 Exam 1
 
-## Week 8 – Lifting State & Component Communication
+# Week 8 – Lifting State & Component Communication
 
 Summary: You’ll design data flow across components by lifting state and avoiding unnecessary prop drilling.
 
@@ -82,7 +80,7 @@ Summary: You’ll design data flow across components by lifting state and avoidi
 
 [Assignment 6 - 666666](/appel/advanced-javascript/assignments/666666)
 
-## Week 9 – Global State with Context API
+# Week 9 – Global State with Context API
 
 Summary: You’ll share state across multiple components using React’s Context API.
 
@@ -90,7 +88,7 @@ Summary: You’ll share state across multiple components using React’s Context
 
 [Assignment 7 - 777777](/appel/advanced-javascript/assignments/777777)
 
-## Week 10 – useReducer for Complex State
+# Week 10 – useReducer for Complex State
 
 Summary: You’ll manage structured, multi-action state with useReducer.
 
@@ -98,7 +96,7 @@ Summary: You’ll manage structured, multi-action state with useReducer.
 
 [Assignment 8 - 888888](/appel/advanced-javascript/assignments/888888)
 
-## Week 11 – Custom Hooks & Memoization
+# Week 11 – Custom Hooks & Memoization
 
 Summary: You’ll encapsulate shared logic in custom hooks and optimize performance with useMemo and React.memo.
 
@@ -108,7 +106,7 @@ Summary: You’ll encapsulate shared logic in custom hooks and optimize performa
 
 [Assignment 9 - 999999](/appel/advanced-javascript/assignments/999999)
 
-## Week 12 – React Router
+# Week 12 – React Router
 
 Summary: You’ll create multi-page apps using React Router and client-side navigation.
 
@@ -116,13 +114,13 @@ Summary: You’ll create multi-page apps using React Router and client-side navi
 
 Review for Exam 2
 
-## Week 13 – Exam 2
+# Week 13 – Exam 2
 
 Summary: You’ll demonstrate your understanding of React fundamentals and advanced concepts.
 
 Exam 2
 
-## Weeks 14-16 – Project Kickoff & Tech Exploration
+# Weeks 14-16 – Project Kickoff & Tech Exploration
 
 Summary: You’ll begin your final project and explore emerging JavaScript or React tools to potentially integrate. Then create a project using a new JavaScript technology, framework, or library. Finally, you’ll present your project and reflect on the learning experience.
 
