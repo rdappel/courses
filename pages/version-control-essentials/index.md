@@ -10,7 +10,7 @@ repo: https://github.com/rappel/courses
 
 # Version Control Essentials
 
-## Week 1
+## Week 1 - Introduction to Version Control
 
 [Introduction to Git](/appel/version-control-essentials/intro-to-git)
 
@@ -22,7 +22,7 @@ repo: https://github.com/rappel/courses
 
 [Assignment 1 - GitHub Account](/appel/version-control-essentials/assignments/github-account)
 
-## Week 2
+## Week 2 - Remote Repositories
 
 [Remote Repositories](/appel/version-control-essentials/remote-repos)
 
@@ -30,16 +30,16 @@ repo: https://github.com/rappel/courses
 
 [Assignment 2 - Webpage Update](/appel/version-control-essentials/assignments/webpage-update)
 
-## Week 3
+## Week 3 - Syncing Work & Handling Merge Conflicts
 
-## Week 4
+## Week 4 - Contributing & Pulling Requests
 
-## Week 5
+## Week 5 - Branching and Feature Development Workflow
 
-## Week 6
+## Week 6 - Workflow Interruptions & Stashing
 
-## Week 7
+## Week 7 - Review and Final Project Planning
 
-## Week 8
+## Week 8 - Project Work
 
-## Week 9
+## Week 9 - Final Project Submission & Exam
