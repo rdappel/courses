@@ -1,7 +1,7 @@
 ---
 title: Data Access for Programmers
 subtitle: Appel
-hide-nav: true
+hide-nav: false
 
 live: https://fvtc.software/appel/data-access-for-programmers
 dev: http://localhost:3006/appel/data-access-for-programmers
