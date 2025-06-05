@@ -44,7 +44,7 @@ Summary: You will begin to learn how collaboration works in Git.
 
 [Assignment 4 - 444444](/appel/version-control-essentials/assignments/444444)
 
-# Week 4 - Contributing & Pulling Requests
+# Week 4 - Contributing & Pull Requests
 
 Summary: You'll learn how to contribute to open-source projects.
 

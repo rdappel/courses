@@ -10,7 +10,7 @@ repo: https://github.com/rdappel/courses
 
 # Week 1 - Introduction to C++
 
-Summary: You’ll learn the basics of C++ programming, and cover conditionals and loops.
+Summary: You’ll learn the basics of C++ programming, and review conditionals and loops.
 
 [Getting Started](/appel/computer-programming-cpp/getting-started)
 
@@ -96,9 +96,9 @@ Summary: You’ll learn about static members in classes, including static variab
 
 Review for Exam 3
 
-# Week 12 - Review for Exam 3
+# Week 12 - Exam 3
 
-Summary: You’ll review the material covered in weeks 7-11 in preparation for the third exam.
+Summary: You’ll take your third exam, which will cover the material from weeks 9-11.
 
 Exam 3
 

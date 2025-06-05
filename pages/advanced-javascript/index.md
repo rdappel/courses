@@ -16,7 +16,7 @@ Summary: You’ll refresh your understanding of JavaScript functions, array meth
 
 [Assignment 1 - GitHub Account](/appel/advanced-javascript/assignments/github-account)
 
-# Week 2 - ESM Modules and Vite Setup
+# Week 2 - ES Modules and Vite Setup
 
 Summary: You’ll set up Vite and learn how to organize modular JavaScript using ESM syntax.
 
@@ -38,7 +38,7 @@ Summary: You’ll create functional React components and use props to pass data.
 
 # Week 4 - Introducing Hooks & useState
 
-Summary: You’ll learn why hooks replaced class components and manage local state with useState.
+Summary: You’ll learn how to write functional code in React using "hooks," and manage local state with useState.
 
 [React Hooks](/appel/advanced-javascript/hooks)
 
