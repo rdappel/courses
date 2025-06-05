@@ -5,7 +5,7 @@ hideNav: false
 
 live: https://fvtc.software/appel/advanced-javascript
 dev: http://localhost:3006/appel/advanced-javascript
-repo: https://github.com/rappel/courses
+repo: https://github.com/rdappel/courses
 ---
 
 # Week 1 - Modern JavaScript Review: Functions & Array Methods

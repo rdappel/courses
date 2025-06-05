@@ -10,7 +10,7 @@
 			"",
 			"live: https://fvtc.software/appel/$4",
 			"dev: http://localhost:3006/appel/$4",
-			"repo: https://github.com/rappel/courses",
+			"repo: https://github.com/rdappel/courses",
 			"---",
 			"",
 			"# $1$5",

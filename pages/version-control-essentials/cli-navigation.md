@@ -5,7 +5,7 @@ hideNav: false
 
 live: https://fvtc.software/appel/version-control-essentials/intro-to-git
 dev: http://localhost:3006/appel/version-control-essentials/intro-to-git
-repo: https://github.com/rappel/courses
+repo: https://github.com/rdappel/courses
 ---
 
 # Navigating the Command Line

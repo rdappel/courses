@@ -5,7 +5,7 @@ hideNav: false
 
 live: https://fvtc.software/appel/advanced-javascript/esm-and-bundling
 dev: http://localhost:3006/appel/advanced-javascript/esm-and-bundling
-repo: https://github.com/rappel/courses
+repo: https://github.com/rdappel/courses
 ---
 
 # ES Modules and Bundling

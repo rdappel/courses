@@ -5,7 +5,7 @@ hideNav: false
 
 live: https://fvtc.software/appel/csharp-intermediate-programming/exercises/arrays
 dev: http://localhost:3006/appel/csharp-intermediate-programming/exercises/arrays
-repo: https://github.com/rappel/courses
+repo: https://github.com/rdappel/courses
 ---
 
 # Exercise 5 - Arrays

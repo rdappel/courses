@@ -5,7 +5,7 @@ hideNav: false
 
 live: https://fvtc.software/appel/version-control-essentials
 dev: http://localhost:3006/appel/version-control-essentials
-repo: https://github.com/rappel/courses
+repo: https://github.com/rdappel/courses
 ---
 
 # Week 1 - Introduction to Version Control

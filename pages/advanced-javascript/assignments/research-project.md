@@ -5,7 +5,7 @@ hideNav: false
 
 live: https://fvtc.software/appel/advanced-javascript/assignments/research-project
 dev: http://localhost:3006/appel/advanced-javascript/assignments/research-project
-repo: https://github.com/rappel/courses
+repo: https://github.com/rdappel/courses
 ---
 
 # Advanced JavaScript Research Project
