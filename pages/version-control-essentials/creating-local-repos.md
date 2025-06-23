@@ -115,7 +115,7 @@ git log
 <details open>
     <summary class="video">Show/Hide Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/hBmft2fZG-4" width="100%" height="100%" frameborder="0"
             allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
         </iframe>
     </div>
@@ -156,7 +156,7 @@ git add .
 You can commit changes using the `git commit` command. Use the `-m` flag to add a message to your commit.
 
 ```bash
-git commit -m "Added new paragraph of text"
+git commit -m ":sparkles: Added new paragraph"
 ```
 
 </details>
@@ -178,15 +178,14 @@ Once you have completed the exercise, copy the commands you used to complete the
 Add your paragraph to the `index.html` file, under your name. For example:
 
 ```html
-
+<p>New paragraph</p>
 ```
 
 Then, open Git Bash (or a terminal) and navigate to the folder where you created your repository, and run the following commands:
 
 ```bash
 git add .
-git status
-git commit -m ":technologist: Added programmer paragraph"
+git commit -m ":sparkles: Added new paragraph"
 ```
 
 </details>
@@ -194,7 +193,7 @@ git commit -m ":technologist: Added programmer paragraph"
 <details>
     <summary>Walkthrough Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/SgtrEhkVuRE" width="100%" height="100%" frameborder="0"
             allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
         </iframe>
     </div>
