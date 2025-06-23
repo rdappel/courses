@@ -41,26 +41,16 @@ This video will show you how to create a local repository in Windows 10. The pro
 <details open>
     <summary class="video">Show/Hide Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/PfTWHIN8sPM" width="100%" height="100%" frameborder="0"
             allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
         </iframe>
     </div>
 </details>
 
-## Staging Changes
+## Staging and Committing Changes
 
 Before you can commit changes to your repository, you need to stage them. This tells Git which files you want to commit. 
 
-This video will cover how to stage changes in Git:
-
-<details open>
-    <summary class="video">Show/Hide Video</summary>
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
-            allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-        </iframe>
-    </div>
-</details>
 
 To stage a single file, run the following command:
 
@@ -73,8 +63,6 @@ To stage all of the files in your repository, run:
 ```bash
 git add .
 ```
-
-## Committing Changes
 
 Once you have staged your changes, you can commit them to your repository.
 
@@ -118,36 +106,7 @@ In the video we also showed `git log` to see the commit history. This command wi
 ```bash
 git log
 ```
-
-# Follow Along
-
-As mentioned in the previous video, I want you to follow along now as we create a project, stage changes, and commit those changes together.
-
-<details open>
-    <summary class="video">Show/Hide Video</summary>
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
-            allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-        </iframe>
-    </div>
-</details>
-
-Here is the html code that we created in the video:
-
-```html
-<html>
-    <head>
-        <title>Creating a local repo!</title>
-    </head>
-    <body>
-        <h1>My name is Ryan.</h1>
-    </body>
-</html>
-```
-
-## Forgetting the -m Flag
-
-If you forget the -m flag when committing changes, Git will open a text editor for you to enter your commit message. By default, this will be Vim, which can be confusing for new users. If this happens to you, my recommendation (for now) is to exit out of your terminal and run the command again with the -m flag.
+> [!IMPORTANT] If you forget the -m flag when committing changes, Git will open a text editor for you to enter your commit message. By default, this will be Vim, which can be confusing for new users. If this happens to you, my recommendation (for now) is to exit out of your terminal and run the command again with the -m flag.
 
 
 # Exercise 3
@@ -161,7 +120,7 @@ If you forget the -m flag when committing changes, Git will open a text editor f
     </div>
 </details>
 
-For this exercise, you will complete another commit on the `test-project` that we created in the previous video.
+For this exercise, you will complete another commit on the `demo1` folder that we created in the previous video.
 
 Open the `index.html` file (if you closed it), and add a new paragraph of text under your name. I won't see this, so it can be something silly 🤪 or spicy 🔥.
 
@@ -216,15 +175,7 @@ Once you have completed the exercise, copy the commands you used to complete the
 Add your paragraph to the `index.html` file, under your name. For example:
 
 ```html
-<html>
-    <head>
-        <title>Creating a local repo!</title>
-    </head>
-    <body>
-        <h1>My name is Ryan.</h1>
-        <p>I like to write code!</p>
-    </body>
-</html>
+
 ```
 
 Then, open Git Bash (or a terminal) and navigate to the folder where you created your repository, and run the following commands:
