@@ -106,6 +106,7 @@ In the video we also showed `git log` to see the commit history. This command wi
 ```bash
 git log
 ```
+
 > [!IMPORTANT] If you forget the -m flag when committing changes, Git will open a text editor for you to enter your commit message. By default, this will be Vim, which can be confusing for new users. If this happens to you, my recommendation (for now) is to exit out of your terminal and run the command again with the -m flag.
 
 
