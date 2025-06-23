@@ -17,7 +17,7 @@ In this video, we will walk through the process of cloning a repository from Git
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/Wtl5GD73xrg" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -40,20 +40,7 @@ In this video, we will walk through the process of forking a repository on GitHu
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/L2DWVdb-QW4" width="100%" height="100%" frameborder="0"
-			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-		</iframe>
-	</div>
-</details>
-
-# Real-World Example
-
-In this video I will talk about a real-world example of how you can use forking and cloning to contribute to an open-source project:
-
-<details open>
-	<summary class="video">Show/Hide Video</summary>
-	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/7wY2PO7PT00" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -64,7 +51,7 @@ In this video I will talk about a real-world example of how you can use forking 
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/0Zb-Kk7nNNA" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -124,7 +111,7 @@ git push
 <details>
 	<summary>Walkthrough Video</summary>
 	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/kmX6RLkVVVc" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
