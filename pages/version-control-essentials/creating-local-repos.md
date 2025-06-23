@@ -122,6 +122,8 @@ git log
 
 For this exercise, you will complete another commit on the `demo1` folder that we created in the previous video.
 
+Before starting, close your Git Bash if you currently have it open.
+
 Open the `index.html` file (if you closed it), and add a new paragraph of text under your name. I won't see this, so it can be something silly 🤪 or spicy 🔥.
 
 > [!TIP] Use the `<p> </p>` tags to create a new paragraph.
