@@ -117,19 +117,6 @@ git commit -m ":memo: added readme"
 git push
 ```
 
-# Deleting a Remote Repository
-
-If you need to delete a remote repository, you can do so from the repository page on GitHub. Click on the "Settings" tab, scroll down to the "Danger Zone" section, and click on the "Delete this repository" button.
-
-<details open>
-    <summary class="video">Show/Hide Video</summary>
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
-            allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-        </iframe>
-    </div>
-</details>
-
 # Exercise 1
 
 <details open>
