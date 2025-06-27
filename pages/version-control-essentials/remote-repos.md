@@ -78,11 +78,12 @@ If you are using a Mac, you will need to create a Personal Access Token (PAT) to
         </iframe>
     </div>
 
-    The command shown in the video is:
+The command shown in the video is:
 
-    ```bash
-    git remote set-url origin https://<your-pat>@github.com/<your-username>/<your-repo>.git
-    ```
+```bash
+git remote set-url origin https://<your-pat>@github.com/<your-username>/<your-repo>.git
+```
+
 </details>
 
 ## Pushing Changes to a Repository
