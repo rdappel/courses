@@ -48,15 +48,6 @@ The following videos will walk you through the installation process. Choose the 
     </div>
 </details>
 
-<details>
-    <summary class="video">Creating a PAT (Mac)</summary>
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
-            allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-        </iframe>
-    </div>
-</details>
-
 The commands we ran were:
 
 ```bash
@@ -76,6 +67,23 @@ git push -u origin master
 ```
 
 > [!NOTE] You don't need to memorize these last two commands, because you can always copy them from the remote repository page. Remember that `Ctrl` + `V` will not work in Git Bash. Instead, right-click in the terminal and select "Paste" from the context menu.
+
+If you are using a Mac, you will need to create a Personal Access Token (PAT) to authenticate with GitHub. The following video will show you how to create and use a PAT:
+
+<details>
+    <summary class="video">Creating a PAT</summary>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+            allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+        </iframe>
+    </div>
+
+    The command shown in the video is:
+
+    ```bash
+    git remote set-url origin https://<your-pat>@github.com/<your-username>/<your-repo>.git
+    ```
+</details>
 
 ## Pushing Changes to a Repository
 
