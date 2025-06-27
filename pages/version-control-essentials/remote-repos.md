@@ -130,14 +130,23 @@ git push
 
 For this exercise, you will add a comment to your index.html file, commit the changes, and push them to your remote repository.
 
-If you haven't used comments in HTML before, you can read up on them on w3schools: [HTML Comments](https://www.w3schools.com/html/html_comments.asp).
-
 Once you have added your comment, create a commit with a message that describes the change you made. Then, push your changes to your remote repository.
 
 The [Gitmoji](https://gitmoji.dev/) website recommends using the 💡 `:bulb:` emoji for adding comments to your code, so you can use that in your commit message.
 
 
 ## Hints {#exercise-1-hints}
+
+<details>
+    <summary>How do I add a comment to my HTML file?</summary>
+
+You can add a comment to your HTML file by using the following syntax:
+
+```html
+<!-- This is a comment -->
+```
+
+</details>
 
 <details>
     <summary>How do I push changes to my repo?</summary>
@@ -155,6 +164,11 @@ git push
 ## Submission {#exercise-1-submission}
 
 Once you have completed the exercise, copy the url of your remote repository and paste it into the text area below. Then click the "Submit Exercise" button.
+
+<div data-language="plaintext" class="exercise-submission">
+    <textarea placeholder="Paste your code here..."></textarea>
+    <button type="button" class="submit-button">Submit Exercise</button>
+</div>
 
 ## Solution {#exercise-1-solution}
 
