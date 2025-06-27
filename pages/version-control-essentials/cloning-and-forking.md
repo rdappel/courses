@@ -84,7 +84,7 @@ Next, open the `index.html` file in your text editor and change where it says "V
 
 Save the file and go back to your browser. Refresh the page and you should see your name displayed on the page.
 
-Finally, push your changes to GitHub.
+Finally, push your changes to GitHub, and submit the url of your forked repository below.
 
 ## Hints {#exercise-2-hints}
 
@@ -122,6 +122,15 @@ git push
 ```
 
 </details>
+
+## Submission {#exercise-2-submission}
+
+Once you have completed the exercise, copy the URL of your forked repository and paste it into the text area below. Then click the "Submit Exercise" button.
+
+<div data-language="plaintext" class="exercise-submission">
+	<textarea placeholder="Paste your code here..."></textarea>
+	<button type="button" class="submit-button">Submit Exercise</button>
+</div>
 
 ## Solution {#exercise-2-solution}
 
