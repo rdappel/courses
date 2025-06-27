@@ -117,16 +117,6 @@ git commit -m ":memo: added readme"
 git push
 ```
 
-Then the next update was:
-
-```bash
-git add .
-
-git commit -m ":sparkles: added git commands"
-
-git push
-```
-
 # Exercise 1
 
 <details open>
