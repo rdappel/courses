@@ -46,7 +46,7 @@ In this video, we will walk through the process of forking a repository on GitHu
 	</div>
 </details>
 
-# Exercise 1
+# Exercise 2
 
 <details open>
 	<summary class="video">Show/Hide Video</summary>
@@ -69,7 +69,7 @@ Save the file and go back to your browser. Refresh the page and you should see y
 
 Finally, push your changes to GitHub.
 
-## Hints {#exercise-1-hints}
+## Hints {#exercise-2-hints}
 
 <details>
 	<summary>How do I fork a GitHub repository?</summary>
@@ -106,7 +106,7 @@ git push
 
 </details>
 
-## Solution {#exercise-1-solution}
+## Solution {#exercise-2-solution}
 
 <details>
 	<summary>Walkthrough Video</summary>
