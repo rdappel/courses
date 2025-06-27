@@ -23,7 +23,7 @@ For now, let's take a look at how to create a remote repository on GitHub:
 <details open>
     <summary class="video">Show/Hide Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/gcPF4p3lAj8" width="100%" height="100%" frameborder="0"
             allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
         </iframe>
     </div>
@@ -39,17 +39,17 @@ Mac users will need to create a Personal Access Token (PAT) in GitHub to authent
 
 The following videos will walk you through the installation process. Choose the corresponding video for your operating system:
 
-<details>
-    <summary class="video">Windows</summary>
+<details open>
+    <summary class="video">Show/Hide Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/ju-u3343L-A" width="100%" height="100%" frameborder="0"
             allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
         </iframe>
     </div>
 </details>
 
 <details>
-    <summary class="video">Mac</summary>
+    <summary class="video">Creating a PAT (Mac)</summary>
     <div class="video-container">
         <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
             allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
@@ -113,3 +113,62 @@ git commit -m ":sparkles: added git commands"
 
 git push
 ```
+
+# Exercise 1
+
+<details open>
+    <summary class="video">Show/Hide Video</summary>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+            allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+        </iframe>
+    </div>
+</details>
+
+For this exercise, you will add a comment to your index.html file, commit the changes, and push them to your remote repository.
+
+If you haven't used comments in HTML before, you can read up on them on w3schools: [HTML Comments](https://www.w3schools.com/html/html_comments.asp).
+
+Once you have added your comment, create a commit with a message that describes the change you made. Then, push your changes to your remote repository.
+
+The [Gitmoji](https://gitmoji.dev/) website recommends using the 💡 `:bulb:` emoji for adding comments to your code, so you can use that in your commit message.
+
+
+## Hints {#exercise-1-hints}
+
+<details>
+    <summary>How do I push changes to my repo?</summary>
+
+You will need to create a commit, then use the `git push` command to push your changes to the remote repository.
+
+```bash
+git add .
+git commit -m "your commit message here"
+git push
+```
+
+</details>
+
+## Solution {#exercise-1-solution}
+
+<details>
+    <summary>Show the Answer</summary>
+
+Here are the commands you need to complete the exercise:
+
+```bash
+git add .
+git commit -m ":bulb: added a comment"
+git push
+```
+
+</details>
+
+<details>
+    <summary>Walkthrough Video</summary>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+            allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+        </iframe>
+    </div>
+</details>
