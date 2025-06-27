@@ -146,6 +146,8 @@ You can add a comment to your HTML file by using the following syntax:
 <!-- This is a comment -->
 ```
 
+You can read more about HTML comments on w3schools: [HTML Comments](https://www.w3schools.com/html/html_comments.asp).
+
 </details>
 
 <details>
