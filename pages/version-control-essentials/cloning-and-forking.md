@@ -37,7 +37,7 @@ Forking is the process of creating a copy of a remote repository on your GitHub 
 
 In this video, we will walk through the process of forking a repository on GitHub:
 
-> [!NOTE] If you want to follow along, the repository we are forking is [js-movie-api](https://github.com/fvtc/js-movie-api).
+> [!NOTE] If you want to follow along, the repository we are forking is [js-movie-exercise](https://github.com/fvtc/js-movie-exercise).
 
 <details open>
 	<summary class="video">Show/Hide Video</summary>
