@@ -35,10 +35,21 @@ For now, let's take a look at how to create a remote repository on GitHub:
 
 Once you have created a remote repository, you can push your local changes to the remote repository. This allows you to share your code with others and collaborate on projects.
 
-This video will show you how to push your local repo to GitHub:
+Mac users will need to create a Personal Access Token (PAT) in GitHub to authenticate with the remote repository. Windows users will be prompted to log in using their browser, which is the recommended method.
 
-<details open>
-    <summary class="video">Show/Hide Video</summary>
+The following videos will walk you through the installation process. Choose the corresponding video for your operating system:
+
+<details>
+    <summary class="video">Windows</summary>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+            allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+        </iframe>
+    </div>
+</details>
+
+<details>
+    <summary class="video">Mac</summary>
     <div class="video-container">
         <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
             allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
