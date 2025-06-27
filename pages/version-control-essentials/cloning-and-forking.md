@@ -23,6 +23,8 @@ In this video, we will walk through the process of cloning a repository from Git
 	</div>
 </details>
 
+Here is [Ryan's Demo1 Repository](https://github.com/rdappel/demo1) that we will be cloning in the video.
+
 The command to clone a repository is:
 
 ```bash
