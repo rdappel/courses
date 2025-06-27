@@ -46,6 +46,23 @@ In this video, we will walk through the process of forking a repository on GitHu
 	</div>
 </details>
 
+# Deleting a Remote Repository
+
+If you need to delete a remote repository, you can do so from the repository page on GitHub. Click on the "Settings" tab, scroll down to the "Danger Zone" section, and click on the "Delete this repository" button.
+
+There will be a confirmation dialog that asks you to type the name of the repository to confirm that you want to delete it. 
+
+In the video below, I will show you how to delete a remote repository:
+
+<details open>
+    <summary class="video">Show/Hide Video</summary>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+            allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+        </iframe>
+    </div>
+</details>
+
 # Exercise 2
 
 <details open>
@@ -59,11 +76,11 @@ In this video, we will walk through the process of forking a repository on GitHu
 
 For this exercise, you will need to fork and clone the following repository:
 
-- [vce-fork-exercise](https://github.com/fvtc/vce-fork-exercise)
+- [vce-forking-exercise](https://github.com/fvtc/vce-forking-exercise)
 
-Once you have forked and cloned the repository, open the `index.html` file in your browser. You should see a message that says "Version Control".
+Once you have forked and cloned the repository, open the `index.html` file in your browser. You should see some 3d text that says "VCE".
 
-Next, open the `index.html` file in your text editor and change where it says "Version Control" to your name (it should be on line 14).
+Next, open the `index.html` file in your text editor and change where it says "VCE" to your name (it should be on line 14).
 
 Save the file and go back to your browser. Refresh the page and you should see your name displayed on the page.
 
@@ -99,7 +116,7 @@ To push your changes to GitHub, run the following commands in Git Bash:
 ```bash
 git add .
 
-git commit -m "Finished Exercise 1"
+git commit -m "Finished Exercise 2"
 
 git push
 ```
