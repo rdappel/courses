@@ -88,7 +88,7 @@ This video will show you how to push changes to GitHub:
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/KGzOox5vzpI" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -152,12 +152,24 @@ git push
 
 </details>
 
+## Submission {#exercise-1-submission}
+
+Once you have completed the exercise, copy the url of your remote repository and paste it into the text area below. Then click the "Submit Exercise" button.
+
 ## Solution {#exercise-1-solution}
 
 <details>
     <summary>Show the Answer</summary>
 
 Here are the commands you need to complete the exercise:
+
+First, add a comment to your `index.html` file, for example:
+
+```html
+<!-- This is a comment -->
+```
+
+Then, open Git Bash (or a terminal in VSCode) and run the following commands:
 
 ```bash
 git add .
