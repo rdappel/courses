@@ -1,5 +1,5 @@
 ---
-title: Assignment 2 - Markdown Cheatsheet Update
+title: Assignment 2 - Markdown Cheatsheet
 subtitle: Version Control Essentials
 hideNav: false
 
@@ -8,7 +8,7 @@ dev: http://localhost:3006/appel/version-control-essentials/assignments/md-cheat
 repo: https://github.com/rdappel/courses
 ---
 
-# Assignment 2 - Markdown Cheatsheet Update
+# Assignment 2 - Markdown Cheatsheet
 
 For this assignment, you will create a copy of tchapi's [Markdown Cheatsheet](https://github.com/tchapi/markdown-cheatsheet).
 

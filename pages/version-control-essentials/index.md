@@ -30,7 +30,7 @@ Summary: You will create remote repositories and use them to host our source cod
 
 [Cloning and Forking Repositories](/appel/version-control-essentials/cloning-and-forking)
 
-[Assignment 2 - MD Cheatsheet Update](/appel/version-control-essentials/assignments/md-cheatsheet)
+[Assignment 2 - MD Cheatsheet](/appel/version-control-essentials/assignments/md-cheatsheet)
 
 [Assignment 3 - Azure DevOps Account](/appel/version-control-essentials/assignments/devops-account)
 
