@@ -15,7 +15,7 @@ For this assignment, you will work with a partner to create a merge conflict and
 <details open>
     <summary class="video">Show/Hide Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/vUaRNbRK910" width="100%" height="100%" frameborder="0"
             allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
         </iframe>
     </div>
@@ -30,7 +30,7 @@ To get started, you will need to create a new repository on GitHub and add some 
 <details open>
     <summary class="video">Show/Hide Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/n0B8DiwQx2Q" width="100%" height="100%" frameborder="0"
             allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
         </iframe>
     </div>
@@ -70,7 +70,7 @@ Your partner will modify your project by adding their name and some information 
 <details open>
     <summary class="video">Show/Hide Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/YUso6HSfGFc" width="100%" height="100%" frameborder="0"
             allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
         </iframe>
     </div>
@@ -100,7 +100,7 @@ Now that your partner has made changes to your project, it's time to create and 
 <details open>
     <summary class="video">Show/Hide Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/DnwnhDW1OoY" width="100%" height="100%" frameborder="0"
             allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
         </iframe>
     </div>
