@@ -55,3 +55,43 @@ If you are using Visual Studio Code, you can also resolve merge conflicts using 
     </div>
 </details>
 
+# Exercise 2
+
+<details open>
+    <summary class="video">Show/Hide Video</summary>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+            allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+        </iframe>
+    </div>
+</details>
+
+For this exercise, you will simply submit your commit history to demonstrate that you have successfully resolved a merge conflict.
+
+1. **Navigate to your repository**: Open your browser and navigate to the remote repository you created for demo1.
+
+2. **Locate the commit history**: Click on the "Commits" tab to view the commit history of your repository. It's located on the right side of the repository page, just above the file list.
+
+![Commit History](https://raw.githubusercontent.com/rdappel/courses/support-files/vce/commit-history-link.png)
+
+3. **Copy the URL**: Copy the URL of the commit history page from your browser's address bar. It should look something like this: `https://github.com/your-username/your-repo/commits/main`.
+
+## Submission {#exercise-2-submission}
+
+Once you have found the commit history, you will submit the URL as your solution for this exercise.
+
+<div data-language="bash" class="exercise-submission">
+    <textarea placeholder="Paste your code here..."></textarea>
+    <button type="button" class="submit-button">Submit Exercise</button>
+</div>
+
+## Solution {#exercise-2-solution}
+
+<details>
+    <summary>Walkthrough Video</summary>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+            allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+        </iframe>
+    </div>
+</details>

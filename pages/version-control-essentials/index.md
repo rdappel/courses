@@ -42,7 +42,7 @@ Summary: You will begin to learn how collaboration works in Git.
 
 [Handling Merge Conflicts](/appel/version-control-essentials/merge-conflicts)
 
-[Assignment 4 - 444444](/appel/version-control-essentials/assignments/444444)
+[Assignment 4 - Merge Conflict](/appel/version-control-essentials/assignments/merge-conflict)
 
 # Week 4 - Contributing & Pull Requests
 
