@@ -74,6 +74,7 @@ For this exercise, you will simply submit your commit history to demonstrate tha
 
 ![Commit History](https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/commit-history-link.png)
 
+
 3. **Copy the URL**: Copy the URL of the commit history page from your browser's address bar. It should look something like this: `https://github.com/your-username/your-repo/commits/main`.
 
 ## Submission {#exercise-2-submission}
