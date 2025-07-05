@@ -29,6 +29,12 @@ This video will show you how to perform a pull, and cover some of the common sit
 
 If you no longer have your demo1 repository, you can [fork my demo1 repository from GitHub](https://github.com/rdappel/demo1/fork).
 
+Here is the command to pull changes from a remote repository:
+
+```bash
+git pull
+```
+
 ## Pushing Changes
 
 As mentioned earlier, you already pushed changes to a remote repository in the previous section. However, there are some situations where pushing changes might fail. This video will show you some of the common situations where pushing changes might fail, and how to resolve them:
@@ -68,13 +74,36 @@ This video will show you how to pull and push changes using Visual Studio Code:
     </div>
 </details>
 
+For this exercise, you will practice pulling changes from a remote repository.
+
+> [!NOTE] When you pull the changes, I want you to use the command line, not an IDE.
+
+1. In your browser, navigate to your demo1 repository on GitHub.
+
+2. Click on the "Code" button and copy the URL of your repository.
+
+3. Modify your index.html file, and add a paragraph with the text "Exercise 1: Pulling Changes".
+
+4. Save the file and commit your changes with the message "Exercise 1".
+
+5. In Git Bash or your termainal, pull the latest changes from your remote repository.
+
+6. Verify that your changes have been pulled successfully by checking the contents of your index.html file.
+
+7. If you encounter any issues, refer to the videos above for troubleshooting tips.
+
+8. To submit, copy the contents of your terminal and paste them into the text area below.
 
 ## Hints {#exercise-1-hints}
 
 <details>
-    <summary>How do I ?</summary>
+    <summary>How do I pull changes from a remote repository?</summary>
 
-Answer
+To pull changes from a remote repository, you can use the following command:
+
+```bash
+git pull
+```
 
 </details>
 
@@ -88,11 +117,6 @@ Once you have completed the exercise, paste the contents of your terminal into t
 </div>
 
 ## Solution {#exercise-1-solution}
-
-<details>
-    <summary>Show the Answer</summary>
-
-</details>
 
 <details>
     <summary>Walkthrough Video</summary>
