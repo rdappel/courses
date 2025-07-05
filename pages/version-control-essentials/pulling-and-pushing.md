@@ -40,6 +40,21 @@ As mentioned earlier, you already pushed changes to a remote repository in the p
     </div>
 </details>
 
+# Using an IDE
+
+Most IDEs have built-in support for Git, which makes it easy to pull and push changes. In this section, we will cover how to pull and push changes using Visual Studio Code. Using an IDE can speed up your workflow and make it easier to manage your code.
+
+This video will show you how to pull and push changes using Visual Studio Code:
+
+<details open>
+    <summary class="video">Show/Hide Video</summary>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+            allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+        </iframe>
+    </div>
+</details>
+
 # Exercise 1
 
 <details open>
