@@ -21,7 +21,7 @@ This video will show you how to perform a pull, and cover some of the common sit
 <details open>
     <summary class="video">Show/Hide Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/tEB6UnENwCk" width="100%" height="100%" frameborder="0"
             allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
         </iframe>
     </div>
@@ -42,7 +42,7 @@ As mentioned earlier, you already pushed changes to a remote repository in the p
 <details open>
     <summary class="video">Show/Hide Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/zcmR3864ibs" width="100%" height="100%" frameborder="0"
             allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
         </iframe>
     </div>
@@ -57,7 +57,7 @@ This video will show you how to pull and push changes using Visual Studio Code:
 <details open>
     <summary class="video">Show/Hide Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/KENANZ2mrrE" width="100%" height="100%" frameborder="0"
             allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
         </iframe>
     </div>
@@ -68,7 +68,7 @@ This video will show you how to pull and push changes using Visual Studio Code:
 <details open>
     <summary class="video">Show/Hide Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/e5bnI6aM6WE" width="100%" height="100%" frameborder="0"
             allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
         </iframe>
     </div>
@@ -121,7 +121,7 @@ Once you have completed the exercise, paste the contents of your terminal into t
 <details>
     <summary>Walkthrough Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/3YSREV4RrN4" width="100%" height="100%" frameborder="0"
             allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
         </iframe>
     </div>
