@@ -27,6 +27,8 @@ This video will show you how to perform a pull, and cover some of the common sit
     </div>
 </details>
 
+If you no longer have your demo1 repository, you can [fork my demo1 repository from GitHub](https://github.com/rdappel/demo1/fork).
+
 ## Pushing Changes
 
 As mentioned earlier, you already pushed changes to a remote repository in the previous section. However, there are some situations where pushing changes might fail. This video will show you some of the common situations where pushing changes might fail, and how to resolve them:
