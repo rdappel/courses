@@ -85,14 +85,3 @@ Once you have found the commit history, you will submit the URL as your solution
     <textarea placeholder="Paste your code here..."></textarea>
     <button type="button" class="submit-button">Submit Exercise</button>
 </div>
-
-## Solution {#exercise-2-solution}
-
-<details>
-    <summary>Walkthrough Video</summary>
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
-            allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-        </iframe>
-    </div>
-</details>
