@@ -48,7 +48,7 @@ git commit -m "Merged keeping both changes"
 git push # this code will succeed!
 ```
 
-## Example with VS Code Source Control
+## Example with VS Code Panel
 
 If you are using Visual Studio Code, you can also resolve merge conflicts using the Source Control panel. This video will show you how to do that:
 
