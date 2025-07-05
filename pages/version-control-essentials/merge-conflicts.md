@@ -13,7 +13,7 @@ repo: https://github.com/rdappel/courses
 As you saw in the previous section, pulling changes from a remote repository can sometimes lead to merge conflicts. A merge conflict occurs when two people make changes to the same line of code in a file, and Git doesn't know which change to keep.
 In this section, we will spend some time learning how to handle merge conflicts.
 
-This video will show you how to handle merge conflicts in Visual Studio Code:
+This video will show you how to handle merge conflicts:
 
 <details open>
     <summary class="video">Show/Hide Video</summary>
@@ -27,7 +27,12 @@ This video will show you how to handle merge conflicts in Visual Studio Code:
 Here is the lorem text that I used in the video to create a merge conflict:
 
 ```text
-Laudantium reiciendis impedit voluptate repudiandae dolorum voluptatibus minima nisi laborum recusandae, atque ullam enim est? Consequatur provident quia temporibus, accusantium labore incidunt sequi eius quae soluta blanditiis doloremque maiores, quam maxime animi, saepe omnis. A cum dolor amet expedita minima beatae cumque voluptatem eveniet perspiciatis deleniti, dolorum aliquam ea, alias autem quis hic debitis? Quidem, debitis alias est quod, nulla error iste modi explicabo voluptatem expedita ut molestias illum quibusdam repudiandae dolorum possimus omnis.
+
+Laudantium reiciendis impedit voluptate repudiandae dolorum voluptatibus minima nisi laborum recusandae, atque ullam enim
+est? Consequatur provident quia temporibus, accusantium labore incidunt sequi eius quae soluta blanditiis doloremque
+maiores, quam maxime animi, saepe omnis. A cum dolor amet expedita minima beatae cumque voluptatem eveniet perspiciatis
+deleniti, dolorum aliquam ea, alias autem quis hic debitis? Quidem, debitis alias est quod, nulla error iste modi explicabo
+voluptatem expedita ut molestias illum quibusdam repudiandae dolorum possimus omnis.
 ```
 
 The code to resolve a merge conflict in Visual Studio Code is as follows:
