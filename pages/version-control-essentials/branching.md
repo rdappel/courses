@@ -62,20 +62,6 @@ You can also create and switch to a new branch in one command:
 git checkout -b <branch-name>
 ```
 
-# Viewing Branches
-
-To see all the branches in your repository, use:
-
-```bash
-git branch
-```
-
-This will show all local branches, with an asterisk (*) next to the current branch. To see remote branches as well, use:
-
-```bash
-git branch -a
-```
-
 # Merging Branches
 
 When you're ready to incorporate changes from one branch into another, you use the `git merge` command. However, it's important to be cautious when merging, especially when merging into your main branch.
