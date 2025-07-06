@@ -56,9 +56,9 @@ Summary: You'll learn how to contribute to open-source projects.
 
 # Week 5 - Branching and Feature Development Workflow
 
-[Branching and Feature Development Workflow](/appel/version-control-essentials/branching)
-
 Summary: You will be creating branches to help keep features separate from working code.
+
+[Branching and Feature Development Workflow](/appel/version-control-essentials/branching)
 
 # Week 6 - Workflow Interruptions & Stashing
 
