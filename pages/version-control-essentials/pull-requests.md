@@ -117,7 +117,7 @@ For this exercise, you will create a pull request for the following project:
 <details>
     <summary>How do I create a pull request?</summary>
 
-Answer
+Once you have pushed your changes to your forked repository, you can create a pull request by clicking the "Contribute" button on your repository page and selecting "Open pull request." Fill out the title and description, then submit the pull request.
 
 </details>
 
@@ -131,11 +131,6 @@ Submit the link to your pull request in the text area below. The url should look
 </div>
 
 ## Solution {#exercise-2-solution}
-
-<details>
-    <summary>Show the Answer</summary>
-
-</details>
 
 <details>
     <summary>Walkthrough Video</summary>
