@@ -152,35 +152,6 @@ git checkout -b release/v1.2.0
 
 - **Use the cautious merge approach**: Merge main into feature first, then feature into main
 
-# Working with Remote Branches
-
-<details open>
-    <summary class="video">Show/Hide Video</summary>
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
-            allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-        </iframe>
-    </div>
-</details>
-
-When working with remote repositories, you'll often need to push your branches to the remote:
-
-```bash
-git push origin branch-name
-```
-
-To set up tracking so you can just use `git push` in the future:
-
-```bash
-git push -u origin branch-name
-```
-
-To pull changes from a remote branch:
-
-```bash
-git pull origin branch-name
-```
-
 # Exercise 1
 
 <details open>
@@ -196,13 +167,7 @@ For this exercise, you will practice creating branches, making changes, and merg
 
 ## Instructions
 
-1. **Create a new project folder** and initialize it as a Git repository:
-
-```bash
-mkdir branching-practice
-cd branching-practice
-git init
-```
+1. **Create a new project folder** called `branching-practice` and initialize it as a Git repository.
 
 2. **Create a simple HTML file** called `index.html`:
 
@@ -219,12 +184,7 @@ git init
 </html>
 ```
 
-3. **Commit your initial file**:
-
-```bash
-git add index.html
-git commit -m "Initial commit with basic HTML"
-```
+3. **Commit your initial file**
 
 4. **Create a new branch** for adding a navigation menu:
 
@@ -244,19 +204,9 @@ git checkout -b feature/navigation
 </nav>
 ```
 
-6. **Commit your changes**:
+6. **Commit your navigation changes** to the feature branch
 
-```bash
-git add index.html
-git commit -m "Add navigation menu"
-```
-
-7. **Switch back to master** and merge your changes using the cautious approach:
-
-```bash
-git checkout master
-git merge feature/navigation
-```
+7. **Merge your changes back to master** using the cautious approach (merge master into feature first)
 
 8. **Create another branch** for adding a footer:
 
@@ -272,71 +222,11 @@ git checkout -b feature/footer
 </footer>
 ```
 
-10. **Commit your changes**:
+10. **Commit your changes**
 
-```bash
-git add index.html
-git commit -m "Add footer"
-```
-
-11. **Switch back to master and merge the footer**:
-
-```bash
-git checkout master
-git merge feature/footer
-```
-
-12. **Clean up by deleting the feature branches**:
-
-```bash
-git branch -d feature/navigation
-git branch -d feature/footer
-```
+11. **Merge the footer changes back to master** using the cautious approach (merge master into feature first)
 
 ## Hints {#exercise-1-hints}
-
-<details>
-    <summary>How do I check which branch I'm on?</summary>
-
-You can check your current branch with:
-
-```bash
-git branch
-```
-
-The current branch will have an asterisk (*) next to it.
-
-</details>
-
-<details>
-    <summary>How do I see my commit history?</summary>
-
-You can see your commit history with:
-
-```bash
-git log --oneline
-```
-
-This shows a condensed view of your commits.
-
-</details>
-
-<details>
-    <summary>What if I make a mistake?</summary>
-
-If you make a mistake and want to undo your last commit (but keep the changes in your working directory):
-
-```bash
-git reset --soft HEAD~1
-```
-
-If you want to completely undo your last commit and lose the changes:
-
-```bash
-git reset --hard HEAD~1
-```
-
-</details>
 
 ## Submission {#exercise-1-submission}
 
