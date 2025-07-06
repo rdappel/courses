@@ -63,7 +63,20 @@ You can also find a lot of resources online for learning Markdown, such as the [
 
 ## Creating a README.md File
 
-To create a `README.md` file, you can use any text editor or IDE. Here is an example of a simple `README.md` file:
+To create a `README.md` file, you can use any text editor or IDE.
+
+This video will show you how to create a README file in Visual Studio Code:
+
+<details open>
+    <summary class="video">Show/Hide Video</summary>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+            allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+        </iframe>
+    </div>
+</details>
+
+Here is the markdown code from the video:
 
 ```markdown
 # Project Title
@@ -83,17 +96,6 @@ Instructions for using the project.
 Instructions for contributing to the project.
 ```
 
-This video will show you how to create a `README.md` file:
-
-<details open>
-    <summary class="video">Show/Hide Video</summary>
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
-            allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-        </iframe>
-    </div>
-</details>
-
 > [!NOTE] For Assignment 2, you created a fork of tchapi's [Markdown Cheatsheet](https://github.com/tchapi/markdown-cheatsheet). You can refer to that repository for a quick reference on how to do common formatting tasks in Markdown.
 
 # .gitignore Files
@@ -106,23 +108,7 @@ Using a `.gitignore` file is important because it helps keep your repository cle
 
 ## Creating a .gitignore File
 
-To create a `.gitignore` file, you can use any text editor or IDE. Here is an example of a simple `.gitignore` file:
-
-```plaintext
-# Ignore these folders (and their contents)
-build/
-dist/
-
-# Ignore these files
-secret.txt
-config.json
-
-# Ignore files with these extensions
-*.tmp
-*.log
-```
-
-This video will show you how to create a `.gitignore` file:
+To create a `.gitignore` file, you can use any text editor or IDE. This video will show you how to create one in Visual Studio Code:
 
 <details open>
     <summary class="video">Show/Hide Video</summary>
@@ -134,6 +120,22 @@ This video will show you how to create a `.gitignore` file:
 </details>
 
 > [!NOTE] Some IDEs, such as Visual Studio will automatically create a `.gitignore` file for you when you create a new project. You can also find pre-made `.gitignore` files for many common programming languages and frameworks on [GitHub's gitignore repository](https://github.com/github/gitignore).
+
+Here is the .gitignore file from the video:
+
+```plaintext
+# Ignore these folders (and their contents)
+build/
+dist/
+
+# Ignore these files
+secrets.txt
+config.json
+
+# Ignore files with these extensions
+*.tmp
+*.log
+```
 
 # Exercise 1
 
@@ -179,17 +181,8 @@ Instructions for contributing to the project.
 To create a `.gitignore` file, you can use any text editor or IDE. Here is an example of a simple `.gitignore` file:
 
 ```plaintext
-# Ignore these folders (and their contents)
-build/
-dist/
-
-# Ignore these files
-secret.txt
-config.json
-
-# Ignore files with these extensions
-*.tmp
-*.log
+# Ignore this folder and anything in it
+secrets/
 ```
 
 </details>
