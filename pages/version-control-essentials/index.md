@@ -52,7 +52,7 @@ Summary: You'll learn how to contribute to open-source projects.
 
 [Pull Requests](/appel/version-control-essentials/pull-requests)
 
-
+[Assignment 5 - First Contribution](/appel/version-control-essentials/assignments/first-contribution)
 
 # Week 5 - Branching and Feature Development Workflow
 
