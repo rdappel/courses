@@ -127,7 +127,21 @@ When reviewing pull requests, consider:
     </div>
 </details>
 
-For this exercise, you will create a pull request for a project.
+For this exercise, you will create a pull request for a project:
+
+1. Visit [VCE Contribute](https://github.com/fvtc/vce-contribute).
+
+2. Fork the repository to your GitHub account.
+
+3. Clone your forked repository to your local machine.
+
+4. Find the markdown file that corresponds with your class. (E.g., `fall25.md` for Fall 2025).
+
+5. Add your name (linked to your GitHub profile), along with a brief description of yourself or your interests.
+
+6. Commit your changes, and push them to your forked repository.
+
+7. Create a pull request from your forked repository to the original `fvtc/vce-contribute` repository.
 
 ## Hints {#exercise-2-hints}
 
@@ -138,12 +152,12 @@ Answer
 
 </details>
 
+## Submission {#exercise-2-submission}
+
 ## Solution {#exercise-2-solution}
 
 <details>
     <summary>Show the Answer</summary>
-
-
 
 </details>
 
