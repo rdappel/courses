@@ -211,8 +211,6 @@ git checkout -b release/v1.2.0
 
 For this exercise, you will practice creating branches, making changes, and merging them back together.
 
-## Instructions
-
 1. **Create a new project folder** called `branching-practice` and initialize it as a Git repository.
 
 2. **Create a simple HTML file** called `index.html`:
