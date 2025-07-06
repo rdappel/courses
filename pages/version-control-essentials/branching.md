@@ -322,16 +322,18 @@ git merge feature/branch-name
 Once you have completed the exercise, run `git log --oneline` to see your commit history. Copy the output and paste it into the text area below.
 
 <div data-language="bash" class="exercise-submission">
-    <textarea placeholder="Paste your git log output here..."></textarea>
+    <textarea placeholder="Paste your code here..."></textarea>
     <button type="button" class="submit-button">Submit Exercise</button>
 </div>
 
 ## Solution {#exercise-1-solution}
 
 <details>
-    <summary>Show the Answer</summary>    Your git log output should look something like this:
+    <summary>Show the Answer</summary>
+    
+Your git log output should look something like this:
 
-```
+```bash
 a1b2c3d Merge branch 'dev' (final merge to master)
 e4f5g6h Add footer
 i7j8k9l Add navigation menu
@@ -340,9 +342,13 @@ p4q5r6s Initial commit with basic HTML
 ```
 
 The exact commit hashes will be different, but you should see the progression showing:
+
 - Initial commit on master
+
 - Development work on dev and feature branches
+
 - Final merge from dev to master
+
 
 Your final HTML file should look like this:
 
