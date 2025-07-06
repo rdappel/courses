@@ -158,19 +158,17 @@ For this exercise, you will create a `README.md` file and a `.gitignore` file fo
 To create a `README.md` file, you can use any text editor or IDE. Here is an example of a simple `README.md` file:
 
 ```markdown
-# Bookmarklet Creator
+# Project Title
 
-A simple tool to create bookmarklets from JavaScript code.
+A brief description of your project.
 
 ## Usage
 
-1. Create a folder in the `scripts` directory with the name of your bookmarklet.
+Instructions for using the project.
 
-2. Run the app.
+## Contributing
 
-3. Open your browser to `http://localhost:3000`.
-
-4. Drag your bookmarklet to your bookmarks bar.
+Instructions for contributing to the project.
 ```
 
 </details>
@@ -182,7 +180,6 @@ To create a `.gitignore` file, you can use any text editor or IDE. Here is an ex
 
 ```plaintext
 secrets/
-node_modules/
 ```
 
 </details>
