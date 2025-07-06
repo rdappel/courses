@@ -8,7 +8,7 @@ dev: http://localhost:3006/appel/version-control-essentials/branching
 repo: https://github.com/rdappel/courses
 ---
 
-# Branching and Feature Development Workflow
+# Branching and Development Workflow
 
 Branching is one of the most powerful features of Git. It allows you to create separate lines of development within a single repository. This is incredibly useful for developing new features, fixing bugs, or experimenting with code without affecting the main codebase.
 
