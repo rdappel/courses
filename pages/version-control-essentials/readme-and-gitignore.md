@@ -148,9 +148,7 @@ config.json
     </div>
 </details>
 
-For this exercise, you will create a `README.md` file and a `.gitignore` file for your demo1 repository. You can use the examples provided in this unit as a starting point.
-
-Once you have created the files, commit them to your repository and push the changes to GitHub.
+For this exercise, you will create a `README.md` file and a `.gitignore` file for a project. You can use a project from another class or create a new project just for this exercise.
 
 ## Hints {#exercise-1-hints}
 
