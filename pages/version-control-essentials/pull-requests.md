@@ -54,6 +54,8 @@ Some tips for writing good pull request descriptions include:
 
 ## Merging Pull Requests
 
+This video will explain how to merge pull requests:
+
 <details open>
     <summary class="video">Show/Hide Video</summary>
     <div class="video-container">
@@ -63,9 +65,11 @@ Some tips for writing good pull request descriptions include:
     </div>
 </details>
 
-> [!NOTE] As a student contributing to open-source projects, you typically won't be the one merging pull requests. The project maintainers will review your PR and merge it if it meets their standards.
+As a student contributing to open-source projects, you typically won't be the one merging pull requests. The project maintainers will review your PR and merge it, if it meets their standards.
 
 ## Pull Request Best Practices
+
+When you're creating pull requests, it's important to follow best practices to ensure a smooth review process and successful integration of your changes. Here are some key practices to keep in mind:
 
 - **Keep PRs Small**: Smaller pull requests are easier to review and less likely to cause issues
 
@@ -111,7 +115,7 @@ For this exercise, you will create a pull request for a project:
 ## Hints {#exercise-2-hints}
 
 <details>
-    <summary>How do I ?</summary>
+    <summary>How do I create a pull request?</summary>
 
 Answer
 
