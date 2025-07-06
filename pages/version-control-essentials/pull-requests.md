@@ -12,6 +12,19 @@ repo: https://github.com/rdappel/courses
 
 Pull requests are a fundamental feature of Git hosting platforms like GitHub, GitLab, and Bitbucket. They provide a way to propose changes to a repository and facilitate code review and collaboration. In this section, we'll learn how to create, review, and merge pull requests.
 
+In this video, we'll introduce the concept of pull requests and how they work:
+
+<details open>
+    <summary class="video">Show/Hide Video</summary>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/LVKjUvHAOBg" width="100%" height="100%" frameborder="0"
+            allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+        </iframe>
+    </div>
+</details>
+
+Now that you have a basic understanding of pull requests, let's dive into the details of how to create and manage them.
+
 ## Creating a Pull Request
 
 Before you can create a pull request, you need to have a fork of the repository you want to contribute to. After cloning the repository and making your changes, you can create a pull request to propose those changes to the original repository.
