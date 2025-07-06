@@ -54,7 +54,9 @@ Some tips for writing good pull request descriptions include:
 
 ## Merging Pull Requests
 
-This video will explain how to merge pull requests:
+Merging a pull request is actually pretty straightforward. As a student contributing to open-source projects, you typically won't be the one merging pull requests.
+
+Additionally, you should always be cautious when merging pull requests, especially from external contributors! Review the changes carefully and ensure they meet the project's standards before merging.
 
 <details open>
     <summary class="video">Show/Hide Video</summary>
@@ -65,11 +67,11 @@ This video will explain how to merge pull requests:
     </div>
 </details>
 
-As a student contributing to open-source projects, you typically won't be the one merging pull requests. The project maintainers will review your PR and merge it, if it meets their standards.
+Again, as a student contributing to open-source projects, you typically won't be the one merging pull requests. Even when you're working professionally, you'll often have a team lead or senior developer handle the merging process to ensure code quality and consistency.
 
 ## Pull Request Best Practices
 
-When you're creating pull requests, it's important to follow best practices to ensure a smooth review process and successful integration of your changes. Here are some key practices to keep in mind:
+When you're creating pull requests, it's important to follow best practices to ensure a smooth review process and successful integration of your changes. Here are some recommended practices to keep in mind:
 
 - **Keep PRs Small**: Smaller pull requests are easier to review and less likely to cause issues
 
