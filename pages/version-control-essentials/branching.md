@@ -287,19 +287,6 @@ git merge dev
 ## Hints {#exercise-1-hints}
 
 <details>
-    <summary>How do I check which branch I'm on?</summary>
-
-You can check your current branch with:
-
-```bash
-git branch
-```
-
-The current branch will have an asterisk (*) next to it.
-
-</details>
-
-<details>
     <summary>How do I create a feature branch from dev?</summary>
 
 First make sure you're on the dev branch, then create the feature branch:
