@@ -102,8 +102,6 @@ As mentioned in the video, the merge tool in Visual Studio is really powerful. I
 
 For this exercise, you will practice resolving merge conflicts using Visual Studio Code. You will need to create a merge conflict in your own repository, and then resolve it using the steps outlined in this section.
 
-## Instructions
-
 1. **Create a merge conflict**: Choose a file in one of your repositories and make a change to it in your browser. Then, open the same file in Visual Studio Code (or Visual Studio) and make a different change to the same line of code.
 
 2. **Pull the changes**: In Visual Studio Code (or Visual Studio), pull the changes from the remote repository. This will create a merge conflict.
