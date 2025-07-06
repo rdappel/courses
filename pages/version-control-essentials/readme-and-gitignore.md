@@ -16,11 +16,39 @@ This unit will cover how to contribute to open-source projects. Before you can c
 
 A `README.md` file is a markdown file that contains information about a project. It is typically the first file that people see when they visit a repository, and it should provide an overview of the project, how to install it, how to use it, and how to contribute to it. Additionally, it can include links to documentation, issues, and other resources related to the project.
 
+This video will show you an example of a `README.md` file:
+
+<details open>
+    <summary class="video">Show/Hide Video</summary>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+            allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+        </iframe>
+    </div>
+</details>
+
+As you can see, a `README.md` file is a great way to provide information about your project in a clear and concise manner. It can also help people understand how to use your project and how to contribute to it.
+
+The repository that I showed in the video is [fvtc/choose-your-adventure](https://github.com/fvtc/choose-your-adventure).
+
 ## What is Markdown?
 
 Markdown is a lightweight markup language that allows you to format text using simple syntax. It is widely used for writing documentation, README files, and other text-based content. Markdown files typically have a `.md` extension.
 
 Markdown is kind of like a simplified version of HTML. It allows you to format text using special characters, such as `#` for headings, `-` for bullet points, and `**` for bold text. Markdown is easy to read and write, and it can be converted to HTML or other formats.
+
+This video will explain how to use Markdown:
+
+<details open>
+    <summary class="video">Show/Hide Video</summary>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+            allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+        </iframe>
+    </div>
+</details>
+
+You can also find a lot of resources online for learning Markdown, such as the [Markdown Guide](https://www.markdownguide.org/).
 
 ## Creating a README.md File
 
@@ -54,8 +82,6 @@ This video will show you how to create a `README.md` file:
         </iframe>
     </div>
 </details>
-
-The repository that I showed in the video is [fvtc/choose-your-adventure](https://github.com/fvtc/choose-your-adventure).
 
 > [!NOTE] For Assignment 2, you created a fork of tchapi's [Markdown Cheatsheet](https://github.com/tchapi/markdown-cheatsheet). You can refer to that repository for a quick reference on how to do common formatting tasks in Markdown.
 
