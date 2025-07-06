@@ -71,7 +71,7 @@ Using a `.gitignore` file is important because it helps keep your repository cle
 
 To create a `.gitignore` file, you can use any text editor or IDE. Here is an example of a simple `.gitignore` file:
 
-```
+```plaintext
 # Ignore these folders (and their contents)
 build/
 dist/
@@ -120,7 +120,7 @@ Once you have created the files, commit them to your repository and push the cha
 
 To create a `README.md` file, you can use any text editor or IDE. Here is an example of a simple `README.md` file:
 
-```
+```markdown
 # Project Title
 
 A brief description of your project.
@@ -141,7 +141,7 @@ Instructions for contributing to the project.
 
 To create a `.gitignore` file, you can use any text editor or IDE. Here is an example of a simple `.gitignore` file:
 
-```
+```plaintext
 # Ignore these folders (and their contents)
 build/
 dist/
