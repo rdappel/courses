@@ -52,29 +52,6 @@ Some tips for writing good pull request descriptions include:
 
 - **Related Issues**: Reference any issues that the PR addresses
 
-## Reviewing Pull Requests
-
-<details open>
-    <summary class="video">Show/Hide Video</summary>
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
-            allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-        </iframe>
-    </div>
-</details>
-
-When reviewing pull requests, consider:
-
-- **Code Quality**: Is the code well-written and maintainable?
-
-- **Functionality**: Do the changes work as expected?
-
-- **Testing**: Are there adequate tests for the changes?
-
-- **Documentation**: Is documentation updated if needed?
-
-- **Style**: Does the code follow the project's style guidelines?
-
 ## Merging Pull Requests
 
 <details open>
