@@ -114,11 +114,11 @@ For this exercise, you will practice resolving merge conflicts using Visual Stud
 
 Once you have completed the exercise, you will need to submit your commit history to show that you have resolved the merge conflict.
 
-If you are using GitHub, navigate to your repository, click on the "Commits" link, shown below.
+**If you are using GitHub**, navigate to your repository, click on the "Commits" link, shown below.
 
 ![Commit History Link - GitHub](https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/commit-history-link-github.png)
 
-If you are using Azure DevOps, make sure that you have the correct repository selected, then click on the "Commits" link in the left-hand menu, as shown below.
+**If you are using Azure DevOps**, make sure that you have the correct repository selected, then click on the "Commits" link in the left-hand menu, as shown below.
 
 ![Commit History Link - DevOps](https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/commit-history-link-devops.png)
 
@@ -134,7 +134,7 @@ Once you have the commit history open, copy the URL from your browser's address 
 <details>
     <summary>Walkthrough Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/3YSREV4RrN4" width="100%" height="100%" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
             allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
         </iframe>
     </div>
