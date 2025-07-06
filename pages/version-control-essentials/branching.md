@@ -89,29 +89,73 @@ When you're ready to incorporate changes from one branch into another, you use t
     </div>
 </details>
 
-## Cautious Merge Approach
+## Development Branch Workflow
 
-When merging branches, especially if you're working on a team or have multiple branches, it's a good idea to follow a cautious approach to avoid conflicts and ensure stability.
+In professional development, it's common to avoid working directly with the master branch. Instead, you typically work with a `dev` (development) branch and create feature branches from there.
 
-1. **First, merge master into dev**: This way, if there are any merge conflicts, you deal with them in the dev branch (not master).
+Here's the recommended workflow:
+
+### Initial Setup
+
+1. **Create a dev branch** from master:
+
+```bash
+git checkout -b dev
+```
+
+2. **Push the dev branch** to your remote repository:
+
+```bash
+git push -u origin dev
+```
+
+### Feature Development
+
+1. **Create feature branches from dev** (not master):
 
 ```bash
 git checkout dev
-git merge master
+git checkout -b feature/new-feature
 ```
 
-2. **Resolve any conflicts** that arise during this merge in the dev branch.
+2. **Work on your feature** and commit changes to the feature branch.
 
-3. **Test thoroughly** to make sure everything works correctly in the dev branch.
+3. **When ready to merge**, use the cautious approach:
 
-4. **Then merge dev into master**: Since you've already resolved conflicts, this should be a clean merge.
+   - First, merge dev into your feature branch:
+   ```bash
+   git checkout feature/new-feature
+   git merge dev
+   ```
+
+   - Resolve any conflicts in the feature branch, not in dev.
+
+   - Test thoroughly to ensure everything works.
+
+   - Then merge the feature branch into dev:
+   ```bash
+   git checkout dev
+   git merge feature/new-feature
+   ```
+
+### Releasing to Master
+
+When dev is stable and ready for release:
+
+1. **Merge dev into master**:
 
 ```bash
 git checkout master
 git merge dev
 ```
 
-This approach keeps your main branch (master) stable and clean, while handling any messy conflict resolution in the development branch.
+2. **Tag the release** (optional but recommended):
+
+```bash
+git tag -a v1.0.0 -m "Release version 1.0.0"
+```
+
+This approach keeps master as a stable release branch, dev as your main development branch, and feature branches for individual features.
 
 
 # Common Branching Strategies
@@ -150,7 +194,9 @@ git checkout -b release/v1.2.0
 
 - **Test before merging**: Always test your changes before merging into main branches
 
-- **Use the cautious merge approach**: Merge main into feature first, then feature into main
+- **Use the development branch workflow**: Create feature branches from dev, not master
+
+- **Keep master stable**: Only merge into master when ready for release
 
 # Exercise 1
 
@@ -184,15 +230,21 @@ For this exercise, you will practice creating branches, making changes, and merg
 </html>
 ```
 
-3. **Commit your initial file**
+3. **Commit your initial file** to master
 
-4. **Create a new branch** for adding a navigation menu:
+4. **Create a dev branch** from master:
+
+```bash
+git checkout -b dev
+```
+
+5. **Create a feature branch** for adding a navigation menu (from dev):
 
 ```bash
 git checkout -b feature/navigation
 ```
 
-5. **Add a navigation menu** to your HTML file (inside the `<body>` tag, before the `<h1>`):
+6. **Add a navigation menu** to your HTML file (inside the `<body>` tag, before the `<h1>`):
 
 ```html
 <nav>
@@ -204,17 +256,18 @@ git checkout -b feature/navigation
 </nav>
 ```
 
-6. **Commit your navigation changes** to the feature branch
+7. **Commit your navigation changes** to the feature branch
 
-7. **Merge your changes back to master** using the cautious approach (merge master into feature first)
+8. **Merge your changes back to dev** using the cautious approach (merge dev into feature first, then feature into dev)
 
-8. **Create another branch** for adding a footer:
+9. **Create another feature branch** for adding a footer (from dev):
 
 ```bash
+git checkout dev
 git checkout -b feature/footer
 ```
 
-9. **Add a footer** to your HTML file (before the closing `</body>` tag):
+10. **Add a footer** to your HTML file (before the closing `</body>` tag):
 
 ```html
 <footer>
@@ -222,11 +275,62 @@ git checkout -b feature/footer
 </footer>
 ```
 
-10. **Commit your changes**
+11. **Commit your changes**
 
-11. **Merge the footer changes back to master** using the cautious approach (merge master into feature first)
+12. **Merge the footer changes back to dev** using the cautious approach
+
+13. **Finally, merge dev into master** when everything is stable:
+
+```bash
+git checkout master
+git merge dev
+```
 
 ## Hints {#exercise-1-hints}
+
+<details>
+    <summary>How do I check which branch I'm on?</summary>
+
+You can check your current branch with:
+
+```bash
+git branch
+```
+
+The current branch will have an asterisk (*) next to it.
+
+</details>
+
+<details>
+    <summary>How do I create a feature branch from dev?</summary>
+
+First make sure you're on the dev branch, then create the feature branch:
+
+```bash
+git checkout dev
+git checkout -b feature/branch-name
+```
+
+</details>
+
+<details>
+    <summary>How do I do the cautious merge approach?</summary>
+
+To merge a feature branch into dev:
+
+1. First merge dev into your feature branch:
+```bash
+git checkout feature/branch-name
+git merge dev
+```
+
+2. Resolve any conflicts, then merge feature into dev:
+```bash
+git checkout dev
+git merge feature/branch-name
+```
+
+</details>
 
 ## Submission {#exercise-1-submission}
 
@@ -240,17 +344,20 @@ Once you have completed the exercise, run `git log --oneline` to see your commit
 ## Solution {#exercise-1-solution}
 
 <details>
-    <summary>Show the Answer</summary>
-
-Your git log output should look something like this:
+    <summary>Show the Answer</summary>    Your git log output should look something like this:
 
 ```
-a1b2c3d Add footer
-e4f5g6h Add navigation menu
-i7j8k9l Initial commit with basic HTML
+a1b2c3d Merge branch 'dev' (final merge to master)
+e4f5g6h Add footer
+i7j8k9l Add navigation menu
+m1n2o3p Create dev branch
+p4q5r6s Initial commit with basic HTML
 ```
 
-The exact commit hashes will be different, but you should see three commits showing the progression of your work.
+The exact commit hashes will be different, but you should see the progression showing:
+- Initial commit on master
+- Development work on dev and feature branches
+- Final merge from dev to master
 
 Your final HTML file should look like this:
 
