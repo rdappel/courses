@@ -158,17 +158,19 @@ For this exercise, you will create a `README.md` file and a `.gitignore` file fo
 To create a `README.md` file, you can use any text editor or IDE. Here is an example of a simple `README.md` file:
 
 ```markdown
-# Project Title
+# Bookmarklet Creator
 
-A brief description of your project.
+A simple tool to create bookmarklets from JavaScript code.
 
 ## Usage
 
-Instructions for using the project.
+1. Create a folder in the `scripts` directory with the name of your bookmarklet.
 
-## Contributing
+2. Run the app.
 
-Instructions for contributing to the project.
+3. Open your browser to `http://localhost:3000`.
+
+4. Drag your bookmarklet to your bookmarks bar.
 ```
 
 </details>
@@ -179,8 +181,8 @@ Instructions for contributing to the project.
 To create a `.gitignore` file, you can use any text editor or IDE. Here is an example of a simple `.gitignore` file:
 
 ```plaintext
-# Ignore this folder and anything in it
 secrets/
+node_modules/
 ```
 
 </details>
@@ -199,27 +201,27 @@ Please submit your `README.md` and `.gitignore` files by pasting them into the t
 <details>
     <summary>Show the Answer</summary>
 
-Here is the README file that I created for this exercise:
+Here are the files that I created for this exercise, your files will be different:
 
 ```markdown
-# Demo1 Repository
+# Bookmarklet Creator
 
-This is a demo repository for the **Version Control Essentials** course.
+A simple tool to create bookmarklets from JavaScript code.
 
 ## Usage
 
-As this is a demo repository, there is no specific usage for it. However, you can use it to practice using Git and GitHub.
+1. Create a folder in the `scripts` directory with the name of your bookmarklet.
 
-## Contributing
+2. Run the app.
 
-I don't actually expect anyone to contribute to this repository...
-```
+3. Open your browser to `http://localhost:3000`.
 
-Here is the `.gitignore` file that I created for this exercise:
+4. Drag your bookmarklet to your bookmarks bar.
 
-```plaintext
-# Ignore anything in the secrets folder
+
+
 secrets/
+node_modules/
 ```
 
 </details>
