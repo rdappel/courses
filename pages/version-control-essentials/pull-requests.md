@@ -98,7 +98,7 @@ When you're creating pull requests, it's important to follow best practices to e
     </div>
 </details>
 
-For this exercise, you will create a pull request for a project:
+For this exercise, you will create a pull request for the following project:
 
 1. Visit the [VCE Contribute](https://github.com/fvtc/vce-contribute) repository.
 
