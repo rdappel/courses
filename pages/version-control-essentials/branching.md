@@ -12,6 +12,8 @@ repo: https://github.com/rdappel/courses
 
 Branching is one of the most powerful features of Git. It allows you to create separate lines of development within a single repository. This is incredibly useful for developing new features, fixing bugs, or experimenting with code without affecting the main codebase.
 
+Think of branches like parallel universes for your code. You can work on different features or fixes in different branches without them interfering with each other. When you're satisfied with the changes in a branch, you can merge it back into the main branch.
+
 <details open>
     <summary class="video">Show/Hide Video</summary>
     <div class="video-container">
@@ -20,10 +22,6 @@ Branching is one of the most powerful features of Git. It allows you to create s
         </iframe>
     </div>
 </details>
-
-## What is a Branch?
-
-Think of branches like parallel universes for your code. You can work on different features or fixes in different branches without them interfering with each other. When you're satisfied with the changes in a branch, you can merge it back into the main branch.
 
 ## Why Use Branches?
 
@@ -35,7 +33,7 @@ Think of branches like parallel universes for your code. You can work on differe
 
 - **Organization**: Keep different types of work separate (features, bug fixes, experiments)
 
-## Creating and Switching Branches
+# Creating and Switching Branches
 
 <details open>
     <summary class="video">Show/Hide Video</summary>
@@ -49,22 +47,22 @@ Think of branches like parallel universes for your code. You can work on differe
 To create a new branch, use the `git branch` command:
 
 ```bash
-git branch feature-branch
+git branch <branch-name>
 ```
 
-This creates a new branch called `feature-branch`, but you're still on your current branch. To switch to the new branch, use:
+This creates a new branch called `<branch-name>`, but you're still on your current branch. To switch to the new branch, use:
 
 ```bash
-git checkout feature-branch
+git checkout <branch-name>
 ```
 
 You can also create and switch to a new branch in one command:
 
 ```bash
-git checkout -b feature-branch
+git checkout -b <branch-name>
 ```
 
-## Viewing Branches
+# Viewing Branches
 
 To see all the branches in your repository, use:
 
@@ -78,19 +76,9 @@ This will show all local branches, with an asterisk (*) next to the current bran
 git branch -a
 ```
 
-## Making Changes on a Branch
+# Merging Branches
 
-Once you're on a branch, you can make changes just like you normally would:
-
-1. Edit your files
-
-2. Stage your changes: `git add .`
-
-3. Commit your changes: `git commit -m "Add new feature"`
-
-These commits will only exist on your current branch and won't affect other branches.
-
-## Merging Branches
+When you're ready to incorporate changes from one branch into another, you use the `git merge` command. However, it's important to be cautious when merging, especially when merging into your main branch.
 
 <details open>
     <summary class="video">Show/Hide Video</summary>
@@ -101,11 +89,9 @@ These commits will only exist on your current branch and won't affect other bran
     </div>
 </details>
 
-When you're ready to incorporate changes from one branch into another, you use the `git merge` command. However, it's important to be cautious when merging, especially when merging into your main branch.
+## Cautious Merge Approach
 
-### The Cautious Approach to Merging
-
-Here's a safer approach to merging branches. Let's say you have a `dev` branch that you want to merge into `master`:
+When merging branches, especially if you're working on a team or have multiple branches, it's a good idea to follow a cautious approach to avoid conflicts and ensure stability.
 
 1. **First, merge master into dev**: This way, if there are any merge conflicts, you deal with them in the dev branch (not master).
 
@@ -127,53 +113,10 @@ git merge dev
 
 This approach keeps your main branch (master) stable and clean, while handling any messy conflict resolution in the development branch.
 
-## Merge Conflicts
 
-Sometimes Git can't automatically merge branches because the same lines of code have been changed in both branches. This creates a merge conflict.
+# Common Branching Strategies
 
-<details open>
-    <summary class="video">Show/Hide Video</summary>
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
-            allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-        </iframe>
-    </div>
-</details>
-
-When a merge conflict occurs, Git will mark the conflicting sections in your files:
-
-```plaintext
-<<<<<<< HEAD
-Your current branch's changes
-=======
-The other branch's changes
->>>>>>> branch-name
-```
-
-To resolve the conflict:
-
-1. **Edit the file** to keep the changes you want
-2. **Remove the conflict markers** (`<<<<<<<`, `=======`, `>>>>>>>`)
-3. **Stage the resolved file**: `git add filename`
-4. **Commit the merge**: `git commit -m "Resolve merge conflict"`
-
-## Deleting Branches
-
-Once you've merged a branch and no longer need it, you can delete it:
-
-```bash
-git branch -d branch-name
-```
-
-If the branch hasn't been merged and you want to force delete it:
-
-```bash
-git branch -D branch-name
-```
-
-## Common Branching Strategies
-
-### Feature Branches
+## Feature Branches
 
 Create a new branch for each feature you're working on:
 
@@ -181,7 +124,7 @@ Create a new branch for each feature you're working on:
 git checkout -b feature/user-authentication
 ```
 
-### Bug Fix Branches
+## Bug Fix Branches
 
 Create branches for bug fixes:
 
@@ -189,7 +132,7 @@ Create branches for bug fixes:
 git checkout -b bugfix/fix-login-issue
 ```
 
-### Release Branches
+## Release Branches
 
 Some teams use release branches for preparing releases:
 
@@ -197,7 +140,7 @@ Some teams use release branches for preparing releases:
 git checkout -b release/v1.2.0
 ```
 
-## Best Practices
+# Best Practices
 
 - **Use descriptive branch names**: `feature/user-login` is better than `new-stuff`
 
@@ -209,7 +152,7 @@ git checkout -b release/v1.2.0
 
 - **Use the cautious merge approach**: Merge main into feature first, then feature into main
 
-## Working with Remote Branches
+# Working with Remote Branches
 
 <details open>
     <summary class="video">Show/Hide Video</summary>
@@ -237,16 +180,6 @@ To pull changes from a remote branch:
 ```bash
 git pull origin branch-name
 ```
-
-## Viewing Branch History
-
-To see the commit history of branches in a visual format:
-
-```bash
-git log --oneline --graph --all
-```
-
-This shows a nice graph of your branch history and merges.
 
 # Exercise 1
 
