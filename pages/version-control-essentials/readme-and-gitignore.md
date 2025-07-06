@@ -183,6 +183,15 @@ config.json
 
 </details>
 
+## Submission {#exercise-1-submission} 
+
+Please submit your `README.md` and `.gitignore` files by pasting them into the text area below. Make sure to include both files in your submission.
+
+<div data-language="bash" class="exercise-submission">
+    <textarea placeholder="Paste your code here..."></textarea>
+    <button type="button" class="submit-button">Submit Exercise</button>
+</div>
+
 ## Solution {#exercise-1-solution}
 
 <details>
