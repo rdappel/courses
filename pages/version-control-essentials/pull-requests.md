@@ -40,11 +40,7 @@ This video will walk you through the process of creating a pull request on GitHu
     </div>
 </details>
 
-When creating a pull request, you typically follow these steps:
-
-## Writing Good Pull Request Descriptions
-
-A good pull request description should include:
+Some tips for writing good pull request descriptions include:
 
 - **Title**: A clear, concise title that summarizes the changes
 
