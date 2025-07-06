@@ -100,19 +100,17 @@ When you're creating pull requests, it's important to follow best practices to e
 
 For this exercise, you will create a pull request for a project:
 
-1. Visit [VCE Contribute](https://github.com/fvtc/vce-contribute).
+1. Visit the [VCE Contribute](https://github.com/fvtc/vce-contribute) repository.
 
-2. Fork the repository to your GitHub account.
+2. Fork the repository to your GitHub account and clone it to your computer.
 
-3. Clone your forked repository to your local machine.
+3. Find the markdown file that corresponds with your class. (E.g., `fall25.md` for Fall 2025).
 
-4. Find the markdown file that corresponds with your class. (E.g., `fall25.md` for Fall 2025).
+4. Add your name (linked to your GitHub profile), along with a brief description of yourself or your interests.
 
-5. Add your name (linked to your GitHub profile), along with a brief description of yourself or your interests.
+5. Commit your changes, and push them to your forked repository.
 
-6. Commit your changes, and push them to your forked repository.
-
-7. Create a pull request from your forked repository to the original `fvtc/vce-contribute` repository.
+6. Create a pull request from your forked repository to the original `fvtc/vce-contribute` repository.
 
 ## Hints {#exercise-2-hints}
 
