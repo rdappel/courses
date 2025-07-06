@@ -48,7 +48,7 @@ git commit -m "Merged keeping both changes"
 git push # this code will succeed!
 ```
 
-## Example with VS Code Panel
+# Git with VS Code
 
 If you are using Visual Studio Code, you can also resolve merge conflicts using the Source Control panel. This video will show you how to do that:
 
@@ -61,33 +61,83 @@ If you are using Visual Studio Code, you can also resolve merge conflicts using 
     </div>
 </details>
 
-# Exercise 2
+# Git with Visual Studio
+
+Visual Studio also has built-in support for Git, meaning that you can do all of the same things that you can do in Visual Studio Code.
+
+This video will show you how to clone a repository directly in Visual Studio:
 
 <details open>
     <summary class="video">Show/Hide Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/dLIbcLFTlcM" width="100%" height="100%" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
             allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
         </iframe>
     </div>
 </details>
 
-For this exercise, you will simply submit your commit history to demonstrate that you have successfully resolved a merge conflict.
+As you can see, cloning a repository in Visual Studio is pretty straightforward. You can also use Visual Studio to commit, push and pull changes, and resolve merge conflicts, as shown in this video:
 
-1. **Navigate to your repository**: Open your browser and navigate to the remote repository you created for demo1.
+<details open>
+    <summary class="video">Show/Hide Video</summary>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+            allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+        </iframe>
+    </div>
+</details>
 
-2. **Locate the commit history**: Click on the "Commits" tab to view the commit history of your repository. It's located on the right side of the repository page, just above the file list.
+As mentioned in the video, the merge tool in Visual Studio is really powerful. It allows you to see the changes made by both parties side-by-side, and quickly choose which to keep.
 
-![Commit History](https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/commit-history-link.png)
+# Exercise 2
 
+<details open>
+    <summary class="video">Show/Hide Video</summary>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+            allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+        </iframe>
+    </div>
+</details>
 
-3. **Copy the URL**: Copy the URL of the commit history page from your browser's address bar. It should look something like this: `https://github.com/your-username/your-repo/commits/main`.
+For this exercise, you will practice resolving merge conflicts using Visual Studio Code. You will need to create a merge conflict in your own repository, and then resolve it using the steps outlined in this section.
 
-## Submission {#exercise-2-submission}
+## Instructions
 
-Once you have found the commit history, you will submit the URL as your solution for this exercise.
+1. **Create a merge conflict**: Choose a file in one of your repositories and make a change to it in your browser. Then, open the same file in Visual Studio Code (or Visual Studio) and make a different change to the same line of code.
+
+2. **Pull the changes**: In Visual Studio Code (or Visual Studio), pull the changes from the remote repository. This will create a merge conflict.
+
+3. **Resolve the merge conflict**: Use the steps outlined in this section to resolve the merge conflict. Make sure to keep both changes, and commit the changes to your repository.
+
+4. **Push the changes**: After resolving the merge conflict, push the changes to your remote repository.
+
+## Submission {#exercise-2-submission} 
+
+Once you have completed the exercise, you will need to submit your commit history to show that you have resolved the merge conflict.
+
+If you are using GitHub, navigate to your repository, click on the "Commits" link, shown below.
+
+![Commit History Link - GitHub](https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/commit-history-link-github.png)
+
+If you are using Azure DevOps, make sure that you have the correct repository selected, then click on the "Commits" link in the left-hand menu, as shown below.
+
+![Commit History Link - DevOps](https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/commit-history-link-devops.png)
+
+Once you have the commit history open, copy the URL from your browser's address bar and paste it into the submission box below.
 
 <div data-language="bash" class="exercise-submission">
     <textarea placeholder="Paste your code here..."></textarea>
     <button type="button" class="submit-button">Submit Exercise</button>
 </div>
+
+## Solution {#exercise-1-solution}
+
+<details>
+    <summary>Walkthrough Video</summary>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/3YSREV4RrN4" width="100%" height="100%" frameborder="0"
+            allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+        </iframe>
+    </div>
+</details>

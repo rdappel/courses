@@ -48,6 +48,12 @@ Summary: You will begin to learn how collaboration works in Git.
 
 Summary: You'll learn how to contribute to open-source projects.
 
+[Readme Files and .gitignore](/appel/version-control-essentials/readme-and-gitignore)
+
+[Pull Requests](/appel/version-control-essentials/pull-requests)
+
+
+
 # Week 5 - Branching and Feature Development Workflow
 
 Summary: You will be creating branches to help keep features separate from working code.
