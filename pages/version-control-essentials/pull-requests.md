@@ -79,14 +79,6 @@ When reviewing pull requests, consider:
 
 - **Style**: Does the code follow the project's style guidelines?
 
-### Types of Review Comments
-
-- **Approval**: The changes look good and can be merged
-
-- **Request Changes**: Issues that must be addressed before merging
-
-- **Comment**: General feedback or suggestions
-
 ## Merging Pull Requests
 
 <details open>
