@@ -100,31 +100,31 @@ This video explains the cautious merging approach:
 
 As shown in the video, the cautious merge approach involves:
 
-1. **Switch to your feature branch**:
+1. **Switch to your feature branch** (chances are you're already on it):
 
-   ```bash
-   git checkout feature/branch-name
-   ```
+```bash
+git checkout feature/test
+```
 
-2. **Merge the target branch (e.g., `dev`) into your feature branch**:
+2. **Merge the dev into your feature branch**:
 
-   ```bash
-    git merge dev
-    ```
+```bash
+git merge dev
+```
 
 3. **Resolve any conflicts** that arise during the merge.
 
-4. **Switch back to the target branch** (e.g., `dev`):
+4. **Switch to the dev branch**:
 
-   ```bash
-   git checkout dev
-   ```
+```bash
+git checkout dev
+```
 
-5. **Merge your feature branch into the target branch**:
+5. **Merge your feature branch into dev**:
 
-   ```bash
-   git merge feature/branch-name
-   ```
+```bash
+git merge feature/test
+```
 
 Using this cautious approach helps ensure that your feature branch is up-to-date with the latest changes in the target branch before merging, reducing the risk of conflicts and ensuring a smoother integration.
 
