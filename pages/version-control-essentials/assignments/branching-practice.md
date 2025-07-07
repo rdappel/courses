@@ -29,7 +29,7 @@ For this assignment, you will practice Git branching, cautious merging, and maki
 git clone https://github.com/fvtc/vce-branching-practice.git
 ```
 
-> You can fork this repository if you want, but it's not necessary for this assignment.
+> [!NOTE] You can fork this repository if you want, but it's not necessary for this assignment.
 
 2. **Create a `dev` branch**
 
@@ -41,11 +41,11 @@ git clone https://github.com/fvtc/vce-branching-practice.git
 
 - `feature/new-section`
 
-> The instructions for each feature branch can be found below.
+The instructions for each feature branch can be found below.
 
 4. **Merge all of your branches into `dev` and then into `main`**
 
-> Remember to use the Cautious Merge strategy when merging your branches.
+> [!IMPORTANT] Remember to use the Cautious Merge strategy when merging your branches.
 
 ## Feature Branches
 
