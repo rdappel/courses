@@ -75,74 +75,58 @@ When you're ready to incorporate changes from one branch into another, you use t
     </div>
 </details>
 
-## Development Branch Workflow
-
-In professional development, it's common to avoid working directly with the master branch. Instead, you typically work with a `dev` (development) branch and create feature branches from there.
-
-Here's the recommended workflow:
-
-### Initial Setup
-
-1. **Create a dev branch** from master:
+The command to merge a branch into your current branch is:
 
 ```bash
-git checkout -b dev
+git merge <branch-name>
 ```
 
-2. **Push the dev branch** to your remote repository:
+> [!IMPORTANT] Make sure that you're on the branch you want to merge into before running this command. For example, if you want to merge a feature branch into `dev`, first switch to `dev`.
 
-```bash
-git push -u origin dev
-```
+# Cautious Merging
 
-### Feature Development
+When merging branches, especially into your main branch, it's a good practice to first merge the target branch into your feature branch. This helps resolve any conflicts before merging into the main branch.
 
-1. **Create feature branches from dev** (not master):
+This video explains the cautious merging approach:
 
-```bash
-git checkout dev
-git checkout -b feature/new-feature
-```
+<details open>
+    <summary class="video">Show/Hide Video</summary>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+            allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+        </iframe>
+    </div>
+</details>
 
-2. **Work on your feature** and commit changes to the feature branch.
+As shown in the video, the cautious merge approach involves:
 
-3. **When ready to merge**, use the cautious approach:
+1. **Switch to your feature branch**:
 
-   - First, merge dev into your feature branch:
    ```bash
-   git checkout feature/new-feature
-   git merge dev
+   git checkout feature/branch-name
    ```
 
-   - Resolve any conflicts in the feature branch, not in dev.
+2. **Merge the target branch (e.g., `dev`) into your feature branch**:
 
-   - Test thoroughly to ensure everything works.
+   ```bash
+    git merge dev
+    ```
 
-   - Then merge the feature branch into dev:
+3. **Resolve any conflicts** that arise during the merge.
+
+4. **Switch back to the target branch** (e.g., `dev`):
+
    ```bash
    git checkout dev
-   git merge feature/new-feature
    ```
 
-### Releasing to Master
+5. **Merge your feature branch into the target branch**:
 
-When dev is stable and ready for release:
+   ```bash
+   git merge feature/branch-name
+   ```
 
-1. **Merge dev into master**:
-
-```bash
-git checkout master
-git merge dev
-```
-
-2. **Tag the release** (optional but recommended):
-
-```bash
-git tag -a v1.0.0 -m "Release version 1.0.0"
-```
-
-This approach keeps master as a stable release branch, dev as your main development branch, and feature branches for individual features.
-
+Using this cautious approach helps ensure that your feature branch is up-to-date with the latest changes in the target branch before merging, reducing the risk of conflicts and ensuring a smoother integration.
 
 # Common Branching Strategies
 
