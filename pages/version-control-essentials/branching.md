@@ -17,7 +17,7 @@ Think of branches like parallel universes for your code. You can work on differe
 <details open>
     <summary class="video">Show/Hide Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/nDZUJHo1nSM" width="100%" height="100%" frameborder="0"
             allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
         </iframe>
     </div>
@@ -38,7 +38,7 @@ Think of branches like parallel universes for your code. You can work on differe
 <details open>
     <summary class="video">Show/Hide Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/TBgsXTrLRV0" width="100%" height="100%" frameborder="0"
             allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
         </iframe>
     </div>
@@ -69,7 +69,7 @@ When you're ready to incorporate changes from one branch into another, you use t
 <details open>
     <summary class="video">Show/Hide Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/_b_gIUtabTc" width="100%" height="100%" frameborder="0"
             allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
         </iframe>
     </div>
@@ -92,7 +92,7 @@ This video explains the cautious merging approach:
 <details open>
     <summary class="video">Show/Hide Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/vgdHq31PyZM" width="100%" height="100%" frameborder="0"
             allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
         </iframe>
     </div>
@@ -173,7 +173,7 @@ git checkout -b release/v1.2.0
 <details open>
     <summary class="video">Show/Hide Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/RxGOqsodMWs" width="100%" height="100%" frameborder="0"
             allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
         </iframe>
     </div>
@@ -350,7 +350,7 @@ Your final HTML file should look like this:
 <details>
     <summary>Walkthrough Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/FmZRB8ylLKs" width="100%" height="100%" frameborder="0"
             allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
         </iframe>
     </div>
