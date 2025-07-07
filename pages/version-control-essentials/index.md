@@ -60,6 +60,8 @@ Summary: You will be creating branches to help keep features separate from worki
 
 [Branching and Feature Development Workflow](/appel/version-control-essentials/branching)
 
+[Assignment 6 - Branching Practice](/appel/version-control-essentials/assignments/branching-practice)
+
 # Week 6 - Workflow Interruptions & Stashing
 
 Summary: You'll learn how to handle situations where we need to pause work on a feature.
