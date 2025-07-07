@@ -12,12 +12,12 @@ repo: https://github.com/rdappel/courses
 
 Pull requests are a fundamental feature of Git hosting platforms like GitHub, GitLab, and Bitbucket. They provide a way to propose changes to a repository and facilitate code review and collaboration. In this section, we'll learn how to create, review, and merge pull requests.
 
-In this video, we'll introduce the concept of pull requests and how they work:
+In this video, we'll introduce the concept of contributing to open-source projects:
 
 <details open>
     <summary class="video">Show/Hide Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/LVKjUvHAOBg" width="100%" height="100%" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/oqDCqcPfS9I" width="100%" height="100%" frameborder="0"
             allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
         </iframe>
     </div>
@@ -34,7 +34,7 @@ This video will walk you through the process of creating a pull request on GitHu
 <details open>
     <summary class="video">Show/Hide Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/D-ltHjYpQYY" width="100%" height="100%" frameborder="0"
             allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
         </iframe>
     </div>
@@ -61,7 +61,7 @@ Additionally, you should always be cautious when merging pull requests, especial
 <details open>
     <summary class="video">Show/Hide Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/9Y9_yJAAofc" width="100%" height="100%" frameborder="0"
             allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
         </iframe>
     </div>
@@ -92,7 +92,7 @@ When you're creating pull requests, it's important to follow best practices to e
 <details open>
     <summary class="video">Show/Hide Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/WJAe30Z8qEk" width="100%" height="100%" frameborder="0"
             allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
         </iframe>
     </div>
@@ -135,7 +135,7 @@ Submit the link to your pull request in the text area below. The url should look
 <details>
     <summary>Walkthrough Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/gLL_YvN5huw" width="100%" height="100%" frameborder="0"
             allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
         </iframe>
     </div>
