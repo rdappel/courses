@@ -106,7 +106,7 @@ Open the `css/styles.css` file and add the following CSS to style the new sectio
 }
 ```
 
-## Submitting Your Assignment
+# Submission
 
 Once you have completed all the tasks, run the following command:
 
@@ -122,5 +122,5 @@ git log --oneline
 
 - What does merging dev into a feature branch help prevent?
 
-- Did you encounter any conflicts? How did you resolve them?
+- Did you encounter any merge conflicts? How did you resolve them?
 
