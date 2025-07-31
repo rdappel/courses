@@ -106,17 +106,7 @@ This puts your changes back but keeps a copy in the stash (like copying the top 
 
 Here are some common situations where stashing is helpful:
 
-## Scenario 1: Need to Pull Updates
-
-You're working on your project, but your teammate pushed some changes. You need to pull their changes, but you're not ready to commit yours yet.
-
-```bash
-git stash push -m "Half-finished feature"
-git pull
-git stash pop
-```
-
-## Scenario 2: Quick Bug Fix
+## Scenario 1: Quick Bug Fix
 
 You're working on a new feature, but you notice a typo that needs fixing right away.
 
@@ -125,6 +115,16 @@ git stash push -m "New feature work"
 # Fix the typo, commit it
 git stash pop
 # Continue with your feature
+```
+
+## Scenario 2: Need to Pull Updates
+
+You're working on your project, but your teammate pushed some changes. You need to pull their changes, but you're not ready to commit yours yet.
+
+```bash
+git stash push -m "Half-finished feature"
+git pull
+git stash pop
 ```
 
 ## Scenario 3: Wrong Branch
