@@ -8,7 +8,7 @@ dev: http://localhost:3006/appel/version-control-essentials/assignments/choose-y
 repo: https://github.com/rdappel/courses
 ---
 
-# Assignment 8 - Final Project: Choose Your Own Adventure
+# Final Project: Choose Your Own Adventure
 
 For your final project, you will work with a partner to create an interactive "Choose Your Own Adventure" story using Markdown and demonstrate all the Git skills you've learned throughout this course.
 
