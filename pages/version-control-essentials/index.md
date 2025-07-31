@@ -66,13 +66,15 @@ Summary: You will be creating branches to help keep features separate from worki
 
 Summary: You'll learn how to handle situations where we need to pause work on a feature.
 
-# Week 7 - Review and Final Project Planning
+[Workflow Interruptions & Stashing](/appel/version-control-essentials/workflow-stashing)
 
-Summary: This week we will review content from previous weeks, and look ahead to the final project.
+[Assignment 7 - Stashing Practice](/appel/version-control-essentials/assignments/stashing-practice)
 
-# Week 8 - Project Work
+# Weeks 7 & 8 - Exam Review and Final Project Work
 
-Summary: This week will be used to complete your final projects and study for next week's Exam.
+Summary: You will review the course material and work on your final project.
+
+[Assignment 8 - Final Project](/appel/version-control-essentials/assignments/choose-your-adventure)
 
 # Week 9 - Final Project Submission & Exam
 
