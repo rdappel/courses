@@ -185,27 +185,6 @@ To delete all stashes:
 git stash clear
 ```
 
-# Simple Workflow Example
-
-<details open>
-    <summary class="video">Show/Hide Video</summary>
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
-            allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-        </iframe>
-    </div>
-</details>
-
-Here's a typical workflow:
-
-1. **You're coding away on your project**
-2. **Something interrupts you**: `git stash push -m "Feature in progress"`
-3. **Handle the interruption** (fix bug, pull changes, etc.)
-4. **Get back to your work**: `git stash pop`
-5. **Continue coding**
-
-It's that simple!
-
 # Exercise 1
 
 <details open>
