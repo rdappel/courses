@@ -289,19 +289,6 @@ If you forget the `-m` flag, Git will create a generic message. It's not the end
 
 </details>
 
-<details>
-    <summary>What if something goes wrong?</summary>
-
-If you apply a stash and don't like the result:
-
-```bash
-git reset --hard HEAD
-```
-
-This will undo the stash application and go back to your last commit.
-
-</details>
-
 ## Submission {#exercise-1-submission}
 
 Once you've completed the exercise, run these commands and copy the output:
