@@ -33,15 +33,6 @@ You will create an interactive story where readers make choices that lead to dif
 
 ## Part 1: Find a Partner and Set Up
 
-<details open>
-    <summary class="video">Show/Hide Video</summary>
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
-            allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-        </iframe>
-    </div>
-</details>
-
 1. **Find a partner**: Use the [Teams channel](https://teams.microsoft.com/l/channel/19%3Aaa6ad81494264deba8b288e24f4091de%40thread.tacv2/Find%20a%20Partner?groupId=db69ef1e-3c6a-4ac8-8636-f800a33a72ab&tenantId=ae888c53-4d60-47da-a75a-c8a10f1d47b0) for this course to find a partner. Make sure to specify that you are looking for a partner for the Final Project.
 
 2. **Decide who will create the fork**: One partner should fork the [choose-your-adventure repository](https://github.com/fvtc/choose-your-adventure) to their GitHub account.
