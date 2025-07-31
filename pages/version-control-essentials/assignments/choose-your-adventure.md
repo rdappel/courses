@@ -25,7 +25,7 @@ For your final project, you will work with a partner to create an interactive "C
 
 You will create an interactive story where readers make choices that lead to different outcomes. The story will be built using Markdown files that link to each other, creating a branching narrative experience.
 
-**Example Story:** [https://github.com/FVTC/choose-your-adventure/blob/master/space-battles/_start-here.md](Space Battles - Episode IV: A New Spark)
+**Example Story**: [https://github.com/FVTC/choose-your-adventure/blob/master/space-battles/_start-here.md](Space Battles - Episode IV: A New Spark)
 
 **Project Repository**: [https://github.com/fvtc/choose-your-adventure](https://github.com/fvtc/choose-your-adventure)
 
