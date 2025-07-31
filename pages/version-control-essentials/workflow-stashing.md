@@ -185,21 +185,6 @@ To delete all stashes:
 git stash clear
 ```
 
-# Best Practices for New Developers
-
-- **Always add a message** to your stash so you remember what you were working on:
-  ```bash
-  git stash push -m "Adding CSS styles to header"
-  ```
-
-- **Don't let stashes pile up** - use them and clean them up regularly
-
-- **Use `git stash apply` first** if you're nervous about losing work, then use `git stash drop` to clean up
-
-- **Check `git status`** before stashing to see what will be saved
-
-- **Remember the stack concept** - you'll get back the most recent stash first
-
 # Simple Workflow Example
 
 <details open>
@@ -344,6 +329,9 @@ Once you've completed the exercise, run these commands and copy the output:
 
 ```bash
 git log --oneline
+```
+
+```bash
 git stash list
 ```
 
