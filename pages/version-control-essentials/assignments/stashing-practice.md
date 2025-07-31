@@ -298,8 +298,6 @@ git log --oneline
 
    - How many times did you use `git stash push` in this assignment?
    
-   - What is the difference between `git stash pop` and `git stash apply`?
-   
    - Describe a real-world scenario where you might need to stash your work.
    
    - Why is it helpful to add messages to your stashes (using the `-m` flag)?
