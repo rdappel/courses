@@ -62,3 +62,6 @@ Let's go over some of the terminology you will encounter when using Git:
 - **Push**: Pushing changes means sending your commits to a remote repository. This allows others to see your changes and collaborate with you.
 
 - **Others**: We will be covering more concepts in upcoming lessons, such as branches, pull requests, and merging. These are more advanced concepts that you will need to know as you become more comfortable with Git.
+
+<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/intro-concepts-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
+<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/intro-concepts-light.svg" alt="" aria-hidden="true" class="adaptive light">
