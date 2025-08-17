@@ -40,6 +40,11 @@ This video will show you an example of a `README.md` file:
 
 As you can see, a `README.md` file is a great way to provide information about your project in a clear and concise manner. It can also help people understand how to use your project and how to contribute to it.
 
+<div class="centering">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/readme-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/readme-light.svg" alt="" aria-hidden="true" class="adaptive light">
+</div>
+
 The repository that I showed in the video is [fvtc/choose-your-adventure](https://github.com/fvtc/choose-your-adventure).
 
 ## What is Markdown?
@@ -47,6 +52,11 @@ The repository that I showed in the video is [fvtc/choose-your-adventure](https:
 Markdown is a lightweight markup language that allows you to format text using simple syntax. It is widely used for writing documentation, README files, and other text-based content. Markdown files typically have a `.md` extension.
 
 Markdown is kind of like a simplified version of HTML. It allows you to format text using special characters, such as `#` for headings, `-` for bullet points, and `**` for bold text. Markdown is easy to read and write, and it can be converted to HTML or other formats.
+
+<div class="centering">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/markdown-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/markdown-light.svg" alt="" aria-hidden="true" class="adaptive light">
+</div>
 
 This video will explain how to use Markdown:
 
@@ -105,6 +115,11 @@ A `.gitignore` file is a text file that tells Git which files or directories to 
 ## Why Use a .gitignore File?
 
 Using a `.gitignore` file is important because it helps keep your repository clean and free of unnecessary files. It also helps protect sensitive information, such as API keys and passwords, from being accidentally committed to the repository.
+
+<div class="centering">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/gitignore-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/gitignore-light.svg" alt="" aria-hidden="true" class="adaptive light">
+</div>
 
 ## Creating a .gitignore File
 
