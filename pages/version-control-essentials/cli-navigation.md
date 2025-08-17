@@ -37,10 +37,10 @@ In this video we will see these commands in action:
     </div>
 </details>
 
-
-<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/cli-commands-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
-<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/cli-commands-light.svg" alt="" aria-hidden="true" class="adaptive light">
-
+<div class="centering">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/cli-commands-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/cli-commands-light.svg" alt="" aria-hidden="true" class="adaptive light">
+</div>
 
 # Exercise 1
 
