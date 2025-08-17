@@ -131,5 +131,17 @@
 			"</div>"
 		],
 		"description": "No Copy"
+	},
+
+	"Adaptive Image": {
+		"scope": "markdown",
+		"prefix": "adapt",
+		"body": [
+			"<div class=\"centering\">",
+			"\t<img src=\"https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/$0-dark.svg\" alt=\"\" aria-hidden=\"true\" class=\"adaptive dark\">",
+			"\t<img src=\"https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/$0-light.svg\" alt=\"\" aria-hidden=\"true\" class=\"adaptive light\">",
+			"</div>"
+		],
+		"description": "Create an theme aware (adaptive) image"
 	}
 }
