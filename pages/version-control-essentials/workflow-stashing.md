@@ -102,6 +102,11 @@ git stash apply
 
 This puts your changes back but keeps a copy in the stash (like copying the top plate instead of removing it).
 
+<div class="centering">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/stash-workflow-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/stash-workflow-light.svg" alt="" aria-hidden="true" class="adaptive light">
+</div>
+
 # When Would You Use Stashing?
 
 Here are some common situations where stashing is helpful:
@@ -163,6 +168,11 @@ git stash
 git checkout dev
 git stash pop
 ```
+
+<div class="centering">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/stash-scenerios-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/stash-scenerios-light.svg" alt="" aria-hidden="true" class="adaptive light">
+</div>
 
 # Managing Your Stashes
 
