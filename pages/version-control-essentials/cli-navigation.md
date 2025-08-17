@@ -26,6 +26,9 @@ Here are some basic commands you will need to know:
 
 > [!NOTE] The terms "directory" and "folder" are synonymous. I will be using them interchangeably throughout this course.
 
+<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/cli-commands-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
+<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/cli-commands-light.svg" alt="" aria-hidden="true" class="adaptive light">
+
 In this video we will see these commands in action:
 
 <details open>
