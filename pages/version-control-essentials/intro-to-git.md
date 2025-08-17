@@ -14,6 +14,9 @@ repo: https://github.com/rdappel/courses
 
 Before we start using Git, let's take a moment to understand what it is, and why it is so popular. Over 70% of developers worldwide use Git. Git is a free, open-source version control system.
 
+<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/intro-git-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
+<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/intro-git-light.svg" alt="" aria-hidden="true" class="adaptive light">
+
 Git allows you to keep track of changes to your code by creating snapshots of your project at different points in time. Then, you can compare these snapshots to see what has changed.
 
 Git also lets you upload your code to a remote repository, this allow you to access your code from anywhere, collaborate with others, and keeps your code safe in case something happens to your computer.
