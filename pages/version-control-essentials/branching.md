@@ -154,6 +154,25 @@ Some teams use release branches for preparing releases:
 git checkout -b release/v1.2.0
 ```
 
+## Experimental (or "Spike") Branches
+
+Some developers use experimental branches for trying out new ideas:
+
+```bash
+git checkout -b experimental/new-feature
+```
+
+There are other branching strategies, such as:
+
+- **Hotfix Branches**: For quickly addressing production issues.
+- **Chore Branches**: For routine tasks and maintenance.
+- **Test Branches**: For testing new features or changes.
+
+<div class="centering">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/branch-strategies-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/branch-strategies-light.svg" alt="" aria-hidden="true" class="adaptive light">
+</div>
+
 # Best Practices
 
 - **Use descriptive branch names**: `feature/user-login` is better than `new-stuff`
