@@ -49,8 +49,8 @@ git push # this code will succeed!
 ```
 
 <div class="centering">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/merge-conflict-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/merge-conflict-light.svg" alt="" aria-hidden="true" class="adaptive light">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/merge-conflicts-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/merge-conflicts-light.svg" alt="" aria-hidden="true" class="adaptive light">
 </div>
 
 # Git with VS Code
