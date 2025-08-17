@@ -10,7 +10,10 @@ repo: https://github.com/rdappel/courses
 
 # Creating Local Repositories
 
-When introducing Git lot of emphesis was placed on using Git as a colaboration tool, but Git is also a great tool for working on your own. In this section, we will cover how to create a local repository, then learn how to stage and commit changes.
+When introducing Git, a lot of emphesis was placed on using Git as a colaboration tool, but Git is also a great tool for working on your own. In this section, we will cover how to create a local repository, then learn how to stage and commit changes.
+
+<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/local-repo-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
+<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/local-repo-light.svg" alt="" aria-hidden="true" class="adaptive light">
 
 ## Initializing a Repository
 
