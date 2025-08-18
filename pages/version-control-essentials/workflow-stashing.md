@@ -40,7 +40,7 @@ Examples of stacks in everyday life:
 
 
 <div class="centering">
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1068" height="600" viewBox="0 0 1068 600" xml:space="preserve">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1068" height="600" viewBox="0 0 1068 600" xml:space="preserve" class="adaptive">
         <g transform="translate(551.5,75.02)">
             <text class="label" font-family="'Roboto', Arial, sans-serif" font-size="28" font-weight="700"text-anchor="middle" dominant-baseline="middle">Stack (LIFO)</text>
         </g>
