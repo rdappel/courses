@@ -40,80 +40,8 @@ Examples of stacks in everyday life:
 
 
 <div class="centering">
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1068" height="600" viewBox="0 0 1068 600" xml:space="preserve" class="adaptive">
-        <g transform="translate(551.5,75.02)">
-            <text class="label" font-family="'Roboto', Arial, sans-serif" font-size="28" font-weight="700"text-anchor="middle" dominant-baseline="middle">Stack (LIFO)</text>
-        </g>
-        <g transform="translate(277.5,329.8)">
-            <rect x="-250" y="-210" rx="24" ry="24" width="500" height="420" fill="none" stroke="rgb(154,255,67)" stroke-width="3" />
-        </g>
-        <g transform="translate(277.5,146.16)">
-            <text class="label" font-family="'Roboto', Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle" dominant-baseline="middle">Push (add)</text>
-        </g>
-        <g transform="translate(357.5,339.8)">
-            <rect x="-90" y="-150" rx="10" ry="10" width="180" height="300" fill="none" stroke="rgb(154,255,67)" stroke-width="3" />
-        </g>
-        <g transform="translate(357.5,459.8)">
-            <rect x="-84" y="-24" rx="10" ry="10" width="168" height="48" fill="none" stroke="rgb(154,255,67)" stroke-width="1.8" />
-            <text class="label" font-family="'Roboto', Arial, sans-serif" font-size="16" font-weight="500"
-                text-anchor="middle" dominant-baseline="middle">A</text>
-        </g>
-        <g transform="translate(357.5,399.8)">
-            <rect x="-84" y="-24" rx="10" ry="10" width="168" height="48" fill="none" stroke="rgb(154,255,67)" stroke-width="1.8" />
-            <text class="label" font-family="'Roboto', Arial, sans-serif" font-size="16" font-weight="500" text-anchor="middle" dominant-baseline="middle">B</text>
-        </g>
-        <g transform="translate(357.5,339.8)">
-            <rect x="-84" y="-24" rx="10" ry="10" width="168" height="48" fill="none" stroke="rgb(154,255,67)" stroke-width="1.8" />
-            <text class="label" font-family="'Roboto', Arial, sans-serif" font-size="16" font-weight="500" text-anchor="middle" dominant-baseline="middle">C</text>
-        </g>
-        <g transform="translate(357.5,279.8)">
-            <rect x="-84" y="-24" rx="10" ry="10" width="168" height="48" fill="none" stroke="rgb(154,255,67)" stroke-width="1.8" />
-            <text class="label" font-family="'Roboto', Arial, sans-serif" font-size="16" font-weight="500" text-anchor="middle" dominant-baseline="middle">D (top)</text>
-        </g>
-        <g transform="translate(787.5,329.8)">
-            <rect x="-250" y="-210" rx="24" ry="24" width="500" height="420" fill="none" stroke="rgb(255,102,102)" stroke-width="3" />
-        </g>
-        <g transform="translate(777.5,146.16)">
-            <text class="label" font-family="'Roboto', Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle" dominant-baseline="middle">Pop (remove)
-            </text>
-        </g>
-        <g transform="translate(717.62,339.01)">
-            <rect x="-90" y="-150" rx="10" ry="10" width="180" height="300" fill="none" stroke="rgb(255,102,102)" stroke-width="3" />
-        </g>
-        <g transform="translate(717.62,459.01)">
-            <rect x="-84" y="-24" rx="10" ry="10" width="168" height="48" fill="none" stroke="rgb(255,102,102)" stroke-width="1.8" />
-            <text class="label" font-family="'Roboto', Arial, sans-serif" font-size="16" font-weight="500" text-anchor="middle" dominant-baseline="middle">A</text>
-        </g>
-        <g transform="translate(717.62,399.01)">
-            <rect x="-84" y="-24" rx="10" ry="10" width="168" height="48" fill="none" stroke="rgb(255,102,102)" stroke-width="1.8" />
-            <text class="label" font-family="'Roboto', Arial, sans-serif" font-size="16" font-weight="500" text-anchor="middle" dominant-baseline="middle">B</text>
-        </g>
-        <g transform="translate(717.62,339.01)">
-            <rect x="-84" y="-24" rx="10" ry="10" width="168" height="48" fill="none" stroke="rgb(255,102,102)" stroke-width="1.8" />
-            <text class="label" font-family="'Roboto', Arial, sans-serif" font-size="16" font-weight="500" text-anchor="middle" dominant-baseline="middle">C (top)</text>
-        </g>
-        <g transform="translate(934.11,339.22)">
-            <rect x="-36" y="-24" rx="10" ry="10" width="72" height="48" fill="none" stroke="rgb(255,102,102)" stroke-width="1.8" />
-            <text class="label" font-family="'Roboto', Arial, sans-serif" font-size="16" font-weight="500" text-anchor="middle" dominant-baseline="middle">D</text>
-        </g>
-        <g class="ghost">
-            <g transform="translate(717.17,279.48)">
-                <rect x="-84" y="-24" rx="10" ry="10" width="168" height="48" fill="none" stroke="rgb(255,102,102)" stroke-width="1.8" />
-                <text class="label" font-family="'Roboto', Arial, sans-serif" font-size="16" font-weight="500" text-anchor="middle" dominant-baseline="middle">D</text>
-            </g>
-            <g transform="translate(160.26,352.8)">
-                <rect x="-36" y="-24" rx="10" ry="10" width="72" height="48" fill="none" stroke="rgb(154,255,67)" stroke-width="1.8" />
-                <text class="label" font-family="'Roboto', Arial, sans-serif" font-size="16" font-weight="500" text-anchor="middle" dominant-baseline="middle">D</text>
-            </g>
-        </g>
-        <g transform="matrix(0.95 -0.3 0.3 0.95 223.51 283.91)">
-            <path d="M 47.241 73.538 L 87.35 50.377 54.598 17.623 54.598 33.28 C 18.114 31.59 10.956 52.564 14.436 81.641 C 20.303 61.312 31.583 50.328 50.721 53.012 L 47.241 73.538 z"transform="translate(-50.5,-49.63)" fill="rgb(154,255,67)" />
-        </g>
-        <g transform="matrix(0.8 0.6 -0.6 0.8 865.64 279.81)">
-            <path d="M 47.241 73.538 L 87.35 50.377 54.598 17.623 54.598 33.28 C 18.114 31.59 10.956 52.564 14.436 81.641 C 20.303 61.312 31.583 50.328 50.721 53.012 L 47.241 73.538 z"transform="translate(-50.5,-49.63)" fill="rgb(241,96,96)" />
-        </g>
-    </svg>
-
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/stash-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/stash-light.svg" alt="" aria-hidden="true" class="adaptive light">
 </div>
 
 
