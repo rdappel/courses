@@ -5,15 +5,10 @@
 
   <style>
     /* Theme text color */
-    .label { fill: var(--text-color, #484848); }
+    .label { fill: var(--color-svg-text-adaptive, #6e7681); }
 
     /* Ghosted items */
     .ghost rect, .ghost text { opacity: 0.5; }
-
-    /* Example themes:
-       :root { --text-color: #fff; }  // light-on-dark
-       :root { --text-color: #000; }  // dark-on-light
-    */
   </style>
 
   <!-- Title -->
