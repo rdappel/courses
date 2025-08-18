@@ -38,10 +38,9 @@ Examples of stacks in everyday life:
 - A stack of papers
 - Browser history (when you click "back")
 
-
 <div class="centering">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/stash-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/stash-light.svg" alt="" aria-hidden="true" class="adaptive light">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/stack-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/stack-light.svg" alt="" aria-hidden="true" class="adaptive light">
 </div>
 
 Git stash works the same way - when you save (stash) your work, it goes on top of the stack. When you want your work back, you get the most recent one first.
