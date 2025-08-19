@@ -17,7 +17,7 @@ Running the following commands on your Web Server will set up a basic PHP enviro
 <div class="checklist localstore">
 
 
-## 1. Update the "Apt" package list
+## Update the "Apt" package list
 
 Run the following command in your terminal:
 
@@ -28,7 +28,7 @@ sudo apt update
 - [ ] Apt package list updated
 
 
-## 2. Install Apache, PHP, MySQL, and related tools
+## Install Apache, PHP, MySQL, and related tools
 
 Run the following command in your terminal:
 
@@ -39,7 +39,7 @@ sudo apt install apache2 php mysql-server php-mysql net-tools openssh-server
 - [ ] Apache, PHP, MySQL, and related tools installed
 
 
-## 3. Backup SSH Config File
+## Backup SSH Config File
 
 Run the following command in your terminal:
 
