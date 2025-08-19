@@ -31,6 +31,21 @@ sudo apt-get update
 </div>
 
 
+## Install Net-Tools (Network Utilities)
+
+Run the following command in your terminal:
+
+```bash
+sudo apt install net-tools
+```
+
+<div class="checklist localstore">
+
+- [ ] Net-tools installed
+
+</div>
+
+
 ## Install Apache (Web Server)
 
 Run the following command in your terminal:
@@ -87,21 +102,6 @@ sudo apt-get install php-mysql
 <div class="checklist localstore">
 
 - [ ] PHP-MySQL drivers installed
-
-</div>
-
-
-## Install Net-Tools (Network Utilities)
-
-Run the following command in your terminal:
-
-```bash
-sudo apt install net-tools
-```
-
-<div class="checklist localstore">
-
-- [ ] Net-tools installed
 
 </div>
 
