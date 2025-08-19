@@ -10,7 +10,7 @@ repo: https://github.com/rdappel/courses
 
 # Web Server Checklist {#web-server-checklist}
 
-Running the following commands on your Web Server will set up a basic PHP environment. These 
+Running the following commands on your Web Server will set up a basic PHP environment. 
 
 > [!NOTE] This checklist will save to local storage (this computer).
 
