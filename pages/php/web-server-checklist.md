@@ -8,14 +8,14 @@ dev: http://localhost:3006/appel/php/testing
 repo: https://github.com/rdappel/courses
 ---
 
-# Web Server Checklist { #web-server-checklist }
+# Web Server Checklist {#web-server-checklist}
 
 Running the following commands on your Web Server will set up a basic PHP environment. These 
 
 > [!NOTE] This checklist will save to local storage (this computer).
 
 
-## Update the Apt package list { #update-apt-packages }
+## Update the Apt package list {#update-apt-packages}
 
 Run the following command in your terminal:
 
@@ -28,7 +28,7 @@ sudo apt update
 </div>
 
 
-## Install Apache, PHP, MySQL, and related tools { #install-apache-php-mysql }
+## Install Apache, PHP, MySQL {#install-apache-php-mysql}
 
 Run the following command in your terminal:
 
@@ -104,7 +104,7 @@ Match Group sftponly
 ```
 - [ ] Updated the SSH Config File
 
-## Set Permissions for the Web Root { #set-web-root-permissions }
+## Set Permissions for the Web Root {#set-web-root-permissions}
 
 Run the following commands in your terminal:
 
