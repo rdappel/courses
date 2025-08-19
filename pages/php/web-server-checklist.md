@@ -30,6 +30,7 @@ sudo apt-get update
 
 </div>
 
+<br><br>
 
 ## Install Net-Tools (Network Utilities)
 
@@ -45,6 +46,7 @@ sudo apt install net-tools
 
 </div>
 
+<br>
 
 ## Install Apache (Web Server)
 
