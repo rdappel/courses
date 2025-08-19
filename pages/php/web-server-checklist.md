@@ -163,13 +163,9 @@ sudo useradd devuser
 sudo passwd devuser
 ```
 
-When prompted, type the password:
+When prompted, type the password: `dev123`
 
-```
-dev123
-```
-
-> [!IMPORTANT] You will NOT see the characters as you type.
+> [!NOTE] You will NOT see the characters as you type.
 
 <div class="checklist localstore">
 
