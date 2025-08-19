@@ -10,17 +10,20 @@ repo: https://github.com/rdappel/courses
 
 # Web Server Checklist
 
+Running the following commands on your Web Server will set up a basic PHP environment. These 
+
 > [!NOTE] This checklist will save to local storage (this computer).
 
 <div class="checklist localstore">
 
-- [ ] Update package list
+
+1. [ ] Update package list
 
 ```bash
 sudo apt update
 ```
 
-- [ ] Install Apache, PHP, MySQL, and related tools
+2. [ ] Install Apache, PHP, MySQL, and related tools
 
 ```bash
 sudo apt install apache2 php mysql-server php-mysql net-tools openssh-server
