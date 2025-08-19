@@ -17,7 +17,7 @@ Running the following commands on your Web Server will set up a basic PHP enviro
 <div class="checklist localstore">
 
 
-## Update the "Apt" package list
+## Update the Apt package list
 
 Run the following command in your terminal:
 
