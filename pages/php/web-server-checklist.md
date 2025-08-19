@@ -8,7 +8,7 @@ dev: http://localhost:3006/appel/php/testing
 repo: https://github.com/rdappel/courses
 ---
 
-# Web Server Checklist
+# Web Server Checklist { #web-server-checklist }
 
 Running the following commands on your Web Server will set up a basic PHP environment. These 
 
@@ -17,7 +17,7 @@ Running the following commands on your Web Server will set up a basic PHP enviro
 <div class="checklist localstore">
 
 
-## Update the Apt package list
+## Update the Apt package list { #update-apt-packages }
 
 Run the following command in your terminal:
 
@@ -28,7 +28,7 @@ sudo apt update
 - [ ] Apt package list updated
 
 
-## Install Apache, PHP, MySQL, and related tools
+## Install Apache, PHP, MySQL, and related tools { #install-apache-php-mysql }
 
 Run the following command in your terminal:
 
@@ -50,7 +50,7 @@ sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
 - [ ] SSH Config File backed up
 
 
-## 4. Add a New SFTP Group
+## Add a New SFTP Group
 
 Run the following command in your terminal:
 
@@ -61,7 +61,7 @@ sudo groupadd sftponly
 - [ ] SFTP Group added
 
 
-## 5. Add a New User
+## Add a New User
 
 Run the following command in your terminal:
 
@@ -74,7 +74,7 @@ sudo adduser devuser
 - [ ] New user created
 
 
-## 6. Add User to SFTP Group
+## Add User to SFTP Group
 
 Run the following command in your terminal:
 
@@ -85,7 +85,7 @@ sudo usermod -a -G sftponly devuser
 - [ ] `devuser` added to the SFTP Group
 
 
-## 7. Update the SSH Config File
+## Update the SSH Config File
 
 Run the following command in your terminal:
 
@@ -104,7 +104,7 @@ Match Group sftponly
 ```
 - [ ] Updated the SSH Config File
 
-## 8. Set Permissions for the Web Root
+## Set Permissions for the Web Root { #set-web-root-permissions }
 
 Run the following commands in your terminal:
 
@@ -118,7 +118,7 @@ sudo chmod 775 /var/www/html
 
 - [ ] `devuser` has access to the web root
 
-## 9. Restart SSH Service
+## Restart SSH Service
 
 ```bash
 sudo systemctl restart ssh
