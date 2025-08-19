@@ -16,6 +16,8 @@ Running the following commands on your Web Server will set up a basic PHP enviro
 
 ---
 
+<br>
+
 ## Update the apt-get package list {#update-apt-packages}
 
 Run the following command in your terminal:
@@ -28,9 +30,7 @@ sudo apt-get update
 
 - [ ] Apt package list updated
 
-</div>
-
-<br><br>
+</div><br>
 
 ## Install Net-Tools (Network Utilities)
 
@@ -44,9 +44,7 @@ sudo apt install net-tools
 
 - [ ] Net-tools installed
 
-</div>
-
-<br>
+</div><br>
 
 ## Install Apache (Web Server)
 
@@ -60,7 +58,7 @@ sudo apt-get install apache2
 
 - [ ] Apache installed
 
-</div>
+</div><br>
 
 
 ## Install PHP (Programming Language)
@@ -75,7 +73,7 @@ sudo apt-get install php
 
 - [ ] PHP installed
 
-</div>
+</div><br>
 
 
 ## Install MySQL (Database Server)
@@ -90,7 +88,7 @@ sudo apt-get install mysql-server
 
 - [ ] MySQL installed
 
-</div>
+</div><br>
 
 
 ## Install PHP-MySQL Drivers
@@ -105,7 +103,7 @@ sudo apt-get install php-mysql
 
 - [ ] PHP-MySQL drivers installed
 
-</div>
+</div><br>
 
 
 ## Install OpenSSH Server
@@ -120,7 +118,7 @@ sudo apt-get install openssh-server
 
 - [ ] OpenSSH Server installed
 
-</div>
+</div><br>
 
 
 ## Backup SSH Config File
@@ -135,7 +133,7 @@ sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
 
 - [ ] SSH Config File backed up
 
-</div>
+</div><br>
 
 
 ## Add a New SFTP Group
@@ -150,7 +148,7 @@ sudo groupadd sftponly
 
 - [ ] SFTP Group added
 
-</div>
+</div><br>
 
 
 ## Add a New User
@@ -174,7 +172,7 @@ dev123
 
 - [ ] New user created
 
-</div>
+</div><br>
 
 
 ## Add User to SFTP Group
@@ -189,7 +187,7 @@ sudo usermod -a -G sftponly devuser
 
 - [ ] `devuser` added to the SFTP Group
 
-</div>
+</div><br>
 
 
 ## Update the SSH Config File
@@ -214,7 +212,7 @@ Match Group sftponly
 
 - [ ] Updated the SSH Config File
 
-</div>
+</div><br>
 
 
 ## Set Permissions for the Web Root {#set-web-root-permissions}
@@ -229,7 +227,7 @@ sudo chmod 777 /var/www/html
 
 - [ ] `devuser` has access to the web root
 
-</div>
+</div><br>
 
 
 ## Restart SSH Service
