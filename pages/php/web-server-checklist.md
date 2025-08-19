@@ -14,8 +14,6 @@ Running the following commands on your Web Server will set up a basic PHP enviro
 
 > [!NOTE] This checklist will save to local storage (this computer).
 
-<div class="checklist localstore">
-
 
 ## Update the Apt package list { #update-apt-packages }
 
@@ -25,7 +23,9 @@ Run the following command in your terminal:
 sudo apt update
 ```
 
+<div class="checklist localstore">
 - [ ] Apt package list updated
+</div>
 
 
 ## Install Apache, PHP, MySQL, and related tools { #install-apache-php-mysql }
