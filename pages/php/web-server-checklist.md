@@ -24,7 +24,9 @@ sudo apt update
 ```
 
 <div class="checklist localstore">
+
 - [ ] Apt package list updated
+
 </div>
 
 
@@ -36,7 +38,11 @@ Run the following command in your terminal:
 sudo apt install apache2 php mysql-server php-mysql net-tools openssh-server
 ```
 
+<div class="checklist localstore">
+
 - [ ] Apache, PHP, MySQL, and related tools installed
+
+</div>
 
 
 ## Backup SSH Config File
@@ -47,7 +53,11 @@ Run the following command in your terminal:
 sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
 ```
 
+<div class="checklist localstore">
+
 - [ ] SSH Config File backed up
+
+</div>
 
 
 ## Add a New SFTP Group
@@ -58,7 +68,11 @@ Run the following command in your terminal:
 sudo groupadd sftponly
 ```
 
+<div class="checklist localstore">
+
 - [ ] SFTP Group added
+
+</div>
 
 
 ## Add a New User
@@ -71,7 +85,11 @@ Run the following command in your terminal:
 sudo adduser devuser
 ```
 
+<div class="checklist localstore">
+
 - [ ] New user created
+
+</div>
 
 
 ## Add User to SFTP Group
@@ -82,7 +100,11 @@ Run the following command in your terminal:
 sudo usermod -a -G sftponly devuser
 ```
 
+<div class="checklist localstore">
+
 - [ ] `devuser` added to the SFTP Group
+
+</div>
 
 
 ## Update the SSH Config File
@@ -102,7 +124,13 @@ Match Group sftponly
     AllowTcpForwarding no
     X11Forwarding no
 ```
+
+<div class="checklist localstore">
+
 - [ ] Updated the SSH Config File
+
+</div>
+
 
 ## Set Permissions for the Web Root {#set-web-root-permissions}
 
@@ -116,13 +144,20 @@ sudo chown devuser:sftponly /var/www/html
 sudo chmod 775 /var/www/html
 ```
 
+<div class="checklist localstore">
+
 - [ ] `devuser` has access to the web root
+
+</div>
+
 
 ## Restart SSH Service
 
 ```bash
 sudo systemctl restart ssh
 ```
+
+<div class="checklist localstore">
 
 - [ ] SSH Service restarted
 
