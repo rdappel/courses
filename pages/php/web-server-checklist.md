@@ -17,49 +17,83 @@ Running the following commands on your Web Server will set up a basic PHP enviro
 <div class="checklist localstore">
 
 
-1. [ ] Update package list
+## 1. Update the "Apt" package list
+
+Run the following command in your terminal:
 
 ```bash
 sudo apt update
 ```
 
-2. [ ] Install Apache, PHP, MySQL, and related tools
+- [ ] Apt package list updated
+
+
+## 2. Install Apache, PHP, MySQL, and related tools
+
+Run the following command in your terminal:
 
 ```bash
 sudo apt install apache2 php mysql-server php-mysql net-tools openssh-server
 ```
 
-- [ ] Backup SSH Config File
+- [ ] Apache, PHP, MySQL, and related tools installed
+
+
+## 3. Backup SSH Config File
+
+Run the following command in your terminal:
 
 ```bash
 sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
 ```
 
-- [ ] Add a New SFTP Group
+- [ ] SSH Config File backed up
+
+
+## 4. Add a New SFTP Group
+
+Run the following command in your terminal:
 
 ```bash
 sudo groupadd sftponly
 ```
 
-- [ ] Add a New User (Remember to use password: `dev123`)
+- [ ] SFTP Group added
+
+
+## 5. Add a New User
+
+Run the following command in your terminal:
+
+> [!IMPORTANT] Remember to use password `dev123` when prompted.
 
 ```bash
 sudo adduser devuser
 ```
 
-- [ ] Add devuser to the SFTP Group
+- [ ] New user created
+
+
+## 6. Add User to SFTP Group
+
+Run the following command in your terminal:
 
 ```bash
 sudo usermod -a -G sftponly devuser
 ```
 
-- [ ] Update the SSH Config File
+- [ ] `devuser` added to the SFTP Group
+
+
+## 7. Update the SSH Config File
+
+Run the following command in your terminal:
 
 ```bash
-sudo nano /etc/ssh/sshd_config
+sudo gedit /etc/ssh/sshd_config
 ```
 
-- [ ] Scroll to the bottom and add:
+Then, scroll to the bottom and add:
 
 ```bash
 Match Group sftponly
@@ -68,8 +102,11 @@ Match Group sftponly
     AllowTcpForwarding no
     X11Forwarding no
 ```
+- [ ] Updated the SSH Config File
 
-- [ ] Give devuser access to the web root
+## 8. Set Permissions for the Web Root
+
+Run the following commands in your terminal:
 
 ```bash
 sudo chown devuser:sftponly /var/www/html
@@ -79,9 +116,14 @@ sudo chown devuser:sftponly /var/www/html
 sudo chmod 775 /var/www/html
 ```
 
-- [ ] Restart SSH Service
+- [ ] `devuser` has access to the web root
+
+## 9. Restart SSH Service
+
 ```bash
 sudo systemctl restart ssh
 ```
+
+- [ ] SSH Service restarted
 
 </div>
