@@ -31,92 +31,17 @@ sudo apt-get update
 </div>
 
 
-## Install Apache (Web Server)
+## Install Apache, PHP, MySQL {#install-apache-php-mysql}
 
 Run the following command in your terminal:
 
 ```bash
-sudo apt-get install apache2
+sudo apt install apache2 php mysql-server php-mysql net-tools openssh-server
 ```
 
 <div class="checklist localstore">
 
-- [ ] Apache installed
-
-</div>
-
-
-## Install PHP (Programming Language)
-
-Run the following command in your terminal:
-
-```bash
-sudo apt-get install php
-```
-
-<div class="checklist localstore">
-
-- [ ] PHP installed
-
-</div>
-
-
-## Install MySQL (Database Server)
-
-Run the following command in your terminal:
-
-```bash
-sudo apt-get install mysql-server
-```
-
-<div class="checklist localstore">
-
-- [ ] MySQL installed
-
-</div>
-
-
-## Install PHP-MySQL Drivers
-
-Run the following command in your terminal:
-
-```bash
-sudo apt-get install php-mysql
-```
-
-<div class="checklist localstore">
-
-- [ ] PHP-MySQL drivers installed
-
-</div>
-
-
-## Install Net-Tools (Network Utilities)
-
-Run the following command in your terminal:
-
-```bash
-sudo apt install net-tools
-```
-
-<div class="checklist localstore">
-
-- [ ] Net-tools installed
-
-</div>
-
-
-## Install OpenSSH Server
-
-Run the following command in your terminal:
-
-```bash
-sudo apt-get install openssh-server
-```
-
-<div class="checklist localstore">
-
-- [ ] OpenSSH Server installed
+- [ ] Apache, PHP, MySQL, and related tools installed
 
 </div>
 
@@ -153,20 +78,13 @@ sudo groupadd sftponly
 
 ## Add a New User
 
-Run the following commands in your terminal:
+Run the following command in your terminal:
+
+> [!IMPORTANT] Remember to use password `dev123` when prompted.
 
 ```bash
-sudo useradd devuser
-sudo passwd devuser
+sudo adduser devuser
 ```
-
-When prompted, type the password:
-
-```
-dev123
-```
-
-> [!IMPORTANT] You will NOT see the characters as you type.
 
 <div class="checklist localstore">
 
@@ -198,7 +116,7 @@ Run the following command in your terminal:
 sudo gedit /etc/ssh/sshd_config
 ```
 
-Then, scroll to the bottom (approximately line 124) and add:
+Then, scroll to the bottom and add:
 
 ```bash
 Match Group sftponly
@@ -217,10 +135,14 @@ Match Group sftponly
 
 ## Set Permissions for the Web Root {#set-web-root-permissions}
 
-Run the following command in your terminal:
+Run the following commands in your terminal:
 
 ```bash
-sudo chmod 777 /var/www/html
+sudo chown devuser:sftponly /var/www/html
+```
+
+```bash
+sudo chmod 775 /var/www/html
 ```
 
 <div class="checklist localstore">
@@ -233,7 +155,7 @@ sudo chmod 777 /var/www/html
 ## Restart SSH Service
 
 ```bash
-sudo service ssh restart
+sudo systemctl restart ssh
 ```
 
 <div class="checklist localstore">
