@@ -157,6 +157,9 @@ Run the following commands in your terminal:
 
 ```bash
 sudo useradd devuser
+```
+
+```bash
 sudo passwd devuser
 ```
 
