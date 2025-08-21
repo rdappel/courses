@@ -4,6 +4,8 @@ subtitle: Version Control Essentials
 hideNav: false
 
 live: https://fvtc.software/appel/version-control-essentials/getting-started
+dev: http://localhost:3006/appel/version-control-essentials/getting-started
+repo: https://github.com/rdappel/courses
 ---
 
 # Getting Started

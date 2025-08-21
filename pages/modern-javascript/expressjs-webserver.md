@@ -4,6 +4,8 @@ subtitle: Modern JavaScript
 hideNav: false
 
 live: https://fvtc.software/appel/modern-javascript/expressjs-webserver
+dev: http://localhost:3006/appel/modern-javascript/expressjs-webserver
+
 ---
 
 # ExpressJS Webserver
