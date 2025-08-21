@@ -23,7 +23,7 @@ For this assignment you will create a WinForms application to display the greeti
 
 ## Project Setup
 
-Create a new Windows Forms App project in Visual Studio. Name the project "<your initials>.Assignment1.UI", and the solution "<your initials>.Assignment1". This will help keep your projects organized.
+Create a new Windows Forms App project in Visual Studio. Name the project "&lt;your initials&gt;.Assignment1.UI", and the solution "&lt;your initials&gt;.Assignment1". This will help keep your projects organized.
 
 ## Form Design
 
