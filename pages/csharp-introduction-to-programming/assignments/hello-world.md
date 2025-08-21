@@ -41,6 +41,12 @@ Arrange the controls to closely resemble the following image:
 
 3. When the `Exit` button is clicked, the application should close.
 
+## Specifications
+
+1. Use correct naming conventions for your project, solution, and all controls.
+
+2. Include appropriate comments in your code.
+
 # Submission
 
 Either show your instructor (classroom students), or push your code to the Azure DevOps repository and submit the URL to Blackboard.
