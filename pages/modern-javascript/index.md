@@ -14,7 +14,9 @@ Summary: You’ll learn the basics of JavaScript, including variables, data type
 
 [Getting Started](/appel/modern-javascript/getting-started)
 
-[Variables and Operators](appel/modern-javascript/variables-and-operators)
+[Variables and Operators](/appel/modern-javascript/variables-and-operators)
+
+[Conditional and Loops](conditionals-and-loops)
 
 [Assignment 1 - GitHub Account](/appel/modern-javascript/assignments/github-account)
 
