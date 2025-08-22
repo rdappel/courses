@@ -16,8 +16,6 @@ Summary: You’ll learn the basics of JavaScript, including variables, data type
 
 [Variables and Operators](./modern-javascript/variables-and-operators)
 
-[Conditional and Loops](./modern-javascript/conditionals-and-loops)
-
 [Assignment 1 - GitHub Account](./modern-javascript/assignments/github-account)
 
 # Week 2 - Accessing DOM Elements
