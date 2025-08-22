@@ -29,13 +29,13 @@ Create a new Windows Forms App project in Visual Studio. Name the project `<your
 
 Arrange the controls to closely resemble the following image:
 
-![Form Layout](https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/cs-intro/assignment1-layout1.png)
+![Form Layout](https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/cs-intro/hello-world-layout.png)
 
 ## Operation
 
 1. When the `Display` button is clicked, the message "Welcome to Visual Studio ~ C#!" should appear in the label, as shown below:
 
-![Operation](https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/cs-intro/assignment1-running1.png)
+![Operation](https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/cs-intro/hello-world-running.png)
 
 2. When the `Clear` button is clicked, the message in the label should be cleared, resulting in an empty label.
 
