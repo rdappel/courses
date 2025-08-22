@@ -12,37 +12,37 @@ repo: https://github.com/rdappel/courses
 
 Summary: You’ll learn the basics of JavaScript, including variables, data types, and basic DOM manipulation.
 
-[Getting Started](/appel/modern-javascript/getting-started)
+[Getting Started](./getting-started)
 
-[Variables and Operators](/appel/modern-javascript/variables-and-operators)
+[Variables and Operators](./variables-and-operators)
 
-[Conditional and Loops](conditionals-and-loops)
+[Conditional and Loops](./conditionals-and-loops)
 
-[Assignment 1 - GitHub Account](/appel/modern-javascript/assignments/github-account)
+[Assignment 1 - GitHub Account](./assignments/github-account)
 
 # Week 2 - Accessing DOM Elements
 
 Summary: You’ll learn how to select and manipulate DOM elements using JavaScript.
 
-[Selecting Dom Elements](/appel/modern-javascript/selecting-dom-elements)
+[Selecting Dom Elements](./selecting-dom-elements)
 
-[Assignment 2 - Homepage](/appel/modern-javascript/assignments/homepage)
+[Assignment 2 - Homepage](./assignments/homepage)
 
 # Week 3 - Arrays and Objects
 
 Summary: You’ll learn about arrays and objects, two fundamental data structures in JavaScript, and how to manipulate them.
 
-[Arrays and Objects](/appel/modern-javascript/arrays-and-objects)
+[Arrays and Objects](./arrays-and-objects)
 
-[Assignment 3 - Dynamic Welcome](/appel/modern-javascript/assignments/dynamic-welcome)
+[Assignment 3 - Dynamic Welcome](./assignments/dynamic-welcome)
 
 # Week 4 - Local Storage and JSON
 
 Summary: You’ll learn how to use local storage to persist data in the browser, and how to work with JSON for data interchange.
 
-[Local Storage and JSON](/appel/modern-javascript/local-storage-and-json)
+[Local Storage and JSON](./local-storage-and-json)
 
-[Assignment 4 - Secret Message](/appel/modern-javascript/assignments/secret-message)
+[Assignment 4 - Secret Message](./assignments/secret-message)
 
 Exam 1 Review
 
@@ -56,25 +56,25 @@ Exam 1
 
 Summary: You’ll learn how to create and use functions in JavaScript, and how to handle events in the browser.
 
-[Functions and Events](/appel/modern-javascript/functions-and-events)
+[Functions and Events](./functions-and-events)
 
-[Assignment 5 - Carousel](/appel/modern-javascript/assignments/carousel)
+[Assignment 5 - Carousel](./assignments/carousel)
 
 # Week 7 - Higher-Order Functions
 
 Summary: You’ll learn about higher-order functions, which are functions that can take other functions as arguments or return them as results.
 
-[Higher-Order Functions](/appel/modern-javascript/higher-order-functions)
+[Higher-Order Functions](./higher-order-functions)
 
-[Assignment 6 - To Do List](/appel/modern-javascript/assignments/to-do-list)
+[Assignment 6 - To Do List](./assignments/to-do-list)
 
 # Week 8 - Asynchronous JavaScript
 
 Summary: You’ll learn about asynchronous programming in JavaScript, including callbacks, promises, and async/await.
 
-[Callbacks, Promises, Async/Await](/appel/modern-javascript/callbacks-promises-async-await)
+[Callbacks, Promises, Async/Await](./callbacks-promises-async-await)
 
-[Assignment 7 - API Fetch](/appel/modern-javascript/assignments/api-fetch)
+[Assignment 7 - API Fetch](./assignments/api-fetch)
 
 Review for Exam 2
 
@@ -88,23 +88,23 @@ Exam 2
 
 Summary: You’ll learn how to run JavaScript on the server using Node.js, and how to create custom modules.
 
-[Server-Side JavaScript](/appel/modern-javascript/server-side-javascript)
+[Server-Side JavaScript](./server-side-javascript)
 
-[Assignment 8 - Custom Module](/appel/modern-javascript/assignments/custom-module)
+[Assignment 8 - Custom Module](./assignments/custom-module)
 
 # Week 11 - ExpressJS Webserver
 
 Summary: You’ll learn how to set up a web server using ExpressJS, a popular Node.js framework.
 
-[ExpressJS Webserver](/appel/modern-javascript/expressjs-webserver)
+[ExpressJS Webserver](./expressjs-webserver)
 
-[Assignment 9 - Joke API](/appel/modern-javascript/assignments/joke-api)
+[Assignment 9 - Joke API](./assignments/joke-api)
 
 # Week 12 - Advanced Routing and MongoDB
 
 Summary: You’ll learn about advanced routing techniques in ExpressJS and how to integrate MongoDB for data storage.
 
-[Advanced Routing and MongoDB](/appel/modern-javascript/routing-and-mongodb)
+[Advanced Routing and MongoDB](./routing-and-mongodb)
 
 Review for Exam 3
 
@@ -118,4 +118,4 @@ Exam 3
 
 Summary: You’ll work on and submit your final project, which will involve building a full-stack JavaScript application.
 
-[Assignment 10 - Final Project](/appel/modern-javascript/assignments/final-project)
+[Assignment 10 - Final Project](./assignments/final-project)
