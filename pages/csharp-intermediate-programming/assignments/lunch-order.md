@@ -37,6 +37,10 @@ Arrange the controls to closely resemble the following image:
 
 - When the user clicks the `Place Order` button, the application calculates and displays the subtota, tax, and the total due for the order.
 
+- When the user selects a main course, the application should remove check marks from any of the add-on items and clear the order totals.
+
+- When the user checks or unchecks an add-on item, the application should clear the order totals.
+
 ### Add-ons
 
 - For a hamburger, the three add-on items are: (1) Lettuce, tomato, and onions; (2) Mayonnaise and mustard; and (3) French fries. The price of each is 75 cents.
@@ -51,9 +55,9 @@ Arrange the controls to closely resemble the following image:
 
 - The subtotal is equal to the cost of the main course item, plus the cost of the add-ons. The tax is the subtotal * .0775. And the total due is the subtotal + tax.
 
-- When the user selects a main course, the application should remove check marks from any of the add-on items and clear the order totals.
+- Use correct naming conventions for your project, solution, and all controls.
 
-- When the user checks or unchecks an add-on item, the application should clear the order totals.
+- Remember to comment your code appropriately.
 
 # Submission
 
