@@ -12,7 +12,7 @@ repo: https://github.com/rdappel/courses
 
 For this assignment you will create a WinForms application to display the greeting "Hello World! Welcome to Visual Studio ~ C#!".
 
-<details open>
+<details open style="display: none;">
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
 		<iframe src="https://www.youtube.com/embed/AAAAAAA" width="100%" height="100%" frameborder="0"
@@ -23,7 +23,7 @@ For this assignment you will create a WinForms application to display the greeti
 
 ## Project Setup
 
-Create a new Windows Forms App project in Visual Studio. Name the project `<your-initials>.Assignment1.UI`, and the solution `<your-initials>.Assignment1`. This will help keep your projects organized.
+Create a new Windows Forms App project in Visual Studio. Name the project `<your-initials>.HelloWorld.UI`, and the solution `<your-initials>.HelloWorld`. This will help keep your projects organized.
 
 ## Form Design
 
