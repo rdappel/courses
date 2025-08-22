@@ -45,6 +45,8 @@ Arrange the controls to closely resemble the following image:
 
 - For a salad, the three items are (1) Croutons, (2) Bacon bits, and (3) Bread sticks. The price of each is 25 cents.
 
+> [!NOTE] The add-on items have different prices depending on the main course selected.
+
 ## Specifications
 
 - The subtotal is equal to the cost of the main course item, plus the cost of the add-ons. The tax is the subtotal * .0775. And the total due is the subtotal + tax.
