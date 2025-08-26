@@ -4,6 +4,8 @@ subtitle: Computer Programming C++
 hideNav: false
 
 live: https://fvtc.software/appel/computer-programming-cpp/getting-started
+dev: http://localhost:3006/appel/computer-programming-cpp/getting-started
+repo: https://github.com/rdappel/courses
 ---
 
 # Getting Started
