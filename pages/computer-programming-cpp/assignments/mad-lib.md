@@ -3,8 +3,8 @@ title: Assignment 3 - Mad Lib
 subtitle: Computer Programming C++
 hideNav: false
 
-live: https://fvtc.software/appel/computer-programming-cpp/assignment
-dev: http://localhost:3006/appel/computer-programming-cpp/assignment
+live: https://fvtc.software/appel/computer-programming-cpp/assignment/mad-lib
+dev: http://localhost:3006/appel/computer-programming-cpp/assignment/mad-lib
 repo: https://github.com/rdappel/courses
 ---
 
