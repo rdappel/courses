@@ -70,12 +70,6 @@ Arrange the controls to closely resemble the standard layout used in previous as
 
     - An OK button to return to the main form
 
-## Extra Credit: Splash Form
-
-Add a Splash Form that displays while the main form is loading.
-
-> [!NOTE] A splash form uniquely identifies an application while it is loading, as well as providing something for the viewer to see while critical initialization sections of the code execute.
-
 ## Specifications
 
 - Use standard Microsoft naming conventions for all controls
@@ -91,6 +85,12 @@ Add a Splash Form that displays while the main form is loading.
 - Set access keys for buttons and controls.
 
 - Ensure logical tab sequence and proper data alignment.
+
+## Extra Credit: Splash Form
+
+Add a Splash Form that displays while the main form is loading.
+
+> [!NOTE] A splash form uniquely identifies an application while it is loading, as well as providing something for the viewer to see while critical initialization sections of the code execute.
 
 # Submission
 
