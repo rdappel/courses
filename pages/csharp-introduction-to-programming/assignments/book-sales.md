@@ -27,7 +27,9 @@ Create a new Windows Forms App project in Visual Studio. Name the project `<your
 
 ## Form Design
 
-Arrange the controls to closely resemble the standard layout used in previous assignments. (No image provided for this assignment.)
+Arrange the controls to closely resemble the standard layout used in previous assignments.
+
+(No image provided for this assignment.)
 
 ## Operation
 

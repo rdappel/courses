@@ -24,4 +24,8 @@ repo: https://github.com/rdappel/courses
 
 [Assignment 7 - Population Change](./population)
 
+[Assignment 8 - Looping](./looping)
 
+[Assignment 9 - Salary](./salary)
+
+[Assignment 10 - Sales Tax Calculator](./sales-tax-calculator)
