@@ -35,12 +35,6 @@ doubling each day (2 pennies for the second, 4 for the third, etc.).
 
 5. The Exit button closes the application.
 
-6. Set appropriate AcceptButton and CancelButton.
-
-7. Set access keys for buttons and controls.
-
-8. Ensure logical tab sequence and proper data alignment.
-
 ## Specifications
 
 - Use standard Microsoft naming conventions for all controls.
@@ -50,6 +44,12 @@ doubling each day (2 pennies for the second, 4 for the third, etc.).
 - Validate all input as specified.
 
 - Align all numeric data appropriately.
+
+- Set appropriate AcceptButton and CancelButton.
+
+- Set access keys for buttons and controls.
+
+- Ensure logical tab sequence and proper data alignment.
 
 # Submission
 

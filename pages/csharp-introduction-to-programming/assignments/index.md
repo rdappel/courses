@@ -24,7 +24,7 @@ repo: https://github.com/rdappel/courses
 
 [Assignment 7 - Population Change](./population)
 
-[Assignment 8 - Looping](./looping)
+[Assignment 8 - Phrase Repetition](./phrase-repetition)
 
 [Assignment 9 - Salary](./salary)
 
