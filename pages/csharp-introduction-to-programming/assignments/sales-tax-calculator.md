@@ -34,8 +34,6 @@ Arrange the controls to closely resemble the standard layout used in previous as
 
     - Display the sales tax and total due
 
-    - Dispose of the object
-
 2. The Clear button resets all entered and calculated data.
 
 3. The Exit button closes the application.
