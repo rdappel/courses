@@ -66,13 +66,13 @@ Arrange the controls to closely resemble the following image:
 
 ## Calculations
 
-1. Calculate the percent change using the formula:
+Calculate the percent change using the formulas:
 
-   \[
-   \text{Percent Change} = \frac{\text{Ending Population} - \text{Beginning Population}}{\text{Beginning Population}} \times 100
-   \]
+   Percent Increase = (Ending Population - Beginning Population) / Beginning Population * 100
 
-2. Display the result in the appropriate label.
+   Percent Decrease = (Beginning Population - Ending Population) / Beginning Population * 100
+
+> [!TIP] You can use `.ToString("p")` to format the output as a percentage.
 
 # Submission
 

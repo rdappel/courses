@@ -20,4 +20,8 @@ repo: https://github.com/rdappel/courses
 
 [Assignment 5 - Pet Clinic](/appel/csharp-introduction-to-programming/assignments/pet-clinic)
 
+[Assignment 6 - Sales Commission](/appel/csharp-introduction-to-programming/assignments/sales-commission)
+
+[Assignment 7 - Population Change](/appel/csharp-introduction-to-programming/assignments/population)
+
 
