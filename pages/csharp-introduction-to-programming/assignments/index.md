@@ -17,3 +17,7 @@ repo: https://github.com/rdappel/courses
 [Assignment 3 - Miles to Kilometers](/appel/csharp-introduction-to-programming/assignments/miles-to-kilometers)
 
 [Assignment 4 - Book Sales](/appel/csharp-introduction-to-programming/assignments/book-sales)
+
+[Assignment 5 - Pet Clinic](/appel/csharp-introduction-to-programming/assignments/pet-clinic)
+
+
