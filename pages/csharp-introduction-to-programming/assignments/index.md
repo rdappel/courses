@@ -10,18 +10,18 @@ repo: https://github.com/rdappel/courses
 
 # C# Introduction to Programming Assignments
 
-[Assignment 1 - Hello World](/appel/csharp-introduction-to-programming/assignments/hello-world)
+[Assignment 1 - Hello World](./hello-world)
 
-[Assignment 2 - State Capitals](/appel/csharp-introduction-to-programming/assignments/state-capitals)
+[Assignment 2 - State Capitals](./state-capitals)
 
-[Assignment 3 - Miles to Kilometers](/appel/csharp-introduction-to-programming/assignments/miles-to-kilometers)
+[Assignment 3 - Miles to Kilometers](./miles-to-kilometers)
 
-[Assignment 4 - Book Sales](/appel/csharp-introduction-to-programming/assignments/book-sales)
+[Assignment 4 - Book Sales](./book-sales)
 
-[Assignment 5 - Pet Clinic](/appel/csharp-introduction-to-programming/assignments/pet-clinic)
+[Assignment 5 - Pet Clinic](./pet-clinic)
 
-[Assignment 6 - Sales Commission](/appel/csharp-introduction-to-programming/assignments/sales-commission)
+[Assignment 6 - Sales Commission](./sales-commission)
 
-[Assignment 7 - Population Change](/appel/csharp-introduction-to-programming/assignments/population)
+[Assignment 7 - Population Change](./population)
 
 
