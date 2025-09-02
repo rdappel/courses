@@ -78,4 +78,3 @@ Calculate the percent change using the formulas:
 
 Show your instructor (classroom students), or push your code to the Azure DevOps repository and submit the URL to Blackboard.
 
-> [!NOTE] If you don't know how to push your code to Azure DevOps, contact your instructor for assistance.
