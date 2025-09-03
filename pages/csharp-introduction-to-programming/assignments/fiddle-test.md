@@ -23,7 +23,7 @@ Instructions go here
 
 # Exercise
 
-<iframe width="100%" height="500px" src="https://dotnetfiddle.net/Widget/F177TF" frameborder="0" style="min-height: 50vh;"></iframe>
+<iframe width="100%" height="500px" src="https://dotnetfiddle.net/Widget/F177TF" frameborder="0" style="min-height: 60vh;"></iframe>
 
 # Submission
 
