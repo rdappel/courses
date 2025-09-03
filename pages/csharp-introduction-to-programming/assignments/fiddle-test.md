@@ -23,12 +23,10 @@ Instructions go here
 
 # Exercise
 
-<iframe width="100%" height="500px" src="https://dotnetfiddle.net/Widget/F177TF" frameborder="0" style="min-height: 60vh;"></iframe>
+<iframe class="fiddle" id="fiddle-F177TF" width="100%" height="500px" src="https://dotnetfiddle.net/Widget/F177TF" frameborder="0" style="min-height: 60vh;"></iframe>
 
 # Submission
 
 When you are satisfied with your code, please submit it using the button below.
 
-<div class="exercise-submission">
-    <button type="button" class="submit-button">Submit</button>
-</div>
+<button type="button" class="fiddle submit-button" data-fiddle-id="fiddle-F177TF">Submit</button>
