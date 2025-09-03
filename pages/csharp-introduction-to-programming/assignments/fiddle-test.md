@@ -3,14 +3,14 @@ title: Fiddle Test
 subtitle: C# Introduction to Programming
 hide-nav: false
 
-live: https://fvtc.software/appel/csharp-introduction-to-programming/assignments/book-sales
-dev: http://localhost:3006/appel/csharp-introduction-to-programming/assignments/book-sales
+live: https://fvtc.software/appel/csharp-introduction-to-programming/assignments/fiddle-test
+dev: http://localhost:3006/appel/csharp-introduction-to-programming/assignments/fiddle-test
 repo: https://github.com/rdappel/courses
 ---
 
-# Fiddle Test
+# Instructions
 
-Instructions go here:
+Instructions go here
 
 <details open style="display: none;">
 	<summary class="video">Show/Hide Video</summary>
@@ -23,5 +23,5 @@ Instructions go here:
 
 # Exercise
 
-<iframe width="100%" src="https://dotnetfiddle.net/Widget/F177TF" frameborder="0"></iframe>
+<iframe width="100%" height="500px" src="https://dotnetfiddle.net/Widget/F177TF" frameborder="0" style="min-height: 50vh;"></iframe>
 
