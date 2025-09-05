@@ -14,7 +14,12 @@ Instructions for runner exercise.
 
 # Exercise
 
-<code class="runner language-javascript">console.log("Hello, World!");</code>
+<div class="editor" id="editor">
+    <div class="code-output" id="output">
+        <pre><code id="hl" class="hljs language-javascript"></code></pre>
+    </div>
+    <textarea id="input" class="code-input" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off"></textarea>
+</div>
 
 # Submission
 
