@@ -1,5 +1,5 @@
 ---
-title: Project 5 - Banking Application
+title: Assignment 5 - Banking Application
 subtitle: C# Intermediate Programming
 hide-nav: false
 
@@ -8,7 +8,7 @@ dev: http://localhost:3006/appel/csharp-intermediate-programming/assignments/ban
 repo: https://github.com/rdappel/courses
 ---
 
-# Project 5 - Banking Application
+# Assignment 5 - Banking Application
 
 Create a multi-project solution for a banking application, including a Windows Forms UI, business layer, models, and unit tests.
 
