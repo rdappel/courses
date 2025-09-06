@@ -12,27 +12,27 @@ repo: https://github.com/rdappel/courses
 
 Design a timer class to track the time spent on phone calls. Create a 2-tier application with one User Interface (Windows Forms App) and one Business Layer (Class Library). Use this class to time the number of hours, minutes, and seconds.
 
-# Timer Class Requirements
+## Timer Class Requirements
 
 ## Public Properties
 - **ElapsedTime** (Read Only): Returns a string in the format `Hours:Minutes:Seconds` (e.g., `12:23:34`).
 
 > [!TIP] Use `.ToString("hh\\:mm\\:ss")` to format a TimeSpan as `Hours:Minutes:Seconds`.
 
-## Private Fields
+### Private Fields
 - `startTime` – DateTime
 - `endTime` – DateTime
 - `isRunning` – Boolean
 
-## Methods
+### Methods
 - `StartClock()`
 - `StopClock()`
 
-## Exceptions
+### Exceptions
 - `StartException`
 - `StopException`
 
-# Specifications
+## Specifications
 
 - The class must have the above properties, methods, and exceptions.
 - The application architecture must be correct (2-tier: UI and Business Layer).
@@ -44,7 +44,7 @@ Design a timer class to track the time spent on phone calls. Create a 2-tier app
 
 > [!NOTE] There is no `Reset` method requirement. To reset the timer, stop it and start it again.
 
-# Extra Credit (10 Points)
+## Extra Credit (10 Points)
 
 Add a split time function that displays split times (time since beginning or last split time). Extra credit will only be allowed if the base functionality of the application is working correctly.
 
