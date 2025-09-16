@@ -3,8 +3,8 @@ title: Assignment 3 - Lunch Order using OOP
 subtitle: C# Intermediate Programming
 hide-nav: false
 
-live: https://fvtc.software/appel/csharp-intermediate-programming/assignments/lunch-order
-dev: http://localhost:3006/appel/csharp-intermediate-programming/assignments/lunch-order
+live: https://fvtc.software/appel/csharp-intermediate-programming/assignments/lunch-order-oop
+dev: http://localhost:3006/appel/csharp-intermediate-programming/assignments/lunch-order-oop
 repo: https://github.com/rdappel/courses
 ---
 
