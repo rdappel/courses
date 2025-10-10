@@ -31,5 +31,5 @@ Once you have your GitHub account, paste the link (example: github.com/your-user
 	data-url-pattern="^(?:https?:\/\/)?(?:www\.)?github\.com\/[A-Za-z0-9](?:[A-Za-z0-9-]{0,38})\/?$"
 	data-validate-fetch="true">
 	<input type="text" placeholder="https://github.com/your-username" aria-label="GitHub profile URL" autocomplete="off" />
-	<button type="button">Submit</button>
+	<button type="button">Submit Assignment</button>
 </div>
