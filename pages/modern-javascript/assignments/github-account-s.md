@@ -27,20 +27,9 @@ For this assignment you are going to create a [GitHub](https://github.com) accou
 
 Once you have your GitHub account, paste the link (example: github.com/your-username) into the text box below and click the "Submit Assignment" button.
 
-<div class="exercise">
-  <h2 id="github-profile-submission">Submit GitHub profile</h2>
-
-  <div
-    class="link-submission"
-    data-url-pattern="^(?:https?:\/\/)?(?:www\.)?github\.com\/[A-Za-z0-9](?:[A-Za-z0-9-]{0,38})\/?$"
-    data-validate-fetch="true"
-  >
-    <input
-      type="text"
-      placeholder="https://github.com/rdappel"
-      aria-label="GitHub profile URL"
-      autocomplete="off"
-    />
-    <button type="button">Submit</button>
-  </div>
+<div class="link-submission"
+	data-url-pattern="^(?:https?:\/\/)?(?:www\.)?github\.com\/[A-Za-z0-9](?:[A-Za-z0-9-]{0,38})\/?$"
+	data-validate-fetch="true">
+	<input type="text" placeholder="https://github.com/your-username" aria-label="GitHub profile URL" autocomplete="off" />
+	<button type="button">Submit</button>
 </div>
