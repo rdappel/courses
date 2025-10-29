@@ -30,6 +30,10 @@ To create a `package.json` file, you can run the following command in your termi
 npm init
 ```
 
+> [!NOTE] npm doesn't always play nicely with certain terminals, like Powershell for windows users. You can change your terminal to Command Prompt (cmd) or Git Bash to avoid issues:
+
+![Change Terminal](https://i.imgur.com/1oYJY6L.png)
+
 Now that we have a `package.json` file, we can start install and use packages in our project.
 
 We're going to install a package called `ansi-colors` to demonstrate how to install packages using NPM.
