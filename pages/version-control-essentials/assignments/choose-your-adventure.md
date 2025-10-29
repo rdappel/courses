@@ -156,7 +156,7 @@ git push origin main
 
 # Submission
 
-Submit the following in Blackboard:
+**Every team member should submit the following in Blackboard:**
 
 1. **URL of your forked repository**
 
@@ -164,7 +164,7 @@ Submit the following in Blackboard:
 
 3. **Git log output**: Run `git log --oneline --graph` and paste the output
 
-4. **Team reflection** (one submission per team): Answer these questions:
+4. **Team reflection**: Answer these questions:
    - Describe how you divided the work between partners
    - What Git features did you find most helpful during collaboration?
    - Did you encounter any merge conflicts? How did you resolve them?
