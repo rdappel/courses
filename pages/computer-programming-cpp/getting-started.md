@@ -4,6 +4,8 @@ subtitle: Computer Programming C++
 hideNav: false
 
 live: https://fvtc.software/appel/computer-programming-cpp/getting-started
+dev: http://localhost:3006/appel/computer-programming-cpp/getting-started
+repo: https://github.com/rdappel/courses
 ---
 
 # Getting Started
@@ -19,7 +21,7 @@ This unit will introduce you to the basics of C++. If you are used to programmin
     </div>
 </details>
 
-If you do not have "Visual C++" templates available in the New Project window, you need to [Modify your Visual Studio Installation](https://www.youtube.com/watch?v=3Z1b8Z6Q6k8).
+If you do not have "Visual C++" templates available in the New Project window, you need to [Modify your Visual Studio Installation](https://www.youtube.com/watch?v=suoeL7yfbyc).
 
 
 ## The Main Function

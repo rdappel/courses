@@ -93,4 +93,4 @@ Total Pay: $1215
 
 # Submission
 
-Create a new repository on GitHub and push your code to it. Then submit the link to your repository on Blackboard.
+Create a new repository on GitHub and push your code to it. Then submit the link to your repository to Blackboard.

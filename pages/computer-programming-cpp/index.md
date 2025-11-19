@@ -4,78 +4,110 @@ subtitle: Ryan's Courses
 hideNav: false
 
 live: https://fvtc.software/appel/computer-programming-cpp
+dev: http://localhost:3006/appel/computer-programming-cpp
+repo: https://github.com/rdappel/courses
 ---
 
-# Computer Programming C++
+# Week 1 - Introduction to C++
 
-## Week 1
+Summary: You’ll learn the basics of C++ programming, and review conditionals and loops.
 
-[Getting Started](/appel/computer-programming-cpp/getting-started)
+[Getting Started](./computer-programming-cpp/getting-started)
 
-[Conditionals and Repetition](/appel/computer-programming-cpp/conditionals-and-repetition)
+[Conditionals and Repetition](./computer-programming-cpp/conditionals-and-repetition)
 
-[Assignment 1 - GitHub Account](/appel/computer-programming-cpp/assignments/github-account)
+[Assignment 1 - GitHub Account](./computer-programming-cpp/assignments/github-account)
 
-## Week 2
+# Week 2 - Functions in C++
 
-[Functions](/appel/computer-programming-cpp/functions)
+Summary: You’ll learn how to create and use functions in C++, including function parameters and return values.
 
-[Assignment 2 - Rectangle Area](/appel/computer-programming-cpp/assignments/rectangle-area)
+[Functions](./computer-programming-cpp/functions)
 
-## Week 3
+[Assignment 2 - Rectangle Area](./computer-programming-cpp/assignments/rectangle-area)
 
-[Structs and Arrays](/appel/computer-programming-cpp/structs-and-arrays)
+# Week 3 - Structs and Arrays
 
-[Assignment 3 - Library Book Manager](/appel/computer-programming-cpp/assignments/book-manager)
+Summary: You’ll learn about structs and arrays in C++, and how to use them to organize data.
 
-## Week 4
+[Structs and Arrays](./computer-programming-cpp/structs-and-arrays)
+
+[Assignment 3 - Mad Lib](./computer-programming-cpp/assignments/mad-lib)
+
+Review for Exam 1
+
+# Week 4 - Exam 1
+
+Summary: You’ll take your first exam, which will cover the material from weeks 1-3.
 
 Exam 1
 
-## Week 5
+# Week 5 - Pointers and Heap Memory
 
-[Pointers and Heap Memory](/appel/computer-programming-cpp/pointers-and-heap-memory)
+Summary: You’ll learn about pointers, dynamic memory allocation, and how to manage memory in C++.
 
-[Assignment 4 - Pay Report](/appel/computer-programming-cpp/assignments/pay-report)
+[Pointers and Heap Memory](./computer-programming-cpp/pointers-and-heap-memory)
 
-## Week 6
+[Assignment 4 - Pay Report](./computer-programming-cpp/assignments/pay-report)
 
-[Vectors, Strings, and File I/O](/appel/computer-programming-cpp/vectors-strings-fileio)
+# Week 6 - Vectors, Strings, and File I/O
 
-[Assignment 5 - Math Quiz](/appel/computer-programming-cpp/assignments/math-quiz)
+Summary: You’ll learn about vectors, strings, and file input/output in C++.
 
-## Week 7
+[Vectors, Strings, and File I/O](./computer-programming-cpp/vectors-strings-fileio)
 
-[Classes](/appel/computer-programming-cpp/classes)
+[Assignment 5 - Math Quiz](./computer-programming-cpp/assignments/math-quiz)
 
-## Week 8
+# Week 7 - Classes in C++
+
+Summary: You’ll learn about classes in C++, including constructors, destructors, and member functions.
+
+[Classes](./computer-programming-cpp/classes)
+
+Review for Exam 2
+
+# Week 8 - Exam 2
+
+Summary: You’ll take your second exam, which will cover the material from weeks 4-6.
 
 Exam 2
 
-## Week 9
+# Week 9 - OOP Concepts
 
-[Inheritance and Polymorphism](/appel/computer-programming-cpp/inheritance-and-polymorphism)
+Summary: You’ll learn about object-oriented programming concepts such as inheritance and polymorphism.
 
-[Assignment 6 - Tic Tac Toe](/appel/computer-programming-cpp/assignments/tic-tac-toe)
+[Inheritance and Polymorphism](./computer-programming-cpp/inheritance-and-polymorphism)
 
-## Week 10
+[Assignment 6 - Tic Tac Toe](./computer-programming-cpp/assignments/tic-tac-toe)
 
-[Abstract Classes](/appel/computer-programming-cpp/abstract-classes)
+# Week 10 - Abstract Classes
 
-## Week 11
+Summary: You’ll learn about abstract classes and how they can be used to define interfaces in C++.
 
-[Static Members](/appel/computer-programming-cpp/static-members)
+[Abstract Classes](./computer-programming-cpp/abstract-classes)
 
-[Assignment 7 - Peer Review](/appel/computer-programming-cpp/assignments/peer-review)
+# Week 11 - Static Members
 
-## Week 12
+Summary: You’ll learn about static members in classes, including static variables and static methods.
+
+[Static Members](./computer-programming-cpp/static-members)
+
+[Assignment 7 - Peer Review](./computer-programming-cpp/assignments/peer-review)
+
+Review for Exam 3
+
+# Week 12 - Exam 3
+
+Summary: You’ll take your third exam, which will cover the material from weeks 9-11.
 
 Exam 3
 
-## Weeks 13-16
+# Weeks 13-16 - Final Project
 
-[Assignment 8 - Game Analysis](/appel/computer-programming-cpp/assignments/game-analysis)
+Summary: You’ll work on a final project that incorporates the concepts learned throughout the course.
 
-[Assignment 9 - Game Modification Proposal](/appel/computer-programming-cpp/assignments/modification-proposal)
+[Assignment 8 - Game Analysis](./computer-programming-cpp/assignments/game-analysis)
 
-[Assignment 10 - Final Project](/appel/computer-programming-cpp/final-project)
+[Assignment 9 - Game Modification Proposal](./computer-programming-cpp/assignments/modification-proposal)
+
+[Assignment 10 - Final Project](./computer-programming-cpp/assignments/final-project)

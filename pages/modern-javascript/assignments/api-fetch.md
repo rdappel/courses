@@ -13,7 +13,7 @@ In this assignment you are going to use the fetch api, along with the PokeAPI to
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/eQk7uV_vBOI" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		></iframe>
 	</div>
@@ -54,4 +54,4 @@ const url = 'https://pokeapi.co/api/v2/pokemon/' + Math.floor(Math.random() * 15
 
 # Submission
 
-Push up your changes to GitHub and submit the URL to your repository on Blackboard.
+Push up your changes to GitHub and submit the URL to your repository to Blackboard.

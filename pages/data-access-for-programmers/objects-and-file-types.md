@@ -255,7 +255,7 @@ Time to create your first object! Create a CSV, XML, and JSON file that contains
 ```ebnf
 Course ID: 10-152-168
 Course Name: Data Access for Programmers
-Instuctor Name: Ryan Appel
+Instructor Name: Ryan Appel
 Credits: 3
 ```
 
@@ -280,6 +280,8 @@ REST stands for "representational state transfer". It's a software architectural
 
 Let's take a look at an example.
 
+> [!NOTE] swapi.dev is no longer accessable. A new version of the API is available at [https://swapi.tech/](https://swapi.tech/). I have updated the links on this page, but the video still uses the old API. The new API is very similar, so you should be able to follow along with the video.
+
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
@@ -291,7 +293,7 @@ Let's take a look at an example.
 	</div>
 </details>
 
-I recommend that you take a few minutes to check out the [Star Wars API](https://swapi.dev/). It's a great example, and as I mentioned in the video, it's near and dear to my heart.
+I recommend that you take a few minutes to check out the [Star Wars API](https://swapi.tech/). It's a great example, and as I mentioned in the video, it's near and dear to my heart.
 
 ## Running Demo 2
 

@@ -81,4 +81,4 @@ todoList.append(li)
 
 # Submission
 
-Push up your changes to GitHub and submit the URL to your repository on Blackboard.
+Push up your changes to GitHub and submit the URL to your repository to Blackboard.

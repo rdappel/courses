@@ -1,15 +1,19 @@
 {
 	"Initialize a Unit": {
-		"scope": "markdown",
+		"scope": "markdown, md",
 		"prefix": "init",
 		"body": [
 			"---",
 			"title: $1",
 			"subtitle: $2",
 			"hideNav: ${3|false,true|}",
+			"",
+			"live: https://fvtc.software/appel/$4",
+			"dev: http://localhost:3006/appel/$4",
+			"repo: https://github.com/rdappel/courses",
 			"---",
 			"",
-			"# $1$4",
+			"# $1$5",
 			"",
 			"$0"
 		],
@@ -17,7 +21,7 @@
 	},
 
 	"Embed YouTube Video with Details Toggle": {
-		"scope": "markdown",
+		"scope": "markdown, md, mdx",
 		"prefix": "yt",
 		"body": [
 			"<details open>",
@@ -36,7 +40,7 @@
 
 	"Add a Note, Tip, Important, Warning, Caution Blockquote": {
 		"scope": "markdown",
-		"prefix": ">",
+		"prefix": "> [",
 		"body": "> [!${1|NOTE,TIP,IMPORTANT,WARNING,CAUTION|}] $0",
 		"description": "Emphasize critical information using a Note, Tip, Important, Warning, or Caution Blockquote"
 	},
@@ -86,7 +90,24 @@
 			"</details>"
 		],
 		"description": "Create an exercise"
-	}, 
+	},
+
+	"Submission Template": {
+		"scope": "markdown",
+		"prefix": "sub",
+		"body": [
+			"## Submission {#exercise-$1-submission}",
+			"",
+			"Once you have completed the exercise, paste your $0",
+			"",
+			"<div data-language=\"$2\" class=\"exercise-submission\">",
+			"\t<textarea placeholder=\"Paste your code here...\"></textarea>",
+			"\t<button type=\"button\" class=\"submit-button\">Submit Exercise</button>",
+			"</div>",
+			""
+		],
+		"description": "Create a submission template"
+	},
 
 	"Hiden Content for AI":{
 		"scope": "markdown",
@@ -110,5 +131,35 @@
 			"</div>"
 		],
 		"description": "No Copy"
+	},
+
+	"Adaptive Image": {
+		"scope": "markdown",
+		"prefix": "adapt",
+		"body": [
+			"<div class=\"centering\">",
+			"\t<img src=\"https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/${1:course-id}/$2-dark.svg\" alt=\"$3\" aria-hidden=\"true\" class=\"adaptive dark\">",
+			"\t<img src=\"https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/${1:course-id}/$2-light.svg\" alt=\"$3\" aria-hidden=\"true\" class=\"adaptive light\">",
+			"</div>$0"
+		],
+		"description": "Create an theme aware (adaptive) image"
+	},
+
+	"Add an Image from Support Files": {
+		"scope": "markdown",
+		"prefix": "img",
+		"body": [
+			"\t<img src=\"https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/${1:course-id}/$2\" alt=\"$3\">$0"
+		],
+		"description": "Add an image from the support files"
+	},
+
+	"Add an MD Image from Support Files": {
+		"scope": "markdown",
+		"prefix": "mdimg",
+		"body": [
+			"![${1}](https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/${2:course-id}/$3)$0"
+		],
+		"description": "Add an image from the support files"
 	}
 }
