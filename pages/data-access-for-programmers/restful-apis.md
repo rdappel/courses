@@ -250,6 +250,7 @@ app.get('/', (request, response) => {
 		if (error) {
 			console.log(error)
 			response.send({ error: "There was an sql error."})
+			}
 		else {
 			console.log(results)
 			response.send(results)
