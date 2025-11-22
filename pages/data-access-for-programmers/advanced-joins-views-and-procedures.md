@@ -146,7 +146,7 @@ A view always shows up-to-date data! The database engine recreates the data, usi
 
 Views allow us to store a query in the database, and then use that query as if it were a table. This can be useful if we have a query that we use often, or if we want to limit the data that a user can see.
 
-A view is created using the `CREATE VIEW` statement. The following statement will create a view that shows the customer number, first name, and last name of all of the customers.
+A view is created using the `CREATE VIEW` statement. The following statement will create a view that joins the rep and customer tables, showing rep numbers, names, customer numbers, customer names, and credit limits.
 
 ```sql
 CREATE VIEW vsRepCustomerCredit AS
