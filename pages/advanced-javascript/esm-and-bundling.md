@@ -31,7 +31,17 @@ CommonJS modules are synchronous and load dependencies on demand. This pattern w
 
 ## ES Modules
 
-In 2015, ECMAScript 6 introduced a new module system called ECMAScript Modules (ESM). This system is asynchronous and allows for static analysis of dependencies. You can recognize ES modules by the `import` and `export` keywords:
+In 2015, ECMAScript 6 introduced a new module system called ECMAScript Modules (ESM). This system is asynchronous and allows for static analysis of dependencies. You can recognize ES modules by the `import` and `export` keywords.
+
+<details open>
+    <summary class="video">Show/Hide Video</summary>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+            allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+        </iframe>
+    </div>
+</details>
+
 
 ```javascript
 // import a module
@@ -108,10 +118,10 @@ Let's turn our JavaScript files into a bundle using Vite.
 Here is the command that I ran to initialize Vite in my project:
 
 ```bash
-npm init vite@latest . --template vanilla
+npm create vite@latest .
 ```
 
-This command creates a new Vite project in the current directory using the vanilla JavaScript template. It also installs all the necessary dependencies.
+This command creates a new Vite project in the current directory. It also installs all the necessary dependencies.
 
 After that, I ran the following command to start the development server:
 

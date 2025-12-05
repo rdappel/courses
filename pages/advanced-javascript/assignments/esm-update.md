@@ -1,5 +1,5 @@
 ---
-title: Assignment 1 - List Utilities Module
+title: Assignment 2 - ES Module Update
 subtitle: Advanced JavaScript
 hideNav: false
 
@@ -8,9 +8,9 @@ dev: http://localhost:3006/appel/advanced-javascript/assignments/list-utilities-
 repo: https://github.com/rdappel/courses
 ---
 
-# Assignment 1 - List Utilities Module
+# Assignment 2 - ES Module Update
 
-For this assignment, you'll create a small JavaScript utility module used for filtering, sorting, and searching lists of movies. This is a foundation you'll reuse later in the course.
+For this assignment, you'll update your list utilities module to use ES Modules.
 
 <details open>
    <summary class="video">Show/Hide Video</summary>
@@ -25,7 +25,7 @@ For this assignment, you'll create a small JavaScript utility module used for fi
 
 1. Fork and Clone the Starter Repository
 
-- Go to: [https://github.com/FVTC/ajs-assignment1](https://github.com/FVTC/ajs-assignment1)
+- Go to: [https://github.com/FVTC/ajs-esmodule](https://github.com/FVTC/ajs-esmodule)
 
 - Click "Fork" to create your own copy.
 
@@ -35,9 +35,11 @@ For this assignment, you'll create a small JavaScript utility module used for fi
 
 2. Create the Utility File
 
-- In your cloned repo, create a file named exactly `list-utils.js`.
+- In your cloned repo, create a file in the `src` directory, named exactly `list-utils.js`.
 
 3. Implement Required Functions
+
+> [!TIP] Use the logic from your previous assignment as a starting point.
 
 All functions must be **pure** (no mutation of input arrays). Implement the following:
 
