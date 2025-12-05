@@ -24,7 +24,7 @@ Summary: You’ll set up Vite and learn how to organize modular JavaScript using
 
 [Getting Started with Vite](./advanced-javascript/getting-started-with-vite)
 
-[Assignment 2 - 22222](./advanced-javascript/assignments/22222)
+[Assignment 2 - ES Module Update](./advanced-javascript/assignments/esm-update)
 
 # Week 3 - React Fundamentals
 
