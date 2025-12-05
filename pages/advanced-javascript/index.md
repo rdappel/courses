@@ -20,8 +20,6 @@ Summary: You’ll refresh your understanding of JavaScript functions, array meth
 
 Summary: You’ll set up Vite and learn how to organize modular JavaScript using ESM syntax.
 
-[ESM and Bundling](./advanced-javascript/esm-and-bundling)
-
 [Getting Started with Vite](./advanced-javascript/getting-started-with-vite)
 
 [Assignment 2 - ES Module Update](./advanced-javascript/assignments/esm-update)
