@@ -8,7 +8,7 @@ dev: http://localhost:3006/appel/advanced-javascript
 repo: https://github.com/rdappel/courses
 ---
 
-# Week 1 - Modern JavaScript Review: Functions & Array Methods
+# Week 1 - Modern JavaScript Review
 
 Summary: You’ll refresh your understanding of JavaScript functions, array methods, and higher-order functions.
 
@@ -26,7 +26,7 @@ Summary: You’ll set up Vite and learn how to organize modular JavaScript using
 
 [Assignment 2 - 22222](./advanced-javascript/assignments/22222)
 
-# Week 3 - React Fundamentals: Components & Props
+# Week 3 - React Fundamentals
 
 Summary: You’ll create functional React components and use props to pass data.
 
@@ -36,7 +36,7 @@ Summary: You’ll create functional React components and use props to pass data.
 
 [Assignment 3 - 3333333](./advanced-javascript/assignments/3333333)
 
-# Week 4 - Introducing Hooks & useState
+# Week 4 - Hooks & useState
 
 Summary: You’ll learn how to write functional code in React using "hooks," and manage local state with useState.
 
@@ -46,7 +46,7 @@ Summary: You’ll learn how to write functional code in React using "hooks," and
 
 [Assignment 4 - 444444](./advanced-javascript/assignments/444444)
 
-# Week 5 - Side Effects and Data Fetching with useEffect
+# Week 5 - Side Effects & Data Fetching
 
 Summary: You’ll manage side effects in React components using the useEffect hook, including data fetching.
 
@@ -56,7 +56,7 @@ Summary: You’ll manage side effects in React components using the useEffect ho
 
 [Assignment 5 - 555555](./advanced-javascript/assignments/555555)
 
-# Week 6 - Controlled Components and useRef
+# Week 6 - Controlled Components & useRef
 
 Summary: You’ll build forms using controlled inputs and use useRef to access DOM elements and persist values.
 
@@ -70,7 +70,7 @@ Summary: You’ll demonstrate your understanding of the concepts covered in the 
 
 Exam 1
 
-# Week 8 – Lifting State & Component Communication
+# Week 8 – Lifting State
 
 Summary: You’ll design data flow across components by lifting state and avoiding unnecessary prop drilling.
 
@@ -88,7 +88,7 @@ Summary: You’ll share state across multiple components using React’s Context
 
 [Assignment 7 - 777777](./advanced-javascript/assignments/777777)
 
-# Week 10 – useReducer for Complex State
+# Week 10 – useReducer
 
 Summary: You’ll manage structured, multi-action state with useReducer.
 
