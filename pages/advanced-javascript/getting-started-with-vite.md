@@ -43,13 +43,19 @@ npm create vite@latest .
 
 This command creates a new Vite project in the current directory. It also installs all the necessary dependencies.
 
+> [!NOTE] You could run `npm create vite@latest` (without the dot) to create a new project in a new directory, but then you would need to navigate into that directory before running the development server.
+
+---
+
 After that, I ran the following command to start the development server:
 
 ```bash
 npm run dev
 ```
 
-This command starts the Vite development server, which serves the files in the `dist` directory and watches for changes to the source files.
+This command starts the Vite development server, which watches for changes and reloads the browser automatically.
+
+---
 
 After that, I ran the following command to build the project for production:
 
