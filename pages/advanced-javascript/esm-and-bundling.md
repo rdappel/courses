@@ -85,9 +85,9 @@ console.log(subtract(5, 3)) // 2
 Here is the code for the math.js file:
 
 ```javascript
-export add = (a, b) => a + b
+export const add = (a, b) => a + b
 
-export subtract = (a, b) => a - b
+export const subtract = (a, b) => a - b
 ```
 
 And here is how we linked the JavaScript files in our HTML file:
