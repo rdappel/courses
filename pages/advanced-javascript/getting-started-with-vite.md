@@ -12,9 +12,19 @@ repo: https://github.com/rdappel/courses
 
 Vite is a modern build tool that provides a fast and efficient development experience for web applications.
 
-Vite also supports hot module replacement (HMR). This is going to be very useful for us as we develop our React applications. HMR allows you to see changes in your code immediately without having to refresh the entire page.
+## Hot Module Replacement (HMR)
 
-In this video, we will walk through the process of setting up Vite for our React application:
+Vite supports hot module replacement (HMR). This is going to be very useful for us as we develop our React applications. HMR allows you to see changes in your code immediately without having to refresh the entire page.
+
+## Bundling
+
+Bundling is the process of combining multiple JavaScript files into a single file. This is important for performance, as it reduces the number of HTTP requests made by the browser. Bundling also allows for minification, which reduces the size of the JavaScript file by removing whitespace and comments.
+
+Vite uses Rollup under the hood for bundling, and it supports ES Modules out of the box.
+
+# Getting Started with Vite
+
+Let's turn our JavaScript files into a bundle using Vite.
 
 <details open>
     <summary class="video">Show/Hide Video</summary>
@@ -25,6 +35,25 @@ In this video, we will walk through the process of setting up Vite for our React
     </div>
 </details>
 
-The command to create a new Vite project is:
+Here is the command that I ran to initialize Vite in my project:
 
 ```bash
+npm create vite@latest .
+```
+
+This command creates a new Vite project in the current directory. It also installs all the necessary dependencies.
+
+After that, I ran the following command to start the development server:
+
+```bash
+npm run dev
+```
+
+This command starts the Vite development server, which serves the files in the `dist` directory and watches for changes to the source files.
+
+After that, I ran the following command to build the project for production:
+
+```bash
+npm run build
+```
+
