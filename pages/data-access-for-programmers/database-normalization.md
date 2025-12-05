@@ -144,9 +144,9 @@ This video demonstrates the process.
 A database is in **Second Normal Form** if it meets the following criteria:
 
 - It is in First Normal Form.
-- All non-key attributes are dependent on the entire primary key. (This only applies to concatinated/composite primary keys.)
+- All non-key attributes are dependent on the entire primary key. (This only applies to concatenated/composite primary keys.)
 
-In this video we will explore how concatinated primary keys relate to Second Normal Form.
+In this video we will explore how concatenated primary keys relate to Second Normal Form.
 
 <details open>
 	<summary class="video">Show/Hide Video</summary>
@@ -271,7 +271,7 @@ Denormalization is the process of taking a normalized database and adding redund
 
 ## Remembering the Normal Forms
 
-A common pneumonic device for remembering the normal forms is:
+A common mnemonic device for remembering the normal forms is:
 
 - 1NF: The key.
 - 2NF: The whole key.

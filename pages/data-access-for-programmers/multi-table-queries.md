@@ -56,7 +56,7 @@ This video will demonstrate this query.
 
 # Exercises
 
-Let's practice joining tables. For these exercises, we'll be using the "Premeire" database, so make sure that you're using it, by double-clicking on it in the Navigator.
+Let's practice joining tables. For these exercises, we'll be using the "Premiere" database, so make sure that you're using it, by double-clicking on it in the Navigator.
 
 ## Exercise 1 
 

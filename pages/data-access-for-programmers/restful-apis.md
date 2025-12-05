@@ -12,7 +12,7 @@ As we learned earlier in the semester, a RESTful API is an API that uses HTTP me
 
 In this unit we will learn how to create a RESTful API using JavaScript. We will have to design an ERD, create the database, and then write an application that will allow us to access the data in the database.
 
-The first big decission to make... what kind of data should we store in our database?
+The first big decision to make... what kind of data should we store in our database?
 
 <details open>
 	<summary class="video">Show/Hide Video</summary>
@@ -74,7 +74,7 @@ CREATE TABLE `pokemon` (
 
 INSERT INTO `pokemon` VALUES ('1', 'Bulbasaur', NULL, 'It uses the nutrients that are stored in the seed on its back in order to grow...');
 INSERT INTO `pokemon` VALUES ('2', 'Ivysaur', '1', 'When it is exposed to sunlight, the seed, now a bud, grows so much that it apparently loses the ability to stand on its hind legs...');
-INSERT INTO `pokemon` VALUES ('3', 'Ivysaur', '2', 'Its English name is a portmanteau of "Venus" (relating to the Venus flytrap) and "dinosaur"...');
+INSERT INTO `pokemon` VALUES ('3', 'Venusaur', '2', 'Its English name is a portmanteau of "Venus" (relating to the Venus flytrap) and "dinosaur"...');
 INSERT INTO `pokemon` VALUES ('4', 'Charmander', NULL, 'Charmander is a bipedal, lizard-like Pokémon with a flame at the tip of its tail. Its English name is a portmanteau of "char" and "salamander"...');
 
 
@@ -250,6 +250,7 @@ app.get('/', (request, response) => {
 		if (error) {
 			console.log(error)
 			response.send({ error: "There was an sql error."})
+		}
 		else {
 			console.log(results)
 			response.send(results)
@@ -290,7 +291,7 @@ app.get('/pokemon', (request, response) => {
 	})
 })
 ```
-## Endpoint that Calls a Proecedure
+## Endpoint that Calls a Procedure
 
 That last query was a little complicated, so we're going to create a stored procedure that will do the same thing. This video will show you how to create a stored procedure, and how to call it from our application.
 
@@ -321,7 +322,7 @@ app.get('/pokemon', (request, response) => {
 })
 ```
 
-And the new endpoint that retreives a single Pokémon:
+And the new endpoint that retrieves a single Pokémon:
 
 ```javascript
 app.get('/pokemon/3', (request, response) => {
