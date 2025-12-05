@@ -3,8 +3,8 @@ title: Assignment 2 - ES Module Update
 subtitle: Advanced JavaScript
 hideNav: false
 
-live: https://fvtc.software/appel/advanced-javascript/assignments/list-utilities-module
-dev: http://localhost:3006/appel/advanced-javascript/assignments/list-utilities-module
+live: https://fvtc.software/appel/advanced-javascript/assignments/esm-update
+dev: http://localhost:3006/appel/advanced-javascript/assignments/esm-update
 repo: https://github.com/rdappel/courses
 ---
 
