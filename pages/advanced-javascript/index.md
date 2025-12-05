@@ -14,7 +14,7 @@ Summary: You’ll refresh your understanding of JavaScript functions, array meth
 
 [JavaScript Review](./advanced-javascript/javascript-review)
 
-[Assignment 1 - GitHub Account](./advanced-javascript/assignments/github-account)
+[Assignment 1 - List Utilities Module](./advanced-javascript/assignments/list-utilities-module)
 
 # Week 2 - ES Modules and Vite Setup
 
