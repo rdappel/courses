@@ -153,6 +153,16 @@ logTuesdayHigh(weather)
 
 The ternary operator is a concise way to perform conditional expressions in JavaScript. It is often used as a shorthand for the if-else statement.
 
+<details open>
+    <summary class="video">Show/Hide Video</summary>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+            allowfullscreen></iframe>
+    </div>
+</details>
+
+Here is the code from the video:
+
 ```javascript
 const age = 18
 
