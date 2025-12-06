@@ -176,4 +176,67 @@ console.log(canVote) // Output: "Yes"
 
 In this example, the ternary operator checks if the age is 18 or older. If true, it returns "Yes"; otherwise, it returns "No".
 
+# ES Modules (ESM)
 
+In Modern JavaScript, we used `require` and `module.exports` to create and use modules. There is a newer, standardized way to work with modules in JavaScript called ES Modules (ESM). ESM uses the `import` and `export` keywords.
+
+In the following video, I'll be starting with a simple module that uses CommonJS syntax and converting it to use ESM syntax.
+
+Please follow along by cloning down the [AJS Module Conversion repository](https://github.com/FVTC/ajs-module-conversion) to your computer.
+
+<details open>
+    <summary class="video">Show/Hide Video</summary>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+            allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+        </iframe>
+    </div>
+</details>
+
+Here is the code that was updated in the video:
+
+Default Import/Export:
+
+```javascript
+// in user.js:
+
+// module.exports = { // old CommonJS syntax
+// ...
+// }
+
+export default { // new ESM syntax
+    createUser,
+    getUserInfo,
+    updateAge,
+    deactivateUser,
+    getActiveStatus
+}
+
+// in app.js:
+import userFunctions from './user.js' // Default import
+
+const {
+    createUser,
+    getUserInfo,
+    updateAge,
+    deactivateUser,
+    getActiveStatus
+} = userFunctions // Destructure imported functions
+```
+
+Named Import/Export:
+
+```javascript
+// in user.js:
+
+export const createUser = (name, age) => {
+    // ...
+}
+
+export const getUserInfo = (user) => {
+    // ...
+}
+
+// in app.js:
+import { createUser, getUserInfo } from './user.js' // Named import
+```
