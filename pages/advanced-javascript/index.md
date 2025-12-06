@@ -8,21 +8,19 @@ dev: http://localhost:3006/appel/advanced-javascript
 repo: https://github.com/rdappel/courses
 ---
 
-# Week 1 - Modern JavaScript Review
+# Week 1 - JavaScript Review and ESM
 
-Summary: You’ll refresh your understanding of JavaScript functions, array methods, and higher-order functions.
+Summary: You’ll refresh some JavaScript fundamentals and learn how to organize modular JavaScript using ESM syntax.
 
-[JavaScript Review](./advanced-javascript/javascript-review)
+[JavaScript Review](./advanced-javascript/javascript-review-and-esm)
 
-[Assignment 1 - List Utilities Module](./advanced-javascript/assignments/list-utilities-module)
+[Assignment 1 - Module Conversion](./advanced-javascript/assignments/module-conversion)
 
-# Week 2 - ES Modules and Vite Setup
+# Week 2 - Introduction to React
 
-Summary: You’ll set up Vite and learn how to organize modular JavaScript using ESM syntax.
+Summary: You'll learn how to set up a React development environment using Vite.
 
-[Getting Started with Vite](./advanced-javascript/getting-started-with-vite)
-
-[Assignment 2 - ES Module Update](./advanced-javascript/assignments/esm-update)
+[Getting Started with React](./advanced-javascript/getting-started-with-vite-and-react)
 
 # Week 3 - React Fundamentals
 

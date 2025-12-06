@@ -1,10 +1,10 @@
 ---
-title: JavaScript Review
+title: JavaScript Review and ESM
 subtitle: Advanced JavaScript
 hideNav: false
 
-live: https://fvtc.software/appel/advanced-javascript
-dev: http://localhost:3006/appel/advanced-javascript
+live: https://fvtc.software/appel/advanced-javascript/javascript-review-and-esm
+dev: http://localhost:3006/appel/advanced-javascript/javascript-review-and-esm
 repo: https://github.com/rdappel/courses
 ---
 
@@ -23,9 +23,9 @@ Before we start reviewing, please make sure you have all of the same software in
 
 In this section, we'll review some of the key concepts from the Modern JavaScript course. This will include functions, array methods, and higher-order functions. If you need a refresher on any of these topics, please refer to the [Modern JavaScript course content](https://fvtc.software/appel/modern-javascript).
 
-## Array Functions
+## Array Methods
 
-Let's start by reviewing some common array functions in JavaScript. The ones we'll focus on are map, filter, and reduce. These will be essential when working with arrays in React.
+Let's start by reviewing some common array methods in JavaScript. The ones we'll focus on are map, filter, and reduce. These will be essential when working with arrays in React.
 
 <details open>
     <summary class="video">Show/Hide Video</summary>
@@ -45,21 +45,21 @@ const double = n => n * 2
 
 // Use map to get a new array with doubled values
 const doubledNumbers = numbers.map(double)
-console.log(doubledNumbers)
+console.log({ doubledNumbers })
 
 // Function to check if a number is even
 const isEven = n => n % 2 === 0
 
 // Use filter to get only even numbers
 const evenNumbers = numbers.filter(isEven)
-console.log(evenNumbers)
+console.log({ evenNumbers })
 
 // Reducer function that sums two numbers
 const sum = (n1, n2) => n1 + n2
 
 // Use reduce to sum all numbers in the array
-const sum = numbers.reduce(sum, 0)
-console.log(sum)
+const sumOfNumbers = numbers.reduce(sum, 0)
+console.log({ sumOfNumbers })
 ```
 
 ## Destructuring Arrays and Objects
@@ -87,11 +87,11 @@ const object = {
 
 // Destructuring an array
 const [ first, _, third ] = array
-console.log(first, third) // Output: 10 30
+console.log({ first, third }) // Output: { first: 10, third: 30 }
 
 // Destructuring an object
 const { name, age } = object
-console.log(name, age) // Output: Alice 25
+console.log({ name, age }) // Output: { name: "Alice", age: 25 }
 ```
 
 I find these especially useful when objects or arrays are passed as function parameters.
@@ -135,16 +135,17 @@ const getWeather = async () => {
     })
 }
 
-const logTemperature = ({ current }) => {
-    console.log(`The current temperature is ${current.temperature}°F.`)
-}
-
-const logTuesdayHigh = ({ forecast: { data } }) => {
-    const tuesday = data.find(({ day }) => day === "Tuesday")
-    console.log(`The high temperature on Tuesday is ${tuesday.high}°F.`)
-}
-
 const weather = await getWeather()
+
+const logTemperature = ({ current }) => {
+	console.log(`The current temperature is ${current.temperature}°F.`)
+}
+
+const logTuesdayHigh = ({ forecast : { data } }) => {
+	const { high } = data.find(({ day }) => day === 'Tuesday')
+	console.log(`The high temperature on Tuesday is ${high}°F.`)
+}
+
 logTemperature(weather)
 logTuesdayHigh(weather)
 ```
@@ -168,7 +169,9 @@ const age = 18
 
 // Set canVote based on age using the ternary operator
 const canVote = age >= 18 ? "Yes" : "No"
-console.log(canVote)
+console.log(canVote) // Output: "Yes"
 ```
 
 In this example, the ternary operator checks if the age is 18 or older. If true, it returns "Yes"; otherwise, it returns "No".
+
+
