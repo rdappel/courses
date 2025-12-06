@@ -30,7 +30,7 @@ Let's start by reviewing some common array methods in JavaScript. The ones we'll
 <details open>
     <summary class="video">Show/Hide Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/YHgWn09h1Is" width="100%" height="100%" frameborder="0"
             allowfullscreen></iframe>
     </div>
 </details>
@@ -69,7 +69,7 @@ Destructuring is a convenient way of extracting multiple values from data stored
 <details open>
     <summary class="video">Show/Hide Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/xj4jXhmKEs8" width="100%" height="100%" frameborder="0"
             allowfullscreen></iframe>
     </div>
 </details>
@@ -96,10 +96,12 @@ console.log({ name, age }) // Output: { name: "Alice", age: 25 }
 
 I find these especially useful when objects or arrays are passed as function parameters.
 
+Let's look at a more complex example:
+
 <details open>
     <summary class="video">Show/Hide Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/9Bwd_aXTDsA" width="100%" height="100%" frameborder="0"
             allowfullscreen></iframe>
     </div>
 </details>
@@ -157,7 +159,7 @@ The ternary operator is a concise way to perform conditional expressions in Java
 <details open>
     <summary class="video">Show/Hide Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/MQM1YeO8wxE" width="100%" height="100%" frameborder="0"
             allowfullscreen></iframe>
     </div>
 </details>
