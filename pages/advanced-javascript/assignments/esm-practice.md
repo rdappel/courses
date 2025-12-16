@@ -54,7 +54,7 @@ Create a file called `rpg-utils.js` that exports the following:
 Use the following code as a starting point:
 
 ```javascript
-// Default export
+// todo: make this your default export
 const createCharacter = (name, characterClass) => {
   return {
     name: name,
@@ -64,7 +64,7 @@ const createCharacter = (name, characterClass) => {
   }
 }
 
-// Named exports
+// todo: make these your named exports
 const calculateDamage = (attackPower, defense) => {
   const damage = attackPower - defense
   return damage > 0 ? damage : 0
