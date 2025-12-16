@@ -14,6 +14,8 @@ Summary: You’ll refresh some JavaScript fundamentals and learn how to organize
 
 [JavaScript Review and ESM](./advanced-javascript/javascript-review-and-esm)
 
+[Assignment 1 - ESM Practice](./advanced-javascript/assignments/esm-practice)
+
 # Week 2 - Introduction to React
 
 Summary: You'll learn how to set up a React development environment using Vite, how to create reusable components, and how to pass data using props.
@@ -24,7 +26,7 @@ Summary: You'll learn how to set up a React development environment using Vite, 
 
 [React Props](./advanced-javascript/props)
 
-[Assignment 1 - Homepage](./advanced-javascript/assignments/homepage)
+[Assignment 2 - Homepage](./advanced-javascript/assignments/homepage)
 
 # Week 3 - Hooks & useState
 
