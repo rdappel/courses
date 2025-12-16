@@ -27,7 +27,7 @@ In this assignment, you will practice using ES Module syntax in Node.js. You wil
 
 Create a new Node.js project by creating a new directory and running `npm init.`
 
-> [!REMINDER] You're going to push your code up to GitHub later, so now is a good time to add a `.gitignore` file and include `node_modules/` in it.
+> [!IMPORTANT] You're going to push your code up to GitHub later, so now is a good time to add a `.gitignore` file and include `node_modules/` in it.
 
 ### 2. Configure ES Modules
 
