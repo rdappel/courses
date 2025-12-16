@@ -15,7 +15,7 @@ In this assignment, you will create a personal homepage using React components. 
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/PL_pqIzAP1Q" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -161,7 +161,16 @@ You are allowed to use AI tools like Copilot or ChatGPT to help you with this as
 
 ## Pushing to GitHub
 
-You are going to replace your github.io pages site (homepage from Modern JavaScript) with this new React homepage. This video will walk you through the steps to push your project to GitHub.
+You are going to replace your github.io pages site (homepage from Modern JavaScript) with this new React homepage. This video will walk you through the steps to push your project to GitHub:
+
+<details>
+	<summary class="video">Show/Hide Video</summary>
+	<div class="video-container">
+		<iframe src="https://www.youtube.com/embed/sSVCLaHijcg" width="100%" height="100%" frameborder="0"
+			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+		</iframe>
+	</div>
+</details>
 
 ## Submitting to Blackboard
 
