@@ -79,7 +79,7 @@ const calculateManaCost = (spellLevel) => {
 
 Create a file called `app.js` that:
 
-1. Imports the default export and named exports from `utils.js`
+1. Imports the default export and named exports from `rpg-utils.js`
 2. Uses each function
 3. Logs the results to the console to prove they work
 
