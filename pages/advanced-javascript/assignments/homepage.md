@@ -1,5 +1,5 @@
 ---
-title: Assignment 2 - React Homepage
+title: Assignment 2 - Homepage
 subtitle: Advanced JavaScript
 hideNav: false
 
@@ -8,7 +8,7 @@ dev: http://localhost:3006/appel/advanced-javascript/assignments/homepage
 repo: https://github.com/rdappel/courses
 ---
 
-# Assignment 2 - React Homepage
+# Assignment 2 - Homepage
 
 In this assignment, you will create a personal homepage using React components. You will build a component-based website that displays information about yourself using components.
 

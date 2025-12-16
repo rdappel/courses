@@ -1,5 +1,5 @@
 ---
-title: Assignment 1 - ES Modules Practice
+title: Assignment 1 - ESM Practice
 subtitle: Advanced JavaScript
 hideNav: false
 
@@ -8,7 +8,7 @@ dev: http://localhost:3006/appel/advanced-javascript/assignments/esm-practice
 repo: https://github.com/rdappel/courses
 ---
 
-# Assignment 1 - ES Modules Practice
+# Assignment 1 - ESM Practice
 
 In this assignment, you will practice using ES Module syntax in Node.js. You will create a custom module with both named and default exports, then import and use them in your main application.
 
