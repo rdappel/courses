@@ -22,8 +22,6 @@ Summary: You'll learn how to set up a React development environment using Vite, 
 
 [Introduction to React](./advanced-javascript/intro-to-react)
 
-[React Components](./advanced-javascript/components)
-
 [React Props](./advanced-javascript/props)
 
 [Assignment 2 - Homepage](./advanced-javascript/assignments/homepage)
