@@ -159,20 +159,20 @@ const CharacterCreation = () => {
 			<input 
 				type="text" 
 				value={characterName} 
-				onChange={(e) => setCharacterName(e.target.value)}
+				onChange={({ target }) => setCharacterName(target.value)}
 				placeholder="Enter character name"
 			/>
 			<input 
 				type="number" 
 				value={level} 
-				onChange={(e) => setLevel(parseInt(e.target.value))}
+				onChange={({ target }) => setLevel(parseInt(target.value))}
 				placeholder="Starting level"
 			/>
 			<label>
 				<input 
 					type="checkbox" 
 					checked={isWarrior}
-					onChange={(e) => setIsWarrior(e.target.checked)}
+					onChange={({ target }) => setIsWarrior(target.checked)}
 				/>
 				Warrior Class
 			</label>
@@ -228,7 +228,7 @@ const CharacterSheet = () => {
 			<input 
 				type="text" 
 				value={character.name}
-				onChange={(e) => updateName(e.target.value)}
+				onChange={({ target }) updateName(e.target.value)}
 				placeholder="Character Name"
 			/>
 			<p>Name: {character.name}</p>
@@ -283,7 +283,7 @@ const Inventory = () => {
 			<input 
 				type="text"
 				value={itemName}
-				onChange={(e) => setItemName(e.target.value)}
+				onChange={({ target }) setItemName(e.target.value)}
 				placeholder="Enter item name"
 			/>
 			<button onClick={addItem}>Add Item</button>
