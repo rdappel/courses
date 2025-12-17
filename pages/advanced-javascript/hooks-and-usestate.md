@@ -392,6 +392,15 @@ Here's a practical example combining multiple state concepts:
 ```javascript
 import { useState } from 'react'
 
+const questStyle = {
+	padding: '20px',
+	border: '2px solid #8b4513',
+	borderRadius: '8px',
+	maxWidth: '400px',
+	margin: '20px',
+	backgroundColor: '#f5e6d3',
+}
+
 const QuestLog = () => {
 	const [isExpanded, setIsExpanded] = useState(false)
 	const [progress, setProgress] = useState(0)
@@ -440,15 +449,6 @@ const QuestLog = () => {
 			)}
 		</div>
 	)
-}
-
-const questStyle = {
-	padding: '20px',
-	border: '2px solid #8b4513',
-	borderRadius: '8px',
-	maxWidth: '400px',
-	margin: '20px',
-	backgroundColor: '#f5e6d3',
 }
 
 export default QuestLog

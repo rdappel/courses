@@ -28,11 +28,11 @@ Summary: You'll learn how to set up a React development environment using Vite, 
 
 # Week 3 - Hooks & useState
 
-Summary: You’ll learn how to write functional code in React using "hooks," and manage local state with useState.
+Summary: You'll learn how to write functional code in React using "hooks," and manage local state with useState.
 
 [React Hooks and useState](./advanced-javascript/hooks-and-usestate)
 
-[Assignment 3 - AAAA](./advanced-javascript/assignments/AAAA)
+[Assignment 3 - Item Rating](./advanced-javascript/assignments/item-rating)
 
 # Week 4 - Side Effects & Data Fetching
 
