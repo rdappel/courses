@@ -33,6 +33,8 @@ Examples of state include:
 
 The `useState` hook allows you to add state to functional components. It returns an array with two elements: the current state value and a function to update that state.
 
+> [!NOTE] I will be importing `styles/shared-styles.js` for some basic styling used in the examples. You can copy the code from [this gist](https://gist.github.com/rdappel/a7f2d1659d37b7a9fb3c1e95844e0536).
+
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
@@ -47,17 +49,34 @@ Here's a character stat example:
 ```javascript
 import { useState } from 'react'
 
+import { containerStyle, buttonStyle } from '../styles/shared-styles'
+
 const CharacterStats = () => {
 	const [strength, setStrength] = useState(10)
 
-	return (
-		<div>
-			<h3>Character Stats</h3>
-			<p>Strength: {strength}</p>
-			<button onClick={() => setStrength(strength - 1)}>-</button>
-			<button onClick={() => setStrength(strength + 1)}>+</button>
-		</div>
-	)
+    const updateStrength = amount => {
+        if (strength + amount >= 0) setStrength(strength + amount)
+    }
+
+    const isDisabled = () => strength <= 0
+
+    return (
+        <div className="character-stats" style={containerStyle}>
+            <h2>Character Stats</h2>
+            <div>
+                <button
+					style={buttonStyle}
+					onClick={() => updateStrength(-1)}
+					disabled={isDisabled()}
+				>-</button>
+                <span>Strength: {strength}</span>
+                <button
+					style={buttonStyle}
+					onClick={() => updateStrength(1)}
+				>+</button>
+            </div>
+        </div>
+    )
 }
 
 export default CharacterStats
@@ -78,6 +97,8 @@ const [strength, setStrength] = useState(10)
 
 > [!IMPORTANT] When you call the setter function (like `setStrength`), React will re-render the component with the new state value.
 
+> [!NOTE] This demo illustrates Vite's HMR (Hot Module Replacement) feature. When you make changes to the code, the component updates in real-time without losing its state.
+
 # Multiple State Variables
 
 You can use `useState` multiple times in a single component to manage different pieces of state. Let's build on our previous example by adding skill points that limit how many stats you can increase.
@@ -95,34 +116,46 @@ Here's an example with multiple state variables:
 
 ```javascript
 import { useState } from 'react'
+import { containerStyle, buttonStyle } from '../styles/shared-styles'
 
 const CharacterStats = () => {
-	const [strength, setStrength] = useState(10)
-	const [skillPoints, setSkillPoints] = useState(5)
+    const [strength, setStrength] = useState(10)
+    const [skillPoints, setSkillPoints] = useState(5)
 
-	const increaseStat = () => {
-		if (skillPoints > 0) {
-			setStrength(strength + 1)
-			setSkillPoints(skillPoints - 1)
-		}
-	}
+    const increaseStat = () => {
+        if (skillPoints <= 0) return
 
-	const decreaseStat = () => {
-		if (strength > 0) {
-			setStrength(strength - 1)
-			setSkillPoints(skillPoints + 1)
-		}
-	}
+        setStrength(strength + 1)
+        setSkillPoints(skillPoints - 1)
+    }
 
-	return (
-		<div>
-			<h3>Character Stats</h3>
-			<p>Strength: {strength}</p>
-			<button onClick={decreaseStat}>-</button>
-			<button onClick={increaseStat}>+</button>
-			<p>Skill Points Available: {skillPoints}</p>
-		</div>
-	)
+    const decreaseStat = () => {
+        if (strength <= 0) return
+
+        setStrength(strength - 1)
+        setSkillPoints(skillPoints + 1)
+    }
+
+    const isDisabled = () => strength <= 0
+
+    return (
+        <div className="character-stats" style={containerStyle}>
+            <h2>Character Stats</h2>
+            <div>Skill Points: {skillPoints}</div>
+            <div>
+                <button
+					style={buttonStyle}
+					onClick={() => decreaseStat()}
+					disabled={isDisabled()}
+				>-</button>
+                <span>Strength: {strength}</span>
+                <button
+					style={buttonStyle}
+					onClick={() => increaseStat()}
+				>+</button>
+            </div>
+        </div>
+    )
 }
 
 export default CharacterStats
@@ -147,38 +180,41 @@ Here's a character creation form:
 
 ```javascript
 import { useState } from 'react'
+import { containerStyle, inputStyle } from '../styles/shared-styles'
 
 const CharacterCreation = () => {
-	const [characterName, setCharacterName] = useState('')
-	const [level, setLevel] = useState(1)
-	const [isWarrior, setIsWarrior] = useState(false)
+    const [characterName, setCharacterName] = useState('')
+    const [level, setLevel] = useState(1)
+    const [isWarrior, setIsWarrior] = useState(false)
 
-	return (
-		<div>
-			<h3>Create Your Character</h3>
-			<input 
-				type="text" 
-				value={characterName} 
-				onChange={({ target }) => setCharacterName(target.value)}
-				placeholder="Enter character name"
-			/>
-			<input 
-				type="number" 
-				value={level} 
-				onChange={({ target }) => setLevel(parseInt(target.value))}
-				placeholder="Starting level"
-			/>
-			<label>
-				<input 
-					type="checkbox" 
-					checked={isWarrior}
-					onChange={({ target }) => setIsWarrior(target.checked)}
-				/>
-				Warrior Class
-			</label>
-			<p>Preview: {characterName || 'Unknown'} (Level {level}) - {isWarrior ? 'Warrior' : 'Mage'}</p>
-		</div>
-	)
+    return (
+        <div className="character-creation" style={containerStyle}>
+            <h2>Create Your Character</h2>
+            <input 
+                type="text"
+                style={inputStyle}
+                value={characterName} 
+                onChange={({ target }) => setCharacterName(target.value)}
+                placeholder="Enter character name"
+            />
+            <input 
+                type="number"
+                style={inputStyle}
+                value={level} 
+                onChange={({ target }) => setLevel(parseInt(target.value))}
+                placeholder="Starting level"
+            />
+            <label style={inputStyle}>
+                <input 
+                    type="checkbox"
+                    checked={isWarrior}
+                    onChange={({ target }) => setIsWarrior(target.checked)}
+                />
+                Warrior Class
+            </label>
+            <p>Preview: {characterName || 'Unknown'} (Level {level}) - {isWarrior ? 'Warrior' : 'Mage'}</p>
+        </div>
+    )
 }
 
 export default CharacterCreation
@@ -201,6 +237,7 @@ Here's an example using an object in state:
 
 ```javascript
 import { useState } from 'react'
+import { containerStyle, inputStyle } from '../styles/shared-styles'
 
 const CharacterSheet = () => {
 	const [character, setCharacter] = useState({
@@ -261,37 +298,46 @@ Here's an inventory system example:
 
 ```javascript
 import { useState } from 'react'
+import { containerStyle, inputStyle, buttonStyle } from '../styles/shared-styles'
 
 const Inventory = () => {
-	const [items, setItems] = useState([])
-	const [itemName, setItemName] = useState('')
+    const [items, setItems] = useState([])
+    const [itemName, setItemName] = useState('')
 
-	const addItem = () => {
-		if (itemName.trim()) {
-			setItems([...items, itemName])
-			setItemName('')
-		}
-	}
+    const addItem = () => {
+        if (itemName.trim() === '') return
+        setItems([...items, itemName.trim()])
+        setItemName('')
+    }
 
-	const removeItem = (index) => {
-		setItems(items.filter((_, i) => i !== index))
-	}
+    const handleKeyDown = ({ key }) => {
+        if (key === 'Enter') addItem()
+    }
 
-	return (
-		<div>
+    const removeItem = index => {
+        setItems(items.filter((_, i) => i !== index))
+    }
+
+    return (
+		<div style={containerStyle}>
 			<h3>Inventory ({items.length} items)</h3>
 			<input 
 				type="text"
+                style={inputStyle}
 				value={itemName}
-				onChange={({ target }) setItemName(e.target.value)}
+				onChange={({ target }) => setItemName(target.value)}
+				onKeyDown={handleKeyDown}
 				placeholder="Enter item name"
 			/>
-			<button onClick={addItem}>Add Item</button>
+			<button onClick={addItem} style={buttonStyle}>+</button>
 			<ul>
 				{items.map((item, index) => (
 					<li key={index}>
 						{item}
-						<button onClick={() => removeItem(index)}>Drop</button>
+						<button
+                            onClick={() => removeItem(index)}
+                            style={buttonStyle}
+                        >-</button>
 					</li>
 				))}
 			</ul>
@@ -373,93 +419,3 @@ const [questName, setQuestName] = useState('')
 const [combat, setCombat] = useState(0)
 const [data, setData] = useState(null)
 ```
-
-# Interactive Example: Quest Log
-
-Let's create a component that demonstrates several `useState` concepts together by building a quest log system.
-
-<details open>
-	<summary class="video">Show/Hide Video</summary>
-	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
-			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-		</iframe>
-	</div>
-</details>
-
-Here's a practical example combining multiple state concepts:
-
-```javascript
-import { useState } from 'react'
-
-const questStyle = {
-	padding: '20px',
-	border: '2px solid #8b4513',
-	borderRadius: '8px',
-	maxWidth: '400px',
-	margin: '20px',
-	backgroundColor: '#f5e6d3',
-}
-
-const QuestLog = () => {
-	const [isExpanded, setIsExpanded] = useState(false)
-	const [progress, setProgress] = useState(0)
-	const [isAccepted, setIsAccepted] = useState(false)
-
-	const toggleExpand = () => {
-		setIsExpanded(!isExpanded)
-	}
-
-	const acceptQuest = () => {
-		if (!isAccepted) {
-			setIsAccepted(true)
-			setProgress(0)
-		}
-	}
-
-	const updateProgress = () => {
-		if (isAccepted && progress < 5) {
-			setProgress(progress + 1)
-		}
-	}
-
-	return (
-		<div style={questStyle}>
-			<h3>🗡️ Defeat the Dragon</h3>
-			<button onClick={toggleExpand}>
-				{isExpanded ? 'Hide Details' : 'Show Details'}
-			</button>
-			
-			{isExpanded && (
-				<p>
-					A fearsome dragon terrorizes the village. 
-					Defeat it to earn legendary rewards!
-				</p>
-			)}
-			
-			{!isAccepted ? (
-				<button onClick={acceptQuest}>Accept Quest</button>
-			) : (
-				<div>
-					<p>Progress: {progress}/5 enemies defeated</p>
-					<button onClick={updateProgress} disabled={progress >= 5}>
-						{progress >= 5 ? 'Quest Complete! ✨' : 'Defeat Enemy'}
-					</button>
-				</div>
-			)}
-		</div>
-	)
-}
-
-export default QuestLog
-```
-
-This example shows:
-- Boolean state for toggling (`isExpanded`, `isAccepted`)
-- Number state for tracking progress (`progress`)
-- Conditional rendering based on state
-- Multiple event handlers updating different state variables
-- Dynamic button behavior based on state
-- Disabled button when quest is complete
-
-> [!TIP] Notice how each piece of state has a specific purpose and is updated independently. This makes the component easier to understand and maintain.
