@@ -97,6 +97,8 @@ You are allowed to use AI tools like Copilot or ChatGPT to help you with this as
 
 > [!NOTE] AI tools may suggest more complex approaches (like passing callback functions). For this assignment, keep the rating state internal to the StarRating component to focus on understanding `useState` basics.
 
+# Submission
+
 ## Deploying to GitHub Pages
 
 Make sure your changes are deployed to GitHub Pages so your site is live:
