@@ -10,7 +10,7 @@ repo: https://github.com/rdappel/courses
 
 # What is React?
 
-React is a JavaScript library for building user interfaces. It was created by Facebook (meta) and is now maintained by Facebook and the community. React allows you to build complex UIs from small, reusable pieces called components.
+React is a JavaScript library for building user interfaces. It was created by Facebook (Meta) and is now maintained by Facebook and the community. React allows you to build complex UIs from small, reusable pieces called components.
 
 In this lesson, we'll set up a React project using Vite and create our first component.
 
