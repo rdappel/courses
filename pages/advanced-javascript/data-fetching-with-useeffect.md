@@ -16,6 +16,11 @@ One of the most common use cases for `useEffect` is fetching data from an API. I
 
 Let's start with a simple example that fetches user data when the component mounts:
 
+<div class="centering">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/data-fetch-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/data-fetch-light.svg" alt="" aria-hidden="true" class="adaptive light">
+</div>
+
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
