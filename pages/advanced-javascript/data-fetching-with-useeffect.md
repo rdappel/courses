@@ -37,9 +37,11 @@ const UserList = () => {
 	const [users, setUsers] = useState([])
 
 	useEffect(() => {
-		fetch('/support-files/ajs/users.json')
-			.then(response => response.json())
-			.then(data => setUsers(data))
+		(async () => {
+			const response = await fetch('/support-files/ajs/users.json')
+			const data = await response.json()
+			setUsers(data)
+		})()
 	}, [])
 
 	return (
@@ -80,12 +82,12 @@ const UserList = () => {
 	const [loading, setLoading] = useState(true)
 
 	useEffect(() => {
-		fetch('/support-files/ajs/users.json')
-			.then(response => response.json())
-			.then(data => {
-				setUsers(data)
-				setLoading(false)
-			})
+		(async () => {
+			const response = await fetch('/support-files/ajs/users.json')
+			const data = await response.json()
+			setUsers(data)
+			setLoading(false)
+		})()
 	}, [])
 
 	if (loading) {
@@ -131,21 +133,18 @@ const UserList = () => {
 	const [error, setError] = useState(null)
 
 	useEffect(() => {
-		fetch('/support-files/ajs/users.json')
-			.then(response => {
-				if (!response.ok) {
-					throw new Error('Failed to fetch users')
-				}
-				return response.json()
-			})
-			.then(data => {
+		(async () => {
+			try {
+				const response = await fetch('/support-files/ajs/users.json')
+				if (!response.ok) throw new Error('Failed to fetch users')
+				const data = await response.json()
 				setUsers(data)
-				setLoading(false)
-			})
-			.catch(err => {
+			} catch (err) {
 				setError(err.message)
+			} finally {
 				setLoading(false)
-			})
+			}
+		})()
 	}, [])
 
 	if (loading) return <div>Loading users...</div>
@@ -170,67 +169,7 @@ export default UserList
 
 > [!IMPORTANT] Always handle both the loading and error states. This provides a better user experience and helps with debugging.
 
-## Using Async/Await
-
-Modern JavaScript allows us to use async/await syntax, which can make our code cleaner. However, we can't make the useEffect callback itself async, so we need to create an async function inside:
-
-<details open>
-	<summary class="video">Show/Hide Video</summary>
-	<div class="video-container">
-		<iframe src="" width="100%" height="100%" frameborder="0"
-			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-		</iframe>
-	</div>
-</details>
-
-```javascript
-import { useState, useEffect } from 'react'
-
-const ProductList = () => {
-	const [products, setProducts] = useState([])
-	const [loading, setLoading] = useState(true)
-	const [error, setError] = useState(null)
-
-	useEffect(() => {
-		const fetchProducts = async () => {
-			try {
-				const response = await fetch('/support-files/ajs/products.json')
-				if (!response.ok) {
-					throw new Error('Failed to fetch products')
-				}
-				const data = await response.json()
-				setProducts(data)
-				setLoading(false)
-			} catch (err) {
-				setError(err.message)
-				setLoading(false)
-			}
-		}
-
-		fetchProducts()
-	}, [])
-
-	if (loading) return <div>Loading products...</div>
-	if (error) return <div>Error: {error}</div>
-
-	return (
-		<div>
-			<h2>Products</h2>
-			<ul>
-				{products.map(product => (
-					<li key={product.id}>
-						{product.name} - ${product.price}
-					</li>
-				))}
-			</ul>
-		</div>
-	)
-}
-
-export default ProductList
-```
-
-> [!CAUTION] Never make the useEffect callback itself async. Instead, define an async function inside the effect and call it immediately.
+> [!NOTE] We're using an async IIFE (Immediately Invoked Function Expression) inside the useEffect because the useEffect callback itself cannot be async. The `finally` block ensures loading is set to false whether the request succeeds or fails.
 
 ## Building a User Card Component
 
