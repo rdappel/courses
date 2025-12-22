@@ -12,7 +12,7 @@ repo: https://github.com/rdappel/courses
 
 One of the most common use cases for `useEffect` is fetching data from an API. In this lesson, we'll learn how to fetch data, handle loading states, and manage errors properly.
 
-# Basic Data Fetching
+## Basic Data Fetching
 
 Let's start with a simple example that fetches user data when the component mounts:
 
@@ -59,7 +59,7 @@ export default UserList
 
 > [!NOTE] The empty dependency array `[]` ensures the fetch only happens once when the component mounts, not on every render.
 
-# Adding Loading States
+## Adding Loading States
 
 Users should know when data is being fetched. Let's add a loading indicator:
 
@@ -109,7 +109,7 @@ const UserList = () => {
 export default UserList
 ```
 
-# Error Handling
+## Error Handling
 
 Network requests can fail, so we need to handle errors gracefully:
 
@@ -170,7 +170,7 @@ export default UserList
 
 > [!IMPORTANT] Always handle both the loading and error states. This provides a better user experience and helps with debugging.
 
-# Using Async/Await
+## Using Async/Await
 
 Modern JavaScript allows us to use async/await syntax, which can make our code cleaner. However, we can't make the useEffect callback itself async, so we need to create an async function inside:
 
@@ -232,7 +232,7 @@ export default ProductList
 
 > [!CAUTION] Never make the useEffect callback itself async. Instead, define an async function inside the effect and call it immediately.
 
-# Building a User Card Component
+## Building a User Card Component
 
 Let's create a more polished component that displays user information in cards:
 
@@ -329,7 +329,7 @@ export default UserList
 
 > [!TIP] The `finally` block in try/catch is perfect for setting loading to false, as it runs whether the request succeeds or fails.
 
-# Filtering Fetched Data
+## Filtering Fetched Data
 
 Let's add filtering capability to our product list:
 
@@ -398,7 +398,7 @@ const ProductList = () => {
 export default ProductList
 ```
 
-# Refetching Data
+## Refetching Data
 
 Sometimes you need to refetch data based on user actions or changing conditions:
 
