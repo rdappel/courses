@@ -42,7 +42,7 @@ Summary: You’ll manage side effects in React components using the useEffect ho
 
 [Data Fetching with useEffect](./advanced-javascript/data-fetching-with-useeffect)
 
-[Assignment 3 - 555555](./advanced-javascript/assignments/555555)
+[Assignment 4 - Fetching Favorites](./advanced-javascript/assignments/fetching-favorites)
 
 # Week 5 - Controlled Components & useRef
 
