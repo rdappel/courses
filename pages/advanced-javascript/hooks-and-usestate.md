@@ -123,7 +123,7 @@ You can use `useState` multiple times in a single component to manage different 
 	</div>
 </details>
 
-Here's an example with multiple state variables:
+Here's the updated CharacterStats component:
 
 ```javascript
 import { useState } from 'react'
