@@ -16,6 +16,8 @@ Hooks always start with the word "use" (like `useState`, `useEffect`, `useContex
 
 This video covers project setup and an introduction to React Hooks:
 
+> [!NOTE] In the video, I will be importing `styles/shared-styles.js` for some basic styling used in the examples. You can copy the code from [this gist](https://gist.github.com/rdappel/a7f2d1659d37b7a9fb3c1e95844e0536).
+
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
@@ -43,8 +45,6 @@ Examples of state include:
 # The useState Hook
 
 The `useState` hook allows you to add state to functional components. It returns an array with two elements: the current state value and a function to update that state.
-
-> [!NOTE] I will be importing `styles/shared-styles.js` for some basic styling used in the examples. You can copy the code from [this gist](https://gist.github.com/rdappel/a7f2d1659d37b7a9fb3c1e95844e0536).
 
 <details open>
 	<summary class="video">Show/Hide Video</summary>
