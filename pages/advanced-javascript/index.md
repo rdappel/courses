@@ -38,9 +38,9 @@ Summary: You'll learn how to write functional code in React using "hooks," and m
 
 Summary: You’ll manage side effects in React components using the useEffect hook, including data fetching.
 
-[The "useEffect" Hook](./advanced-javascript/useeffect)
+[Side Effects and useEffect](./advanced-javascript/side-effects-and-useeffect)
 
-[Data Fetching in React](./advanced-javascript/data-fetching)
+[Data Fetching with useEffect](./advanced-javascript/data-fetching-with-useeffect)
 
 [Assignment 3 - 555555](./advanced-javascript/assignments/555555)
 
