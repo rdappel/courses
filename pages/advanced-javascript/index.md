@@ -48,7 +48,9 @@ Summary: You’ll manage side effects in React components using the useEffect ho
 
 Summary: You’ll build forms using controlled inputs and use useRef to access DOM elements and persist values.
 
-[The "useRef" Hook](./advanced-javascript/useref)
+[Controlled Components](./advanced-javascript/controlled-components)
+
+[The useRef Hook](./advanced-javascript/useref)
 
 Review for Exam 1
 
