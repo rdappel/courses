@@ -219,8 +219,6 @@ const StarRating = ({ rating, color }) => {
 export default StarRating
 ```
 
-> [!IMPORTANT] Notice how we are using the `key` prop when rendering the stars in a loop. This helps React efficiently update the list of stars when the rating changes.
-
 Here is the code for the updated Card component that uses the StarRating component:
 
 ```javascript
