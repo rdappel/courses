@@ -236,3 +236,79 @@ const Card = ({ title, children, rating }) => {
 ```
 
 > [!CAUTION] Passing the rating value to the Card component as a prop is called "prop drilling". In larger applications, this can become cumbersome. In future lessons, we'll explore state management solutions to handle this more elegantly.
+
+# Building for Production
+
+When you're ready to deploy your React application, you need to create an optimized production build. Vite makes this easy with the build command.
+
+<details open>
+	<summary class="video">Show/Hide Video</summary>
+	<div class="video-container">
+		<iframe src="https://www.youtube.com/embed/Dbyhnd0gQH8" width="100%" height="100%" frameborder="0"
+			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+		</iframe>
+	</div>
+</details>
+
+## Creating a Production Build
+
+To build your React app for production, run:
+
+```bash
+npm run build
+```
+
+This command will:
+- Bundle all your JavaScript files together
+- Minify and optimize your code
+- Process your CSS
+- Optimize images and other assets
+- Create a `dist` folder with the production-ready files
+
+> [!NOTE] The `dist` folder contains static files that can be deployed to any web server or hosting platform.
+
+## What's in the dist Folder?
+
+After running the build command, you'll see a `dist` folder containing:
+
+```
+dist/
+  index.html
+  assets/
+    index-[hash].js
+    index-[hash].css
+```
+
+The hash in the filenames helps with cache busting - when you update your code, the filename changes, ensuring users get the latest version.
+
+## Previewing the Production Build
+
+You can preview your production build locally before deploying:
+
+```bash
+npm run preview
+```
+
+This starts a local server that serves your production build, allowing you to test it before deployment.
+
+> [!TIP] Always test your production build with `npm run preview` before deploying to catch any issues that might not appear in development mode.
+
+## Development vs Production
+
+There are key differences between running `npm run dev` and `npm run build`:
+
+**Development Mode (`npm run dev`):**
+- Fast hot module replacement (HMR)
+- Detailed error messages
+- Source maps for debugging
+- Larger file sizes
+- Not optimized for performance
+
+**Production Mode (`npm run build`):**
+- Optimized and minified code
+- Smaller file sizes
+- Better performance
+- No source maps (by default)
+- Ready for deployment
+
+> [!IMPORTANT] Never deploy your development build to production. Always use `npm run build` to create optimized production files.
