@@ -14,6 +14,17 @@ React Hooks are functions that let you "hook into" React features from functiona
 
 Hooks always start with the word "use" (like `useState`, `useEffect`, `useContext`, etc.). In this lesson, we'll focus on `useState`, which is the most fundamental hook for managing state in React components.
 
+This video covers project setup and an introduction to React Hooks:
+
+<details open>
+	<summary class="video">Show/Hide Video</summary>
+	<div class="video-container">
+		<iframe src="https://www.youtube.com/embed/JUMg25MLhNc" width="100%" height="100%" frameborder="0"
+			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+		</iframe>
+	</div>
+</details>
+
 # What is State?
 
 State is data that changes over time in your application. When state changes, React automatically re-renders the component to reflect those changes in the UI. This is what makes React applications interactive and dynamic.
@@ -38,7 +49,7 @@ The `useState` hook allows you to add state to functional components. It returns
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/SbsmY_Igekw" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -106,7 +117,7 @@ You can use `useState` multiple times in a single component to manage different 
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/aaYKyEHKyso" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -170,7 +181,7 @@ Another common use case for multiple state variables is managing form inputs. Le
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/YEQxS2othuI" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -227,7 +238,7 @@ You can also store objects in state. However, when updating object state, you ne
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/3M_2Dt1y-Hs" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -288,7 +299,7 @@ When working with arrays in state, you also need to create new arrays rather tha
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/bCBw5QeLC-E" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -419,3 +430,18 @@ const [questName, setQuestName] = useState('')
 const [combat, setCombat] = useState(0)
 const [data, setData] = useState(null)
 ```
+
+# Setting Up a React Project with AI
+
+As you've seen, after creating a new Vite + React project with `npm create vite@latest .`, we often need to clean up boilerplate code and set up our project structure. I have created a Markdown file that will allow chat-based AI tools to complete this process for you.
+
+<details open>
+	<summary class="video">Show/Hide Video</summary>
+	<div class="video-container">
+		<iframe src="https://www.youtube.com/embed/5jIpUOSdjmM" width="100%" height="100%" frameborder="0"
+			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+		</iframe>
+	</div>
+</details>
+
+You can download the file from [this gist](https://gist.github.com/rdappel/2f331c2e2c0085d825ec100f2e45c9a5).
