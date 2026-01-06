@@ -39,7 +39,9 @@ The `useEffect` hook allows you to perform side effects in functional components
 	</div>
 </details>
 
-Here's a basic example that updates the document title:
+Here is the url to `users.json` that we used as a mock API in the video: `https://raw.githubusercontent.com/rdappel/courses/master/support-files/ajs/users.json`.
+
+And here's a basic example that updates the document title:
 
 ```javascript
 import { useState, useEffect } from 'react'

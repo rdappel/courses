@@ -68,7 +68,7 @@ Summary: You’ll design data flow across components by lifting state and avoidi
 
 [Component Hierarchy](./advanced-javascript/component-hierarchy)
 
-[Assignment 6 - 666666](./advanced-javascript/assignments/666666)
+[Assignment 5 - 555555](./advanced-javascript/assignments/555555)
 
 # Week 8 – Global State with Context API
 
@@ -76,7 +76,7 @@ Summary: You’ll share state across multiple components using React’s Context
 
 [React Context API](./advanced-javascript/context-api)
 
-[Assignment 7 - 777777](./advanced-javascript/assignments/777777)
+[Assignment 6 - 666666](./advanced-javascript/assignments/666666)
 
 # Week 9 – useReducer
 
@@ -84,7 +84,7 @@ Summary: You’ll manage structured, multi-action state with useReducer.
 
 [The "useReducer" Hook](./advanced-javascript/usereducer)
 
-[Assignment 8 - 888888](./advanced-javascript/assignments/888888)
+[Assignment 7 - 777777](./advanced-javascript/assignments/777777)
 
 # Week 10 – Custom Hooks & Memoization
 
@@ -94,7 +94,7 @@ Summary: You’ll encapsulate shared logic in custom hooks and optimize performa
 
 [useMemo and React.memo](./advanced-javascript/usememo-and-react-memo)
 
-[Assignment 9 - 999999](./advanced-javascript/assignments/999999)
+[Assignment 8 - 888888](./advanced-javascript/assignments/888888)
 
 # Week 11 – React Router
 
@@ -114,5 +114,4 @@ Exam 2
 
 Summary: You’ll begin your final project and explore emerging JavaScript or React tools to potentially integrate. Then create a project using a new JavaScript technology, framework, or library. Finally, you’ll present your project and reflect on the learning experience.
 
-[Assignment 10 - Final Project](./advanced-javascript/assignments/final-project)
-
+[Assignment 9 - Final Project](./advanced-javascript/assignments/final-project)
