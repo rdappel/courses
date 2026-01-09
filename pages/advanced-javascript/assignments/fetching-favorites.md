@@ -21,9 +21,7 @@ In this assignment, you will refactor your personal homepage from Assignment 3 t
 	</div>
 </details>
 
-## Specifications
-
-### 1. Create Data Files
+## Create Data Files
 
 Create a `public/data` directory in your project and move your favorite items (movies, books, or hobbies) into JSON files.
 
