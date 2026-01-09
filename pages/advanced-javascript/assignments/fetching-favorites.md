@@ -73,34 +73,49 @@ Create at least two new components that fetch and display data:
 - Each project should show its title, description, and technologies
 
 **Skills Component:**
-- FetchRefactor Your List Component
+- Fetches data from `skills.json` using `useEffect`
+- Displays loading and error states
+- Maps through skills and displays them with icons or badges
+- Shows skill categories and proficiency levels
+
+### 3. Refactor Your List Component
 
 Update the section of your homepage that displays your favorite items to fetch data instead of using a hardcoded array:
 
 **Before (hardcoded):**
 ```javascript
 const App = () => {
-Your component must display a loading message while data is being fetched:
-
-```javascript
-if (loading) {
-  return <div className="loading">Loading movies...</div>
+  const [movies, setMovies] = useState([
+    { id: 1, title: "The Shawshank Redemption", year: 1994 },
+    { id: 2, title: "The Dark Knight", year: 2008 },
+    // ... more hardcoded movies
+  ])
+  
+  return (
+    <ul>
+      {movies.map(movie => (
+        <li key={movie.id}>{movie.title}</li>
+      ))}
+    </ul>
+  )
 }
 ```
 
-Style your loading message to match your site's design. Consider adding a spinner or animatio
+**After (fetching from JSON):**
 ```javascript
 const App = () => {
   const [movies, setMovies] = useState([])
   const [loading, setLoading] = useState(true)
-Your component must handle errors gracefully:
-```javascript
-if (error) {
-  return <div className="error">Error: {error}</div>
-}
-```
+  const [error, setError] = useState(null)
 
-Test your error handling by temporarily changing the file path to something incorrect like `/data/wrong.json`
+  useEffect(() => {
+    const fetchMovies = async () => {
+      try {
+        const response = await fetch('/data/movies.json')
+        if (!response.ok) throw new Error('Failed to fetch movies')
+        const data = await response.json()
+        setMovies(data)
+      } catch (err) {
         setError(err.message)
       } finally {
         setLoading(false)
@@ -109,28 +124,49 @@ Test your error handling by temporarily changing the file path to something inco
 
     fetchMovies()
   }, [])
-  // ...
+
+  if (loading) return <div className="loading">Loading movies...</div>
+  if (error) return <div className="error">Error: {error}</div>
+
+  return (
+    <ul>
+      {movies.map(movie => (
+        <li key={movie.id}>
+          <h3>{movie.title} ({movie.year})</h3>
+          <p>Director: {movie.director} | Genre: {movie.genre}</p>
+          <StarRating initialRating={movie.rating} />
+        </li>
+      ))}
+    </ul>
+  )
 }
 ```
-Style your loading message to match your site's design.
 
-### 4. Implement Error Handling
+### 4. Implement Loading States
 
-Both components must handle errors:
+Your component must display a loading message while data is being fetched:
+
 ```javascript
-const [error, setError] = useState(null)
-
-if (error) {
-  return <div>Error: {error}</div>
+if (loading) {
+  return <div className="loading">Loading movies...</div>
 }
 ```
 
-You can test error handling by temporarily changing the file path to a non-existent file.
+Style your loading message to match your site's design. Consider adding a spinner or animation.
 
-### 5. Use Async/Await Pattern
+### 5. Implement Error Handling
 
-Use the async/await pattern inside your `useEffect` hook:
-Display Fetched Data with Additional Details
+Your component must handle errors gracefully:
+
+```javascript
+if (error) {
+  return <div className="error">Error: {error}</div>
+}
+```
+
+Test your error handling by temporarily changing the file path to something incorrect like `/data/wrong.json`.
+
+### 6. Display Fetched Data with Additional Details
 
 Update your list rendering to display the additional information from your JSON:
 
@@ -146,16 +182,9 @@ Update your list rendering to display the additional information from your JSON:
 </ul>
 ```
 
-> [!IMPORTANT] Use `movie.id` for the key prop instead of the array index for better React performance and consistency
-Use `useEffect` in your main App component to update the document title:
+> [!IMPORTANT] Use `movie.id` for the key prop instead of the array index for better React performance and consistency.
 
-```javascript
-useEffect(() => {
-  document.title = 'Your Name - Portfolio'
-}, [])
-```
-
-You can make this dynamic by Based on Data
+### 7. Update Document Title Based on Data
 
 Use `useEffect` to update the document title once the data loads:
 
@@ -169,7 +198,7 @@ useEffect(() => {
 
 This makes your page title dynamic based on the fetched data.
 
-### 7. Style Your Enhanced List
+### 8. Style Your Enhanced List
 
 Improve the visual presentation of your items:
 - Add CSS for the loading and error states
@@ -177,9 +206,13 @@ Improve the visual presentation of your items:
 - Display the additional details (year, genre, director) in an appealing way
 - Ensure your StarRating component integrates nicely with the new data
 - Consider adding hover effects or transitions
-const filteredSkills = filter === 'all' 
-  ? skills by Genre/Category
+
+## Optional Enhancements
+
+### Filter by Genre/Category
+
 Add buttons to filter your items by genre or category:
+
 ```javascript
 const [filter, setFilter] = useState('all')
 
@@ -196,7 +229,9 @@ const filteredMovies = filter === 'all'
 ```
 
 ### Sort Functionality
+
 Add a dropdown or buttons to sort your items:
+
 ```javascript
 const [sortBy, setSortBy] = useState('title')
 
@@ -208,26 +243,22 @@ const sortedMovies = [...movies].sort((a, b) => {
 ```
 
 ### Search Feature
+
 Add a search input to filter items by title:
+
 ```javascript
-consmovies.json
-    (or books.json, games.json, etc.)
-src/
-  components/
-    Header.jsx
-    Nav.jsx
-    Footerdisplay multiple types of items (movies AND books AND games) with separate sections for each
-public/
-  data/
-    projects.json
-    skills.json
-src/
-  components/
-    Header.jsx
-    Nav.jsx
-    Footer.jsx
-    ProjectList.jsx
-    Skills.jsxThe loading message should appear briefly when the page first loads
+const [search, setSearch] = useState('')
+
+const searchedMovies = movies.filter(movie => 
+  movie.title.toLowerCase().includes(search.toLowerCase())
+)
+```
+
+## Testing Your Implementation
+
+Test the following scenarios:
+
+1. **Loading State**: The loading message should appear briefly when the page first loads
 2. **Error Handling**: Change `/data/movies.json` to `/data/wrong.json` temporarily and verify the error displays
 3. **Data Display**: All properties from your JSON (title, year, genre, etc.) should display correctly
 4. **Star Ratings**: The StarRating component should still work with each item
@@ -235,27 +266,18 @@ src/
 6. **Console Logs**: Check for any warnings or errors in the browser console
 7. **Single Fetch**: Open the Network tab in DevTools and confirm the JSON file is only fetched once
 
-> [!CAUTION] If your data fetches on every render (infinite loop), make sure you included the empty
-## Testing Your Implementation
- understanding:
-- How `useEffect` works with the dependency array `[]`
-- The async/await pattern for data fetching
-- Error handling with try/catch/finally
-- Managing multiple state variables (data, loading, error)
-- Why the data only loads once instead of on every render
-
-> [!NOTE] Make sure you understand the code you're submitting. Be prepared to explain how your useEffect hook works and why you structured it the way you did
-5. **Multiple Renders**: Ensure data only fetches once (not on every render)
+> [!CAUTION] If your data fetches on every render (infinite loop), check that you included the dependency array `[]` in your useEffect
 
 > [!CAUTION] If your data fetches on every render (infinite loop), check that you included the dependency array `[]` in your useEffect.
 
 ## Using AI for this Assignment
 
-You are encouraged to use AI tools like Copilot or ChatGPT to help you with this assignment. Focus on:
-- Understanding how `useEffect` works with the dependency array
-- Grasping the async/await pattern for data fetching
-- Implementing proper error handling with try/catch
+You are encouraged to use AI tools like Copilot or ChatGPT to help you with this assignment. Focus on understanding:
+- How `useEffect` works with the dependency array `[]`
+- The async/await pattern for data fetching
+- Error handling with try/catch/finally
 - Managing multiple state variables (data, loading, error)
+- Why the data only loads once instead of on every render
 
 > [!NOTE] Make sure you understand the code you're submitting. You may be asked to explain how your useEffect implementation works.
 
