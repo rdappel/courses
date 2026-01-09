@@ -15,12 +15,12 @@ In this assignment, you will modify your personal homepage from Assignment 2 to 
 Additionally, you will add a [GitHub Corners](https://github.com/tholman/github-corners) ribbon to your site that links to your GitHub repository.
 
 <details open>
-	<summary class="video">Show/Hide Video</summary>
-	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
-			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-		</iframe>
-	</div>
+    <summary class="video">Show/Hide Video</summary>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/S_RNAAzdv4E" width="100%" height="100%" frameborder="0" allowfullscreen
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+        </iframe>
+    </div>
 </details>
 
 ## Specifications
@@ -40,6 +40,7 @@ It should position automatically in the corner of your page.
 ### 2. Add rating functionality
 
 Each item in your list (movies, books, or hobbies) should now have:
+
 - A star rating component that displays 5 stars
 - The ability for users to click on a star to set a rating
 - Visual feedback showing which stars are filled based on the rating
@@ -47,6 +48,7 @@ Each item in your list (movies, books, or hobbies) should now have:
 ### 3. Create an Interactive StarRating Component
 
 Create a `StarRating` component that:
+
 - Accepts an `initialRating` prop (the starting rating value, default to 0)
 - Uses the `useState` hook to manage its own rating state internally
 - Displays 5 stars (you can use `react-icons` or Unicode stars)
@@ -58,6 +60,7 @@ Create a `StarRating` component that:
 ### 4. Update Your Item List
 
 Modify the section of your homepage that displays your favorite movies, books, or hobbies to:
+
 - Display each item with its name
 - Add a StarRating component next to each item
 - Optionally pass an `initialRating` prop to start with a specific rating
@@ -84,13 +87,13 @@ If you want to enhance your rating component, consider adding **Half Stars**:
 
 Allow for half-star ratings (e.g., 3.5 stars)
 
-   - Import `FaStarHalfAlt` from `react-icons/fa`
-   - Update your logic to handle decimal ratings
-
+- Import `FaStarHalfAlt` from `react-icons/fa`
+- Update your logic to handle decimal ratings
 
 # Using AI for this Assignment
 
 You are allowed to use AI tools like Copilot or ChatGPT to help you with this assignment. However, make sure to:
+
 - Understand how the `useState` hook works with arrays of objects
 - Ensure your click handlers properly update the state
 - Test the functionality thoroughly to ensure ratings persist correctly
