@@ -116,7 +116,7 @@ Runs only once after the initial render:
 ```javascript
 useEffect(() => {
 	console.log('Runs only once on mount')
-}, [])
+}, [ ])
 ```
 
 ## 3. With Dependencies
@@ -126,7 +126,7 @@ Runs when any dependency value changes:
 ```javascript
 useEffect(() => {
 	console.log('Runs when count changes')
-}, [count])
+}, [ count ])
 ```
 
 > [!IMPORTANT] Always include all values from the component scope that change over time and are used by the effect in the dependency array. ESLint can help catch missing dependencies.
@@ -156,17 +156,17 @@ const MessageDisplay = () => {
 	// Runs only once on mount
 	useEffect(() => {
 		console.log('Component mounted')
-	}, [])
+	}, [ ])
 
 	// Runs whenever count changes
 	useEffect(() => {
 		console.log(`Count changed to: ${count}`)
-	}, [count])
+	}, [ count ])
 
 	// Runs whenever name changes
 	useEffect(() => {
 		console.log(`Name changed to: ${name}`)
-	}, [name])
+	}, [ name ])
 
 	return (
 		<div>
@@ -211,7 +211,7 @@ import { useState, useEffect } from 'react'
 
 const Timer = () => {
 	const [seconds, setSeconds] = useState(0)
-	const [isRunning, setIsRunning] = useState(true)
+	const [isRunning, setIsRunning] = useState(false)
 
 	useEffect(() => {
 		if (!isRunning) return
@@ -225,7 +225,7 @@ const Timer = () => {
 			clearInterval(interval)
 			console.log('Timer cleaned up')
 		}
-	}, [isRunning])
+	}, [ isRunning ])
 
 	return (
 		<div>
@@ -269,7 +269,7 @@ useEffect(() => {
 	return () => {
 		window.removeEventListener('resize', handleResize)
 	}
-}, [])
+}, [ ])
 ```
 
 ## Working with Local Storage
@@ -286,7 +286,7 @@ useEffect(() => {
 
 useEffect(() => {
 	localStorage.setItem('theme', theme)
-}, [theme])
+}, [ theme ])
 ```
 
 ## Syncing with External Systems
@@ -299,7 +299,7 @@ useEffect(() => {
 	return () => {
 		connection.disconnect()
 	}
-}, [])
+}, [ ])
 ```
 
 > [!TIP] Keep effects focused on a single concern. If you need to do multiple unrelated things, use multiple useEffect hooks instead of combining them into one.
