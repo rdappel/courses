@@ -21,7 +21,9 @@ In this assignment, you will refactor your personal homepage from Assignment 3 t
 	</div>
 </details>
 
-## Create Data Files
+## Specifications
+
+### 1. Create Data Files
 
 Create a `public/data` directory in your project and move your favorite items (movies, books, or hobbies) into JSON files.
 
@@ -59,7 +61,7 @@ You can also create **books.json**, **games.json**, or **hobbies.json** dependin
 
 > [!TIP] Include properties like `genre`, `year`, `author`, or other relevant details to make your data more interesting. Start the `rating` at 0 so users can rate items themselves.
 
-## Refactor Your List Component
+### 2. Refactor Your List Component
 
 Update the section of your homepage that displays your favorite items to fetch data instead of using a hardcoded array:
 
@@ -123,7 +125,7 @@ const App = () => {
 }
 ```
 
-## Implement Loading States
+### 3. Implement Loading States
 
 Your component must display a loading message while data is being fetched:
 
@@ -135,7 +137,7 @@ if (loading) {
 
 Style your loading message to match your site's design. Consider adding a spinner or animation.
 
-## Implement Error Handling
+### 4. Implement Error Handling
 
 Your component must handle errors gracefully:
 
@@ -147,7 +149,7 @@ if (error) {
 
 Test your error handling by temporarily changing the file path to something incorrect like `/data/wrong.json`.
 
-## Display Fetched Data with Additional Details
+### 5. Display Fetched Data with Additional Details
 
 Update your list rendering to display the additional information from your JSON:
 
@@ -165,7 +167,7 @@ Update your list rendering to display the additional information from your JSON:
 
 > [!IMPORTANT] Use `movie.id` for the key prop instead of the array index for better React performance and consistency.
 
-## Update Document Title Based on Data
+### 6. Update Document Title Based on Data
 
 Use `useEffect` to update the document title once the data loads:
 
@@ -179,7 +181,7 @@ useEffect(() => {
 
 This makes your page title dynamic based on the fetched data.
 
-## Style Your Enhanced List
+### 7. Style Your Enhanced List
 
 Improve the visual presentation of your items:
 - Add CSS for the loading and error states
@@ -190,7 +192,7 @@ Improve the visual presentation of your items:
 
 ## Optional Enhancements
 
-### Filter by Genre/Category
+**Filter by Genre/Category**
 
 Add buttons to filter your items by genre or category:
 
@@ -209,7 +211,7 @@ const filteredMovies = filter === 'all'
 </div>
 ```
 
-### Sort Functionality
+**Sort Functionality**
 
 Add a dropdown or buttons to sort your items:
 
@@ -223,10 +225,7 @@ const sortedMovies = [...movies].sort((a, b) => {
 })
 ```
 
-### Search Feature
-
-Add a search input to filter items by title:
-
+**Search Feature**
 ```javascript
 const [search, setSearch] = useState('')
 
@@ -235,7 +234,7 @@ const searchedMovies = movies.filter(movie =>
 )
 ```
 
-## Testing Your Implementation
+# Testing Your Implementation
 
 Test the following scenarios:
 
@@ -249,7 +248,7 @@ Test the following scenarios:
 
 > [!CAUTION] If your data fetches on every render (infinite loop), check that you included the dependency array `[]` in your useEffect.
 
-## Using AI for this Assignment
+# Using AI for this Assignment
 
 You are encouraged to use AI tools like Copilot or ChatGPT to help you with this assignment. Focus on understanding:
 - How `useEffect` works with the dependency array `[]`
@@ -260,9 +259,9 @@ You are encouraged to use AI tools like Copilot or ChatGPT to help you with this
 
 > [!NOTE] Make sure you understand the code you're submitting. You may be asked to explain how your useEffect implementation works.
 
-## Submission
+# Submission
 
-### Deploying to GitHub Pages
+## Deploying to GitHub Pages
 
 Deploy your updated site to GitHub Pages:
 
@@ -279,7 +278,7 @@ npm run build
 
 5. Verify your site loads correctly and all data fetches properly
 
-### Submitting to Blackboard
+## Submitting to Blackboard
 
 Submit the URL of your deployed GitHub Pages site on Blackboard for grading.
 
