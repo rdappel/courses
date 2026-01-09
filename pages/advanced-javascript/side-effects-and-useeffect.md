@@ -26,6 +26,19 @@ In React, a side effect is any operation that affects something outside the scop
 
 Since React components should be pure functions (same input = same output), we need a special way to handle these side effects. That's where the `useEffect` hook comes in.
 
+Before we dive into `useEffect`, let's take a look at a side effect that will cause problems if not handled correctly:
+
+<details open>
+	<summary class="video">Show/Hide Video</summary>
+	<div class="video-container">
+		<iframe src="https://www.youtube.com/embed/BHIwkCGNNLo" width="100%" height="100%" frameborder="0"
+			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+		</iframe>
+	</div>
+</details>
+
+As you can see, fetching data directly in the component body causes an infinite loop of re-renders. We need to use `useEffect` to manage this side effect properly.
+
 # Introduction to useEffect
 
 The `useEffect` hook allows you to perform side effects in functional components. It runs after React updates the DOM, making it perfect for operations that need to happen after rendering.
@@ -33,7 +46,7 @@ The `useEffect` hook allows you to perform side effects in functional components
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/RMtcj3MZAmc" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -78,7 +91,7 @@ The dependency array is the second argument to `useEffect`. It controls when the
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/SQZBpeg8kds" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -125,7 +138,7 @@ Let's create a component that demonstrates how dependencies work:
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/fUWuVYV2HrM" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -183,7 +196,7 @@ Sometimes effects need to clean up after themselves. For example, if you set up 
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/wpNUefD49SM" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -231,6 +244,15 @@ export default Timer
 # Common Use Cases
 
 Here are some common patterns for using useEffect:
+
+<details open>
+	<summary class="video">Show/Hide Video</summary>
+	<div class="video-container">
+		<iframe src="https://www.youtube.com/embed/Ytonfvt6Gh8" width="100%" height="100%" frameborder="0"
+			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+		</iframe>
+	</div>
+</details>
 
 ## Setting Up Event Listeners
 

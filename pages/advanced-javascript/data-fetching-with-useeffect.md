@@ -21,24 +21,31 @@ Let's start with a simple example that fetches user data when the component moun
     <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/data-fetch-light.svg" alt="" aria-hidden="true" class="adaptive light">
 </div>
 
+Here is the url to `users.json` that we used as a mock API in the video: `https://raw.githubusercontent.com/rdappel/courses/master/support-files/ajs/users.json`.
+
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/bNCUjYzOSIQ" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
 </details>
 
+Here is a link to the code-snippet that I created in the video: [Code snippet for Basic React Component](https://gist.github.com/rdappel/a0e3fb75061ed55fceda4a0b42b58ae8).
+
+And here is the UserList component code:
+
 ```javascript
 import { useState, useEffect } from 'react'
 
 const UserList = () => {
-	const [users, setUsers] = useState([])
+	const [ users, setUsers ] = useState([])
 
 	useEffect(() => {
 		(async () => {
-			const response = await fetch('/support-files/ajs/users.json')
+			const url = 'https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/users.json'
+			const response = await fetch(url)
 			const data = await response.json()
 			setUsers(data)
 		})()
@@ -48,9 +55,9 @@ const UserList = () => {
 		<div>
 			<h2>Users</h2>
 			<ul>
-				{users.map(user => (
-					<li key={user.id}>{user.name} - {user.role}</li>
-				))}
+				{users.map(({ id, name, role }) => {
+					return <li key={id}>{name} - {role}</li>
+				})}
 			</ul>
 		</div>
 	)
@@ -68,7 +75,7 @@ Users should know when data is being fetched. Let's add a loading indicator:
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/99PUJ5PaD-E" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -79,30 +86,26 @@ import { useState, useEffect } from 'react'
 
 const UserList = () => {
 	const [users, setUsers] = useState([])
-	const [loading, setLoading] = useState(true)
+	const [ isLoading, setIsLoading ] = useState(true)
 
 	useEffect(() => {
 		(async () => {
 			const response = await fetch('/support-files/ajs/users.json')
 			const data = await response.json()
 			setUsers(data)
-			setLoading(false)
+			setIsLoading(false)
 		})()
 	}, [])
 
-	if (loading) {
-		return <div>Loading users...</div>
-	}
+	if (isLoading) return <div>Loading users...</div>
 
 	return (
 		<div>
 			<h2>Users</h2>
 			<ul>
-				{users.map(user => (
-					<li key={user.id}>
-						{user.name} - {user.role}
-					</li>
-				))}
+				{users.map(({ id, name, role }) => {
+					return <li key={id}>{name} - {role}</li>
+				})}
 			</ul>
 		</div>
 	)
@@ -118,7 +121,7 @@ Network requests can fail, so we need to handle errors gracefully:
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/5jl6uGAY_rM" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -129,36 +132,33 @@ import { useState, useEffect } from 'react'
 
 const UserList = () => {
 	const [users, setUsers] = useState([])
-	const [loading, setLoading] = useState(true)
+	const [isLoading, setIsLoading] = useState(true)
 	const [error, setError] = useState(null)
 
 	useEffect(() => {
 		(async () => {
 			try {
 				const response = await fetch('/support-files/ajs/users.json')
-				if (!response.ok) throw new Error('Failed to fetch users')
 				const data = await response.json()
 				setUsers(data)
 			} catch (err) {
 				setError(err.message)
 			} finally {
-				setLoading(false)
+				setIsLoading(false)
 			}
 		})()
 	}, [])
 
-	if (loading) return <div>Loading users...</div>
+	if (isLoading) return <div>Loading users...</div>
 	if (error) return <div>Error: {error}</div>
 
 	return (
 		<div>
 			<h2>Users</h2>
 			<ul>
-				{users.map(user => (
-					<li key={user.id}>
-						{user.name} - {user.role}
-					</li>
-				))}
+				{users.map(({ id, name, role }) => {
+					return <li key={id}>{name} - {role}</li>
+				})}
 			</ul>
 		</div>
 	)
@@ -178,16 +178,16 @@ Let's create a more polished component that displays user information in cards:
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/uBQjqXVCXWg" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
 </details>
 
-First, let's create the UserCard component:
+First, let's create the Card component:
 
 ```javascript
-const UserCard = ({ user }) => {
+const Card = ({ user }) => {
 	const cardStyle = {
 		border: '1px solid #ddd',
 		borderRadius: '8px',
@@ -217,201 +217,52 @@ const UserCard = ({ user }) => {
 	)
 }
 
-export default UserCard
+export default Card
 ```
 
 Now, let's use it in our UserList component:
 
 ```javascript
 import { useState, useEffect } from 'react'
-import UserCard from './UserCard'
+import Card from './Card.jsx'
 
 const UserList = () => {
-	const [users, setUsers] = useState([])
-	const [loading, setLoading] = useState(true)
-	const [error, setError] = useState(null)
+	const [ users, setUsers ] = useState([])
+	const [ isLoading, setIsLoading ] = useState(true)
+	const [ error, setError ] = useState(null)
 
 	useEffect(() => {
-		const fetchUsers = async () => {
+		(async () => {
 			try {
-				const response = await fetch('/support-files/ajs/users.json')
-				if (!response.ok) {
-					throw new Error('Failed to fetch users')
-				}
+				const url = 'https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/users.json'
+				const response = await fetch(url)
+				if (!response.ok) throw new Error('Failed to fetch users')
 				const data = await response.json()
 				setUsers(data)
-			} catch (err) {
-				setError(err.message)
-			} finally {
-				setLoading(false)
 			}
-		}
-
-		fetchUsers()
+			catch (err) {
+				setError(err.message)
+			}
+			finally {
+				setIsLoading(false)
+			}
+		})()
 	}, [])
 
-	if (loading) return <div>Loading users...</div>
+	if (isLoading) return <div>Loading users...</div>
 	if (error) return <div>Error: {error}</div>
 
 	return (
 		<div>
-			<h2>Team Members</h2>
-			{users.map(user => (
-				<UserCard key={user.id} user={user} />
-			))}
+			<h2>Users</h2>
+			<ul>
+				{users.map(user => (
+					<Card key={user.id} user={user} />
+				))}
+			</ul>
 		</div>
 	)
 }
 
 export default UserList
 ```
-
-> [!TIP] The `finally` block in try/catch is perfect for setting loading to false, as it runs whether the request succeeds or fails.
-
-## Filtering Fetched Data
-
-Let's add filtering capability to our product list:
-
-<details open>
-	<summary class="video">Show/Hide Video</summary>
-	<div class="video-container">
-		<iframe src="" width="100%" height="100%" frameborder="0"
-			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-		</iframe>
-	</div>
-</details>
-
-```javascript
-import { useState, useEffect } from 'react'
-
-const ProductList = () => {
-	const [products, setProducts] = useState([])
-	const [loading, setLoading] = useState(true)
-	const [error, setError] = useState(null)
-	const [filter, setFilter] = useState('all')
-
-	useEffect(() => {
-		const fetchProducts = async () => {
-			try {
-				const response = await fetch('/support-files/ajs/products.json')
-				if (!response.ok) throw new Error('Failed to fetch products')
-				const data = await response.json()
-				setProducts(data)
-			} catch (err) {
-				setError(err.message)
-			} finally {
-				setLoading(false)
-			}
-		}
-
-		fetchProducts()
-	}, [])
-
-	if (loading) return <div>Loading products...</div>
-	if (error) return <div>Error: {error}</div>
-
-	const filteredProducts = filter === 'all' 
-		? products 
-		: products.filter(p => p.category === filter)
-
-	return (
-		<div>
-			<h2>Products</h2>
-			<div>
-				<button onClick={() => setFilter('all')}>All</button>
-				<button onClick={() => setFilter('Electronics')}>Electronics</button>
-				<button onClick={() => setFilter('Accessories')}>Accessories</button>
-			</div>
-			<ul>
-				{filteredProducts.map(product => (
-					<li key={product.id}>
-						{product.name} - ${product.price}
-						{!product.inStock && ' (Out of Stock)'}
-					</li>
-				))}
-			</ul>
-		</div>
-	)
-}
-
-export default ProductList
-```
-
-## Refetching Data
-
-Sometimes you need to refetch data based on user actions or changing conditions:
-
-<details open>
-	<summary class="video">Show/Hide Video</summary>
-	<div class="video-container">
-		<iframe src="" width="100%" height="100%" frameborder="0"
-			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-		</iframe>
-	</div>
-</details>
-
-```javascript
-import { useState, useEffect } from 'react'
-
-const RefreshableUserList = () => {
-	const [users, setUsers] = useState([])
-	const [loading, setLoading] = useState(true)
-	const [error, setError] = useState(null)
-	const [refreshKey, setRefreshKey] = useState(0)
-
-	useEffect(() => {
-		const fetchUsers = async () => {
-			setLoading(true)
-			setError(null)
-			try {
-				const response = await fetch('/support-files/ajs/users.json')
-				if (!response.ok) throw new Error('Failed to fetch users')
-				const data = await response.json()
-				setUsers(data)
-			} catch (err) {
-				setError(err.message)
-			} finally {
-				setLoading(false)
-			}
-		}
-
-		fetchUsers()
-	}, [refreshKey])
-
-	const handleRefresh = () => {
-		setRefreshKey(prev => prev + 1)
-	}
-
-	if (loading) return <div>Loading users...</div>
-	if (error) return <div>Error: {error}</div>
-
-	return (
-		<div>
-			<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-				<h2>Team Members</h2>
-				<button onClick={handleRefresh}>Refresh</button>
-			</div>
-			<ul>
-				{users.map(user => (
-					<li key={user.id}>{user.name} - {user.role}</li>
-				))}
-			</ul>
-		</div>
-	)
-}
-
-export default RefreshableUserList
-```
-
-> [!NOTE] By adding `refreshKey` to the dependency array, we can trigger a refetch by changing its value. This is a common pattern for refreshing data.
-
-# Best Practices for Data Fetching
-
-1. **Always handle loading and error states** - Never assume requests will succeed
-2. **Use try/catch with async/await** - This makes error handling cleaner
-3. **Set loading to false in finally** - Ensures it updates regardless of success or failure
-4. **Check response.ok** - The fetch API doesn't reject on HTTP errors
-5. **Keep the dependency array accurate** - Include all values used in the effect
-6. **Consider using a data fetching library** - For larger apps, libraries like React Query or SWR can simplify data fetching
-
-> [!TIP] For production applications, consider using a dedicated data fetching library like React Query or SWR. These libraries handle caching, refetching, and state management automatically, reducing boilerplate code significantly.
