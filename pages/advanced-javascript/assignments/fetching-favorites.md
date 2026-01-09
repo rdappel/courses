@@ -59,24 +59,7 @@ You can also create **books.json**, **games.json**, or **hobbies.json** dependin
 
 > [!TIP] Include properties like `genre`, `year`, `author`, or other relevant details to make your data more interesting. Start the `rating` at 0 so users can rate items themselves.
 
-### 2. Create Components to Display Fetched Data
-
-Create at least two new components that fetch and display data:
-
-**ProjectList Component:**
-- Fetches data from `projects.json` using `useEffect`
-- Displays a loading message while data is being fetched
-- Handles errors gracefully with an error message
-- Maps through the projects and displays them in cards or a list
-- Each project should show its title, description, and technologies
-
-**Skills Component:**
-- Fetches data from `skills.json` using `useEffect`
-- Displays loading and error states
-- Maps through skills and displays them with icons or badges
-- Shows skill categories and proficiency levels
-
-### 3. Refactor Your List Component
+## Refactor Your List Component
 
 Update the section of your homepage that displays your favorite items to fetch data instead of using a hardcoded array:
 
@@ -140,7 +123,7 @@ const App = () => {
 }
 ```
 
-### 4. Implement Loading States
+## Implement Loading States
 
 Your component must display a loading message while data is being fetched:
 
@@ -152,7 +135,7 @@ if (loading) {
 
 Style your loading message to match your site's design. Consider adding a spinner or animation.
 
-### 5. Implement Error Handling
+## Implement Error Handling
 
 Your component must handle errors gracefully:
 
@@ -164,7 +147,7 @@ if (error) {
 
 Test your error handling by temporarily changing the file path to something incorrect like `/data/wrong.json`.
 
-### 6. Display Fetched Data with Additional Details
+## Display Fetched Data with Additional Details
 
 Update your list rendering to display the additional information from your JSON:
 
@@ -182,7 +165,7 @@ Update your list rendering to display the additional information from your JSON:
 
 > [!IMPORTANT] Use `movie.id` for the key prop instead of the array index for better React performance and consistency.
 
-### 7. Update Document Title Based on Data
+## Update Document Title Based on Data
 
 Use `useEffect` to update the document title once the data loads:
 
@@ -196,7 +179,7 @@ useEffect(() => {
 
 This makes your page title dynamic based on the fetched data.
 
-### 8. Style Your Enhanced List
+## Style Your Enhanced List
 
 Improve the visual presentation of your items:
 - Add CSS for the loading and error states
@@ -263,8 +246,6 @@ Test the following scenarios:
 5. **Document Title**: The browser tab title should update after data loads
 6. **Console Logs**: Check for any warnings or errors in the browser console
 7. **Single Fetch**: Open the Network tab in DevTools and confirm the JSON file is only fetched once
-
-> [!CAUTION] If your data fetches on every render (infinite loop), check that you included the dependency array `[]` in your useEffect
 
 > [!CAUTION] If your data fetches on every render (infinite loop), check that you included the dependency array `[]` in your useEffect.
 
