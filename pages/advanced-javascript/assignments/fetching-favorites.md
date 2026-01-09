@@ -95,7 +95,7 @@ Your component must handle errors gracefully. If the fetch fails:
 
 Test your error handling by temporarily changing the file path to something incorrect like `/data/wrong.json`.
 
-### 5. Display Fetched Data with Additional Details
+### 5. Display Fetched Data
 
 Update your list rendering to display the additional information from your JSON. Each item should show:
 
@@ -103,65 +103,15 @@ Update your list rendering to display the additional information from your JSON.
 - Additional details like genre, director, or author (depending on your data)
 - The StarRating component with the rating from the JSON
 
-> [!IMPORTANT] Use `movie.id` for the key prop instead of the array index for better React performance and consistency.
+> [!IMPORTANT] Use `data.id` for the key prop instead of the array index for better React performance and consistency.
 
-### 6. Update Document Title Based on Data
+### 6. Update Document Title
 
 Use a second `useEffect` to update the browser tab title (document.title) once the data loads. The title should:
 
 - Display the count of items (e.g., "5 Favorite Movies")
 - Only update after the data has finished loading
 - Use the appropriate dependency array to run when the data changes
-
-### 7. Style Your Enhanced List
-
-Improve the visual presentation of your items:
-
-- Add CSS for the loading and error states
-- Style each item card with better spacing and typography
-- Display the additional details (year, genre, director) in an appealing way
-- Ensure your StarRating component integrates nicely with the new data
-- Consider adding hover effects or transitions
-
-## Optional Enhancements
-
-**Filter by Genre/Category**
-
-Add buttons to filter your items by genre or category. You'll need:
-
-- State to track the current filter
-- Filter buttons that update the filter state  
-- Logic to filter the movies array based on the selected genre
-
-**Sort Functionality**
-
-Add a dropdown or buttons to sort your items by title, year, or rating. Consider:
-
-- How to sort alphabetically vs numerically
-- Whether to sort ascending or descending
-- Creating a new sorted array (don't mutate the original)
-
-**Search Feature**
-
-Add a search input to filter items by title. Think about:
-
-- Using controlled input with state
-- Filtering the array based on the search term
-- Making the search case-insensitive
-
-# Testing Your Implementation
-
-Test the following scenarios:
-
-1. **Loading State**: The loading message should appear briefly when the page first loads
-2. **Error Handling**: Change `/data/movies.json` to `/data/wrong.json` temporarily and verify the error displays
-3. **Data Display**: All properties from your JSON (title, year, genre, etc.) should display correctly
-4. **Star Ratings**: The StarRating component should still work with each item
-5. **Document Title**: The browser tab title should update after data loads
-6. **Console Logs**: Check for any warnings or errors in the browser console
-7. **Single Fetch**: Open the Network tab in DevTools and confirm the JSON file is only fetched once
-
-> [!CAUTION] If your data fetches on every render (infinite loop), check that you included the dependency array `[]` in your useEffect.
 
 # Using AI for this Assignment
 
