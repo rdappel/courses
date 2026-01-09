@@ -120,45 +120,24 @@ Improve the visual presentation of your items:
 
 **Filter by Genre/Category**
 
-Add buttons to filter your items by genre or category:
-
-```javascript
-const [filter, setFilter] = useState('all')
-
-const filteredMovies = filter === 'all' 
-  ? movies 
-  : movies.filter(movie => movie.genre === filter)
-
-// Then in your JSX:
-<div>
-  <button onClick={() => setFilter('all')}>All</button>
-  <button onClick={() => setFilter('Drama')}>Drama</button>
-  <button onClick={() => setFilter('Action')}>Action</button>
-</div>
-```
+Add buttons to filter your items by genre or category. You'll need:
+- State to track the current filter
+- Filter buttons that update the filter state  
+- Logic to filter the movies array based on the selected genre
 
 **Sort Functionality**
 
-Add a dropdown or buttons to sort your items:
-
-```javascript
-const [sortBy, setSortBy] = useState('title')
-
-const sortedMovies = [...movies].sort((a, b) => {
-  if (sortBy === 'year') return b.year - a.year
-  if (sortBy === 'title') return a.title.localeCompare(b.title)
-  return 0
-})
-```
+Add a dropdown or buttons to sort your items by title, year, or rating. Consider:
+- How to sort alphabetically vs numerically
+- Whether to sort ascending or descending
+- Creating a new sorted array (don't mutate the original)
 
 **Search Feature**
-```javascript
-const [search, setSearch] = useState('')
 
-const searchedMovies = movies.filter(movie => 
-  movie.title.toLowerCase().includes(search.toLowerCase())
-)
-```
+Add a search input to filter items by title. Think about:
+- Using controlled input with state
+- Filtering the array based on the search term
+- Making the search case-insensitive
 
 # Testing Your Implementation
 
