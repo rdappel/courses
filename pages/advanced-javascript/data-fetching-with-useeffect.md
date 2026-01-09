@@ -25,7 +25,7 @@ Let's start with a simple example that fetches user data when the component moun
 	</div>
 </details>
 
-Here is the url to `users.json` that we used as a mock API in the video: 
+Here is the url to `users.json` that we used as a mock API in the video:
 
 ```plaintext
 https://raw.githubusercontent.com/rdappel/courses/master/support-files/ajs/users.json
