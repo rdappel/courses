@@ -140,11 +140,13 @@ export default RefVsState
 > [!CAUTION] In the example above, clicking "Increment Ref" won't update the displayed count until the component re-renders for another reason. This is because changing a ref doesn't trigger a re-render.
 
 **Use useState when:**
+
 - The value should trigger a re-render when it changes
 - You need to display the value in the UI
 - React needs to track the value for proper rendering
 
 **Use useRef when:**
+
 - You need to store a value that persists between renders but doesn't affect the UI
 - You're working with DOM elements directly
 - You're storing timers, intervals, or other mutable values

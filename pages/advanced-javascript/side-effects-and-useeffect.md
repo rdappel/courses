@@ -18,7 +18,6 @@ In React, a side effect is any operation that affects something outside the scop
 - Setting up timers or intervals
 - Logging to the console
 
-
 <div class="centering">
     <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/side-effects-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
     <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/side-effects-light.svg" alt="" aria-hidden="true" class="adaptive light">
