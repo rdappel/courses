@@ -144,6 +144,8 @@ Let's create a component that demonstrates how dependencies work:
 	</div>
 </details>
 
+Here's the updated code from the video:
+
 ```javascript
 import { useState, useEffect } from 'react'
 
