@@ -63,123 +63,49 @@ You can also create **books.json**, **games.json**, or **hobbies.json** dependin
 
 ### 2. Refactor Your List Component
 
-Update the section of your homepage that displays your favorite items to fetch data instead of using a hardcoded array:
+Update the section of your homepage that displays your favorite items to fetch data instead of using a hardcoded array.
 
-**Before (hardcoded):**
-```javascript
-const App = () => {
-  const [movies, setMovies] = useState([
-    { id: 1, title: "The Shawshank Redemption", year: 1994 },
-    { id: 2, title: "The Dark Knight", year: 2008 },
-    // ... more hardcoded movies
-  ])
-  
-  return (
-    <ul>
-      {movies.map(movie => (
-        <li key={movie.id}>{movie.title}</li>
-      ))}
-    </ul>
-  )
-}
-```
+Your component will need to:
+- Use three state variables: one for the data array, one for loading status, and one for errors
+- Use `useEffect` with an async function inside to fetch the data from `/data/movies.json` (or your chosen file)
+- Use `fetch()` to retrieve the JSON file
+- Update the state with the fetched data
+- Handle the loading and error states appropriately
 
-**After (fetching from JSON):**
-```javascript
-const App = () => {
-  const [movies, setMovies] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
-
-  useEffect(() => {
-    const fetchMovies = async () => {
-      try {
-        const response = await fetch('/data/movies.json')
-        if (!response.ok) throw new Error('Failed to fetch movies')
-        const data = await response.json()
-        setMovies(data)
-      } catch (err) {
-        setError(err.message)
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    fetchMovies()
-  }, [])
-
-  if (loading) return <div className="loading">Loading movies...</div>
-  if (error) return <div className="error">Error: {error}</div>
-
-  return (
-    <ul>
-      {movies.map(movie => (
-        <li key={movie.id}>
-          <h3>{movie.title} ({movie.year})</h3>
-          <p>Director: {movie.director} | Genre: {movie.genre}</p>
-          <StarRating initialRating={movie.rating} />
-        </li>
-      ))}
-    </ul>
-  )
-}
-```
+> [!TIP] Remember that `useEffect` cannot be async directly, but you can define an async function inside it and call it immediately.
 
 ### 3. Implement Loading States
 
-Your component must display a loading message while data is being fetched:
-
-```javascript
-if (loading) {
-  return <div className="loading">Loading movies...</div>
-}
-```
-
-Style your loading message to match your site's design. Consider adding a spinner or animation.
+Your component must display a loading message while data is being fetched. The loading state should:
+- Show before the data has loaded
+- Display a user-friendly message (e.g., "Loading movies...")
+- Be styled to match your site's design
+- Optionally include a spinner or animation
 
 ### 4. Implement Error Handling
 
-Your component must handle errors gracefully:
-
-```javascript
-if (error) {
-  return <div className="error">Error: {error}</div>
-}
-```
+Your component must handle errors gracefully. If the fetch fails:
+- Display an error message to the user
+- Include the error details in the message
+- Style the error message to stand out visually
 
 Test your error handling by temporarily changing the file path to something incorrect like `/data/wrong.json`.
 
 ### 5. Display Fetched Data with Additional Details
 
-Update your list rendering to display the additional information from your JSON:
-
-```javascript
-<ul>
-  {movies.map(movie => (
-    <li key={movie.id}>
-      <h3>{movie.title} ({movie.year})</h3>
-      <p>Director: {movie.director} | Genre: {movie.genre}</p>
-      <StarRating initialRating={movie.rating} />
-    </li>
-  ))}
-</ul>
-```
+Update your list rendering to display the additional information from your JSON. Each item should show:
+- The item's title and year
+- Additional details like genre, director, or author (depending on your data)
+- The StarRating component with the rating from the JSON
 
 > [!IMPORTANT] Use `movie.id` for the key prop instead of the array index for better React performance and consistency.
 
 ### 6. Update Document Title Based on Data
 
-Use `useEffect` to update the document title once the data loads:
-
-```javascript
-useEffect(() => {
-  if (!loading && movies.length > 0) {
-    document.title = `${movies.length} Favorite Movies`
-  }
-}, [loading, movies])
-```
-
-This makes your page title dynamic based on the fetched data.
+Use a second `useEffect` to update the browser tab title (document.title) once the data loads. The title should:
+- Display the count of items (e.g., "5 Favorite Movies")
+- Only update after the data has finished loading
+- Use the appropriate dependency array to run when the data changes
 
 ### 7. Style Your Enhanced List
 
