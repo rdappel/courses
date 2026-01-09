@@ -16,17 +16,6 @@ One of the most common use cases for `useEffect` is fetching data from an API. I
 
 Let's start with a simple example that fetches user data when the component mounts:
 
-<div class="centering">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/data-fetch-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/data-fetch-light.svg" alt="" aria-hidden="true" class="adaptive light">
-</div>
-
-Here is the url to `users.json` that we used as a mock API in the video: 
-
-```plaintext
-https://raw.githubusercontent.com/rdappel/courses/master/support-files/ajs/users.json
-```
-
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
@@ -35,6 +24,12 @@ https://raw.githubusercontent.com/rdappel/courses/master/support-files/ajs/users
 		</iframe>
 	</div>
 </details>
+
+Here is the url to `users.json` that we used as a mock API in the video: 
+
+```plaintext
+https://raw.githubusercontent.com/rdappel/courses/master/support-files/ajs/users.json
+```
 
 Here is a link to the code-snippet that I created in the video:
 
@@ -72,7 +67,10 @@ const UserList = () => {
 export default UserList
 ```
 
-> [!NOTE] The empty dependency array `[]` ensures the fetch only happens once when the component mounts, not on every render.
+<div class="centering">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/data-fetch-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/data-fetch-light.svg" alt="" aria-hidden="true" class="adaptive light">
+</div>
 
 ## Adding Loading States
 
