@@ -15,8 +15,8 @@ repo: https://github.com/rdappel/courses
 Before we start using Git, let's take a moment to understand what it is, and why it is so popular. Over 70% of developers worldwide use Git. Git is a free, open-source version control system.
 
 <div class="centering">
-	<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/intro-git-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
-	<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/intro-git-light.svg" alt="" aria-hidden="true" class="adaptive light">
+	<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/intro-git-dark.svg" alt="Intro to Git" aria-hidden="true" class="adaptive dark">
+	<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/intro-git-light.svg" alt="Intro to Git" aria-hidden="true" class="adaptive light">
 </div>
 
 Git allows you to keep track of changes to your code by creating snapshots of your project at different points in time. Then, you can compare these snapshots to see what has changed.
@@ -66,6 +66,6 @@ Let's go over some of the terminology you will encounter when using Git:
 - **Others**: We will be covering more concepts in upcoming lessons, such as branches, pull requests, and merging. These are more advanced concepts that you will need to know as you become more comfortable with Git.
 
 <div class="centering">
-	<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/intro-concepts-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
-	<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/intro-concepts-light.svg" alt="" aria-hidden="true" class="adaptive light">
+	<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/intro-concepts-dark.svg" alt="Intro Concepts" aria-hidden="true" class="adaptive dark">
+	<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/intro-concepts-light.svg" alt="Intro Concepts" aria-hidden="true" class="adaptive light">
 </div>

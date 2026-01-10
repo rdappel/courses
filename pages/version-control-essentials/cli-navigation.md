@@ -38,8 +38,8 @@ In this video we will see these commands in action:
 </details>
 
 <div class="centering">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/cli-commands-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/cli-commands-light.svg" alt="" aria-hidden="true" class="adaptive light">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/cli-commands-dark.svg" alt="CLI Commands" aria-hidden="true" class="adaptive dark">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/cli-commands-light.svg" alt="CLI Commands" aria-hidden="true" class="adaptive light">
 </div>
 
 # Exercise 1
@@ -113,7 +113,6 @@ Once you have completed the exercise, copy the commands you used to complete the
     <button type="button" class="submit-button">Submit Exercise</button>
 </div>
 
-
 ## Solution {#exercise-1-solution}
 
 > [!NOTE] Your instructor can see if you view the solution before submitting your answer, so please try to solve the exercise on your own first.
@@ -142,6 +141,3 @@ Note that the `ls` command will need to be replaced with `dir` if you are using 
         </iframe>
     </div>
 </details>
-
-
-

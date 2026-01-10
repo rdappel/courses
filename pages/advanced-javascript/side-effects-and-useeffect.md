@@ -19,8 +19,8 @@ In React, a side effect is any operation that affects something outside the scop
 - Logging to the console
 
 <div class="centering">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/side-effects-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/side-effects-light.svg" alt="" aria-hidden="true" class="adaptive light">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/side-effects-dark.svg" alt="Side Effects" aria-hidden="true" class="adaptive dark">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/side-effects-light.svg" alt="Side Effects" aria-hidden="true" class="adaptive light">
 </div>
 
 Since React components should be pure functions (same input = same output), we need a special way to handle these side effects. That's where the `useEffect` hook comes in.
@@ -83,8 +83,8 @@ export default Counter
 The dependency array is the second argument to `useEffect`. It controls when the effect runs:
 
 <div class="centering">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/useeffect-dependencies-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/useeffect-dependencies-light.svg" alt="" aria-hidden="true" class="adaptive light">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/useeffect-dependencies-dark.svg" alt="useEffect Dependencies" aria-hidden="true" class="adaptive dark">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/useeffect-dependencies-light.svg" alt="useEffect Dependencies" aria-hidden="true" class="adaptive light">
 </div>
 
 <details open>

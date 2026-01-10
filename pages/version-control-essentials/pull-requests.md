@@ -68,8 +68,8 @@ Additionally, you should always be cautious when merging pull requests, especial
 </details>
 
 <div class="centering">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/pull-request-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/pull-request-light.svg" alt="" aria-hidden="true" class="adaptive light">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/pull-request-dark.svg" alt="Pull Request" aria-hidden="true" class="adaptive dark">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/pull-request-light.svg" alt="Pull Request" aria-hidden="true" class="adaptive light">
 </div>
 
 Again, as a student contributing to open-source projects, you typically won't be the one merging pull requests. Even when you're working professionally, you'll often have a team lead or senior developer handle the merging process to ensure code quality and consistency.

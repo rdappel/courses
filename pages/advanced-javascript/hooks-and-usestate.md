@@ -32,11 +32,12 @@ This video covers project setup and an introduction to React Hooks:
 State is data that changes over time in your application. When state changes, React automatically re-renders the component to reflect those changes in the UI. This is what makes React applications interactive and dynamic.
 
 <div class="centering">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/react-state-mgt-cycle-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/react-state-mgt-cycle-light.svg" alt="" aria-hidden="true" class="adaptive light">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/react-state-mgt-cycle-dark.svg" alt="State Management" aria-hidden="true" class="adaptive dark">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/react-state-mgt-cycle-light.svg" alt="State Management" aria-hidden="true" class="adaptive light">
 </div>
 
 Examples of state include:
+
 - A counter value that increases when you click a button
 - Form input values that change as the user types
 - A boolean that tracks whether a modal is open or closed

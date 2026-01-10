@@ -260,6 +260,6 @@ export default App
 5. **Initialize refs properly** - Start with `null` for DOM refs or an appropriate initial value for data refs
 
 <div class="centering">
-	<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/useref-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
-	<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/useref-light.svg" alt="" aria-hidden="true" class="adaptive light">
+	<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/useref-dark.svg" alt="useRef Best Practices" aria-hidden="true" class="adaptive dark">
+	<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/useref-light.svg" alt="useRef Best Practices" aria-hidden="true" class="adaptive light">
 </div>

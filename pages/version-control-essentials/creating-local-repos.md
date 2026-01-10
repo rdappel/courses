@@ -13,8 +13,8 @@ repo: https://github.com/rdappel/courses
 When introducing Git, a lot of emphesis was placed on using Git as a colaboration tool, but Git is also a great tool for working on your own. In this section, we will cover how to create a local repository, then learn how to stage and commit changes.
 
 <div class="centering">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/local-repo-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/local-repo-light.svg" alt="" aria-hidden="true" class="adaptive light">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/local-repo-dark.svg" alt="Local Repository" aria-hidden="true" class="adaptive dark">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/local-repo-light.svg" alt="Local Repository" aria-hidden="true" class="adaptive light">
 </div>
 
 ## Initializing a Repository
@@ -54,8 +54,7 @@ This video will show you how to create a local repository in Windows 10. The pro
 
 ## Staging and Committing Changes
 
-Before you can commit changes to your repository, you need to stage them. This tells Git which files you want to commit. 
-
+Before you can commit changes to your repository, you need to stage them. This tells Git which files you want to commit.
 
 To stage a single file, run the following command:
 
@@ -113,7 +112,6 @@ git log
 ```
 
 > [!IMPORTANT] If you forget the -m flag when committing changes, Git will open a text editor for you to enter your commit message. By default, this will be Vim, which can be confusing for new users. If this happens to you, my recommendation (for now) is to exit out of your terminal and run the command again with the -m flag.
-
 
 # Exercise 3
 

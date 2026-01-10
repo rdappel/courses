@@ -34,13 +34,14 @@ Before we learn about Git stash, let's understand what a "stack" is. A stack is 
 This is called **LIFO** - "Last In, First Out."
 
 Examples of stacks in everyday life:
+
 - A stack of books on your desk
 - A stack of papers
 - Browser history (when you click "back")
 
 <div class="centering">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/stack-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/stack-light.svg" alt="" aria-hidden="true" class="adaptive light">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/stack-dark.svg" alt="Stack" aria-hidden="true" class="adaptive dark">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/stack-light.svg" alt="Stack" aria-hidden="true" class="adaptive light">
 </div>
 
 Git stash works the same way - when you save (stash) your work, it goes on top of the stack. When you want your work back, you get the most recent one first.
@@ -57,8 +58,8 @@ Git stash is like a temporary save button for your uncommitted changes. When you
 Think of it like putting your homework in a folder, working on a different assignment, then taking your homework back out of the folder.
 
 <div class="centering">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/stash-workflow-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/stash-workflow-light.svg" alt="" aria-hidden="true" class="adaptive light">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/stash-workflow-dark.svg" alt="Stash Workflow" aria-hidden="true" class="adaptive dark">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/stash-workflow-light.svg" alt="Stash Workflow" aria-hidden="true" class="adaptive light">
 </div>
 
 # Basic Stashing Commands
@@ -173,8 +174,8 @@ git stash pop
 ```
 
 <div class="centering">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/stash-scenerios-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/stash-scenerios-light.svg" alt="" aria-hidden="true" class="adaptive light">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/stash-scenerios-dark.svg" alt="Stash Scenarios" aria-hidden="true" class="adaptive dark">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/stash-scenerios-light.svg" alt="Stash Scenarios" aria-hidden="true" class="adaptive light">
 </div>
 
 # Managing Your Stashes
@@ -198,7 +199,7 @@ git stash list
 
 This might show something like:
 
-```
+```bash
 stash@{0}: On main: Working on navigation menu
 stash@{1}: On main: Half-finished login form
 ```
@@ -355,7 +356,7 @@ Paste both outputs into the text area below.
 
 Your git log should look something like this:
 
-```
+```bash
 a1b2c3d Add about me section
 e4f5g6h Fix: Update page title
 i7j8k9l Initial website
@@ -363,7 +364,7 @@ i7j8k9l Initial website
 
 Your stash list should be empty (since you used `git stash pop`):
 
-```
+```bash
 # No output means no stashes remaining
 ```
 

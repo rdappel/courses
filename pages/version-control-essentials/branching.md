@@ -169,8 +169,8 @@ There are other branching strategies, such as:
 - **Test Branches**: For testing new features or changes.
 
 <div class="centering">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/branch-strategies-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/branch-strategies-light.svg" alt="" aria-hidden="true" class="adaptive light">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/branch-strategies-dark.svg" alt="Branch Strategies" aria-hidden="true" class="adaptive dark">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/branch-strategies-light.svg" alt="Branch Strategies" aria-hidden="true" class="adaptive light">
 </div>
 
 # Best Practices
@@ -293,12 +293,14 @@ git checkout -b feature/branch-name
 To merge a feature branch into dev:
 
 1. First merge dev into your feature branch:
+
 ```bash
 git checkout feature/branch-name
 git merge dev
 ```
 
 2. Resolve any conflicts, then merge feature into dev:
+
 ```bash
 git checkout dev
 git merge feature/branch-name
@@ -319,7 +321,7 @@ Once you have completed the exercise, run `git log --oneline` to see your commit
 
 <details>
     <summary>Show the Answer</summary>
-    
+
 Your git log output should look something like this:
 
 ```bash
@@ -337,7 +339,6 @@ The exact commit hashes will be different, but you should see the progression sh
 - Development work on dev and feature branches
 
 - Final merge from dev to master
-
 
 Your final HTML file should look like this:
 

@@ -37,6 +37,7 @@ expedita ut molestias illum quibusdam repudiandae dolorum possimus omnis.
 ```
 
 The code to resolve a merge conflict in Visual Studio Code is as follows:
+
 ```bash
 git add .
 git commit -m "Added lorem text"
@@ -49,8 +50,8 @@ git push # this code will succeed!
 ```
 
 <div class="centering">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/merge-conflicts-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/merge-conflicts-light.svg" alt="" aria-hidden="true" class="adaptive light">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/merge-conflicts-dark.svg" alt="Merge Conflicts" aria-hidden="true" class="adaptive dark">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/vce/merge-conflicts-light.svg" alt="Merge Conflicts" aria-hidden="true" class="adaptive light">
 </div>
 
 # Git with VS Code
@@ -115,7 +116,7 @@ For this exercise, you will practice resolving merge conflicts using Visual Stud
 
 4. **Push the changes**: After resolving the merge conflict, push the changes to your remote repository.
 
-## Submission {#exercise-2-submission} 
+## Submission {#exercise-2-submission}
 
 Once you have completed the exercise, you will need to submit your commit history to show that you have resolved the merge conflict.
 

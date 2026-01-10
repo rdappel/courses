@@ -68,8 +68,8 @@ export default UserList
 ```
 
 <div class="centering">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/data-fetch-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/data-fetch-light.svg" alt="" aria-hidden="true" class="adaptive light">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/data-fetch-dark.svg" alt="Data Fetching" aria-hidden="true" class="adaptive dark">
+    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/data-fetch-light.svg" alt="Data Fetching" aria-hidden="true" class="adaptive light">
 </div>
 
 ## Adding Loading States
