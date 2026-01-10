@@ -17,11 +17,6 @@ The `useRef` hook creates a mutable reference that persists across component re-
 - Keeping track of previous values
 - Storing timers or intervals
 
-<div class="centering">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/useref-vs-usestate-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/useref-vs-usestate-light.svg" alt="" aria-hidden="true" class="adaptive light">
-</div>
-
 # Basic useRef Syntax
 
 The `useRef` hook returns a mutable object with a `current` property. This object persists for the entire lifetime of the component:
@@ -54,14 +49,10 @@ import { useRef } from 'react'
 const FocusInput = () => {
 	const inputRef = useRef(null)
 
-	const handleFocus = () => {
-		inputRef.current.focus()
-	}
-
 	return (
 		<div>
-			<input ref={inputRef} type="text" placeholder="Click the button to focus me" />
-			<button onClick={handleFocus}>Focus Input</button>
+			<input type="text" ref={inputRef} />
+			<button onClick={() => inputRef.current.select() }>Focus Input</button>
 		</div>
 	)
 }
@@ -151,105 +142,6 @@ export default RefVsState
 - You're working with DOM elements directly
 - You're storing timers, intervals, or other mutable values
 
-# Storing Previous Values
-
-A clever use of `useRef` is to keep track of a previous value of a prop or state:
-
-<details open>
-	<summary class="video">Show/Hide Video</summary>
-	<div class="video-container">
-		<iframe src="" width="100%" height="100%" frameborder="0"
-			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-		</iframe>
-	</div>
-</details>
-
-```javascript
-import { useState, useRef, useEffect } from 'react'
-
-const PreviousValue = () => {
-	const [count, setCount] = useState(0)
-	const prevCountRef = useRef()
-
-	useEffect(() => {
-		prevCountRef.current = count
-	}, [count])
-
-	const prevCount = prevCountRef.current
-
-	return (
-		<div>
-			<h3>Current: {count}</h3>
-			<h3>Previous: {prevCount}</h3>
-			<button onClick={() => setCount(count + 1)}>Increment</button>
-		</div>
-	)
-}
-
-export default PreviousValue
-```
-
-> [!NOTE] The useEffect runs after the render, so during render, `prevCountRef.current` still holds the old value. After rendering, it gets updated to the current value.
-
-# Managing Timers and Intervals
-
-`useRef` is perfect for storing timer IDs that need to persist across renders and be cleaned up:
-
-<details open>
-	<summary class="video">Show/Hide Video</summary>
-	<div class="video-container">
-		<iframe src="" width="100%" height="100%" frameborder="0"
-			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-		</iframe>
-	</div>
-</details>
-
-```javascript
-import { useState, useRef } from 'react'
-
-const Stopwatch = () => {
-	const [seconds, setSeconds] = useState(0)
-	const [isRunning, setIsRunning] = useState(false)
-	const intervalRef = useRef(null)
-
-	const start = () => {
-		if (isRunning) return
-		
-		setIsRunning(true)
-		intervalRef.current = setInterval(() => {
-			setSeconds(prev => prev + 1)
-		}, 1000)
-	}
-
-	const stop = () => {
-		if (intervalRef.current) {
-			clearInterval(intervalRef.current)
-			intervalRef.current = null
-			setIsRunning(false)
-		}
-	}
-
-	const reset = () => {
-		stop()
-		setSeconds(0)
-	}
-
-	return (
-		<div>
-			<h2>Stopwatch</h2>
-			<p>Time: {seconds} seconds</p>
-			<button onClick={start} disabled={isRunning}>Start</button>
-			<button onClick={stop} disabled={!isRunning}>Stop</button>
-			<button onClick={reset}>Reset</button>
-		</div>
-	)
-}
-
-export default Stopwatch
-```
-
-> [!IMPORTANT] Always clean up intervals and timers to prevent memory leaks. Store the timer ID in a ref so you can clear it later.
-
 # Combining useRef with Controlled Components
 
 You can combine `useRef` with controlled components to add additional functionality without managing extra state:
@@ -266,38 +158,38 @@ You can combine `useRef` with controlled components to add additional functional
 ```javascript
 import { useState, useRef } from 'react'
 
-const SearchForm = () => {
-	const [searchTerm, setSearchTerm] = useState('')
+const SearchableList = () => {
+	const [ searchTerm, setSearchTerm ] = useState('')
 	const inputRef = useRef(null)
 
-	const handleSubmit = (e) => {
-		e.preventDefault()
-		console.log('Searching for:', searchTerm)
-		setSearchTerm('')
-		inputRef.current.focus()
-	}
+	const items = [
+		'Apple', 'Banana', 'Cherry', 'Date', 'Elderberry',
+		'Fig', 'Grape', 'Honeydew', 'Kiwi', 'Lemon'
+	]
 
-	const handleClear = () => {
-		setSearchTerm('')
-		inputRef.current.focus()
-	}
+	const filteredItems = searchTerm.trim() === '' ? items
+		: items.filter(item => item.toLowerCase().includes(searchTerm.toLowerCase()))
 
 	return (
-		<form onSubmit={handleSubmit}>
+		<div>
 			<input
 				ref={inputRef}
 				type="text"
 				value={searchTerm}
-				onChange={(e) => setSearchTerm(e.target.value)}
-				placeholder="Search..."
+				onChange={({ target }) => setSearchTerm(target.value)}
+				placeholder='Search fruits...'
 			/>
-			<button type="submit">Search</button>
-			<button type="button" onClick={handleClear}>Clear</button>
-		</form>
+			{
+				filteredItems.length === 0 ? <div>'No items match search...'</div>
+					: (<ul>
+						{filteredItems.map((item, index) => <li key={index}>{item}</li>)}
+					</ul>)
+			}
+		</div>
 	)
 }
 
-export default SearchForm
+export default SearchableList
 ```
 
 # Forwarding Refs to Child Components
@@ -316,102 +208,48 @@ Sometimes you need to pass a ref from a parent component to a child component. R
 ```javascript
 import { useRef, forwardRef } from 'react'
 
-// Child component that accepts a ref
-const CustomInput = forwardRef((props, ref) => {
+// Custom input component that accepts a ref
+const FancyInput = forwardRef((props, ref) => {
 	return (
 		<input
 			ref={ref}
 			{...props}
-			style={{ padding: '8px', fontSize: '16px' }}
+			style={{
+				padding: '10px',
+				fontSize: '18px',
+				border: '2px solid #4CAF50',
+				borderRadius: '5px'
+			}}
 		/>
 	)
 })
 
 // Parent component
-const ParentComponent = () => {
+const App = () => {
 	const inputRef = useRef(null)
 
 	const handleFocus = () => {
 		inputRef.current.focus()
 	}
 
+	const handleClear = () => {
+		inputRef.current.value = ''
+		inputRef.current.focus()
+	}
+
 	return (
 		<div>
-			<CustomInput ref={inputRef} placeholder="Custom input" />
-			<button onClick={handleFocus}>Focus Custom Input</button>
+			<FancyInput ref={inputRef} placeholder="Type something..." />
+			<button onClick={handleFocus}>Focus</button>
+			<button onClick={handleClear}>Clear</button>
 		</div>
 	)
 }
 
-export default ParentComponent
+export default App
 ```
 
 > [!NOTE] `forwardRef` is necessary because refs are not passed as regular props. Without it, the ref would be undefined in the child component.
-
-# Practical Example: Auto-Scroll Chat
-
-Here's a practical example that combines multiple concepts - using `useRef` to auto-scroll a chat window:
-
-<details open>
-	<summary class="video">Show/Hide Video</summary>
-	<div class="video-container">
-		<iframe src="" width="100%" height="100%" frameborder="0"
-			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-		</iframe>
-	</div>
-</details>
-
-```javascript
-import { useState, useRef, useEffect } from 'react'
-
-const Chat = () => {
-	const [messages, setMessages] = useState(['Hello!', 'How are you?'])
-	const [input, setInput] = useState('')
-	const messagesEndRef = useRef(null)
-
-	const scrollToBottom = () => {
-		messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-	}
-
-	useEffect(() => {
-		scrollToBottom()
-	}, [messages])
-
-	const handleSend = (e) => {
-		e.preventDefault()
-		if (input.trim()) {
-			setMessages([...messages, input])
-			setInput('')
-		}
-	}
-
-	return (
-		<div>
-			<div style={{ height: '300px', overflowY: 'scroll', border: '1px solid #ccc', padding: '10px' }}>
-				{messages.map((msg, index) => (
-					<div key={index} style={{ marginBottom: '8px' }}>
-						{msg}
-					</div>
-				))}
-				<div ref={messagesEndRef} />
-			</div>
-			<form onSubmit={handleSend}>
-				<input
-					type="text"
-					value={input}
-					onChange={(e) => setInput(e.target.value)}
-					placeholder="Type a message..."
-				/>
-				<button type="submit">Send</button>
-			</form>
-		</div>
-	)
-}
-
-export default Chat
-```
-
-> [!TIP] The `?.` optional chaining operator prevents errors if the ref isn't attached yet. This is good practice when calling methods on refs.
 
 # Best Practices
 
