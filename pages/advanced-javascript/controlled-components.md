@@ -26,7 +26,7 @@ Let's start with a simple example of a controlled text input:
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/pqe9emeI-Ms" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -75,7 +75,7 @@ React's controlled component pattern works with all form elements. Let's look at
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/3dlYa37zpWE" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -159,7 +159,7 @@ One of the main benefits of controlled components is the ability to validate inp
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/VpwqZMtruWo" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>

@@ -37,7 +37,7 @@ One of the most common uses of `useRef` is to access DOM elements directly, simi
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/9InB-G196P4" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -92,7 +92,7 @@ Understanding when to use `useRef` vs `useState` is important:
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/sbRef6rMM9M" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -149,7 +149,7 @@ You can combine `useRef` with controlled components to add additional functional
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/-ejoIEsPTAg" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -199,7 +199,7 @@ Sometimes you need to pass a ref from a parent component to a child component. R
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/MOTN6dtnK6U" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
