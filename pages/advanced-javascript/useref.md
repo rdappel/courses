@@ -258,3 +258,8 @@ export default App
 3. **Use refs for imperative actions** - Focus, scroll, animations, third-party libraries
 4. **Avoid reading/writing refs during render** - Do this in event handlers or useEffect instead
 5. **Initialize refs properly** - Start with `null` for DOM refs or an appropriate initial value for data refs
+
+<div class="centering">
+	<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/useref-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
+	<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/useref-light.svg" alt="" aria-hidden="true" class="adaptive light">
+</div>
