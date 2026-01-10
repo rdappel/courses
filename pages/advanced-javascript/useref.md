@@ -128,7 +128,7 @@ const RefVsState = () => {
 export default RefVsState
 ```
 
-> [!CAUTION] In the example above, clicking "Increment Ref" won't update the displayed count until the component re-renders for another reason. This is because changing a ref doesn't trigger a re-render.
+> [!NOTE] In the example above, clicking "Increment Ref" won't update the displayed count until the component re-renders for another reason. This is because changing a ref doesn't trigger a re-render.
 
 **Use useState when:**
 

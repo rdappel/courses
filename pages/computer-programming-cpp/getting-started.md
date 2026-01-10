@@ -23,7 +23,6 @@ This unit will introduce you to the basics of C++. If you are used to programmin
 
 If you do not have "Visual C++" templates available in the New Project window, you need to [Modify your Visual Studio Installation](https://www.youtube.com/watch?v=suoeL7yfbyc).
 
-
 ## The Main Function
 
 Every program needs an entry point. The windows applications that you wrote in C# had a file called Program.cs, that contained a "Main" function. Similarly, we need to create a starting point for our appliction.
@@ -49,7 +48,7 @@ int main()
 }
 ```
 
-> [!NOTE] Comments work the same way in C++ as they do in C#. You can use `//` to create a single-line comment, or `/* */` to create a multi-line comment. 
+> [!NOTE] Comments work the same way in C++ as they do in C#. You can use `//` to create a single-line comment, or `/* */` to create a multi-line comment.
 
 You can debug your program by pressing the "Start" button in Visual Studio, or by pressing F5, just like you did in C#.
 
@@ -345,7 +344,7 @@ char middleInitial = 'D';
 bool isInstructor = true;
 ```
 
-> [!NOTE] Notice that I added an `f` to the end of the `pi` variable. This is because `3.14159` would be a `double` by default, and I want to make it a `float`. 
+> [!NOTE] Notice that I added an `f` to the end of the `pi` variable. This is because `3.14159` would be a `double` by default, and I want to make it a `float`.
 
 ## Constants
 
@@ -531,4 +530,3 @@ int main()
 		></iframe>
 	</div>
 </details>
-
