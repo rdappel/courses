@@ -258,5 +258,3 @@ export default App
 3. **Use refs for imperative actions** - Focus, scroll, animations, third-party libraries
 4. **Avoid reading/writing refs during render** - Do this in event handlers or useEffect instead
 5. **Initialize refs properly** - Start with `null` for DOM refs or an appropriate initial value for data refs
-
-> [!CAUTION] Modifying refs during render can lead to inconsistent behavior. Always update refs in event handlers or useEffect callbacks, not during the render phase.
