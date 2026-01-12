@@ -259,6 +259,7 @@ npm run build
 ```
 
 This command will:
+
 - Bundle all your JavaScript files together
 - Minify and optimize your code
 - Process your CSS
@@ -271,7 +272,7 @@ This command will:
 
 After running the build command, you'll see a `dist` folder containing:
 
-```
+```plaintext
 dist/
   index.html
   assets/
@@ -298,6 +299,7 @@ This starts a local server that serves your production build, allowing you to te
 There are key differences between running `npm run dev` and `npm run build`:
 
 **Development Mode (`npm run dev`):**
+
 - Fast hot module replacement (HMR)
 - Detailed error messages
 - Source maps for debugging
@@ -305,6 +307,7 @@ There are key differences between running `npm run dev` and `npm run build`:
 - Not optimized for performance
 
 **Production Mode (`npm run build`):**
+
 - Optimized and minified code
 - Smaller file sizes
 - Better performance

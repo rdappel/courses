@@ -49,7 +49,7 @@ When a child needs to send data back to the parent, we pass a callback function 
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/lxy2QUI6a9E" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -91,7 +91,7 @@ Let's look at an example:
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/MP8yRGE53-s" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -158,7 +158,7 @@ Keep state local when:
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/MTbT9KbeiSI" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -213,6 +213,15 @@ export default App
 
 </details>
 
+<details>
+	<summary>Walkthrough Video</summary>
+	<div class="video-container">
+		<iframe src="https://www.youtube.com/embed/OYeQC2CuPhI" width="100%" height="100%" frameborder="0"
+			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+		</iframe>
+	</div>
+</details>
+
 # Best Practices
 
 1. **Lift state to the lowest common ancestor** - Don't lift state higher than necessary
@@ -226,14 +235,14 @@ export default App
 	<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/state-management-light.svg" alt="State Management" aria-hidden="true" class="adaptive light">
 </div>
 
-# Avoiding Prop Drilling
+# Prop Drilling
 
 As your component tree grows deeper, passing props through many levels can become cumbersome. This is called "prop drilling":
 
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/eBnWg8x3FFM" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -250,7 +259,7 @@ Let's build a more realistic example with a shopping cart where multiple compone
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/se8HTYcu0b4" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
