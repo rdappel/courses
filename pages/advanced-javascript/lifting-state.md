@@ -345,3 +345,5 @@ const CartSummary = ({ itemCount }) => {
 
 export default CartSummary
 ```
+
+> [!NOTE] Notice how the cart state is lifted to the App component, allowing both ProductList and Cart components to access and modify it.
