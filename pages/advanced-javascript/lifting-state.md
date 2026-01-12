@@ -238,6 +238,11 @@ For now, prop drilling is acceptable for 2-3 levels. In future lessons, we'll le
 4. **Pass only what's needed** - Don't pass entire objects if a component only needs one property
 5. **Use composition** - Sometimes you can avoid lifting state by restructuring your components
 
+<div class="centering">
+	<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/state-management-dark.svg" alt="State Management" aria-hidden="true" class="adaptive dark">
+	<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/state-management-light.svg" alt="State Management" aria-hidden="true" class="adaptive light">
+</div>
+
 # Practical Example: Shopping Cart
 
 Let's build a more realistic example with a shopping cart where multiple components need to access and modify the same data.
