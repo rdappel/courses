@@ -153,6 +153,19 @@ Keep state local when:
 
 > [!NOTE] As you progress, you'll develop intuition for when to lift state. Start by keeping state local, and lift it only when you need to share it.
 
+## Best Practices
+
+1. **Lift state to the lowest common ancestor** - Don't lift state higher than necessary
+2. **Keep state as local as possible** - If only one component needs it, keep it there
+3. **Name callback props clearly** - Use `onSomething` naming convention (e.g., `onUserChange`, `onSubmit`)
+4. **Pass only what's needed** - Don't pass entire objects if a component only needs one property
+5. **Use composition** - Sometimes you can avoid lifting state by restructuring your components
+
+<div class="centering">
+	<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/state-management-dark.svg" alt="State Management" aria-hidden="true" class="adaptive dark">
+	<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/state-management-light.svg" alt="State Management" aria-hidden="true" class="adaptive light">
+</div>
+
 # Exercise 1
 
 <details open>
@@ -221,19 +234,6 @@ export default App
 		</iframe>
 	</div>
 </details>
-
-# Best Practices
-
-1. **Lift state to the lowest common ancestor** - Don't lift state higher than necessary
-2. **Keep state as local as possible** - If only one component needs it, keep it there
-3. **Name callback props clearly** - Use `onSomething` naming convention (e.g., `onUserChange`, `onSubmit`)
-4. **Pass only what's needed** - Don't pass entire objects if a component only needs one property
-5. **Use composition** - Sometimes you can avoid lifting state by restructuring your components
-
-<div class="centering">
-	<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/state-management-dark.svg" alt="State Management" aria-hidden="true" class="adaptive dark">
-	<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/state-management-light.svg" alt="State Management" aria-hidden="true" class="adaptive light">
-</div>
 
 # Prop Drilling
 
