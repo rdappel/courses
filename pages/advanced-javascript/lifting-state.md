@@ -19,6 +19,7 @@ When multiple components need to reflect the same changing data, we lift the sha
 In React, data flows in one direction: from parent to child. There are two main ways components communicate:
 
 **Parent → Child**: Pass data down through props
+
 **Child → Parent**: Pass callback functions down as props, child calls them with data
 
 ## Parent to Child Communication
