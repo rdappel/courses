@@ -213,6 +213,19 @@ export default App
 
 </details>
 
+# Best Practices
+
+1. **Lift state to the lowest common ancestor** - Don't lift state higher than necessary
+2. **Keep state as local as possible** - If only one component needs it, keep it there
+3. **Name callback props clearly** - Use `onSomething` naming convention (e.g., `onUserChange`, `onSubmit`)
+4. **Pass only what's needed** - Don't pass entire objects if a component only needs one property
+5. **Use composition** - Sometimes you can avoid lifting state by restructuring your components
+
+<div class="centering">
+	<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/state-management-dark.svg" alt="State Management" aria-hidden="true" class="adaptive dark">
+	<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/state-management-light.svg" alt="State Management" aria-hidden="true" class="adaptive light">
+</div>
+
 # Avoiding Prop Drilling
 
 As your component tree grows deeper, passing props through many levels can become cumbersome. This is called "prop drilling":
@@ -229,19 +242,6 @@ As your component tree grows deeper, passing props through many levels can becom
 For now, prop drilling is acceptable for 2-3 levels. In future lessons, we'll learn about Context API and state management solutions that solve this problem.
 
 > [!CAUTION] Don't prematurely optimize. Prop drilling through 2-3 levels is perfectly fine. Only reach for more complex solutions when prop drilling becomes genuinely painful.
-
-# Best Practices
-
-1. **Lift state to the lowest common ancestor** - Don't lift state higher than necessary
-2. **Keep state as local as possible** - If only one component needs it, keep it there
-3. **Name callback props clearly** - Use `onSomething` naming convention (e.g., `onUserChange`, `onSubmit`)
-4. **Pass only what's needed** - Don't pass entire objects if a component only needs one property
-5. **Use composition** - Sometimes you can avoid lifting state by restructuring your components
-
-<div class="centering">
-	<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/state-management-dark.svg" alt="State Management" aria-hidden="true" class="adaptive dark">
-	<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/state-management-light.svg" alt="State Management" aria-hidden="true" class="adaptive light">
-</div>
 
 # Practical Example: Shopping Cart
 
