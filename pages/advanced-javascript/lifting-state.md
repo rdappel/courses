@@ -210,6 +210,8 @@ const App = () => {
 export default App
 ```
 
+</details>
+
 # Avoiding Prop Drilling
 
 As your component tree grows deeper, passing props through many levels can become cumbersome. This is called "prop drilling":
