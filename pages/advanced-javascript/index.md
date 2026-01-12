@@ -62,7 +62,7 @@ Exam 1
 
 # Week 7 – Lifting State
 
-Summary: You’ll design data flow across components by lifting state and avoiding unnecessary prop drilling.
+Summary: You’ll design data flow across components by lifting state.
 
 [Lifting State](./advanced-javascript/lifting-state)
 
