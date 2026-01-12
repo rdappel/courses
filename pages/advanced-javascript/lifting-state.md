@@ -14,26 +14,12 @@ Lifting state is a pattern where you move state from a child component to a pare
 
 When multiple components need to reflect the same changing data, we lift the shared state up to their closest common ancestor. The parent component becomes the "source of truth" for that data.
 
-<div class="centering">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/lifting-state-dark.svg" alt="" aria-hidden="true" class="adaptive dark">
-    <img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/lifting-state-light.svg" alt="" aria-hidden="true" class="adaptive light">
-</div>
-
 # Component Communication Patterns
 
 In React, data flows in one direction: from parent to child. There are two main ways components communicate:
 
 **Parent → Child**: Pass data down through props
 **Child → Parent**: Pass callback functions down as props, child calls them with data
-
-<details open>
-	<summary class="video">Show/Hide Video</summary>
-	<div class="video-container">
-		<iframe src="" width="100%" height="100%" frameborder="0"
-			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-		</iframe>
-	</div>
-</details>
 
 ## Parent to Child Communication
 
@@ -59,408 +45,97 @@ const Greeting = ({ name }) => {
 
 When a child needs to send data back to the parent, we pass a callback function as a prop:
 
+<details open>
+	<summary class="video">Show/Hide Video</summary>
+	<div class="video-container">
+		<iframe src="" width="100%" height="100%" frameborder="0"
+			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+		</iframe>
+	</div>
+</details>
+
 ```javascript
 // Parent component
 const App = () => {
-	const handleNameChange = (newName) => {
-		console.log('Name changed to:', newName)
-	}
+	const onNameChange = (newName) => console.log(newName)
 	
-	return <NameInput onNameChange={handleNameChange} />
+	return (
+		<div>
+			<NameInput onNameChange={onNameChange} />
+		</div>
+	)
 }
 
 // Child component
 const NameInput = ({ onNameChange }) => {
 	const [name, setName] = useState('')
 	
-	const handleSubmit = (e) => {
-		e.preventDefault()
-		onNameChange(name) // Call parent's function
-	}
-	
-	return (
-		<form onSubmit={handleSubmit}>
-			<input 
-				value={name} 
-				onChange={(e) => setName(e.target.value)} 
-			/>
-			<button type="submit">Submit</button>
-		</form>
-	)
-}
-```
-
-> [!IMPORTANT] The child doesn't modify the parent's state directly. Instead, it calls a function that the parent provided, and the parent updates its own state.
-
-# Why Lift State?
-
-Consider a simple example: two components that need to stay in sync. Let's say we have a temperature converter with Celsius and Fahrenheit inputs.
-
-<details open>
-	<summary class="video">Show/Hide Video</summary>
-	<div class="video-container">
-		<iframe src="" width="100%" height="100%" frameborder="0"
-			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-		</iframe>
-	</div>
-</details>
-
-**Problem**: If each input has its own state, they can't stay synchronized:
-
-```javascript
-// ❌ Problem - Each has independent state
-const CelsiusInput = () => {
-	const [temp, setTemp] = useState('')
-	return <input value={temp} onChange={(e) => setTemp(e.target.value)} />
-}
-
-const FahrenheitInput = () => {
-	const [temp, setTemp] = useState('')
-	return <input value={temp} onChange={(e) => setTemp(e.target.value)} />
-}
-```
-
-**Solution**: Lift the state to a common parent:
-
-```javascript
-// ✅ Solution - Shared state in parent
-const TemperatureConverter = () => {
-	const [celsius, setCelsius] = useState('')
-	
-	const fahrenheit = celsius ? (celsius * 9/5 + 32).toFixed(1) : ''
-	
-	return (
-		<div>
-			<TemperatureInput 
-				scale="Celsius"
-				temperature={celsius}
-				onTemperatureChange={setCelsius}
-			/>
-			<TemperatureInput 
-				scale="Fahrenheit"
-				temperature={fahrenheit}
-				onTemperatureChange={(f) => setCelsius(((f - 32) * 5/9).toFixed(1))}
-			/>
-		</div>
-	)
-}
-
-const TemperatureInput = ({ scale, temperature, onTemperatureChange }) => {
-	return (
-		<div>
-			<label>{scale}:</label>
-			<input 
-				value={temperature}
-				onChange={(e) => onTemperatureChange(e.target.value)}
-			/>
-		</div>
-	)
-}
-```
-
-# Practical Example: Shopping Cart
-
-Let's build a more realistic example with a shopping cart where multiple components need to access and modify the same data.
-
-<details open>
-	<summary class="video">Show/Hide Video</summary>
-	<div class="video-container">
-		<iframe src="" width="100%" height="100%" frameborder="0"
-			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-		</iframe>
-	</div>
-</details>
-
-```javascript
-import { useState } from 'react'
-
-// Parent component - holds the cart state
-const ShoppingApp = () => {
-	const [cart, setCart] = useState([])
-	
-	const addToCart = (item) => {
-		setCart([...cart, item])
-	}
-	
-	const removeFromCart = (itemId) => {
-		setCart(cart.filter(item => item.id !== itemId))
-	}
-	
-	return (
-		<div>
-			<CartSummary itemCount={cart.length} />
-			<ProductList onAddToCart={addToCart} />
-			<Cart items={cart} onRemove={removeFromCart} />
-		</div>
-	)
-}
-
-// Shows cart item count
-const CartSummary = ({ itemCount }) => {
-	return <div>Cart: {itemCount} items</div>
-}
-
-// Lists available products
-const ProductList = ({ onAddToCart }) => {
-	const products = [
-		{ id: 1, name: 'Widget', price: 9.99 },
-		{ id: 2, name: 'Gadget', price: 19.99 }
-	]
-	
-	return (
-		<div>
-			<h2>Products</h2>
-			{products.map(product => (
-				<div key={product.id}>
-					{product.name} - ${product.price}
-					<button onClick={() => onAddToCart(product)}>
-						Add to Cart
-					</button>
-				</div>
-			))}
-		</div>
-	)
-}
-
-// Displays cart contents
-const Cart = ({ items, onRemove }) => {
-	return (
-		<div>
-			<h2>Your Cart</h2>
-			{items.map(item => (
-				<div key={item.id}>
-					{item.name} - ${item.price}
-					<button onClick={() => onRemove(item.id)}>Remove</button>
-				</div>
-			))}
-		</div>
-	)
-}
-
-export default ShoppingApp
-```
-
-> [!NOTE] Notice how `ShoppingApp` is the single source of truth for the cart data. All three child components receive either the data or functions to modify it through props.
-
-# Sibling Communication
-
-When two sibling components need to share data, lift the state to their common parent:
-
-<details open>
-	<summary class="video">Show/Hide Video</summary>
-	<div class="video-container">
-		<iframe src="" width="100%" height="100%" frameborder="0"
-			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-		</iframe>
-	</div>
-</details>
-
-```javascript
-import { useState } from 'react'
-
-const MessageApp = () => {
-	const [message, setMessage] = useState('')
-	
-	return (
-		<div>
-			<MessageInput onMessageChange={setMessage} />
-			<MessageDisplay message={message} />
-		</div>
-	)
-}
-
-const MessageInput = ({ onMessageChange }) => {
 	return (
 		<input 
 			type="text"
-			onChange={(e) => onMessageChange(e.target.value)}
-			placeholder="Type a message..."
+			style={{ fontSize: '16px', padding: '8px', width: '300px', margin: '10px 10px 20px' }}
+			value={name} 
+			onChange={e => setName(e.target.value)}
+		/>
+	)
+}
+```
+
+# Lifting State
+
+More commonly than the child-to-parent pattern, you'll need to lift state up when multiple sibling components need to share the same data.
+
+Let's look at an example:
+
+<details open>
+	<summary class="video">Show/Hide Video</summary>
+	<div class="video-container">
+		<iframe src="" width="100%" height="100%" frameborder="0"
+			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+		</iframe>
+	</div>
+</details>
+
+Here is the App code from the example:
+
+```javascript
+import { useState } from 'react'
+
+import NameInput from './components/NameInput'
+import NameTag from './components/NameTag'
+
+const App = () => {
+	const [name, setName] = useState('John Snow')
+
+	return (
+		<div>
+			<NameInput name={name} setName={setName} />
+			<NameTag name={name} />
+		</div>
+	)
+}
+
+export default App
+```
+
+And here is the NameInput component:
+
+```javascript
+const NameInput = ({ name, setName }) => {
+	return (
+		<input 
+			type="text"
+			style={{ fontSize: '16px', padding: '8px', width: '300px', margin: '10px 10px 20px' }}
+			value={name} 
+			onChange={e => setName(e.target.value)}
 		/>
 	)
 }
 
-const MessageDisplay = ({ message }) => {
-	return (
-		<div>
-			<h3>Live Preview:</h3>
-			<p>{message || 'Start typing...'}</p>
-		</div>
-	)
-}
-
-export default MessageApp
+export default NameInput
 ```
 
-The key insight: `MessageInput` and `MessageDisplay` are siblings. They can't communicate directly, so we lift the `message` state to their parent `MessageApp`.
-
-> [!TIP] When you find yourself trying to access state from a sibling component, that's a sign you should lift the state to a common parent.
-
-# Managing Complex State Updates
-
-When lifting state, you often need to pass down functions that update state in specific ways:
-
-<details open>
-	<summary class="video">Show/Hide Video</summary>
-	<div class="video-container">
-		<iframe src="" width="100%" height="100%" frameborder="0"
-			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-		</iframe>
-	</div>
-</details>
-
-```javascript
-import { useState } from 'react'
-
-const TodoApp = () => {
-	const [todos, setTodos] = useState([])
-	
-	const addTodo = (text) => {
-		const newTodo = {
-			id: Date.now(),
-			text,
-			completed: false
-		}
-		setTodos([...todos, newTodo])
-	}
-	
-	const toggleTodo = (id) => {
-		setTodos(todos.map(todo =>
-			todo.id === id 
-				? { ...todo, completed: !todo.completed }
-				: todo
-		))
-	}
-	
-	const deleteTodo = (id) => {
-		setTodos(todos.filter(todo => todo.id !== id))
-	}
-	
-	return (
-		<div>
-			<TodoInput onAdd={addTodo} />
-			<TodoList 
-				todos={todos}
-				onToggle={toggleTodo}
-				onDelete={deleteTodo}
-			/>
-		</div>
-	)
-}
-
-const TodoInput = ({ onAdd }) => {
-	const [text, setText] = useState('')
-	
-	const handleSubmit = (e) => {
-		e.preventDefault()
-		if (text.trim()) {
-			onAdd(text)
-			setText('')
-		}
-	}
-	
-	return (
-		<form onSubmit={handleSubmit}>
-			<input 
-				value={text}
-				onChange={(e) => setText(e.target.value)}
-				placeholder="Add a todo..."
-			/>
-			<button type="submit">Add</button>
-		</form>
-	)
-}
-
-const TodoList = ({ todos, onToggle, onDelete }) => {
-	return (
-		<ul>
-			{todos.map(todo => (
-				<TodoItem 
-					key={todo.id}
-					todo={todo}
-					onToggle={onToggle}
-					onDelete={onDelete}
-				/>
-			))}
-		</ul>
-	)
-}
-
-const TodoItem = ({ todo, onToggle, onDelete }) => {
-	return (
-		<li>
-			<input 
-				type="checkbox"
-				checked={todo.completed}
-				onChange={() => onToggle(todo.id)}
-			/>
-			<span style={{ 
-				textDecoration: todo.completed ? 'line-through' : 'none' 
-			}}>
-				{todo.text}
-			</span>
-			<button onClick={() => onDelete(todo.id)}>Delete</button>
-		</li>
-	)
-}
-
-export default TodoApp
-```
-
-> [!IMPORTANT] Notice how we pass down multiple functions (`onToggle`, `onDelete`) that encapsulate different ways to modify the state. This keeps the logic in the parent while allowing children to trigger changes.
-
-# Avoiding Prop Drilling
-
-As your component tree grows deeper, passing props through many levels can become cumbersome. This is called "prop drilling":
-
-```javascript
-// ❌ Prop drilling - passing props through components that don't use them
-const App = () => {
-	const [user, setUser] = useState({ name: 'Alex' })
-	return <Layout user={user} />
-}
-
-const Layout = ({ user }) => {
-	return <Sidebar user={user} /> // Just passing through
-}
-
-const Sidebar = ({ user }) => {
-	return <UserProfile user={user} /> // Just passing through
-}
-
-const UserProfile = ({ user }) => {
-	return <div>{user.name}</div> // Finally using it!
-}
-```
-
-For now, prop drilling is acceptable for 2-3 levels. In future lessons, we'll learn about Context API and state management solutions that solve this problem.
-
-> [!CAUTION] Don't prematurely optimize. Prop drilling through 2-3 levels is perfectly fine. Only reach for more complex solutions when prop drilling becomes genuinely painful.
-
-# Best Practices
-
-1. **Lift state to the lowest common ancestor** - Don't lift state higher than necessary
-2. **Keep state as local as possible** - If only one component needs it, keep it there
-3. **Name callback props clearly** - Use `onSomething` naming convention (e.g., `onUserChange`, `onSubmit`)
-4. **Pass only what's needed** - Don't pass entire objects if a component only needs one property
-5. **Use composition** - Sometimes you can avoid lifting state by restructuring your components
-
-```javascript
-// ✅ Good - Clear naming and minimal props
-const Parent = () => {
-	const [count, setCount] = useState(0)
-	return <Counter count={count} onIncrement={() => setCount(count + 1)} />
-}
-
-// ❌ Less ideal - Unclear naming
-const Parent = () => {
-	const [count, setCount] = useState(0)
-	return <Counter value={count} change={() => setCount(count + 1)} />
-}
-```
-
-> [!TIP] Think of lifted state as a shared resource. Only lift it when multiple components truly need to read or modify the same data.
-
-# When to Lift State
+## When to Lift State
 
 Lift state when:
 
@@ -475,4 +150,198 @@ Keep state local when:
 - The data doesn't affect other components
 - The component is self-contained
 
-> [!NOTE] As your application grows, you'll develop intuition for when to lift state. Start by keeping state local, and lift it only when you need to share it.
+> [!NOTE] As you progress, you'll develop intuition for when to lift state. Start by keeping state local, and lift it only when you need to share it.
+
+# Exercise 1
+
+<details open>
+	<summary class="video">Show/Hide Video</summary>
+	<div class="video-container">
+		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+		</iframe>
+	</div>
+</details>
+
+## Hints {#exercise-1-hints}
+
+<details>
+	<summary>How do I start?</summary>
+
+You will need to create two separate state variables in the parent component: one for the first name and one for the last name. Then, pass down the appropriate state and setter functions to each input component.
+
+</details>
+
+<details>
+	<summary>How do I get the name into the NameTag?</summary>
+
+You can use string interpolation to combine the first and last names into a single string when passing it to the NameTag component:
+
+```javascript
+<NameTag name={`${firstName} ${lastName}`} />
+```
+
+</details>
+
+## Solution {#exercise-1-solution}
+
+<details>
+	<summary>Show the Answer</summary>
+
+```javascript
+import { useState } from 'react'
+
+import NameInput from './components/NameInput'
+import NameTag from './components/NameTag'
+
+const App = () => {
+	const [firstName, setFirstName] = useState('')
+	const [lastName, setLastName] = useState('')
+
+	return (
+		<div>
+			<NameInput firstName={firstName} setFirstName={setFirstName} />
+			<NameInput lastName={lastName} setLastName={setLastName} />
+			<NameTag name={`${firstName} ${lastName}`} />
+		</div>
+	)
+}
+
+export default App
+```
+
+# Avoiding Prop Drilling
+
+As your component tree grows deeper, passing props through many levels can become cumbersome. This is called "prop drilling":
+
+<details open>
+	<summary class="video">Show/Hide Video</summary>
+	<div class="video-container">
+		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+		</iframe>
+	</div>
+</details>
+
+For now, prop drilling is acceptable for 2-3 levels. In future lessons, we'll learn about Context API and state management solutions that solve this problem.
+
+> [!CAUTION] Don't prematurely optimize. Prop drilling through 2-3 levels is perfectly fine. Only reach for more complex solutions when prop drilling becomes genuinely painful.
+
+# Best Practices
+
+1. **Lift state to the lowest common ancestor** - Don't lift state higher than necessary
+2. **Keep state as local as possible** - If only one component needs it, keep it there
+3. **Name callback props clearly** - Use `onSomething` naming convention (e.g., `onUserChange`, `onSubmit`)
+4. **Pass only what's needed** - Don't pass entire objects if a component only needs one property
+5. **Use composition** - Sometimes you can avoid lifting state by restructuring your components
+
+# Practical Example: Shopping Cart
+
+Let's build a more realistic example with a shopping cart where multiple components need to access and modify the same data.
+
+<details open>
+	<summary class="video">Show/Hide Video</summary>
+	<div class="video-container">
+		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+		</iframe>
+	</div>
+</details>
+
+Here is the code for the ShoppingApp:
+
+```javascript
+import { useState } from 'react'
+
+import Cart from './components/Cart'
+import CartSummary from './components/CartSummary'
+import ProductList from './components/ProductList'
+
+const App = () => {
+	const [ cart, setCart ] = useState([])
+
+	const onAddToCart = product => {
+		setCart([...cart, product])
+	}
+
+	const onRemoveFromCart = index => {
+		setCart(cart.filter((item, i) => i !== index))
+	}
+
+	console.log('Cart:', cart)
+
+	return (
+		<div>
+			<CartSummary itemCount={cart.length} />
+			<ProductList
+				onAddToCart={onAddToCart}
+			/>
+			<Cart
+				items={cart}
+				onRemove={onRemoveFromCart}
+			/>
+		</div>
+	)
+}
+
+export default App
+```
+
+Here is the ProductList component:
+
+```javascript
+const ProductList = ({ onAddToCart}) => {
+	const products = [
+		{ id: 1, name: 'Laptop', price: 999.99 },
+		{ id: 2, name: 'Smartphone', price: 499.99 },
+		{ id: 3, name: 'Tablet', price: 299.99 },
+	]
+
+	return (
+		<div>
+			<h2>Product List</h2>
+			{products.map(({ id, name, price }) => (
+				<>
+					<div key={id}>{name} - ${price}</div>
+					<button
+						onClick={() => onAddToCart({ id, name, price })}
+					>Add to Cart</button>
+				</>
+			))}
+		</div>
+	)
+}
+
+export default ProductList
+```
+
+Here is the code for the Cart component:
+
+```javascript
+const Cart = ({ items, onRemove }) => {
+
+	return (
+		<div>
+			<h2>Your Cart</h2>
+			{items.map(({ id, name, price }, index) => (
+				<div key={index}>
+					{name} - ${price}
+					<button onClick={() => onRemove(index)}>Remove</button>
+				</div>
+			))}
+		</div>
+	)
+}
+
+export default Cart
+```
+
+And here is the CartSummary component:
+
+```javascript
+const CartSummary = ({ itemCount }) => {
+	return <span>Items in Cart: {itemCount}</span>
+}
+
+export default CartSummary
+```
