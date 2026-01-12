@@ -64,9 +64,7 @@ Exam 1
 
 Summary: You’ll design data flow across components by lifting state and avoiding unnecessary prop drilling.
 
-[State Management in React](./advanced-javascript/state-management)
-
-[Component Hierarchy](./advanced-javascript/component-hierarchy)
+[State Management in React](./advanced-javascript/lifting-state)
 
 [Assignment 5 - 555555](./advanced-javascript/assignments/555555)
 
