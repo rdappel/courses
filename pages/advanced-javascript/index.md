@@ -66,7 +66,7 @@ Summary: You’ll design data flow across components by lifting state.
 
 [Lifting State](./advanced-javascript/lifting-state)
 
-[Assignment 5 - 555555](./advanced-javascript/assignments/555555)
+[Assignment 5 - Theme Switcher](./advanced-javascript/assignments/theme-switcher)
 
 # Week 8 – Global State with Context API
 
