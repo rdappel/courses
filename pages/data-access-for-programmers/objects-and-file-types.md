@@ -196,7 +196,7 @@ The first way to persist data is by using files. Files are the most common way t
 
 ### CSV Files
 
-One common file type is called a CSV file. CSV stands for "comma-separated values". CSV files are used to store tabular data. They are easy to read and write, and they are supported by  every major programming language.
+One common file type is called a CSV file. CSV stands for "comma-separated values". CSV files are used to store tabular data. They are easy to read and write, and they are supported by every major programming language.
 
 Here's an example of a CSV file:
 
