@@ -72,9 +72,9 @@ Summary: You’ll design data flow across components by lifting state.
 
 Summary: You’ll share state across multiple components using React’s Context API.
 
-[React Context API](./advanced-javascript/context-api)
+[Global State with Context API](./advanced-javascript/global-state-with-context-api)
 
-[Assignment 6 - 666666](./advanced-javascript/assignments/666666)
+[Assignment 6 - Theme Switcher with Context API](./advanced-javascript/assignments/theme-switcher-with-context)
 
 # Week 9 – useReducer
 
