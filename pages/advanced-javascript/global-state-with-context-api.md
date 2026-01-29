@@ -27,24 +27,25 @@ Before we look at Context API, let's understand the problem it solves. Imagine y
 With props, you'd have to pass the data through every component in between:
 
 ```javascript
-// App.js - has user data
+// file: App.jsx
+
 const App = () => {
 	const [user, setUser] = useState({ name: 'John' })
 	
 	return <Layout user={user} setUser={setUser} />
 }
 
-// Layout.js - doesn't need user, but passes it down
+// file: components/Layout.jsx
 const Layout = ({ user, setUser }) => {
 	return <Sidebar user={user} setUser={setUser} />
 }
 
-// Sidebar.js - doesn't need user, but passes it down
+// file: components/Sidebar.jsx
 const Sidebar = ({ user, setUser }) => {
 	return <UserProfile user={user} setUser={setUser} />
 }
 
-// UserProfile.js - finally uses user
+// file: components/UserProfile.jsx
 const UserProfile = ({ user, setUser }) => {
 	return <h1>Hello, {user.name}!</h1>
 }
@@ -68,6 +69,8 @@ To use Context API, we first need to create a context using `React.createContext
 Let's create a UserContext:
 
 ```javascript
+// file: contexts/UserContext.js
+
 import { createContext } from 'react'
 
 export const UserContext = createContext()
@@ -82,6 +85,8 @@ A provider is a component that supplies the context value to its children. Any c
 Here's an example of a UserProvider component:
 
 ```javascript
+// file: contexts/UserProvider.jsx
+
 import { useState } from 'react'
 import { UserContext } from './UserContext'
 
@@ -99,7 +104,9 @@ export const UserProvider = ({ children }) => {
 Now wrap your App with the UserProvider:
 
 ```javascript
-import { UserProvider } from './UserProvider'
+// file: main.jsx
+
+import { UserProvider } from './contexts/UserProvider'
 import App from './App'
 
 export default function Root() {
@@ -110,6 +117,46 @@ export default function Root() {
 	)
 }
 ```
+
+## Combining Context and Provider in One File
+
+In the examples above, we created the context and provider as separate files for clarity. However, it's very common (and perfectly fine) to combine them in a single file:
+
+```javascript
+// file: contexts/UserContext.jsx
+
+import { createContext, useState } from 'react'
+
+export const UserContext = createContext()
+
+export const UserProvider = ({ children }) => {
+	const [user, setUser] = useState({ name: 'John' })
+
+	return (
+		<UserContext.Provider value={{ user, setUser }}>
+			{children}
+		</UserContext.Provider>
+	)
+}
+```
+
+This approach keeps related code together and is easier to maintain. You can then import both from the same file:
+
+```javascript
+// file: main.jsx
+
+import { UserProvider } from './contexts/UserContext'
+
+export default function Root() {
+	return (
+		<UserProvider>
+			<App />
+		</UserProvider>
+	)
+}
+```
+
+Choose whichever approach feels cleaner to you. Both are valid patterns.
 
 # Using Context with useContext
 
@@ -127,13 +174,15 @@ To access context values in a component, use the `useContext` hook.
 Here's how to use context in a component:
 
 ```javascript
+// file: components/UserProfile.jsx
+
 import { useContext } from 'react'
-import { UserContext } from './UserContext'
+import { UserContext } from '../contexts/UserContext'
 
 const UserProfile = () => {
 	const { user, setUser } = useContext(UserContext)
 
-	const updateName = (newName) => {
+	const updateName = newName => {
 		setUser({ ...user, name: newName })
 	}
 
@@ -153,6 +202,8 @@ export default UserProfile
 Now you can use `UserProfile` anywhere in your app without prop drilling:
 
 ```javascript
+// file: App.jsx
+
 const App = () => {
 	return (
 		<div>
@@ -181,7 +232,8 @@ Your app can have multiple contexts for different types of global state.
 For example, you might have a UserContext and a ThemeContext:
 
 ```javascript
-// ThemeContext.js
+// file: contexts/ThemeContext.js
+
 import { createContext, useState } from 'react'
 
 export const ThemeContext = createContext()
@@ -196,7 +248,7 @@ export const ThemeProvider = ({ children }) => {
 	)
 }
 
-// main.jsx - Wrap with multiple providers
+// file: main.jsx
 import Root from './Root'
 import { UserProvider } from './contexts/UserProvider'
 import { ThemeProvider } from './contexts/ThemeProvider'
@@ -234,6 +286,7 @@ Context is convenient but has performance implications:
 To optimize, split contexts by update frequency:
 
 ```javascript
+// file: contexts/index.js
 // Separate contexts for less frequent updates
 export const UserInfoContext = createContext()  // Changes rarely
 export const UserPrefsContext = createContext() // Changes more often
@@ -246,8 +299,10 @@ export const UserPrefsContext = createContext() // Changes more often
 ## Theme Switcher
 
 ```javascript
+// file: components/ThemeToggle.jsx
+
 import { useContext } from 'react'
-import { ThemeContext } from './ThemeContext'
+import { ThemeContext } from '../contexts/ThemeContext'
 
 const ThemeToggle = () => {
 	const { theme, setTheme } = useContext(ThemeContext)
@@ -263,8 +318,9 @@ const ThemeToggle = () => {
 ## Authentication
 
 ```javascript
+// file: components/LoginButton.jsx
 import { useContext } from 'react'
-import { AuthContext } from './AuthContext'
+import { AuthContext } from '../contexts/AuthContext'
 
 const LoginButton = () => {
 	const { user, login, logout } = useContext(AuthContext)
@@ -284,8 +340,9 @@ const LoginButton = () => {
 ## Language/Localization
 
 ```javascript
+// file: components/LanguageSwitcher.jsx
 import { useContext } from 'react'
-import { LanguageContext } from './LanguageContext'
+import { LanguageContext } from '../contexts/LanguageContext'
 
 const LanguageSwitcher = () => {
 	const { language, setLanguage } = useContext(LanguageContext)
