@@ -53,6 +53,46 @@ const UserProfile = ({ user, setUser }) => {
 
 This works, but it's tedious and makes the code harder to maintain. This is called "prop drilling."
 
+# Follow Along: Context API Demo Site
+
+To get hands-on experience with the Context API, you should follow along with a demo site built for this lesson. Please do the following:
+
+1. **Fork the Repository**
+	- Go to [https://github.com/fvtc/ajs-context-api-demo](https://github.com/fvtc/ajs-context-api-demo) and click the **Fork** button in the top right to create your own copy of the repository.
+
+2. **Clone Your Fork**
+	- On your forked repository page, click the **Code** button and copy the URL.
+	- Open your terminal and run:
+
+	  ```bash
+	  git clone [your-fork-url]
+	  ```
+
+	- Replace `[your-fork-url]` with the URL you copied from your fork.
+
+3. **Open the Project**
+	- Navigate into the cloned folder:
+
+	  ```bash
+	  cd ajs-context-api-demo
+	  ```
+
+	- Open the project in VS Code or your preferred editor.
+
+4. **Install Dependencies**
+	- Run:
+
+	  ```bash
+	  npm install
+	  ```
+
+5. **Start the Development Server**
+	- Run:
+
+	  ```bash
+	  npm run dev
+	  ```
+
 # Creating a Context
 
 To use Context API, we first need to create a context using `React.createContext()`.
