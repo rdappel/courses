@@ -131,7 +131,7 @@ import { useState } from 'react'
 import { UserContext } from './UserContext'
 
 export const UserProvider = ({ children }) => {
-	const [user, setUser] = useState({ name: 'John' })
+	const [user, setUser] = useState({ name: 'Ryan' })
 
 	return (
 		<UserContext.Provider value={{ user, setUser }}>
@@ -170,7 +170,7 @@ import { createContext, useState } from 'react'
 export const UserContext = createContext()
 
 export const UserProvider = ({ children }) => {
-	const [user, setUser] = useState({ name: 'John' })
+	const [user, setUser] = useState({ name: 'Ryan' })
 
 	return (
 		<UserContext.Provider value={{ user, setUser }}>
@@ -217,7 +217,7 @@ Here's how to use context in a component:
 // file: components/UserProfile.jsx
 
 import { useContext } from 'react'
-import { UserContext } from '../contexts/UserContext'
+import { UserContext } from '../contexts/UserProvider.jsx'
 
 const UserProfile = () => {
 	const { user, setUser } = useContext(UserContext)
@@ -227,8 +227,9 @@ const UserProfile = () => {
 	}
 
 	return (
-		<div>
-			<h1>Hello, {user.name}!</h1>
+		<div className="user-profile">
+			<div className="avatar">{user.name[0]}</div>
+			<h3>Hello, {user.name}!</h3>
 			<button onClick={() => updateName('Jane')}>
 				Change Name
 			</button>
