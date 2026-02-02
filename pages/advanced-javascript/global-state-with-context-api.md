@@ -100,7 +100,7 @@ To use Context API, we first need to create a context using `React.createContext
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/o-pk15GkUjE" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -158,7 +158,9 @@ export default function Root() {
 }
 ```
 
-## Combining Context and Provider in One File
+## Combining Context and Provider
+
+> [!CAUTION]  In the videos, I did end up combing the context and provider into a single file. However, I accidentally moved them into `UserProvider.jsx` instead of `UserContext.jsx`. Both approaches do work, but it did lead to some confusion. I would recommend calling the file `____Context.jsx` if you combine them. I.e., `UserContext.jsx`, `ThemeContext.jsx`, etc...
 
 In the examples above, we created the context and provider as separate files for clarity. However, it's very common (and perfectly fine) to combine them in a single file:
 
@@ -205,7 +207,7 @@ To access context values in a component, use the `useContext` hook.
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/Pq9y7YhiRkw" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -264,7 +266,7 @@ Your app can have multiple contexts for different types of global state.
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/OQsfGwVNJsw" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
