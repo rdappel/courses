@@ -387,10 +387,10 @@ export default NewNotification
 ```
 
 ```javascript
-// remember to wrap your app with the provider
+// remember to wrap your layout/app with the provider
 import { NotificationProvider } from './contexts/NotificationContext'
 <NotificationProvider>
-	<Layout />
+	<Layout /> {/* or <App /> */}
 </NotificationProvider>
 
 // somewhere in your app render the components
