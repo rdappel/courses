@@ -15,7 +15,9 @@ The Context API is a React feature that allows you to share state between compon
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+		</iframe>
 	</div>
 </details>
 
@@ -266,9 +268,82 @@ const App = () => {
 
 The `UserProfile` component gets access to `user` and `setUser` directly from context, without needing them passed down as props.
 
+# Multiple Contexts
+
+Your app can have multiple contexts for different types of global state.
+
+<details open>
+	<summary class="video">Show/Hide Video</summary>
+	<div class="video-container">
+		<iframe src="https://www.youtube.com/embed/OQsfGwVNJsw" width="100%" height="100%" frameborder="0"
+			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+		</iframe>
+	</div>
+</details>
+
+For example, you might have a UserContext and a ThemeContext:
+
+```javascript
+// file: contexts/ThemeContext.js
+
+import { createContext, useState } from 'react'
+
+export const ThemeContext = createContext()
+
+export const ThemeProvider = ({ children }) => {
+	const [theme, setTheme] = useState('light')
+
+	return (
+		<ThemeContext.Provider value={{ theme, setTheme }}>
+			{children}
+		</ThemeContext.Provider>
+	)
+}
+
+// file: main.jsx
+import Root from './Root'
+import { UserProvider } from './contexts/UserProvider'
+import { ThemeProvider } from './contexts/ThemeProvider'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+	<UserProvider>
+		<ThemeProvider>
+			<Root />
+		</ThemeProvider>
+	</UserProvider>
+)
+```
+
+# Context vs Props
+
+Use context when:
+
+- Data is needed by many components at different nesting levels
+- Data is global or semi-global (themes, user info, authentication)
+- You want to avoid prop drilling
+
+Use props when:
+
+- Data is only needed by a component and its direct children
+- You want explicit data flow that's easy to trace
+- Components should be reusable with different data
+
 # Exercise 1
 
-Below is a copy/paste-ready single-file context + provider for notifications. For this exercise, paste this file into `contexts/NotificationContext.jsx`, then update your app to use the context from your components (e.g., a `NotificationList` and a `NewNotification` component). The exercise is to wire the components to the provided context — no provider implementation required.
+<details open>
+	<summary class="video">Show/Hide Video</summary>
+	<div class="video-container">
+		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+		</iframe>
+	</div>
+</details>
+
+Below is a copy/paste-ready single-file context + provider for notifications.
+
+For this exercise, paste this file into `contexts/NotificationContext.jsx`, then update your app to use the context from your components (e.g., a `NotificationList` and a `NewNotification` component).
+
+The exercise is to wire the components to the provided context.
 
 ```javascript
 // contexts/NotificationContext.jsx
@@ -410,66 +485,6 @@ import NotificationList from './components/NotificationList'
 		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
 	</div>
 </details>
-
-# Multiple Contexts
-
-Your app can have multiple contexts for different types of global state.
-
-<details open>
-	<summary class="video">Show/Hide Video</summary>
-	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/OQsfGwVNJsw" width="100%" height="100%" frameborder="0"
-			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-		</iframe>
-	</div>
-</details>
-
-For example, you might have a UserContext and a ThemeContext:
-
-```javascript
-// file: contexts/ThemeContext.js
-
-import { createContext, useState } from 'react'
-
-export const ThemeContext = createContext()
-
-export const ThemeProvider = ({ children }) => {
-	const [theme, setTheme] = useState('light')
-
-	return (
-		<ThemeContext.Provider value={{ theme, setTheme }}>
-			{children}
-		</ThemeContext.Provider>
-	)
-}
-
-// file: main.jsx
-import Root from './Root'
-import { UserProvider } from './contexts/UserProvider'
-import { ThemeProvider } from './contexts/ThemeProvider'
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-	<UserProvider>
-		<ThemeProvider>
-			<Root />
-		</ThemeProvider>
-	</UserProvider>
-)
-```
-
-# Context vs Props
-
-Use context when:
-
-- Data is needed by many components at different nesting levels
-- Data is global or semi-global (themes, user info, authentication)
-- You want to avoid prop drilling
-
-Use props when:
-
-- Data is only needed by a component and its direct children
-- You want explicit data flow that's easy to trace
-- Components should be reusable with different data
 
 # Performance Considerations
 
