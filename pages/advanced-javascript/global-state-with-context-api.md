@@ -12,6 +12,13 @@ repo: https://github.com/rdappel/courses
 
 The Context API is a React feature that allows you to share state between components without having to pass props down through every level of your component tree. This is often called "prop drilling" - passing props through intermediate components that don't need them.
 
+<details open>
+	<summary class="video">Show/Hide Video</summary>
+	<div class="video-container">
+		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+	</div>
+</details>
+
 Context API is ideal for managing global state such as:
 
 - User authentication information
@@ -258,6 +265,151 @@ const App = () => {
 ```
 
 The `UserProfile` component gets access to `user` and `setUser` directly from context, without needing them passed down as props.
+
+# Exercise 1
+
+Below is a copy/paste-ready single-file context + provider for notifications. For this exercise, paste this file into `contexts/NotificationContext.jsx`, then update your app to use the context from your components (e.g., a `NotificationList` and a `NewNotification` component). The exercise is to wire the components to the provided context — no provider implementation required.
+
+```javascript
+// contexts/NotificationContext.jsx
+import { createContext, useState } from 'react'
+
+export const NotificationContext = createContext()
+
+export const NotificationProvider = ({ children }) => {
+  const [notifications, setNotifications] = useState([])
+
+  const addNotification = (message) => {
+	const newNote = { id: Date.now(), message }
+	setNotifications(prev => [...prev, newNote])
+  }
+
+  const removeNotification = id => {
+	setNotifications(prev => prev.filter(n => n.id !== id))
+  }
+
+  return (
+	<NotificationContext.Provider value={{ notifications, addNotification, removeNotification }}>
+	  {children}
+	</NotificationContext.Provider>
+  )
+}
+```
+
+Feel free to use this code to render the notifications:
+
+```javascript
+{notifications.map(n => (
+	<div key={n.id} style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+		<span>{n.message}</span>
+		<button>Dismiss</button>
+	</div>
+))}
+```
+
+> [!NOTE] You will need to handle the `onClick` for the Dismiss button.
+
+
+## Task
+
+1. Paste the above file into `contexts/NotificationContext.jsx` in your project.
+2. Wrap your application with `NotificationProvider`.
+3. Build two small components that use the context:
+   - `NotificationList` — reads `notifications` and renders them with a dismiss button that calls `removeNotification(id)`.
+   - `NewNotification` — input + button that calls `addNotification(message)`.
+
+## Hints
+
+- Use `const { notifications, removeNotification } = useContext(NotificationContext)` in `NotificationList`.
+- Use `const { addNotification } = useContext(NotificationContext)` in `NewNotification` and clear the input after adding.
+
+## Solution {#exercise-1-solution}
+
+<details>
+	<summary>Show the Answer</summary>
+
+```javascript
+// components/NotificationList.jsx
+import { useContext } from 'react'
+import { NotificationContext } from '../contexts/NotificationContext'
+
+const NotificationList = () => {
+	const { notifications, removeNotification } = useContext(NotificationContext)
+
+	if (!notifications.length) return <div>No notifications</div>
+
+	return (
+		<div>
+			<h3>Notifications</h3>
+			{notifications.map(({ id, message }) => (
+				<div key={id} style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+					<span>{message}</span>
+					<button
+						onClick={() => removeNotification(n.id)}
+					>Dismiss</button>
+				</div>
+			))}
+		</div>
+	)
+}
+
+export default NotificationList
+```
+
+```javascript
+// components/NewNotification.jsx
+import { useState, useContext } from 'react'
+import { NotificationContext } from '../contexts/NotificationContext'
+
+const NewNotification = () => {
+	const [text, setText] = useState('')
+	const { addNotification } = useContext(NotificationContext)
+
+	const submit = () => {
+		if (!text) return
+		addNotification(text)
+		setText('')
+	}
+
+	return (
+		<div>
+			<input
+				value={text}
+				onChange={e => setText(e.target.value)}
+				placeholder="Notification message"
+			/>
+			<button onClick={submit}>Add</button>
+		</div>
+	)
+}
+
+export default NewNotification
+```
+
+```javascript
+// remember to wrap your app with the provider
+import { NotificationProvider } from './contexts/NotificationContext'
+<NotificationProvider>
+	<Layout />
+</NotificationProvider>
+
+// somewhere in your app render the components
+import NewNotification from './components/NewNotification'
+import NotificationList from './components/NotificationList'
+<NewNotification />
+<NotificationList />
+```
+
+</details>
+
+## Walkthrough Video
+
+<details>
+	<summary>Show/Hide Video</summary>
+	<div class="video-container">
+		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+	</div>
+</details>
 
 # Multiple Contexts
 
