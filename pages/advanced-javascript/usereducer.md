@@ -123,6 +123,7 @@ const [state, dispatch] = useReducer(reducerFunction, initialState)
 ```
 
 It returns:
+
 - **state** - The current state value
 - **dispatch** - A function to trigger state updates by sending actions to the reducer
 
