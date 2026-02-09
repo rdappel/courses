@@ -70,6 +70,7 @@ Make sure:
 To help you understand the difference, here's a simple comparison:
 
 **With Props (Assignment 5):**
+
 ```javascript
 <App theme={theme} setTheme={setTheme} />
   <Header theme={theme} setTheme={setTheme} />
@@ -77,6 +78,7 @@ To help you understand the difference, here's a simple comparison:
 ```
 
 **With Context (Assignment 6):**
+
 ```javascript
 <ThemeProvider>
   <App />
