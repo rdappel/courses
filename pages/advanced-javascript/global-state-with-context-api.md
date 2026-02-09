@@ -408,7 +408,7 @@ const { addNotification } = useContext(NotificationContext)
 After calling <code>addNotification(text)</code>, set the input state back to an empty string:
 
 ```javascript
-setText("")
+setText('')
 ```
 
 </details>
@@ -435,7 +435,7 @@ const NotificationList = () => {
 				<div key={id} style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
 					<span>{message}</span>
 					<button
-						onClick={() => removeNotification(n.id)}
+						onClick={() => removeNotification(id)}
 					>Dismiss</button>
 				</div>
 			))}
