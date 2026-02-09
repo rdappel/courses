@@ -15,7 +15,7 @@ In this assignment, you'll refactor your previous theme switcher (from Assignmen
 <details open>
     <summary class="video">Show/Hide Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0" allowfullscreen
+        <iframe src="https://www.youtube.com/embed/JNCylHzkF9o" width="100%" height="100%" frameborder="0" allowfullscreen
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
         </iframe>
     </div>
