@@ -384,7 +384,6 @@ Feel free to use this code to render the notifications:
 
 > [!NOTE] You will need to handle the `onClick` for the Dismiss button.
 
-
 ## Task
 
 1. Paste the above file into `contexts/NotificationContext.jsx` in your project.
@@ -393,10 +392,35 @@ Feel free to use this code to render the notifications:
    - `NotificationList` — reads `notifications` and renders them with a dismiss button that calls `removeNotification(id)`.
    - `NewNotification` — input + button that calls `addNotification(message)`.
 
-## Hints
+## Hints {#exercise-1-hints}
 
-- Use `const { notifications, removeNotification } = useContext(NotificationContext)` in `NotificationList`.
-- Use `const { addNotification } = useContext(NotificationContext)` in `NewNotification` and clear the input after adding.
+<details>
+	<summary>How do I access notifications in NotificationList?</summary>
+
+Use the following in <code>NotificationList</code> to get the notifications array and the remove function:
+
+```javascript
+const { notifications, removeNotification } = useContext(NotificationContext)
+```
+
+</details>
+
+<details>
+	<summary>How do I add a notification and clear the input?</summary>
+
+In <code>NewNotification</code>, use:
+
+```javascript
+const { addNotification } = useContext(NotificationContext)
+```
+
+After calling <code>addNotification(text)</code>, set the input state back to an empty string:
+
+```javascript
+setText("")
+```
+
+</details>
 
 ## Solution {#exercise-1-solution}
 

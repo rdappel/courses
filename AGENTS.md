@@ -5,11 +5,13 @@
 This repository contains course materials for Ryan Appel's programming courses. The content is organized as Markdown files with front matter (YAML), structured in a course curriculum format with lessons, assignments, and resources.
 
 ### Repository Purpose
+
 - Educational platform for multiple programming courses
 - Deployment across live (`fvtc.software`) and dev (`localhost:3006`) environments
 - Version control and collaboration via GitHub (`rdappel/courses`)
 
 ### Active Courses
+
 1. **Version Control Essentials** (`vce/`) - Git and version control fundamentals
 2. **Data Access for Programmers** (`dap/`) - SQL, databases, and data modeling
 3. **Modern JavaScript** (`mjs/`) - JavaScript fundamentals and DOM manipulation
@@ -20,7 +22,7 @@ This repository contains course materials for Ryan Appel's programming courses. 
 
 ## Directory Structure
 
-```
+```plaintext
 courses/
 ├── pages/                              # All course content
 │   ├── index.md                        # Main course listing page
@@ -52,7 +54,9 @@ courses/
 ## File Format Standards
 
 ### Front Matter (YAML)
+
 All `.md` files follow this standard structure:
+
 ```yaml
 ---
 title: [Course/Lesson Title]
@@ -66,11 +70,13 @@ subtitle: [Author or Course Name]
 ```
 
 ### Content Structure
+
 - **Index Files**: Course overview with weekly breakdowns
 - **Lesson Files**: Educational content with explanations and examples
 - **Assignment Files**: Detailed specifications with requirements and acceptance criteria
 
 ### Common Markdown Elements
+
 - `<details>` blocks for expandable video content
 - Link format: `[Link Text](./course/path/to/page)`
 - Headers: H1 for main title, H2 for sections, H3+ for subsections
@@ -80,6 +86,7 @@ subtitle: [Author or Course Name]
 ## Key Content Patterns
 
 ### Assignment Structure
+
 1. **Title** - Assignment number and topic
 2. **Video Section** - Optional expandable YouTube embed
 3. **Specifications** - Numbered requirements
@@ -87,6 +94,7 @@ subtitle: [Author or Course Name]
 5. **Additional Resources** - Links to relevant lesson content
 
 ### Lesson Structure
+
 1. **Title** - Topic and context
 2. **Overview** - What students will learn
 3. **Explanation** - Detailed content with examples
@@ -94,9 +102,27 @@ subtitle: [Author or Course Name]
 5. **Practice Exercises** - Interactive learning opportunities
 6. **Key Takeaways** - Summary of main points
 
+### Exercise Hint Format
+
+- Hints for exercises should use a <details> block for each hint, with a descriptive <summary> for the hint's focus (e.g., "How do I start?", "How do I access notifications?").
+- Place all hint <details> blocks under a `## Hints {#exercise-x-hints}` header, where `x` is the exercise number if applicable.
+- Example:
+
+```markdown
+## Hints {#exercise-1-hints}
+
+<details>
+  <summary>How do I start?</summary>
+
+Hint content here.
+
+</details>
+```
+
 ## VS Code Configuration
 
 ### Code Snippets
+
 - Location: `.vscode/md.code-snippets`
 - Purpose: Quick templates for Markdown content creation
 - Usage: Type snippet prefix in `.md` files for rapid content generation
@@ -104,11 +130,13 @@ subtitle: [Author or Course Name]
 ## Important Conventions
 
 ### URLs and Links
+
 - **Live Site**: `https://fvtc.software/appel/[course-slug]`
 - **Dev Server**: `http://localhost:3006/appel/[course-slug]`
 - **GitHub Repo**: `https://github.com/rdappel/courses`
 
 ### Course Slug Mappings
+
 - `advanced-javascript` → Advanced JavaScript course
 - `data-access-for-programmers` → Data Access course
 - `modern-javascript` → Modern JavaScript course
@@ -125,18 +153,21 @@ subtitle: [Author or Course Name]
 ## Common Tasks for AI Agents
 
 ### Content Creation Tasks
+
 1. **Create new lesson pages** - Follow format in existing lesson files
 2. **Create assignments** - Use assignment template structure
 3. **Update course index** - Add new lessons to week breakdowns
 4. **Add support materials** - Place in `support-files/[course-abbrev]/`
 
 ### Content Modification Tasks
+
 1. **Update front matter** - Ensure YAML validity
 2. **Refactor lessons** - Maintain structure while improving clarity
 3. **Update links** - Verify all internal links remain valid
 4. **Add examples** - Include code blocks with language specification
 
 ### Quality Assurance Tasks
+
 1. **Verify link integrity** - Check all `[text](path)` references are valid
 2. **Validate YAML** - Ensure front matter is properly formatted
 3. **Check consistency** - Verify naming conventions across files
@@ -145,6 +176,7 @@ subtitle: [Author or Course Name]
 ## Notes for AI Agents
 
 ### When Creating/Editing Content
+
 - **Always preserve YAML front matter** - It controls page metadata and displays
 - **Maintain relative links** - Use `./course/path` format for internal navigation
 - **Follow existing patterns** - Match the structure and style of similar existing files
@@ -152,18 +184,21 @@ subtitle: [Author or Course Name]
 - **Test links before committing** - Ensure references are accurate
 
 ### When Working with Assignments
+
 - Assignments are numbered sequentially per course
 - Include clear specifications with acceptance criteria
 - Reference related lesson materials
 - Consider adding practice exercises before main assignment
 
 ### When Updating Index Files
+
 - Index files control course navigation
 - Format: `[Link Text](./course/path)` with brief summaries
 - Structure by week/module with clear hierarchies
 - Keep summaries concise (one sentence preferred)
 
 ### File Naming Conventions
+
 - Use kebab-case for all filenames
 - Spell out words (no abbreviations in filenames)
 - Be descriptive but concise
@@ -189,7 +224,7 @@ subtitle: [Author or Course Name]
 ## Quick Reference for Common Agent Tasks
 
 | Task | Key Files | Pattern |
-|------|-----------|---------|
+| ---- | --------- | ------- |
 | Add new lesson | `pages/[course]/[lesson].md` | Copy structure from existing lesson |
 | Add assignment | `pages/[course]/assignments/[name].md` | Use assignment specification template |
 | Update course nav | `pages/[course]/index.md` | Add entry to appropriate week section |
@@ -200,4 +235,3 @@ subtitle: [Author or Course Name]
 
 **Last Updated**: January 29, 2026
 **Repository Owner**: Ryan Appel
-**GitHub**: https://github.com/rdappel/courses
