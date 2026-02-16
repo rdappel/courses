@@ -206,7 +206,7 @@ Notice how all the state is kept together and updates are predictable. Each acti
 
 # Combining useReducer and Context API
 
-For truly global state, you can combine `useReducer` with Context API to create a powerful state management solution. Let's bring together everything we've learned - character stats, gold, and inventory - into one comprehensive game state:
+For truly global state, you can combine `useReducer` with Context API to create a powerful state management solution. This allows you to share your character state across multiple components:
 
 <details open>
 	<summary class="video">Show/Hide Video</summary>
@@ -217,181 +217,95 @@ For truly global state, you can combine `useReducer` with Context API to create 
 	</div>
 </details>
 
-Here's how to create a global game state provider with `useReducer`:
+Here's how to create a character context with `useReducer`:
 
 ```javascript
-// contexts/GameContext.jsx
+// contexts/CharacterContext.jsx
 import { createContext, useReducer } from 'react'
 
-export const GameContext = createContext()
+export const CharacterContext = createContext()
 
 const initialState = {
-	character: {
-		name: 'Aragorn',
-		level: 1,
-		hp: 100,
-		maxHP: 100,
-		mp: 50,
-		maxMP: 50,
-		experience: 0
-	},
-	gold: 0,
-	inventory: [],
-	settings: {
-		difficulty: 'normal',
-		volume: 50
-	}
+	name: 'Aragorn',
+	level: 1,
+	experience: 0,
+	hp: 100,
+	maxHP: 100,
+	mp: 50,
+	maxMP: 50
 }
 
-const gameReducer = (state, action) => {
+const characterReducer = (state, action) => {
 	switch(action.type) {
-		// Character actions
 		case 'LEVEL_UP':
 			return {
 				...state,
-				character: {
-					...state.character,
-					level: state.character.level + 1,
-					maxHP: state.character.maxHP + 10,
-					maxMP: state.character.maxMP + 5,
-					hp: state.character.hp + 10,
-					mp: state.character.mp + 5
-				}
+				level: state.level + 1,
+				maxHP: state.maxHP + 10,
+				maxMP: state.maxMP + 5,
+				hp: state.hp + 10,
+				mp: state.mp + 5
 			}
 		case 'TAKE_DAMAGE':
 			return {
 				...state,
-				character: {
-					...state.character,
-					hp: Math.max(0, state.character.hp - action.payload)
-				}
+				hp: Math.max(0, state.hp - action.payload)
 			}
 		case 'HEAL':
 			return {
 				...state,
-				character: {
-					...state.character,
-					hp: Math.min(state.character.maxHP, state.character.hp + action.payload)
-				}
+				hp: Math.min(state.maxHP, state.hp + action.payload)
 			}
 		case 'GAIN_EXPERIENCE':
 			return {
 				...state,
-				character: {
-					...state.character,
-					experience: state.character.experience + action.payload
-				}
+				experience: state.experience + action.payload
 			}
-		
-		// Gold actions
-		case 'EARN_GOLD':
-			return {
-				...state,
-				gold: state.gold + action.payload
-			}
-		case 'SPEND_GOLD':
-			return {
-				...state,
-				gold: Math.max(0, state.gold - action.payload)
-			}
-		
-		// Inventory actions
-		case 'ADD_ITEM':
-			return {
-				...state,
-				inventory: [...state.inventory, action.payload]
-			}
-		case 'REMOVE_ITEM':
-			return {
-				...state,
-				inventory: state.inventory.filter(item => item.id !== action.payload)
-			}
-		
-		// Settings actions
-		case 'UPDATE_SETTINGS':
-			return {
-				...state,
-				settings: { ...state.settings, ...action.payload }
-			}
-		
+		case 'RESET':
+			return initialState
 		default:
 			return state
 	}
 }
 
-export const GameProvider = ({ children }) => {
-	const [state, dispatch] = useReducer(gameReducer, initialState)
+export const CharacterProvider = ({ children }) => {
+	const [character, dispatch] = useReducer(characterReducer, initialState)
 
 	return (
-		<GameContext.Provider value={{ state, dispatch }}>
+		<CharacterContext.Provider value={{ character, dispatch }}>
 			{children}
-		</GameContext.Provider>
+		</CharacterContext.Provider>
 	)
 }
 ```
 
-Now you can use this comprehensive game state in any component:
+Now you can use the character state in any component:
 
 ```javascript
 import { useContext } from 'react'
-import { GameContext } from '../contexts/GameContext'
+import { CharacterContext } from '../contexts/CharacterContext'
 
-const GameDashboard = () => {
-	const { state, dispatch } = useContext(GameContext)
-
-	const buyPotion = () => {
-		if (state.gold >= 20) {
-			dispatch({ type: 'SPEND_GOLD', payload: 20 })
-			dispatch({ type: 'ADD_ITEM', payload: { id: Date.now(), name: 'Health Potion', type: 'consumable' } })
-		}
-	}
+const CharacterStats = () => {
+	const { character, dispatch } = useContext(CharacterContext)
 
 	return (
 		<div>
-			{/* Character Stats */}
-			<div>
-				<h2>{state.character.name}</h2>
-				<p>Level: {state.character.level}</p>
-				<p>HP: {state.character.hp}/{state.character.maxHP}</p>
-				<p>MP: {state.character.mp}/{state.character.maxMP}</p>
-				<p>Experience: {state.character.experience}</p>
-			</div>
+			<h2>{character.name}</h2>
+			<p>Level: {character.level}</p>
+			<p>HP: {character.hp}/{character.maxHP}</p>
+			<p>MP: {character.mp}/{character.maxMP}</p>
+			<p>Experience: {character.experience}</p>
 
-			{/* Gold */}
-			<div>
-				<p>Gold: {state.gold}</p>
-				<button onClick={() => dispatch({ type: 'EARN_GOLD', payload: 10 })}>Earn Gold</button>
-			</div>
-
-			{/* Actions */}
-			<div>
-				<button onClick={() => dispatch({ type: 'TAKE_DAMAGE', payload: 15 })}>Take Damage</button>
-				<button onClick={() => dispatch({ type: 'HEAL', payload: 20 })}>Heal</button>
-				<button onClick={() => dispatch({ type: 'GAIN_EXPERIENCE', payload: 50 })}>Gain XP</button>
-				<button onClick={() => dispatch({ type: 'LEVEL_UP' })}>Level Up</button>
-			</div>
-
-			{/* Shop */}
-			<div>
-				<button onClick={buyPotion} disabled={state.gold < 20}>
-					Buy Health Potion (20 gold)
-				</button>
-			</div>
-
-			{/* Inventory */}
-			<div>
-				<h3>Inventory ({state.inventory.length})</h3>
-				<ul>
-					{state.inventory.map(item => (
-						<li key={item.id}>{item.name}</li>
-					))}
-				</ul>
-			</div>
+			<button onClick={() => dispatch({ type: 'LEVEL_UP' })}>Level Up</button>
+			<button onClick={() => dispatch({ type: 'TAKE_DAMAGE', payload: 10 })}>Take Damage</button>
+			<button onClick={() => dispatch({ type: 'HEAL', payload: 15 })}>Heal</button>
+			<button onClick={() => dispatch({ type: 'GAIN_EXPERIENCE', payload: 50 })}>Gain XP</button>
+			<button onClick={() => dispatch({ type: 'RESET' })}>Reset</button>
 		</div>
 	)
 }
 
-export default GameDashboard
+export default CharacterStats
 ```
 
 This pattern scales well for large applications and makes state updates predictable and traceable.
