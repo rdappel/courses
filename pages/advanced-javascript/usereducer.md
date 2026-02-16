@@ -285,27 +285,27 @@ Now you can use the character state in any component:
 import { useContext } from 'react'
 import { CharacterContext } from '../contexts/CharacterContext'
 
-const CharacterStats = () => {
+const Character = () => {
 	const { character, dispatch } = useContext(CharacterContext)
 
-	return (
-		<div>
-			<h2>{character.name}</h2>
-			<p>Level: {character.level}</p>
-			<p>HP: {character.hp}/{character.maxHP}</p>
-			<p>MP: {character.mp}/{character.maxMP}</p>
-			<p>Experience: {character.experience}</p>
+    return (
+        <div>
+            <h2>{character.name}</h2>
+            <p>Level: {character.level}</p>
+            <p>Experience: {character.experience}</p>
+            <p>HP: {character.hp}/{character.maxHP}</p>
+            <p>MP: {character.mp}/{character.maxMP}</p>
 
-			<button onClick={() => dispatch({ type: 'LEVEL_UP' })}>Level Up</button>
-			<button onClick={() => dispatch({ type: 'TAKE_DAMAGE', payload: 10 })}>Take Damage</button>
-			<button onClick={() => dispatch({ type: 'HEAL', payload: 15 })}>Heal</button>
-			<button onClick={() => dispatch({ type: 'GAIN_EXPERIENCE', payload: 50 })}>Gain XP</button>
-			<button onClick={() => dispatch({ type: 'RESET' })}>Reset</button>
-		</div>
-	)
+            <button onClick={() => dispatch({ type: 'LEVEL_UP' })}>Level Up</button>
+            <button onClick={() => dispatch({ type: 'TAKE_DAMAGE', payload: 10 })}>Take Damage</button>
+            <button onClick={() => dispatch({ type: 'HEAL', payload: 15 })}>Heal</button>
+            <button onClick={() => dispatch({ type: 'GAIN_EXPERIENCE', payload: 50 })}>Gain XP</button>
+            <button onClick={() => dispatch({ type: 'RESET' })}>Reset</button>
+        </div>
+    )
 }
 
-export default CharacterStats
+export default Character
 ```
 
 This pattern scales well for large applications and makes state updates predictable and traceable.
@@ -321,78 +321,16 @@ This pattern scales well for large applications and makes state updates predicta
 	</div>
 </details>
 
-Create a simple inventory manager using `useReducer`. Your component should:
+Complete the inventory manager by implementing the `inventoryReducer` function. 
 
-1. Track an array of items in state (each item has an `id` and `name`)
-2. Have an input field and "Add Item" button
-3. Display the list of items with a "Remove" button next to each item
-4. Use a reducer with `ADD_ITEM` and `REMOVE_ITEM` actions
-
-Start with an empty array as your initial state.
-
-## Hints {#exercise-1-hints}
-
-<details>
-	<summary>How do I structure the reducer?</summary>
-
-Your reducer should handle two action types:
-
-```javascript
-const inventoryReducer = (state, action) => {
-	switch(action.type) {
-		case 'ADD_ITEM':
-			// return new array with item added
-		case 'REMOVE_ITEM':
-			// return new array with item filtered out
-		default:
-			return state
-	}
-}
-```
-
-</details>
-
-<details>
-	<summary>How do I add an item?</summary>
-
-When adding an item, create a new object with a unique `id` (you can use `Date.now()`) and the `name` from your input:
-
-```javascript
-case 'ADD_ITEM':
-	return [...state, { id: Date.now(), name: action.payload }]
-```
-
-</details>
-
-<details>
-	<summary>How do I remove an item?</summary>
-
-Use `filter` to remove the item with the matching id:
-
-```javascript
-case 'REMOVE_ITEM':
-	return state.filter(item => item.id !== action.payload)
-```
-
-</details>
-
-## Solution {#exercise-1-solution}
-
-<details>
-	<summary>Show the Answer</summary>
+Copy the component code below and fill in the reducer logic to handle `ADD_ITEM` and `REMOVE_ITEM` actions:
 
 ```javascript
 import { useReducer, useState } from 'react'
 
+// TODO: Implement this reducer function
 const inventoryReducer = (state, action) => {
-	switch(action.type) {
-		case 'ADD_ITEM':
-			return [...state, { id: Date.now(), name: action.payload }]
-		case 'REMOVE_ITEM':
-			return state.filter(item => item.id !== action.payload)
-		default:
-			return state
-	}
+	// Your code here
 }
 
 const InventoryManager = () => {
@@ -436,6 +374,76 @@ const InventoryManager = () => {
 }
 
 export default InventoryManager
+```
+
+**Your Task:** Implement the `inventoryReducer` to:
+
+- Handle `ADD_ITEM` action: add a new item with `{ id: Date.now(), name: action.payload }`
+- Handle `REMOVE_ITEM` action: filter out the item matching `action.payload` (the id)
+- Return the current state for any unknown action types
+
+## Hints {#exercise-1-hints}
+
+<details>
+	<summary>How do I structure the reducer?</summary>
+
+Use a switch statement to handle different action types:
+
+```javascript
+const inventoryReducer = (state, action) => {
+	switch(action.type) {
+		case 'ADD_ITEM':
+			// return new array with item added
+		case 'REMOVE_ITEM':
+			// return new array with item filtered out
+		default:
+			return state
+	}
+}
+```
+
+</details>
+
+<details>
+	<summary>How do I add an item?</summary>
+
+Create a new object with `id` and `name`, then return a new array with the item added:
+
+```javascript
+case 'ADD_ITEM':
+	return [...state, { id: Date.now(), name: action.payload }]
+```
+
+</details>
+
+<details>
+	<summary>How do I remove an item?</summary>
+
+Use `filter` to create a new array without the item matching the given id:
+
+```javascript
+case 'REMOVE_ITEM':
+	return state.filter(item => item.id !== action.payload)
+```
+
+</details>
+
+## Solution {#exercise-1-solution}
+
+<details>
+	<summary>Show the Answer</summary>
+
+```javascript
+const inventoryReducer = (state, action) => {
+	switch(action.type) {
+		case 'ADD_ITEM':
+			return [...state, { id: Date.now(), name: action.payload }]
+		case 'REMOVE_ITEM':
+			return state.filter(item => item.id !== action.payload)
+		default:
+			return state
+	}
+}
 ```
 
 </details>
