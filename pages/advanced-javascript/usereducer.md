@@ -21,7 +21,7 @@ The `useReducer` hook is a better choice than `useState`.
 
 # Understanding Reducers
 
-A reducer is a pure function that takes the current state and an action, then returns the new state. The concept comes from the `Array.reduce()` method you may have used before.
+A reducer is a pure function that takes the current state and an action, then returns the new state. The concept comes from the `Array.reduce()` method you have used before.
 
 > [!NOTE] If you would like to review `Array.reduce()`, please see the [Higher-Order Functions](https://fvtc.software/appel/modern-javascript/higher-order-functions#reduce) lesson.
 
@@ -31,16 +31,16 @@ Here's the basic pattern:
 (currentState, action) => newState
 ```
 
-Let's look at a simple example using an action object:
+Let's look at a simple example using an action object - a gold counter for a game:
 
 ```javascript
 // reducer function
-const counterReducer = (state, action) => {
+const goldReducer = (state, action) => {
 	switch(action.type) {
-		case 'INCREMENT':
-			return state + 1
-		case 'DECREMENT':
-			return state - 1
+		case 'EARN_GOLD':
+			return state + action.payload
+		case 'SPEND_GOLD':
+			return Math.max(0, state - action.payload)
 		case 'RESET':
 			return 0
 		default:
@@ -55,10 +55,10 @@ Actions are plain objects that describe what should happen. They typically have 
 
 ```javascript
 // Simple action
-{ type: 'INCREMENT' }
+{ type: 'LEVEL_UP' }
 
 // Action with payload
-{ type: 'SET_USER', payload: { name: 'Alice', age: 25 } }
+{ type: 'EARN_GOLD', payload: 100 }
 
 // Action with multiple properties
 { type: 'UPDATE_STATS', level: 5, experience: 1000 }
@@ -68,26 +68,17 @@ Actions are plain objects that describe what should happen. They typically have 
 
 The `useReducer` hook gives you a way to manage state using a reducer function. It returns the current state and a dispatch function to trigger state updates.
 
-<details open>
-	<summary class="video">Show/Hide Video</summary>
-	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
-			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-		</iframe>
-	</div>
-</details>
-
-Here's a basic counter component using `useReducer`:
+Here's a basic gold tracker component using `useReducer`:
 
 ```javascript
 import { useReducer } from 'react'
 
-const counterReducer = (state, action) => {
+const goldReducer = (state, action) => {
 	switch(action.type) {
-		case 'INCREMENT':
-			return state + 1
-		case 'DECREMENT':
-			return state - 1
+		case 'EARN_GOLD':
+			return state + action.payload
+		case 'SPEND_GOLD':
+			return Math.max(0, state - action.payload)
 		case 'RESET':
 			return 0
 		default:
@@ -95,20 +86,20 @@ const counterReducer = (state, action) => {
 	}
 }
 
-const Counter = () => {
-	const [count, dispatch] = useReducer(counterReducer, 0)
+const GoldTracker = () => {
+	const [gold, dispatch] = useReducer(goldReducer, 0)
 
 	return (
 		<div>
-			<p>Count: {count}</p>
-			<button onClick={() => dispatch({ type: 'INCREMENT' })}>+</button>
-			<button onClick={() => dispatch({ type: 'DECREMENT' })}>-</button>
+			<p>Gold: {gold}</p>
+			<button onClick={() => dispatch({ type: 'EARN_GOLD', payload: 10 })}>Earn 10 Gold</button>
+			<button onClick={() => dispatch({ type: 'SPEND_GOLD', payload: 5 })}>Spend 5 Gold</button>
 			<button onClick={() => dispatch({ type: 'RESET' })}>Reset</button>
 		</div>
 	)
 }
 
-export default Counter
+export default GoldTracker
 ```
 
 ## How useReducer Works
@@ -149,10 +140,10 @@ const initialState = {
 	name: 'Aragorn',
 	level: 1,
 	experience: 0,
-	health: 100,
-	maxHealth: 100,
-	mana: 50,
-	maxMana: 50
+	hp: 100,
+	maxHP: 100,
+	mp: 50,
+	maxMP: 50
 }
 
 const characterReducer = (state, action) => {
@@ -161,20 +152,20 @@ const characterReducer = (state, action) => {
 			return {
 				...state,
 				level: state.level + 1,
-				maxHealth: state.maxHealth + 10,
-				maxMana: state.maxMana + 5,
-				health: state.health + 10,
-				mana: state.mana + 5
+				maxHP: state.maxHP + 10,
+				maxMP: state.maxMP + 5,
+				hp: state.hp + 10,
+				mp: state.mp + 5
 			}
 		case 'TAKE_DAMAGE':
 			return {
 				...state,
-				health: Math.max(0, state.health - action.payload)
+				hp: Math.max(0, state.hp - action.payload)
 			}
 		case 'HEAL':
 			return {
 				...state,
-				health: Math.min(state.maxHealth, state.health + action.payload)
+				hp: Math.min(state.maxHP, state.hp + action.payload)
 			}
 		case 'GAIN_EXPERIENCE':
 			return {
@@ -196,8 +187,8 @@ const Character = () => {
 			<h2>{character.name}</h2>
 			<p>Level: {character.level}</p>
 			<p>Experience: {character.experience}</p>
-			<p>Health: {character.health}/{character.maxHealth}</p>
-			<p>Mana: {character.mana}/{character.maxMana}</p>
+			<p>HP: {character.hp}/{character.maxHP}</p>
+			<p>MP: {character.mp}/{character.maxMP}</p>
 
 			<button onClick={() => dispatch({ type: 'LEVEL_UP' })}>Level Up</button>
 			<button onClick={() => dispatch({ type: 'TAKE_DAMAGE', payload: 10 })}>Take Damage</button>
@@ -215,7 +206,7 @@ Notice how all the state is kept together and updates are predictable. Each acti
 
 # Form State with useReducer
 
-`useReducer` is especially useful for managing form state with many fields:
+`useReducer` is especially useful for managing form state with many fields. Let's create a character creation form for our game:
 
 <details open>
 	<summary class="video">Show/Hide Video</summary>
@@ -226,16 +217,16 @@ Notice how all the state is kept together and updates are predictable. Each acti
 	</div>
 </details>
 
-Here's a form using `useReducer`:
+Here's a character creation form using `useReducer`:
 
 ```javascript
 import { useReducer } from 'react'
 
 const initialState = {
-	username: '',
-	email: '',
-	password: '',
-	confirmPassword: '',
+	name: '',
+	characterClass: '',
+	race: '',
+	difficulty: 'normal',
 	errors: {}
 }
 
@@ -259,7 +250,7 @@ const formReducer = (state, action) => {
 	}
 }
 
-const SignupForm = () => {
+const CharacterCreationForm = () => {
 	const [form, dispatch] = useReducer(formReducer, initialState)
 
 	const handleChange = (e) => {
@@ -273,18 +264,36 @@ const SignupForm = () => {
 	const handleSubmit = (e) => {
 		e.preventDefault()
 
-		// Validate passwords match
-		if (form.password !== form.confirmPassword) {
+		// Validate required fields
+		if (!form.name) {
 			dispatch({
 				type: 'SET_ERROR',
-				field: 'confirmPassword',
-				message: 'Passwords do not match'
+				field: 'name',
+				message: 'Character name is required'
 			})
 			return
 		}
 
-		// Form is valid - submit
-		console.log('Form submitted:', form)
+		if (!form.characterClass) {
+			dispatch({
+				type: 'SET_ERROR',
+				field: 'characterClass',
+				message: 'Please select a class'
+			})
+			return
+		}
+
+		if (!form.race) {
+			dispatch({
+				type: 'SET_ERROR',
+				field: 'race',
+				message: 'Please select a race'
+			})
+			return
+		}
+
+		// Form is valid - create character
+		console.log('Character created:', form)
 		dispatch({ type: 'RESET' })
 	}
 
@@ -293,59 +302,69 @@ const SignupForm = () => {
 			<div>
 				<input
 					type="text"
-					name="username"
-					value={form.username}
+					name="name"
+					value={form.name}
 					onChange={handleChange}
-					placeholder="Username"
+					placeholder="Character Name"
 				/>
-				{form.errors.username && <span>{form.errors.username}</span>}
+				{form.errors.name && <span className="error">{form.errors.name}</span>}
 			</div>
 
 			<div>
-				<input
-					type="email"
-					name="email"
-					value={form.email}
+				<select
+					name="characterClass"
+					value={form.characterClass}
 					onChange={handleChange}
-					placeholder="Email"
-				/>
-				{form.errors.email && <span>{form.errors.email}</span>}
+				>
+					<option value="">Select Class</option>
+					<option value="warrior">Warrior</option>
+					<option value="mage">Mage</option>
+					<option value="rogue">Rogue</option>
+					<option value="cleric">Cleric</option>
+				</select>
+				{form.errors.characterClass && <span className="error">{form.errors.characterClass}</span>}
 			</div>
 
 			<div>
-				<input
-					type="password"
-					name="password"
-					value={form.password}
+				<select
+					name="race"
+					value={form.race}
 					onChange={handleChange}
-					placeholder="Password"
-				/>
-				{form.errors.password && <span>{form.errors.password}</span>}
+				>
+					<option value="">Select Race</option>
+					<option value="human">Human</option>
+					<option value="elf">Elf</option>
+					<option value="dwarf">Dwarf</option>
+					<option value="orc">Orc</option>
+				</select>
+				{form.errors.race && <span className="error">{form.errors.race}</span>}
 			</div>
 
 			<div>
-				<input
-					type="password"
-					name="confirmPassword"
-					value={form.confirmPassword}
+				<label>Difficulty:</label>
+				<select
+					name="difficulty"
+					value={form.difficulty}
 					onChange={handleChange}
-					placeholder="Confirm Password"
-				/>
-				{form.errors.confirmPassword && <span>{form.errors.confirmPassword}</span>}
+				>
+					<option value="easy">Easy</option>
+					<option value="normal">Normal</option>
+					<option value="hard">Hard</option>
+				</select>
 			</div>
 
-			<button type="submit">Sign Up</button>
+			<button type="submit">Create Character</button>
 			<button type="button" onClick={() => dispatch({ type: 'RESET' })}>Clear</button>
 		</form>
 	)
 }
 
-export default SignupForm
+export default CharacterCreationForm
 ```
 
 # Combining useReducer and Context API
 
-For truly global state, you can combine `useReducer` with Context API to create a powerful state management solution:
+For truly global state, you can combine `useReducer` with Context API to create a powerful state management solution. Let's bring together everything we've learned - character stats, gold, and inventory - into one comprehensive game state:
 
 <details open>
 	<summary class="video">Show/Hide Video</summary>
@@ -356,7 +375,7 @@ For truly global state, you can combine `useReducer` with Context API to create 
 	</div>
 </details>
 
-Here's how to create a global state provider with `useReducer`:
+Here's how to create a global game state provider with `useReducer`:
 
 ```javascript
 // contexts/GameContext.jsx
@@ -365,12 +384,16 @@ import { createContext, useReducer } from 'react'
 export const GameContext = createContext()
 
 const initialState = {
-	player: {
-		name: 'Hero',
+	character: {
+		name: 'Aragorn',
 		level: 1,
-		health: 100,
+		hp: 100,
+		maxHP: 100,
+		mp: 50,
+		maxMP: 50,
 		experience: 0
 	},
+	gold: 0,
 	inventory: [],
 	settings: {
 		difficulty: 'normal',
@@ -380,11 +403,57 @@ const initialState = {
 
 const gameReducer = (state, action) => {
 	switch(action.type) {
-		case 'UPDATE_PLAYER':
+		// Character actions
+		case 'LEVEL_UP':
 			return {
 				...state,
-				player: { ...state.player, ...action.payload }
+				character: {
+					...state.character,
+					level: state.character.level + 1,
+					maxHP: state.character.maxHP + 10,
+					maxMP: state.character.maxMP + 5,
+					hp: state.character.hp + 10,
+					mp: state.character.mp + 5
+				}
 			}
+		case 'TAKE_DAMAGE':
+			return {
+				...state,
+				character: {
+					...state.character,
+					hp: Math.max(0, state.character.hp - action.payload)
+				}
+			}
+		case 'HEAL':
+			return {
+				...state,
+				character: {
+					...state.character,
+					hp: Math.min(state.character.maxHP, state.character.hp + action.payload)
+				}
+			}
+		case 'GAIN_EXPERIENCE':
+			return {
+				...state,
+				character: {
+					...state.character,
+					experience: state.character.experience + action.payload
+				}
+			}
+		
+		// Gold actions
+		case 'EARN_GOLD':
+			return {
+				...state,
+				gold: state.gold + action.payload
+			}
+		case 'SPEND_GOLD':
+			return {
+				...state,
+				gold: Math.max(0, state.gold - action.payload)
+			}
+		
+		// Inventory actions
 		case 'ADD_ITEM':
 			return {
 				...state,
@@ -395,11 +464,14 @@ const gameReducer = (state, action) => {
 				...state,
 				inventory: state.inventory.filter(item => item.id !== action.payload)
 			}
+		
+		// Settings actions
 		case 'UPDATE_SETTINGS':
 			return {
 				...state,
 				settings: { ...state.settings, ...action.payload }
 			}
+		
 		default:
 			return state
 	}
@@ -416,31 +488,68 @@ export const GameProvider = ({ children }) => {
 }
 ```
 
-Then use it in your components:
+Now you can use this comprehensive game state in any component:
 
 ```javascript
 import { useContext } from 'react'
 import { GameContext } from '../contexts/GameContext'
 
-const PlayerStats = () => {
+const GameDashboard = () => {
 	const { state, dispatch } = useContext(GameContext)
+
+	const buyPotion = () => {
+		if (state.gold >= 20) {
+			dispatch({ type: 'SPEND_GOLD', payload: 20 })
+			dispatch({ type: 'ADD_ITEM', payload: { id: Date.now(), name: 'Health Potion', type: 'consumable' } })
+		}
+	}
 
 	return (
 		<div>
-			<h2>{state.player.name}</h2>
-			<p>Level: {state.player.level}</p>
-			<p>Health: {state.player.health}</p>
-			<p>Experience: {state.player.experience}</p>
+			{/* Character Stats */}
+			<div>
+				<h2>{state.character.name}</h2>
+				<p>Level: {state.character.level}</p>
+				<p>HP: {state.character.hp}/{state.character.maxHP}</p>
+				<p>MP: {state.character.mp}/{state.character.maxMP}</p>
+				<p>Experience: {state.character.experience}</p>
+			</div>
 
-			<button onClick={() => dispatch({
-				type: 'UPDATE_PLAYER',
-				payload: { level: state.player.level + 1 }
-			})}>Level Up</button>
+			{/* Gold */}
+			<div>
+				<p>Gold: {state.gold}</p>
+				<button onClick={() => dispatch({ type: 'EARN_GOLD', payload: 10 })}>Earn Gold</button>
+			</div>
+
+			{/* Actions */}
+			<div>
+				<button onClick={() => dispatch({ type: 'TAKE_DAMAGE', payload: 15 })}>Take Damage</button>
+				<button onClick={() => dispatch({ type: 'HEAL', payload: 20 })}>Heal</button>
+				<button onClick={() => dispatch({ type: 'GAIN_EXPERIENCE', payload: 50 })}>Gain XP</button>
+				<button onClick={() => dispatch({ type: 'LEVEL_UP' })}>Level Up</button>
+			</div>
+
+			{/* Shop */}
+			<div>
+				<button onClick={buyPotion} disabled={state.gold < 20}>
+					Buy Health Potion (20 gold)
+				</button>
+			</div>
+
+			{/* Inventory */}
+			<div>
+				<h3>Inventory ({state.inventory.length})</h3>
+				<ul>
+					{state.inventory.map(item => (
+						<li key={item.id}>{item.name}</li>
+					))}
+				</ul>
+			</div>
 		</div>
 	)
 }
 
-export default PlayerStats
+export default GameDashboard
 ```
 
 This pattern scales well for large applications and makes state updates predictable and traceable.
