@@ -206,7 +206,62 @@ Notice how all the state is kept together and updates are predictable. Each acti
 
 # Form State with useReducer
 
-`useReducer` is especially useful for managing form state with many fields. Let's create a character creation form for our game:
+`useReducer` is especially useful for managing form state with many fields. Let's create a character creation form for our game.
+
+Let's start with a component that uses `useState` to manage form state:
+
+```javascript
+import { useState } from 'react'
+
+const initialState = {
+    name: '',
+    characterClass: ''
+}
+
+const CharacterCreationForm = () => {
+    const [form, setForm] = useState(initialState)
+
+    const updateField = (field, value) =>
+        setForm(prev => ({ ...prev, [field]: value }))
+
+    const handleSubmit = e => {
+        e.preventDefault()
+        if (!form.name || !form.characterClass) return
+
+        console.log('Character created:', form)
+        setForm(initialState)
+    }
+
+    return (
+        <form onSubmit={handleSubmit}>
+            <input
+                type="text"
+                name="name"
+                value={form.name}
+                onChange={e => updateField('name', e.target.value)}
+                placeholder="Character Name"
+            />
+
+            <select
+                name="characterClass"
+                value={form.characterClass}
+                onChange={e => updateField('characterClass', e.target.value)}
+            >
+                <option value="">Select Class</option>
+                <option value="warrior">Warrior</option>
+                <option value="mage">Mage</option>
+                <option value="rogue">Rogue</option>
+            </select>
+
+            <button type="submit">Create Character</button>
+        </form>
+    )
+}
+
+export default CharacterCreationForm
+```
+
+Now let's refactor this to use `useReducer` instead:
 
 <details open>
 	<summary class="video">Show/Hide Video</summary>
