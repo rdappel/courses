@@ -329,9 +329,6 @@ Copy the component code below and fill in the reducer logic to handle `ADD_ITEM`
 import { useReducer, useState } from 'react'
 
 // TODO: Implement this reducer function
-const inventoryReducer = (state, action) => {
-	// Your code here
-}
 
 const InventoryManager = () => {
 	const [items, dispatch] = useReducer(inventoryReducer, [])
