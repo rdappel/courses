@@ -554,6 +554,145 @@ export default GameDashboard
 
 This pattern scales well for large applications and makes state updates predictable and traceable.
 
+# Exercise 1
+
+<details open>
+	<summary class="video">Show/Hide Video</summary>
+	<div class="video-container">
+		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+		</iframe>
+	</div>
+</details>
+
+Create a simple inventory manager using `useReducer`. Your component should:
+
+1. Track an array of items in state (each item has an `id` and `name`)
+2. Have an input field and "Add Item" button
+3. Display the list of items with a "Remove" button next to each item
+4. Use a reducer with `ADD_ITEM` and `REMOVE_ITEM` actions
+
+Start with an empty array as your initial state.
+
+## Hints {#exercise-1-hints}
+
+<details>
+	<summary>How do I structure the reducer?</summary>
+
+Your reducer should handle two action types:
+
+```javascript
+const inventoryReducer = (state, action) => {
+	switch(action.type) {
+		case 'ADD_ITEM':
+			// return new array with item added
+		case 'REMOVE_ITEM':
+			// return new array with item filtered out
+		default:
+			return state
+	}
+}
+```
+
+</details>
+
+<details>
+	<summary>How do I add an item?</summary>
+
+When adding an item, create a new object with a unique `id` (you can use `Date.now()`) and the `name` from your input:
+
+```javascript
+case 'ADD_ITEM':
+	return [...state, { id: Date.now(), name: action.payload }]
+```
+
+</details>
+
+<details>
+	<summary>How do I remove an item?</summary>
+
+Use `filter` to remove the item with the matching id:
+
+```javascript
+case 'REMOVE_ITEM':
+	return state.filter(item => item.id !== action.payload)
+```
+
+</details>
+
+## Solution {#exercise-1-solution}
+
+<details>
+	<summary>Show the Answer</summary>
+
+```javascript
+import { useReducer, useState } from 'react'
+
+const inventoryReducer = (state, action) => {
+	switch(action.type) {
+		case 'ADD_ITEM':
+			return [...state, { id: Date.now(), name: action.payload }]
+		case 'REMOVE_ITEM':
+			return state.filter(item => item.id !== action.payload)
+		default:
+			return state
+	}
+}
+
+const InventoryManager = () => {
+	const [items, dispatch] = useReducer(inventoryReducer, [])
+	const [itemName, setItemName] = useState('')
+
+	const addItem = () => {
+		if (!itemName.trim()) return
+		dispatch({ type: 'ADD_ITEM', payload: itemName })
+		setItemName('')
+	}
+
+	return (
+		<div>
+			<h2>Inventory</h2>
+			
+			<div>
+				<input
+					type="text"
+					value={itemName}
+					onChange={(e) => setItemName(e.target.value)}
+					placeholder="Item name"
+				/>
+				<button onClick={addItem}>Add Item</button>
+			</div>
+
+			<ul>
+				{items.map(item => (
+					<li key={item.id}>
+						{item.name}
+						<button onClick={() => dispatch({ type: 'REMOVE_ITEM', payload: item.id })}>
+							Remove
+						</button>
+					</li>
+				))}
+			</ul>
+
+			<p>Total items: {items.length}</p>
+		</div>
+	)
+}
+
+export default InventoryManager
+```
+
+</details>
+
+<details>
+	<summary>Walkthrough Video</summary>
+	<div class="video-container">
+		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+		</iframe>
+	</div>
+</details>
+
 # Key Takeaways
 
 - Use `useReducer` when you have complex state logic or multiple related state values
