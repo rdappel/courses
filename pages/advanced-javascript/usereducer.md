@@ -432,6 +432,7 @@ case 'REMOVE_ITEM':
 	<summary>Show the Answer</summary>
 
 ```javascript
+// reducer function
 const inventoryReducer = (state, action) => {
 	switch(action.type) {
 		case 'ADD_ITEM':
@@ -442,6 +443,9 @@ const inventoryReducer = (state, action) => {
 			return state
 	}
 }
+
+// call to useReducer hook
+const [ items, dispatch ] = useReducer(inventoryReducer, [])
 ```
 
 </details>
