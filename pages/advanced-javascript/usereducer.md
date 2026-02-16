@@ -224,25 +224,13 @@ import { useReducer } from 'react'
 
 const initialState = {
 	name: '',
-	characterClass: '',
-	race: '',
-	difficulty: 'normal',
-	errors: {}
+	characterClass: ''
 }
 
 const formReducer = (state, action) => {
 	switch(action.type) {
-		case 'FIELD_CHANGE':
-			return {
-				...state,
-				[action.field]: action.value,
-				errors: { ...state.errors, [action.field]: '' }
-			}
-		case 'SET_ERROR':
-			return {
-				...state,
-				errors: { ...state.errors, [action.field]: action.message }
-			}
+		case 'UPDATE_FIELD':
+			return { ...state, [action.field]: action.value }
 		case 'RESET':
 			return initialState
 		default:
@@ -253,108 +241,44 @@ const formReducer = (state, action) => {
 const CharacterCreationForm = () => {
 	const [form, dispatch] = useReducer(formReducer, initialState)
 
-	const handleChange = (e) => {
-		dispatch({
-			type: 'FIELD_CHANGE',
-			field: e.target.name,
-			value: e.target.value
-		})
-	}
-
 	const handleSubmit = (e) => {
 		e.preventDefault()
-
-		// Validate required fields
-		if (!form.name) {
-			dispatch({
-				type: 'SET_ERROR',
-				field: 'name',
-				message: 'Character name is required'
-			})
-			return
-		}
-
-		if (!form.characterClass) {
-			dispatch({
-				type: 'SET_ERROR',
-				field: 'characterClass',
-				message: 'Please select a class'
-			})
-			return
-		}
-
-		if (!form.race) {
-			dispatch({
-				type: 'SET_ERROR',
-				field: 'race',
-				message: 'Please select a race'
-			})
-			return
-		}
-
-		// Form is valid - create character
+		if (!form.name || !form.characterClass) return
+		
 		console.log('Character created:', form)
 		dispatch({ type: 'RESET' })
 	}
 
 	return (
 		<form onSubmit={handleSubmit}>
-			<div>
-				<input
-					type="text"
-					name="name"
-					value={form.name}
-					onChange={handleChange}
-					placeholder="Character Name"
-				/>
-				{form.errors.name && <span className="error">{form.errors.name}</span>}
-			</div>
+			<input
+				type="text"
+				name="name"
+				value={form.name}
+				onChange={(e) => dispatch({ 
+					type: 'UPDATE_FIELD', 
+					field: 'name', 
+					value: e.target.value 
+				})}
+				placeholder="Character Name"
+			/>
 
-			<div>
-				<select
-					name="characterClass"
-					value={form.characterClass}
-					onChange={handleChange}
-				>
-					<option value="">Select Class</option>
-					<option value="warrior">Warrior</option>
-					<option value="mage">Mage</option>
-					<option value="rogue">Rogue</option>
-					<option value="cleric">Cleric</option>
-				</select>
-				{form.errors.characterClass && <span className="error">{form.errors.characterClass}</span>}
-			</div>
-
-			<div>
-				<select
-					name="race"
-					value={form.race}
-					onChange={handleChange}
-				>
-					<option value="">Select Race</option>
-					<option value="human">Human</option>
-					<option value="elf">Elf</option>
-					<option value="dwarf">Dwarf</option>
-					<option value="orc">Orc</option>
-				</select>
-				{form.errors.race && <span className="error">{form.errors.race}</span>}
-			</div>
-
-			<div>
-				<label>Difficulty:</label>
-				<select
-					name="difficulty"
-					value={form.difficulty}
-					onChange={handleChange}
-				>
-					<option value="easy">Easy</option>
-					<option value="normal">Normal</option>
-					<option value="hard">Hard</option>
-				</select>
-			</div>
+			<select
+				name="characterClass"
+				value={form.characterClass}
+				onChange={(e) => dispatch({ 
+					type: 'UPDATE_FIELD', 
+					field: 'characterClass', 
+					value: e.target.value 
+				})}
+			>
+				<option value="">Select Class</option>
+				<option value="warrior">Warrior</option>
+				<option value="mage">Mage</option>
+				<option value="rogue">Rogue</option>
+			</select>
 
 			<button type="submit">Create Character</button>
-			<button type="button" onClick={() => dispatch({ type: 'RESET' })}>Clear</button>
 		</form>
 	)
 }
