@@ -321,18 +321,20 @@ This pattern scales well for large applications and makes state updates predicta
 	</div>
 </details>
 
-Complete the inventory manager by implementing the `inventoryReducer` function. 
+Complete the inventory manager by implementing the `inventoryReducer` function.
 
 Copy the component code below and fill in the reducer logic to handle `ADD_ITEM` and `REMOVE_ITEM` actions:
 
 ```javascript
 import { useReducer, useState } from 'react'
 
-// TODO: Implement reducer function
+// TODO: Implement this reducer function
+const inventoryReducer = (state, action) => {
+	// Your code here
+}
 
 const InventoryManager = () => {
-	// TODO: use useReducer
-
+	const [items, dispatch] = useReducer(inventoryReducer, [])
 	const [itemName, setItemName] = useState('')
 
 	const addItem = () => {
@@ -356,10 +358,10 @@ const InventoryManager = () => {
 			</div>
 
 			<ul>
-				{items.map(item => (
-					<li key={item.id}>
-						{item.name}
-						<button onClick={() => dispatch({ type: 'REMOVE_ITEM', payload: item.id })}>
+				{items.map((item, index) => (
+					<li key={index}>
+						{item}
+						<button onClick={() => dispatch({ type: 'REMOVE_ITEM', payload: index })}>
 							Remove
 						</button>
 					</li>
@@ -376,8 +378,8 @@ export default InventoryManager
 
 **Your Task:** Implement the `inventoryReducer` to:
 
-- Handle `ADD_ITEM` action: add a new item with `{ id: Date.now(), name: action.payload }`
-- Handle `REMOVE_ITEM` action: filter out the item matching `action.payload` (the id)
+- Handle `ADD_ITEM` action: add the item (a string) from `action.payload` to the array
+- Handle `REMOVE_ITEM` action: remove the item at the index specified in `action.payload`
 - Return the current state for any unknown action types
 
 ## Hints {#exercise-1-hints}
@@ -405,11 +407,11 @@ const inventoryReducer = (state, action) => {
 <details>
 	<summary>How do I add an item?</summary>
 
-Create a new object with `id` and `name`, then return a new array with the item added:
+Use the spread operator to create a new array with the new item appended:
 
 ```javascript
 case 'ADD_ITEM':
-	return [...state, { id: Date.now(), name: action.payload }]
+	return [...state, action.payload]
 ```
 
 </details>
@@ -417,11 +419,11 @@ case 'ADD_ITEM':
 <details>
 	<summary>How do I remove an item?</summary>
 
-Use `filter` to create a new array without the item matching the given id:
+Use `filter` to create a new array without the item at the given index:
 
 ```javascript
 case 'REMOVE_ITEM':
-	return state.filter(item => item.id !== action.payload)
+	return state.filter((item, index) => index !== action.payload)
 ```
 
 </details>
@@ -435,9 +437,9 @@ case 'REMOVE_ITEM':
 const inventoryReducer = (state, action) => {
 	switch(action.type) {
 		case 'ADD_ITEM':
-			return [...state, { id: Date.now(), name: action.payload }]
+			return [...state, action.payload]
 		case 'REMOVE_ITEM':
-			return state.filter(item => item.id !== action.payload)
+			return state.filter((item, index) => index !== action.payload)
 		default:
 			return state
 	}
