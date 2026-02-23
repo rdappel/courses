@@ -80,7 +80,7 @@ Summary: You’ll share state across multiple components using React’s Context
 
 Summary: You’ll manage structured, multi-action state with useReducer.
 
-[The "useReducer" Hook](./advanced-javascript/usereducer)
+[The useReducer Hook](./advanced-javascript/usereducer)
 
 [Assignment 7 - Homepage Section Controls](./advanced-javascript/assignments/homepage-section-controls)
 
