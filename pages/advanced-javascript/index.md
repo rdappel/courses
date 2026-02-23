@@ -90,7 +90,7 @@ Summary: You’ll encapsulate shared logic in custom hooks and optimize performa
 
 [Creating Custom Hooks](./advanced-javascript/custom-hooks)
 
-[useMemo and React.memo](./advanced-javascript/usememo-and-react-memo)
+[Memoization with useMemo](./advanced-javascript/memoization)
 
 [Assignment 8 - 888888](./advanced-javascript/assignments/888888)
 
