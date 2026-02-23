@@ -3,8 +3,8 @@ title: useReducer for Complex State
 subtitle: Advanced JavaScript
 hideNav: false
 
-live: https://fvtc.software/appel/advanced-javascript/usereducer-for-complex-state
-dev: http://localhost:3006/appel/advanced-javascript/usereducer-for-complex-state
+live: https://fvtc.software/appel/advanced-javascript/usereducer
+dev: http://localhost:3006/appel/advanced-javascript/usereducer
 repo: https://github.com/rdappel/courses
 ---
 
