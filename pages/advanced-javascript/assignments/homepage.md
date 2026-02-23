@@ -28,6 +28,7 @@ Your React application should have the following components:
 ### 1. Header Component
 
 Create a `Header` component that contains:
+
 - Your name or website title
 - A tagline or subtitle
 - Any other header content you want to include
@@ -35,6 +36,7 @@ Create a `Header` component that contains:
 ### 2. Nav Component
 
 Create a `Nav` component that contains:
+
 - At least 3 navigation links (e.g., Home, Projects, Contact)
 - The links don't need to work yet (we haven't learned routing)
 - Use `#` for the href attributes
@@ -42,6 +44,7 @@ Create a `Nav` component that contains:
 ### 3. Footer Component
 
 Create a `Footer` component that contains:
+
 - Copyright information
 - Social media links or contact information
 - Any other footer content you want to include
@@ -49,6 +52,7 @@ Create a `Footer` component that contains:
 ### 4. Main Content
 
 In your main App component, include:
+
 - Your Header component
 - Your Nav component
 - A section with your bio or about information
@@ -58,11 +62,13 @@ In your main App component, include:
 ### 5. Styling
 
 Style your components using CSS. You can use:
+
 - A global stylesheet in your `src` folder
 - Component-specific CSS files
 - Inline styles via the `style` prop
 
 At a minimum, your styling should include:
+
 - Colors and fonts that create a cohesive design
 - Proper spacing and layout
 - Responsive design considerations
@@ -70,6 +76,7 @@ At a minimum, your styling should include:
 ### 6. Props
 
 Use props to pass data to your components. For example:
+
 - Pass your name and tagline to the `Header` component
 - Pass your `Nav` component to the `Header` component as children
 - Pass any other relevant data to your components via props
@@ -92,7 +99,7 @@ Then, go through the project structure and remove unnecessary files.
 
 Your project should have a structure similar to this:
 
-```
+```plaintext
 src/
   components/
     Header.jsx
@@ -151,6 +158,7 @@ export default App
 # Using AI for this Assignment
 
 You are allowed to use AI tools like Copilot or ChatGPT to help you with this assignment. However, make sure to:
+
 - Understand the code that is generated.
 - Customize the code to fit your personal homepage.
 - Ensure that the final code is your own work and reflects your understanding of React components and props.

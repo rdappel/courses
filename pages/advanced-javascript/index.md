@@ -82,7 +82,7 @@ Summary: You’ll manage structured, multi-action state with useReducer.
 
 [The "useReducer" Hook](./advanced-javascript/usereducer)
 
-[Assignment 7 - 777777](./advanced-javascript/assignments/777777)
+[Assignment 7 - Homepage Section Controls](./advanced-javascript/assignments/homepage-section-controls)
 
 # Week 10 – Custom Hooks & Memoization
 
