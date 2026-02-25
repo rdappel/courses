@@ -15,7 +15,7 @@ In this assignment, you will add a theme switcher feature to your personal homep
 <details open>
     <summary class="video">Show/Hide Video</summary>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0" allowfullscreen
+        <iframe src="https://www.youtube.com/embed/s5sFXu00TdU" width="100%" height="100%" frameborder="0" allowfullscreen
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
         </iframe>
     </div>
@@ -51,6 +51,7 @@ Update your components to apply different styles based on the current theme:
 - Consider background colors, text colors, borders, and other visual elements
 
 You can apply theme styles using:
+
 - Conditional inline styles
 - Conditional CSS classes
 - CSS variables that change based on the theme
