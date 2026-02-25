@@ -137,6 +137,117 @@ const SearchList = ({ items }) => {
 }
 ```
 
+# Exercise 1
+
+<details open>
+	<summary class="video">Show/Hide Video</summary>
+	<div class="video-container">
+		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+		</iframe>
+	</div>
+</details>
+
+Add `useMemo` to optimize a filtered list.
+
+Start with a component that has:
+
+- `items` array (at least 6 items)
+- `searchTerm` state
+- `count` state and an **Increment Count** button
+
+Your task:
+
+1. Filter `items` by `searchTerm`
+2. Use `useMemo` so the filter only re-runs when `items` or `searchTerm` changes
+3. Confirm that clicking **Increment Count** does not re-run the filter
+
+## Hints {#exercise-1-hints}
+
+<details>
+	<summary>Where should useMemo go?</summary>
+
+Wrap the filtering logic in `useMemo`:
+
+```javascript
+const filteredItems = useMemo(() => {
+	return items.filter(item =>
+		item.toLowerCase().includes(searchTerm.toLowerCase())
+	)
+}, [items, searchTerm])
+```
+
+</details>
+
+<details>
+	<summary>How do I verify memoization is working?</summary>
+
+Add a `console.log('Filtering...')` inside the `useMemo` callback. It should run when search text changes, but not when only `count` changes.
+
+</details>
+
+## Solution {#exercise-1-solution}
+
+<details>
+	<summary>Show the Answer</summary>
+
+```javascript
+import { useMemo, useState } from 'react'
+
+const SearchableList = () => {
+	const [searchTerm, setSearchTerm] = useState('')
+	const [count, setCount] = useState(0)
+
+	const items = [
+		'React',
+		'JavaScript',
+		'HTML',
+		'CSS',
+		'Node.js',
+		'Vite'
+	]
+
+	const filteredItems = useMemo(() => {
+		console.log('Filtering...')
+		return items.filter(item =>
+			item.toLowerCase().includes(searchTerm.toLowerCase())
+		)
+	}, [items, searchTerm])
+
+	return (
+		<div>
+			<input
+				value={searchTerm}
+				onChange={e => setSearchTerm(e.target.value)}
+				placeholder="Search topics"
+			/>
+
+			<p>Count: {count}</p>
+			<button onClick={() => setCount(count + 1)}>Increment Count</button>
+
+			<ul>
+				{filteredItems.map(item => (
+					<li key={item}>{item}</li>
+				))}
+			</ul>
+		</div>
+	)
+}
+
+export default SearchableList
+```
+
+</details>
+
+<details>
+	<summary>Walkthrough Video</summary>
+	<div class="video-container">
+		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+		</iframe>
+	</div>
+</details>
+
 # Key Takeaways
 
 - `useMemo` caches expensive calculation results to avoid recalculation

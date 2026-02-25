@@ -296,6 +296,111 @@ const MyComponent = () => {
 }
 ```
 
+# Exercise 1
+
+<details open>
+	<summary class="video">Show/Hide Video</summary>
+	<div class="video-container">
+		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+		</iframe>
+	</div>
+</details>
+
+Create a custom hook called `useOnlineStatus` and use it in a component.
+
+Your hook should:
+
+1. Track whether the browser is online (`navigator.onLine`)
+2. Listen for `online` and `offline` events
+3. Return a boolean like `isOnline`
+4. Clean up event listeners when unmounted
+
+Then create a component that uses the hook and renders:
+
+- `Status: Online` when connected
+- `Status: Offline` when disconnected
+
+## Hints {#exercise-1-hints}
+
+<details>
+	<summary>How do I initialize state?</summary>
+
+Use `navigator.onLine` as the initial state value.
+
+```javascript
+const [isOnline, setIsOnline] = useState(navigator.onLine)
+```
+
+</details>
+
+<details>
+	<summary>How do I listen for connection changes?</summary>
+
+Inside `useEffect`, add event listeners for both events and remove them in the cleanup function.
+
+```javascript
+window.addEventListener('online', handleOnline)
+window.addEventListener('offline', handleOffline)
+```
+
+</details>
+
+## Solution {#exercise-1-solution}
+
+<details>
+	<summary>Show the Answer</summary>
+
+```javascript
+// hooks/useOnlineStatus.js
+import { useEffect, useState } from 'react'
+
+const useOnlineStatus = () => {
+	const [isOnline, setIsOnline] = useState(navigator.onLine)
+
+	useEffect(() => {
+		const handleOnline = () => setIsOnline(true)
+		const handleOffline = () => setIsOnline(false)
+
+		window.addEventListener('online', handleOnline)
+		window.addEventListener('offline', handleOffline)
+
+		return () => {
+			window.removeEventListener('online', handleOnline)
+			window.removeEventListener('offline', handleOffline)
+		}
+	}, [])
+
+	return isOnline
+}
+
+export default useOnlineStatus
+```
+
+```javascript
+// components/ConnectionStatus.jsx
+import useOnlineStatus from '../hooks/useOnlineStatus'
+
+const ConnectionStatus = () => {
+	const isOnline = useOnlineStatus()
+
+	return <p>Status: {isOnline ? 'Online' : 'Offline'}</p>
+}
+
+export default ConnectionStatus
+```
+
+</details>
+
+<details>
+	<summary>Walkthrough Video</summary>
+	<div class="video-container">
+		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+		</iframe>
+	</div>
+</details>
+
 # Key Takeaways
 
 - Custom hooks extract and reuse component logic
