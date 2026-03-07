@@ -92,7 +92,7 @@ Summary: You’ll encapsulate shared logic in custom hooks and optimize performa
 
 [Memoization with useMemo](./advanced-javascript/memoization)
 
-[Assignment 8 - 888888](./advanced-javascript/assignments/888888)
+[Assignment 8 - Custom useFetch Hook](./advanced-javascript/assignments/custom-usefetch-hook)
 
 # Week 11 – React Router
 
