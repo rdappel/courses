@@ -25,7 +25,7 @@ Custom hooks help you:
 
 Let's look at a simple example of a custom hook that sets the document title based on the current page.
 
-You don't have to follow along with the code, but if you want to, the repo is available here: [https://github.com/rdappel/ajs-portfolio-example](https://github.com/rdappel/ajs-portfolio-example).
+You don't have to follow along with the code, but if you want to, the repo is available here: [https://github.com/rdappel/ajs-portfolio-example](Portfolio Example).
 
 <details open>
 	<summary class="video">Show/Hide Video</summary>
