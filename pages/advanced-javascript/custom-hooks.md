@@ -23,7 +23,9 @@ Custom hooks help you:
 
 # Creating Your First Custom Hook
 
-Let's create a simple hook that tracks whether a component is mounted:
+Let's look at a simple example of a custom hook that sets the document title based on the current page.
+
+You don't have to follow along with the code, but if you want to, the repo is available here: [https://github.com/rdappel/ajs-portfolio-example](https://github.com/rdappel/ajs-portfolio-example).
 
 <details open>
 	<summary class="video">Show/Hide Video</summary>
@@ -39,9 +41,7 @@ Let's create a simple hook that tracks whether a component is mounted:
 import { useEffect } from 'react'
 
 const useDocumentTitle = (title) => {
-	useEffect(() => {
-		document.title = title
-	}, [title])
+	useEffect(() => document.title = `Ryan's Website - ${title}`, [title])
 }
 
 export default useDocumentTitle
@@ -52,17 +52,19 @@ Now you can use it in any component:
 ```javascript
 import useDocumentTitle from './hooks/useDocumentTitle'
 
-const HomePage = () => {
-	useDocumentTitle('Home - My App')
+const Home = () => {
+	useDocumentTitle('Home')
 
 	return <h1>Welcome Home</h1>
 }
 
-const AboutPage = () => {
-	useDocumentTitle('About - My App')
+const Contact = () => {
+	useDocumentTitle('Contact')
 
-	return <h1>About Us</h1>
+	return <h1>Contact Me</h1>
 }
+
+// etc...
 ```
 
 Instead of repeating the `useEffect` logic in every component, we extracted it into a reusable custom hook.
