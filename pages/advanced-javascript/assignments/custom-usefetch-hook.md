@@ -153,6 +153,8 @@ If you want to take this assignment further:
 
 6. **Search/Filter**: Add input fields to search or filter the API results
 
+> [!NOTE] I'm not expecting you to implement these enhancements yourself. Leverage Copilot, and then take a look at the code it generates to understand how it works.
+
 ## Using AI for this Assignment
 
 You are encouraged to use AI tools like Copilot or ChatGPT to help you with this assignment. However, make sure to:
