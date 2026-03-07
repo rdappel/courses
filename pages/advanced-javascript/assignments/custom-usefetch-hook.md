@@ -41,23 +41,23 @@ Select one of these free public APIs to fetch data from (or find your own):
 
 **Recommended APIs:**
 
-- **JSONPlaceholder** - `https://jsonplaceholder.typicode.com/users`
+- [**JSONPlaceholder**](https://jsonplaceholder.typicode.com/) - `https://jsonplaceholder.typicode.com/users`
   - Fake user data, posts, comments, todos
   - Great for testing
 
-- **REST Countries** - `https://restcountries.com/v3.1/all`
+- [**REST Countries**](https://restcountries.com/) - `https://restcountries.com/v3.1/all`
   - Country data including flags, population, languages
 
-- **Open Trivia Database** - `https://opentdb.com/api.php?amount=10&type=multiple`
+- [**Open Trivia Database**](https://opentdb.com/) - `https://opentdb.com/api.php?amount=10&type=multiple`
   - Trivia questions in various categories
 
-- **PokéAPI** - `https://pokeapi.co/api/v2/pokemon?limit=20`
+- [**PokéAPI**](https://pokeapi.co/) - `https://pokeapi.co/api/v2/pokemon?limit=20`
   - Pokemon data including stats, abilities, sprites
 
-- **Dog CEO's Dog API** - `https://dog.ceo/api/breeds/image/random/10`
+- [**Dog CEO's Dog API**](https://dog.ceo/dog-api/) - `https://dog.ceo/api/breeds/image/random/10`
   - Random dog images by breed
 
-- **Cat Facts** - `https://catfact.ninja/facts?limit=5`
+- [**Cat Facts**](https://catfact.ninja/) - `https://catfact.ninja/facts?limit=5`
   - Random cat facts
 
 > [!NOTE] Make sure to check the API documentation to understand the structure of the response data. Most APIs return JSON that you'll need to navigate to display the relevant information.
