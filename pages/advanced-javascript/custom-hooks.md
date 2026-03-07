@@ -82,18 +82,44 @@ A common pattern is toggling boolean values (modals, menus, etc.). Let's create 
 	</div>
 </details>
 
+Here is the starting point for the `Modal` component without the hook:
+
+```javascript
+const modalStyles = {
+	backgroundColor: '#fff',
+	padding: '20px',
+	border: '1px solid #ccc'
+}
+
+const Modal = () => {
+	return (
+		<div>
+			<button>Open Modal</button>
+			<div style={modalStyles}>
+				<h2>My Content</h2>
+				<button>Close</button>
+			</div>
+		</div>
+	)
+}
+
+export default Modal
+```
+
+And here is the refactored version using the `useToggle` hook:
+
 ```javascript
 // hooks/useToggle.js
 import { useState } from 'react'
 
-const useToggle = (initialValue = false) => {
-	const [value, setValue] = useState(initialValue)
+const useToggle = () => {
+	const [ value, setValue ] = useState(false)
 
-	const toggle = () => setValue(prev => !prev)
 	const setTrue = () => setValue(true)
 	const setFalse = () => setValue(false)
+	const toggle = () => setValue(prev => !prev)
 
-	return [value, toggle, setTrue, setFalse]
+	return [ value, setTrue, setFalse, toggle ]
 }
 
 export default useToggle
@@ -105,96 +131,22 @@ Using the hook:
 import useToggle from './hooks/useToggle'
 
 const Modal = () => {
-	const [isOpen, toggle, open, close] = useToggle(false)
+	const [ isOpen, open, close, toggle ] = useToggle()
 
 	return (
 		<div>
 			<button onClick={open}>Open Modal</button>
-			
+			<button onClick={toggle}>Toggle Modal</button>
 			{isOpen && (
-				<div className="modal">
-					<h2>Modal Content</h2>
-					<button onClick={close}>Close</button>
+				<div style={modalStyles}>
+					<h2>My Content</h2>
+					<button onClick={close}>Close Modal</button>
 				</div>
 			)}
 		</div>
 	)
 }
 ```
-
-# Custom Hook: useLocalStorage
-
-Let's create a hook that syncs state with localStorage:
-
-<details open>
-	<summary class="video">Show/Hide Video</summary>
-	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
-			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-		</iframe>
-	</div>
-</details>
-
-```javascript
-// hooks/useLocalStorage.js
-import { useState, useEffect } from 'react'
-
-const useLocalStorage = (key, initialValue) => {
-	// Get from localStorage or use initial value
-	const [value, setValue] = useState(() => {
-		try {
-			const item = window.localStorage.getItem(key)
-			return item ? JSON.parse(item) : initialValue
-		} catch (error) {
-			console.error(error)
-			return initialValue
-		}
-	})
-
-	// Update localStorage when value changes
-	useEffect(() => {
-		try {
-			window.localStorage.setItem(key, JSON.stringify(value))
-		} catch (error) {
-			console.error(error)
-		}
-	}, [key, value])
-
-	return [value, setValue]
-}
-
-export default useLocalStorage
-```
-
-Using it is just like `useState`:
-
-```javascript
-import useLocalStorage from './hooks/useLocalStorage'
-
-const Settings = () => {
-	const [theme, setTheme] = useLocalStorage('theme', 'light')
-	const [fontSize, setFontSize] = useLocalStorage('fontSize', 16)
-
-	return (
-		<div>
-			<select value={theme} onChange={e => setTheme(e.target.value)}>
-				<option value="light">Light</option>
-				<option value="dark">Dark</option>
-			</select>
-
-			<input
-				type="range"
-				min="12"
-				max="24"
-				value={fontSize}
-				onChange={e => setFontSize(Number(e.target.value))}
-			/>
-		</div>
-	)
-}
-```
-
-The settings persist across page refreshes automatically!
 
 # Custom Hook: useFetch
 
@@ -211,36 +163,29 @@ Data fetching is a common operation. Let's create a reusable hook for it:
 
 ```javascript
 // hooks/useFetch.js
+
 import { useState, useEffect } from 'react'
 
-const useFetch = (url) => {
-	const [data, setData] = useState(null)
-	const [loading, setLoading] = useState(true)
-	const [error, setError] = useState(null)
+const useFetch = url => {
+	const [ data, setData ] = useState(null)
+	const [ loading, setLoading ] = useState(true)
+	const [ error, setError ] = useState(null)
 
 	useEffect(() => {
-		const fetchData = async () => {
-			try {
-				setLoading(true)
-				const response = await fetch(url)
-				
-				if (!response.ok) {
-					throw new Error(`HTTP error! status: ${response.status}`)
-				}
-				
-				const json = await response.json()
-				setData(json)
-				setError(null)
-			} catch (err) {
-				setError(err.message)
-				setData(null)
-			} finally {
-				setLoading(false)
-			}
-		}
+		(async () => {
+			setLoading(true)
+			const response = await fetch(url)
+			setLoading(false)
 
-		fetchData()
-	}, [url])
+			if (!response.ok) {
+				setError(`Error: ${response.status}`)
+				return
+			}
+
+			const json = await response.json()
+			setData(json)
+		})()
+	}, [ url ])
 
 	return { data, loading, error }
 }
@@ -254,17 +199,24 @@ Using the hook:
 import useFetch from './hooks/useFetch'
 
 const UserList = () => {
-	const { data, loading, error } = useFetch('https://api.example.com/users')
-
-	if (loading) return <p>Loading...</p>
-	if (error) return <p>Error: {error}</p>
+	const url = 'https://swapi.dev/api/films/1'
+	const { data, loading, error } = useFetch(url)
+	const [ isOpen, open, close, toggle ] = useToggle()
 
 	return (
-		<ul>
-			{data.map(user => (
-				<li key={user.id}>{user.name}</li>
-			))}
-		</ul>
+		<div>
+			<button onClick={open}>Open Modal</button>
+			<button onClick={toggle}>Toggle Modal</button>
+			{isOpen && (
+				<div style={modalStyles}>
+					<h2>My Content</h2>
+					{data && data.opening_crawl}
+					{loading && 'Loading movie info...'}
+					{error && error}
+					<button onClick={close}>Close Modal</button>
+				</div>
+			)}
+		</div>
 	)
 }
 ```
@@ -316,7 +268,6 @@ Your hook should:
 1. Track whether the browser is online (`navigator.onLine`)
 2. Listen for `online` and `offline` events
 3. Return a boolean like `isOnline`
-4. Clean up event listeners when unmounted
 
 Then create a component that uses the hook and renders:
 
@@ -355,15 +306,15 @@ window.addEventListener('offline', handleOffline)
 
 ```javascript
 // hooks/useOnlineStatus.js
-import { useEffect, useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const useOnlineStatus = () => {
-	const [isOnline, setIsOnline] = useState(navigator.onLine)
+	const [ isOnline, setIsOnline ] = useState(navigator.onLine)
 
 	useEffect(() => {
 		const handleOnline = () => setIsOnline(true)
 		const handleOffline = () => setIsOnline(false)
-
+		
 		window.addEventListener('online', handleOnline)
 		window.addEventListener('offline', handleOffline)
 
@@ -371,6 +322,7 @@ const useOnlineStatus = () => {
 			window.removeEventListener('online', handleOnline)
 			window.removeEventListener('offline', handleOffline)
 		}
+
 	}, [])
 
 	return isOnline
@@ -380,16 +332,14 @@ export default useOnlineStatus
 ```
 
 ```javascript
-// components/ConnectionStatus.jsx
+// components/Modal.jsx
 import useOnlineStatus from '../hooks/useOnlineStatus'
 
-const ConnectionStatus = () => {
+const Modal = () => {
 	const isOnline = useOnlineStatus()
 
 	return <p>Status: {isOnline ? 'Online' : 'Offline'}</p>
 }
-
-export default ConnectionStatus
 ```
 
 </details>
@@ -409,4 +359,4 @@ export default ConnectionStatus
 - Must start with "use" and follow hook rules
 - Can use other hooks internally
 - Make code more maintainable and testable
-- Common patterns: `useToggle`, `useLocalStorage`, `useFetch`
+- Common patterns: `useToggle`, `useFetch`, `useLocalStorage`, etc...
