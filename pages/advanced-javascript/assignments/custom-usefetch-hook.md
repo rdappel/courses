@@ -43,27 +43,22 @@ Select one of these free public APIs to fetch data from (or find your own):
 
 - **JSONPlaceholder** - `https://jsonplaceholder.typicode.com/users`
   - Fake user data, posts, comments, todos
-  - Great for testing, no API key required
+  - Great for testing
 
 - **REST Countries** - `https://restcountries.com/v3.1/all`
   - Country data including flags, population, languages
-  - No API key required
 
 - **Open Trivia Database** - `https://opentdb.com/api.php?amount=10&type=multiple`
   - Trivia questions in various categories
-  - No API key required
 
 - **PokéAPI** - `https://pokeapi.co/api/v2/pokemon?limit=20`
   - Pokemon data including stats, abilities, sprites
-  - No API key required
 
 - **Dog CEO's Dog API** - `https://dog.ceo/api/breeds/image/random/10`
   - Random dog images by breed
-  - No API key required
 
 - **Cat Facts** - `https://catfact.ninja/facts?limit=5`
   - Random cat facts
-  - No API key required
 
 > [!NOTE] Make sure to check the API documentation to understand the structure of the response data. Most APIs return JSON that you'll need to navigate to display the relevant information.
 
