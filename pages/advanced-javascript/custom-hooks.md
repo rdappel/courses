@@ -88,7 +88,8 @@ Here is the starting point for the `Modal` component without the hook:
 const modalStyles = {
 	backgroundColor: '#fff',
 	padding: '20px',
-	border: '1px solid #ccc'
+	border: '1px solid #ccc',
+	maxWidth: '500px'
 }
 
 const Modal = () => {
