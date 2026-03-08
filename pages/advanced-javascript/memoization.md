@@ -106,7 +106,7 @@ import useFilteredProducts from './hooks/useFilteredProducts'
 const filteredProducts = useFilteredProducts(products, searchTerm) // useMemo is used inside the hook
 ```
 
-The source code for this app is available here: [useMemo Example](https://github.com/rdappel/ajs-usememo-example).
+> [!NOTE] The completed source code for this app is available here: [useMemo Example](https://github.com/rdappel/ajs-usememo-example).
 
 # Key Takeaways
 
