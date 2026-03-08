@@ -21,7 +21,7 @@ Let's first look at a performance problem without `useMemo`:
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/fDSI1BNxzH0" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -75,7 +75,16 @@ Don't use `useMemo` for:
 
 # Combining Custom Hooks with Memoization
 
-You can use memoization within custom hooks:
+In this video I will extract the filtering logic into a custom hook and use `useMemo` inside it:
+
+<details open>
+	<summary class="video">Show/Hide Video</summary>
+	<div class="video-container">
+		<iframe src="https://www.youtube.com/embed/f5uACqn4998" width="100%" height="100%" frameborder="0"
+			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+		</iframe>
+	</div>
+</details>
 
 ```javascript
 // hooks/useFilteredProducts.js
