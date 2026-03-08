@@ -148,3 +148,11 @@ const Card = () => {
 
 export default Card
 ```
+
+# Key Takeaways
+
+- React is a JavaScript library for building UIs from small, reusable components
+- Use Vite (`npm create vite@latest`) to quickly scaffold a React project with a fast development server
+- Functional components are plain JavaScript functions that return JSX
+- JSX looks like HTML but is actually JavaScript — use `className` instead of `class`
+- Inline styles in React are JavaScript objects with camelCase property names

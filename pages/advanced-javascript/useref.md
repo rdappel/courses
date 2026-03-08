@@ -263,3 +263,11 @@ export default App
 	<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/useref-dark.svg" alt="useRef Best Practices" aria-hidden="true" class="adaptive dark">
 	<img src="https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/ajs/useref-light.svg" alt="useRef Best Practices" aria-hidden="true" class="adaptive light">
 </div>
+
+# Key Takeaways
+
+- `useRef` creates a mutable `.current` value that persists across renders without triggering re-renders
+- Attach a ref to a JSX element via the `ref` attribute to gain direct access to the underlying DOM node
+- Use `useState` when a value change should update the UI; use `useRef` when it shouldn't
+- Use `forwardRef` to pass a ref from a parent component into a child component
+- Avoid reading or writing refs during rendering — do so in event handlers or `useEffect` instead

@@ -446,3 +446,11 @@ As you've seen, after creating a new Vite + React project with `npm create vite@
 </details>
 
 You can download the file from [this gist](https://gist.github.com/rdappel/2f331c2e2c0085d825ec100f2e45c9a5).
+
+# Key Takeaways
+
+- Hooks are functions that let functional components use React features like state; they always start with `use`
+- `useState` returns a state value and a setter function — calling the setter triggers a re-render
+- Never mutate state directly; always use the setter function and create new objects or arrays
+- Use multiple `useState` calls to manage separate, independent pieces of state
+- Only call hooks at the top level of a component — never inside conditions, loops, or nested functions

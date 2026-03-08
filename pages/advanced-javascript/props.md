@@ -315,3 +315,11 @@ There are key differences between running `npm run dev` and `npm run build`:
 - Ready for deployment
 
 > [!IMPORTANT] Never deploy your development build to production. Always use `npm run build` to create optimized production files.
+
+# Key Takeaways
+
+- Props are read-only arguments passed from parent to child components to customize their output
+- Use the `children` prop to pass elements between a component's opening and closing tags
+- Every item in a rendered list needs a stable, unique `key` prop — never use randomly generated values
+- Use `npm run build` to create an optimized production bundle in the `dist` folder
+- Always preview the production build with `npm run preview` before deploying

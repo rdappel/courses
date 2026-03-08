@@ -312,3 +312,11 @@ useEffect(() => {
 5. **Use multiple effects** - Separate unrelated logic into different useEffect calls
 
 > [!CAUTION] Avoid setting state inside useEffect without proper dependencies, as this can cause infinite loops. Always ensure your effect has appropriate dependencies or conditions to prevent continuous re-renders.
+
+# Key Takeaways
+
+- Side effects are operations that reach outside the component (API calls, timers, DOM changes) and must be managed with `useEffect`
+- An empty dependency array `[]` runs the effect once on mount; specific dependencies run it when those values change
+- Always return a cleanup function from effects that set up timers, event listeners, or subscriptions
+- Keep each `useEffect` focused on a single concern — use multiple hooks for unrelated effects
+- Never omit dependencies that are used inside the effect, as this leads to stale values and bugs

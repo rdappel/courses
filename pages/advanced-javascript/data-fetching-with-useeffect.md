@@ -270,3 +270,11 @@ const UserList = () => {
 
 export default UserList
 ```
+
+# Key Takeaways
+
+- Use `useEffect` with an empty dependency array to fetch data once when a component mounts
+- Always track loading state so users get feedback while data is being retrieved
+- Always handle errors gracefully with a try/catch block and display a meaningful message
+- The `useEffect` callback cannot be async directly — use an async IIFE inside it instead
+- The `finally` block ensures the loading state is cleared whether the request succeeds or fails

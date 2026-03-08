@@ -364,3 +364,11 @@ export default CartSummary
 ```
 
 > [!NOTE] Notice how the cart state is lifted to the App component, allowing both ProductList and Cart components to access and modify it.
+
+# Key Takeaways
+
+- Lift state to the closest common ancestor when multiple components need to share the same data
+- Data flows down via props; data flows up via callback functions passed as props
+- Name callback props with an `onSomething` convention (e.g., `onAddToCart`, `onRemove`)
+- Keep state as local as possible — only lift it when sharing is actually needed
+- Prop drilling through 2–3 levels is acceptable; use Context API for deeper trees

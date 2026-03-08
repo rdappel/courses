@@ -240,3 +240,11 @@ export const getUserInfo = (user) => {
 // in app.js:
 import { createUser, getUserInfo } from './user.js' // Named import
 ```
+
+# Key Takeaways
+
+- `map`, `filter`, and `reduce` are essential array methods you'll use constantly in React
+- Destructuring lets you extract values from arrays and objects cleanly, including in function parameters
+- The ternary operator is a concise way to write conditional expressions, widely used in JSX
+- ES Modules (ESM) use `import`/`export` instead of CommonJS `require`/`module.exports`
+- Use default exports for a single main value and named exports for multiple values from one module

@@ -581,3 +581,11 @@ const LanguageSwitcher = () => {
 	)
 }
 ```
+
+# Key Takeaways
+
+- The Context API solves prop drilling by letting any component in the tree access shared state directly
+- Use `createContext()` to create a context and a Provider component to supply its value
+- Access context values in components using the `useContext` hook
+- Combine the context and provider into a single file (e.g., `UserContext.jsx`) for easier maintenance
+- You can have multiple contexts in one app — split them by domain (user, theme, auth) and by update frequency to avoid unnecessary re-renders
