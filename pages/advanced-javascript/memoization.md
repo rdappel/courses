@@ -30,58 +30,34 @@ Let's first look at a performance problem without `useMemo`:
 ## The Problem: Expensive Calculations on Every Render
 
 ```javascript
-import { useState } from 'react'
+const App = () => {
+	const [searchTerm, setSearchTerm] = useState('')
+	const [cartCount, setCartCount] = useState(0)
 
-const ExpensiveComponent = () => {
-	const [count, setCount] = useState(0)
-	const [items, setItems] = useState([])
+	// This calculation runs on every render, even if searchTerm hasn't changed
+	const filteredProducts = filterProducts(products, searchTerm)
 
-	// This runs on EVERY render, even when items don't change
-	const total = items.reduce((sum, item) => sum + item.price, 0)
-	console.log('Calculating total...') // This logs every time count changes!
-
-	return (
-		<div>
-			<p>Total: ${total}</p>
-			<p>Count: {count}</p>
-			<button onClick={() => setCount(count + 1)}>Increment Count</button>
-			<button onClick={() => setItems([...items, { price: 10 }])}>Add Item</button>
-		</div>
-	)
+	// etc...
 }
 ```
 
-**The Problem**: Every time you click "Increment Count", the component re-renders and recalculates `total`, even though `items` hasn't changed. If this calculation was expensive (imagine filtering thousands of items), it would cause unnecessary slowdowns.
+**The Problem**: The `filterProducts` function is called on every render, even if `searchTerm` hasn't changed. If `filterProducts` is expensive (e.g., it loops through a large list), this can cause performance issues.
 
 ## The Solution: useMemo
 
 `useMemo` returns a memoized value that only recalculates when dependencies change:
 
 ```javascript
-import { useState, useMemo } from 'react'
+const App = () => {
+	const [searchTerm, setSearchTerm] = useState('')
+	const [cartCount, setCartCount] = useState(0)
 
-const ExpensiveComponent = () => {
-	const [count, setCount] = useState(0)
-	const [items, setItems] = useState([])
+	// This calculation only runs when searchTerm changes
+	const filteredProducts = useMemo(() => filterProducts(products, searchTerm), [searchTerm])
 
-	// This expensive calculation only runs when 'items' changes
-	const total = useMemo(() => {
-		console.log('Calculating total...') // Only logs when items change!
-		return items.reduce((sum, item) => sum + item.price, 0)
-	}, [items])
-
-	return (
-		<div>
-			<p>Total: ${total}</p>
-			<p>Count: {count}</p>
-			<button onClick={() => setCount(count + 1)}>Increment Count</button>
-			<button onClick={() => setItems([...items, { price: 10 }])}>Add Item</button>
-		</div>
-	)
+	// etc...
 }
 ```
-
-Now when you click "Increment Count", the total is NOT recalculated because `items` hasn't changed. The cached value is reused instead.
 
 ## When to Use useMemo
 
@@ -102,151 +78,26 @@ Don't use `useMemo` for:
 You can use memoization within custom hooks:
 
 ```javascript
-import { useState, useMemo } from 'react'
+// hooks/useFilteredProducts.js
+import { useMemo } from 'react'
+import filterProducts from '../utils/filterProducts'
 
-const useFilteredList = (items, searchTerm) => {
-	const filteredItems = useMemo(() => {
-		console.log('Filtering items...')
-		return items.filter(item =>
-			item.name.toLowerCase().includes(searchTerm.toLowerCase())
-		)
-	}, [items, searchTerm])
-
-	return filteredItems
+function useFilteredProducts(products, searchTerm) {
+	return useMemo(() => filterProducts(products, searchTerm),
+		[products, searchTerm]
+	)
 }
+
+export default useFilteredProducts
 
 // Usage
-const SearchList = ({ items }) => {
-	const [searchTerm, setSearchTerm] = useState('')
-	const filteredItems = useFilteredList(items, searchTerm)
+import useFilteredProducts from './hooks/useFilteredProducts'
 
-	return (
-		<div>
-			<input
-				value={searchTerm}
-				onChange={e => setSearchTerm(e.target.value)}
-				placeholder="Search..."
-			/>
-			<ul>
-				{filteredItems.map(item => (
-					<li key={item.id}>{item.name}</li>
-				))}
-			</ul>
-		</div>
-	)
-}
+// In your component:
+const filteredProducts = useFilteredProducts(products, searchTerm) // useMemo is used inside the hook
 ```
 
-# Exercise 1
-
-<details open>
-	<summary class="video">Show/Hide Video</summary>
-	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
-			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-		</iframe>
-	</div>
-</details>
-
-Add `useMemo` to optimize a filtered list.
-
-Start with a component that has:
-
-- `items` array (at least 6 items)
-- `searchTerm` state
-- `count` state and an **Increment Count** button
-
-Your task:
-
-1. Filter `items` by `searchTerm`
-2. Use `useMemo` so the filter only re-runs when `items` or `searchTerm` changes
-3. Confirm that clicking **Increment Count** does not re-run the filter
-
-## Hints {#exercise-1-hints}
-
-<details>
-	<summary>Where should useMemo go?</summary>
-
-Wrap the filtering logic in `useMemo`:
-
-```javascript
-const filteredItems = useMemo(() => {
-	return items.filter(item =>
-		item.toLowerCase().includes(searchTerm.toLowerCase())
-	)
-}, [items, searchTerm])
-```
-
-</details>
-
-<details>
-	<summary>How do I verify memoization is working?</summary>
-
-Add a `console.log('Filtering...')` inside the `useMemo` callback. It should run when search text changes, but not when only `count` changes.
-
-</details>
-
-## Solution {#exercise-1-solution}
-
-<details>
-	<summary>Show the Answer</summary>
-
-```javascript
-import { useMemo, useState } from 'react'
-
-const SearchableList = () => {
-	const [searchTerm, setSearchTerm] = useState('')
-	const [count, setCount] = useState(0)
-
-	const items = [
-		'React',
-		'JavaScript',
-		'HTML',
-		'CSS',
-		'Node.js',
-		'Vite'
-	]
-
-	const filteredItems = useMemo(() => {
-		console.log('Filtering...')
-		return items.filter(item =>
-			item.toLowerCase().includes(searchTerm.toLowerCase())
-		)
-	}, [items, searchTerm])
-
-	return (
-		<div>
-			<input
-				value={searchTerm}
-				onChange={e => setSearchTerm(e.target.value)}
-				placeholder="Search topics"
-			/>
-
-			<p>Count: {count}</p>
-			<button onClick={() => setCount(count + 1)}>Increment Count</button>
-
-			<ul>
-				{filteredItems.map(item => (
-					<li key={item}>{item}</li>
-				))}
-			</ul>
-		</div>
-	)
-}
-
-export default SearchableList
-```
-
-</details>
-
-<details>
-	<summary>Walkthrough Video</summary>
-	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
-			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-		</iframe>
-	</div>
-</details>
+The source code for this app is available here: [useMemo Example](https://github.com/rdappel/ajs-usememo-example).
 
 # Key Takeaways
 
