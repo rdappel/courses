@@ -18,7 +18,6 @@ For most of you, it's been a few weeks (or months) since you last wrote JavaScri
 
 Before we start reviewing, please make sure you have all of the same software installed that you did for the Modern JavaScript course. If you need help with this, please refer to the [Software Used in this Course](https://fvtc.software/appel/modern-javascript/getting-started#software-used-in-this-course) section of the Modern JavaScript course.
 
-
 # JavaScript Review
 
 In this section, we'll review some of the key concepts from the Modern JavaScript course. This will include functions, array methods, and higher-order functions. If you need a refresher on any of these topics, please refer to the [Modern JavaScript course content](https://fvtc.software/appel/modern-javascript).

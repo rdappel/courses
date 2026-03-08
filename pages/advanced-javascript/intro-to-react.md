@@ -33,12 +33,14 @@ To create a new React project, run the following command in your terminal:
 npm create vite@latest .
 ```
 
-or 
+or
+
 ```bash
 npm create vite@7.3.0 .
 ```
 
 When prompted:
+
 - Select **React** as the framework
 - Select **JavaScript - SWC** as the variant
 
