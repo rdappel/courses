@@ -187,3 +187,11 @@ const handleEmailChange = ({ target }) => {
 />
 <p>Your email is: {isEmailValid ? email : 'Invalid!'}</p>
 ```
+
+# Key Takeaways
+
+- A controlled component has its value managed by React state, not the DOM
+- Always pair the `value` prop with an `onChange` handler to create two-way binding
+- For checkboxes, use `checked` and read from `event.target.checked` instead of `event.target.value`
+- Controlled components enable real-time validation, conditional enabling of buttons, and input formatting
+- Without an `onChange` handler, a controlled input becomes read-only
