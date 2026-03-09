@@ -39,7 +39,7 @@ Let's create a simple multi-page application with a home page, about page, and c
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/aWnDd8CFVE4" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -68,9 +68,54 @@ Now create routes in your App component:
 ```javascript
 // App.jsx
 import { Routes, Route } from 'react-router-dom'
-import Home from './pages/Home'
-import About from './pages/About'
-import Contact from './pages/Contact'
+
+const App = () => {
+	return (
+		<Routes>
+			<Route path="/" element={<h1>Home</h1>} />
+			<Route path="/about" element={<h1>About</h1>} />
+			<Route path="/contact" element={<h1>Contact</h1>} />
+		</Routes>
+	)
+}
+
+export default App
+```
+
+# Page Components
+
+Next, we will create separate components for each page instead of inline elements:
+
+<details open>
+	<summary class="video">Show/Hide Video</summary>
+	<div class="video-container">
+		<iframe src="https://www.youtube.com/embed/IcKOuh6er_A" width="100%" height="100%" frameborder="0"
+			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+		</iframe>
+	</div>
+</details>
+
+Here is the code for the Home page. I will omit the About and Contact pages since they are similar:
+
+```javascript
+// pages/Home.jsx
+const Home = () => (
+	<div>
+		<h1>Home</h1>
+		<p>This is the Home page.</p>
+	</div>
+)
+
+export default Home
+```
+
+Now import the page components in your App and use them in the routes:
+
+```javascript
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home.jsx'
+import About from './pages/About.jsx'
+import Contact from './pages/Contact.jsx'
 
 const App = () => {
 	return (
@@ -85,23 +130,7 @@ const App = () => {
 export default App
 ```
 
-Create the page components:
-
-```javascript
-// pages/Home.jsx
-const Home = () => {
-	return (
-		<div>
-			<h1>Home Page</h1>
-			<p>Welcome to our website!</p>
-		</div>
-	)
-}
-
-export default Home
-```
-
-Now when you navigate to `/about` or `/contact`, React Router will render the corresponding component.
+Now when you navigate to `/`, `/about` or `/contact`, React Router will render the corresponding component.
 
 # Navigation with Link
 
@@ -119,7 +148,7 @@ Use the `Link` component to navigate between pages without full page reloads:
 ```javascript
 import { Link } from 'react-router-dom'
 
-const Navigation = () => {
+const Nav = () => {
 	return (
 		<nav>
 			<Link to="/">Home</Link>
@@ -129,35 +158,110 @@ const Navigation = () => {
 	)
 }
 
-export default Navigation
-```
-
-Add the navigation to your App:
-
-```javascript
-import { Routes, Route } from 'react-router-dom'
-import Navigation from './components/Navigation'
-import Home from './pages/Home'
-import About from './pages/About'
-import Contact from './pages/Contact'
-
-const App = () => {
-	return (
-		<div>
-			<Navigation />
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/about" element={<About />} />
-				<Route path="/contact" element={<Contact />} />
-			</Routes>
-		</div>
-	)
-}
-
-export default App
+export default Nav
 ```
 
 > [!NOTE] Use `Link` instead of `<a>` tags. The `Link` component prevents full page reloads and uses client-side routing instead.
+
+# Layouts with Outlet
+
+Layouts let you create a shared structure (like headers and footers) that wraps around your pages. React Router provides the `Outlet` component for this purpose.
+
+<details open>
+	<summary class="video">Show/Hide Video</summary>
+	<div class="video-container">
+		<iframe src="https://www.youtube.com/embed/LFpNqjQsAIw" width="100%" height="100%" frameborder="0"
+			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+		</iframe>
+	</div>
+</details>
+
+Create a layout component:
+
+```javascript
+// layouts/MainLayout.jsx
+import { Outlet } from 'react-router-dom'
+import Nav from '../components/Nav.jsx'
+import Footer from '../components/Footer.jsx'
+
+const MainLayout = () => (
+	<div>
+		<h1>Ryan's homepage</h1>
+		<Nav />
+		<Outlet />
+		<Footer />
+	</div>
+)
+
+export default MainLayout
+```
+
+In our App:
+
+```javascript
+// import MainLayout
+import MainLayout from './layouts/MainLayout.jsx'
+
+// Wrap routes with the layout
+<Routes>
+	<Route path="/" element={<MainLayout />}>
+		<Route index element={<Home />} />
+		<Route path="about" element={<About />} />
+		<Route path="contact" element={<Contact />} />
+	</Route>
+</Routes>
+```
+
+Here is the code for the footer component:
+
+```javascript
+// components/Footer.jsx
+const Footer = () => (
+	<footer>
+		<p>&copy; 2024 My SPA. All rights reserved.</p>
+	</footer>
+)
+```
+
+> [!NOTE] The `<Outlet />` component renders the child route's element. When you visit `/about`, the Layout renders with the About component appearing where the Outlet is.
+
+## Index Routes
+
+Notice the `index` prop on the home route. This tells React Router to render that element when the parent route path is matched exactly:
+
+```javascript
+<Route path="/" element={<Layout />}>
+	<Route index element={<Home />} />
+	<Route path="about" element={<About />} />
+	<Route path="contact" element={<Contact />} />
+</Route>
+```
+
+## Multiple Layouts
+
+You can have different layouts for different sections of your app:
+
+```javascript
+const App = () => {
+	return (
+		<Routes>
+			{/* Public pages with main layout */}
+			<Route path="/" element={<Layout />}>
+				<Route index element={<Home />} />
+				<Route path="about" element={<About />} />
+				<Route path="contact" element={<Contact />} />
+			</Route>
+			
+			{/* Dashboard with different layout */}
+			<Route path="/dashboard" element={<DashboardLayout />}>
+				<Route index element={<DashboardHome />} />
+				<Route path="settings" element={<Settings />} />
+				<Route path="profile" element={<Profile />} />
+			</Route>
+		</Routes>
+	)
+}
+```
 
 # Active Link Styling with NavLink
 
@@ -166,43 +270,43 @@ export default App
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/PZ1u_2be0qg" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
 </details>
 
+Here is the updated Nav component and CSS:
+
 ```javascript
 import { NavLink } from 'react-router-dom'
-import './Navigation.css'
 
-const Navigation = () => {
-	return (
-		<nav>
-			<NavLink to="/">Home</NavLink>
-			<NavLink to="/about">About</NavLink>
-			<NavLink to="/contact">Contact</NavLink>
-		</nav>
-	)
-}
+import './Nav.css'
 
-export default Navigation
+const Nav = () => (
+	<nav>
+		<NavLink to="/">Home</NavLink>
+		<NavLink to="/about">About</NavLink>
+		<NavLink to="/contact">Contact</NavLink>
+	</nav>
+)
+
+export default Nav
 ```
 
 Then style the active link in your CSS:
 
 ```css
-/* Navigation.css */
+/* components/Nav.css */
 nav a {
-	margin: 0 10px;
-	color: #333;
+	color: blue;
 	text-decoration: none;
+	margin: 0 10px;
 }
 
 nav a.active {
-	color: #007bff;
-	font-weight: bold;
-	border-bottom: 2px solid #007bff;
+	color: red;
+	text-decoration: underline;
 }
 ```
 
@@ -213,7 +317,7 @@ URL parameters let you pass data through the URL:
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/QTFWgAWHbaI" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -225,7 +329,7 @@ Define a route with parameters:
 // App.jsx
 import UserProfile from './pages/UserProfile'
 
-<Route path="/user/:id" element={<UserProfile />} />
+<Route path="/user-profile/:id" element={<UserProfile />} />
 ```
 
 Access parameters with `useParams`:
@@ -251,8 +355,8 @@ export default UserProfile
 Link to routes with parameters:
 
 ```javascript
-<Link to="/user/123">View User 123</Link>
-<Link to="/user/456">View User 456</Link>
+<Link to="/user-profile/123">View User 123</Link>
+<Link to="/user-profile/456">View User 456</Link>
 ```
 
 ## Multiple Parameters
@@ -283,7 +387,7 @@ Sometimes you need to navigate programmatically (after form submission, authenti
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/M56Lshc4CDg" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -294,34 +398,34 @@ Use the `useNavigate` hook:
 ```javascript
 import { useNavigate } from 'react-router-dom'
 
-const LoginForm = () => {
+const Contact = () => {
 	const navigate = useNavigate()
 
-	const handleSubmit = (e) => {
+	const handleSubmit = e => {
 		e.preventDefault()
-		// Perform login logic...
-		
-		// Navigate to dashboard after successful login
 		navigate('/dashboard')
 	}
 
 	return (
-		<form onSubmit={handleSubmit}>
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
-			<button type="submit">Login</button>
-		</form>
+		<div>
+			<h1>Contact</h1>
+			<form onSubmit={handleSubmit}>
+				<input type="email" placeholder="Your email" />
+				<textarea placeholder="Your message"></textarea>
+				<button type="submit">Send</button>
+			</form>
+		</div>
 	)
 }
 
-export default LoginForm
+export default Contact
 ```
 
 You can also navigate with options:
 
 ```javascript
-// Navigate and replace current entry in history
-navigate('/home', { replace: true })
+// Navigate to Contact page
+navigate('/contact')
 
 // Navigate backwards
 navigate(-1)
@@ -340,7 +444,7 @@ Handle routes that don't exist with a catch-all route:
 <details open>
 	<summary class="video">Show/Hide Video</summary>
 	<div class="video-container">
-		<iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/4E6Qkta7MgE" width="100%" height="100%" frameborder="0"
 			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
 		</iframe>
 	</div>
@@ -369,15 +473,13 @@ Create a 404 page:
 // pages/NotFound.jsx
 import { Link } from 'react-router-dom'
 
-const NotFound = () => {
-	return (
-		<div>
-			<h1>404 - Page Not Found</h1>
-			<p>The page you're looking for doesn't exist.</p>
-			<Link to="/">Go back to home</Link>
-		</div>
-	)
-}
+const NotFound = () => (
+	<div>
+		<h1>Not Found</h1>
+		<p>The page you are looking for does not exist.</p>
+		<Link to="/">Go back to Home</Link>
+	</div>
+)
 
 export default NotFound
 ```
