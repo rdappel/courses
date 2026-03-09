@@ -10,12 +10,12 @@ repo: https://github.com/rdappel/courses
 
 # Advanced JavaScript Research Project
 
-For this project, you will research a JavaScript technology beyond what we covered in class, preferably related to React. You will follow tutorials, build a working demo application, and present your findings to the class.
+For this project, you will research a JavaScript technology beyond what we covered in class. You will follow tutorials, build a working demo application, and present your findings to the class.
 
 <details open>
    <summary class="video">Show/Hide Video</summary>
    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/" width="100%" height="100%" frameborder="0"
+      <iframe src="https://www.youtube.com/embed/4K-OQ_b4Vas" width="100%" height="100%" frameborder="0"
          allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
       </iframe>
    </div>
@@ -36,6 +36,7 @@ Before selecting a final topic, you will conduct an initial investigation into t
 # Final Project
 
 1. **Choose a Technology**: Select a JavaScript-related technology, framework, or library. While it is recommended to choose something React-related, other JavaScript topics are acceptable with approval. Some possible options:
+
    - State management (Redux, Zustand, Jotai, Recoil)
    - UI Libraries (Material UI, Chakra UI, Tailwind CSS with React)
    - Server-Side Rendering (Next.js)
@@ -47,19 +48,22 @@ Before selecting a final topic, you will conduct an initial investigation into t
    - Animations (Framer Motion, GSAP)
    - Others (Three.js, D3.js, Electron, Expo for React Native)
 
-2. **Research & Learn**: 
+2. **Research & Learn**:
+
    - Find at least **3 tutorials or articles** on your chosen topic.
    - Document key concepts, integration with JavaScript/React, and common use cases.
    - Maintain a list of resources, including articles, videos, documentation, and any relevant tools.
 
-3. **Build a Demo Application**: 
+3. **Build a Demo Application**:
+
    - Apply what you’ve learned by building a **small but functional application** demonstrating the technology.
    - Your demo should:
      - Have a clear purpose and show off core features.
      - Be well-structured and use best practices.
      - Be deployed (if applicable) or easily runnable on a local machine.
 
-4. **Write a Report**: 
+4. **Write a Report**:
+
    Your report should be **3-6 pages** and include:
    - **Introduction:** What technology did you choose? Why?
    - **Key Features:** Summary of what it does and its use cases.
@@ -70,8 +74,9 @@ Before selecting a final topic, you will conduct an initial investigation into t
 
 > [!NOTE] While you are encouraged to include code snippets and screenshots in your report, the focus should be on your understanding of the technology and its application, not on the code itself.
 
-5. **Present Your Findings**: 
-   - Prepare a **10 minute presentation** for the class. 
+5. **Present Your Findings**:
+
+   - Prepare a **10 minute presentation** for the class.
    - Demo your application and explain how it works.
    - Share insights from your research and learning process.
 
