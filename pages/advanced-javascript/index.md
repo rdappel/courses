@@ -112,4 +112,4 @@ Exam 2
 
 Summary: You’ll begin your final project and explore emerging JavaScript or React tools to potentially integrate. Then create a project using a new JavaScript technology, framework, or library. Finally, you’ll present your project and reflect on the learning experience.
 
-[Assignment 9 - Final Project](./advanced-javascript/assignments/final-project)
+[Assignment 9 - Final Project](./advanced-javascript/assignments/research-project)
