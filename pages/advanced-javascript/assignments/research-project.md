@@ -93,10 +93,10 @@ When you are finished with your project, you will need to submit the following:
 Your project will be graded based on the following criteria:
 
 - **Initial Investigation (10 pts)**: Depth of preliminary research and clarity of final selection.
-- **Research (20 pts)**: Depth of research, quality of sources, and understanding demonstrated.
-- **Demo Application (30 pts)**: Functionality, integration of the technology, and best practices.
-- **Report (25 pts)**: Clarity, structure, depth of explanation, and documentation.
-- **Presentation (15 pts)**: Clarity, engagement, demonstration of knowledge, and professionalism.
+- **Research (10 pts)**: Depth of research, quality of sources, and understanding demonstrated.
+- **Demo Application (25 pts)**: Functionality, integration of the technology, and best practices.
+- **Report (20 pts)**: Clarity, structure, depth of explanation, and documentation.
+- **Presentation (10 pts)**: Clarity, engagement, demonstration of knowledge, and professionalism.
 
 ---
 
