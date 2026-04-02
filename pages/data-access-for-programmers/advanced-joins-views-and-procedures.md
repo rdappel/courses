@@ -149,7 +149,7 @@ Views allow us to store a query in the database, and then use that query as if i
 A view is created using the `CREATE VIEW` statement. The following statement will create a view that joins the rep and customer tables, showing rep numbers, names, customer numbers, customer names, and credit limits.
 
 ```sql
-CREATE VIEW vsRepCustomerCredit AS
+CREATE VIEW vwRepCustomerCredit AS
 SELECT r.REP_NUM, LAST_NAME, FIRST_NAME, CUSTOMER_NUM, CUSTOMER_NAME, CREDIT_LIMIT FROM rep r
 JOIN customer c ON r.REP_NUM = c.REP_NUM
 ```
@@ -157,13 +157,13 @@ JOIN customer c ON r.REP_NUM = c.REP_NUM
 We can then use the view in a `SELECT` statement, just like we would use a table.
 
 ```sql
-SELECT * FROM vsRepCustomerCredit
+SELECT * FROM vwRepCustomerCredit
 ```
 
 To delete a view, you can simply use the `DROP VIEW` statement.
 
 ```sql
-DROP VIEW vsRepCustomerCredit
+DROP VIEW vwRepCustomerCredit
 ```
 
 <details open>
