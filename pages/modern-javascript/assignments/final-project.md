@@ -23,7 +23,7 @@ You and your group can choose the name of the food truck, type of food served, a
 
 ## Specifications
 
-1. Create a new ExpressJS application called `food-truck`. This application will be the backend for your project. It should have routes for serving static files, as well as an API for getting the menu and events. The back-end will store the menu and events in a MongoDB database.
+1. Create a new ExpressJS application called `food-truck`. This application will be the backend for your project. It should have routes for serving static files, as well as an API for getting the menu and events. The back-end will store the menu and events in a MongoDB (Atlas) database.
 
 2. Create API routes for the following:
 
