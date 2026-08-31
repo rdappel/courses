@@ -166,11 +166,11 @@ const books = [{
 }, {
 	title: 'Onyx Storm',
 	author: 'Rebecca Yarros',
-	released: '9/9/202'
+	released: '9/9/2022'
 }, {
 	title: 'Hopeless',
 	author: 'Alison Moore',
-	released: '9/9/202'	
+	released: '9/9/2022'	
 }]
 
 console.log(books)
