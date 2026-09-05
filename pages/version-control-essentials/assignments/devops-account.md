@@ -25,13 +25,11 @@ For this assignment you are going to create an Azure DevOps account, and add you
 
 > [!IMPORTANT] You will not need to enter a credit card or payment information. By using your fvtc.edu email address, you will be able to create a free Azure DevOps organization that is sufficient for this course. If you are prompted to enter a credit card or payment information, please do not proceed! Instead, contact your instructor for assistance.
 
-1. Go to [Azure Repos](https://azure.microsoft.com/en-us/products/devops/repos/) and Sign in with your fvtc.edu email address.
+**Updated Instructions:**
 
-2. You should see a prompt to create an organization. If you don't see this prompt, click on the "New organization" button.
+Microsoft has recently updated the Azure DevOps registration process. Please follow this guide:
 
-3. For the organization name, use your first and last name (e.g., "ryan-appel"). This will help keep things organized and make it easier for your instructor to find your work.
-
-4. Follow the prompts to complete the organization creation process. **DO NOT enter a credit card or payment information.** Azure DevOps offers a free tier that is sufficient for this course.
+[CreateDevOpsSub.docx](https://github.com/rdappel/courses/raw/refs/heads/master/support-files/misc/CreateDevOpsSub.docx)
 
 ## Create a Project
 
