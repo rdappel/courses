@@ -54,4 +54,3 @@ Microsoft has recently updated the Azure DevOps registration process. Please fol
 # Submission
 
 Submit the URL to your Azure DevOps organization in Blackboard. The URL should look like: `https://dev.azure.com/your-organization-name`.
-

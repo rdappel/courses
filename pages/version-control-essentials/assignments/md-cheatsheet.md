@@ -29,7 +29,9 @@ You may find this useful later on, when you are creating README files for your p
 
 2. **Clone Your Fork**: Clone your forked repository to your local machine.
 
-3. **Update the Cheatsheet**: Open the `README.md` file in VS Code or your preferred text editor. Modify the first line in the file to include your name. For example, change the first line from, "Markdown Cheatsheet" to "Ryan's Markdown Cheatsheet."
+3. **Update the Cheatsheet**: Open the `README.md` file in VS Code or your preferred text editor. Modify the first line in the file to include your name. For example, change the first line from, "Markdown Cheatsheet" image to: `# Ryan's Markdown Cheatsheet.`
+
+> [!NOTE] The "Markdown Cheatsheet" line is an image, if you change the alt text, it will not change the image.
 
 4. **Commit Your Changes**: After making the changes, commit your changes with a meaningful commit message, such as "Updated README with my name."
 
