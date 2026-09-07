@@ -39,12 +39,14 @@ or
 npm create vite@7.3.0 .
 ```
 
+> [!NOTE] React setup options change over time. If the video doesn't match what you see in your terminal, please follow the following instructions instead of the video.
+
 When prompted:
 
 - Select **React** as the framework
-- Select **JavaScript - SWC** as the variant
-
-Then, install the dependencies and start the development server:
+- Select **JavaScript** as the variant
+- Select **ESLint** as the linter (This doesnt' matter, if you pick the other option leave it)
+- Select **Yes** to install dependencies, or do it manually:
 
 ```bash
 npm install
