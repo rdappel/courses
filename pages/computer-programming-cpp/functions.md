@@ -37,6 +37,7 @@ return_type function_name(parameters)
 </details>
 
 Here is the code:
+
 ```cpp
 void PrintHi()
 {
@@ -86,7 +87,7 @@ int main()
 }
 ```
 
-> [!NOTE] You can use `const` to make a parameter a const value. For example, `void PrintHi(const int count)` will prevent the function from modifying the value of `count`. This isn't particularly useful now, but it will be later when we learn about structs and classes. 
+> [!NOTE] You can use `const` to make a parameter a const value. For example, `void PrintHi(const int count)` will prevent the function from modifying the value of `count`. This isn't particularly useful now, but it will be later when we learn about structs and classes.
 
 ## Optional Parameters
 
@@ -357,7 +358,6 @@ int main()
 ```
 
 > [!WARNING] The `main` function should never be called manually! Calling `main` manually will cause all of the local variables to be duplicated and will not be able to be freed.
-
 
 # The Call Stack
 

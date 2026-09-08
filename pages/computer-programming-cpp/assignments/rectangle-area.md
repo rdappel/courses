@@ -70,4 +70,3 @@ Verify that your code was pushed to GitHub by refreshing the page for your repos
 ## Submitting to Blackboard
 
 Once you have your project pushed to GitHub, submit the link to your repository to Blackboard.
-
