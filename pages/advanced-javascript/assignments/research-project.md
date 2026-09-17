@@ -1,5 +1,5 @@
 ---
-title: Assignment 8 - Advanced JS Research Project
+title: Assignment 9 - Advanced JS Research Project
 subtitle: Advanced JavaScript
 hideNav: false
 
@@ -8,7 +8,7 @@ dev: http://localhost:3006/appel/advanced-javascript/assignments/research-projec
 repo: https://github.com/rdappel/courses
 ---
 
-# Advanced JavaScript Research Project
+# Assignment 9 - Advanced JS Research Project
 
 For this project, you will research a JavaScript technology beyond what we covered in class. You will follow tutorials, build a working demo application, and present your findings to the class.
 
