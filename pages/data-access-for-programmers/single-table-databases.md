@@ -143,7 +143,7 @@ Here is the SQL code for creating the `Students` table we created in the previou
 
 ```sql
 CREATE TABLE Students (
-	ID INT,
+	ID INT PRIMARY KEY,
 	FirstName VARCHAR(63),
 	LastName VARCHAR(63),
 	Phone VARCHAR(15)
