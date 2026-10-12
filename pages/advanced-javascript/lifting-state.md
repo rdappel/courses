@@ -26,8 +26,6 @@ In React, data flows in one direction: from parent to child. There are two main 
 
 This is the most common pattern - passing data from parent to child via props:
 
-Here is the [Lifting State Repo](https://github.com/rdappel/ajs-lifting-state-demo/tree/master/src) that we will use in the following video:
-
 ```javascript
 // Parent component
 const App = () => {
@@ -46,7 +44,9 @@ const Greeting = ({ name }) => {
 
 ## Child to Parent Communication
 
-When a child needs to send data back to the parent, we pass a callback function as a prop:
+When a child needs to send data back to the parent, we pass a callback function as a prop.
+
+Here is the [Lifting State Repo](https://github.com/rdappel/ajs-lifting-state-demo) that we will use in the following video:
 
 <details open>
 	<summary class="video">Show/Hide Video</summary>
