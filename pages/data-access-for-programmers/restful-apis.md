@@ -284,6 +284,7 @@ app.get('/pokemon', (request, response) => {
 		if (error) {
 			console.log(error)
 			response.send({ error: "There was an sql error."})
+		}
 		else {
 			console.log(results)
 			response.send(results)
@@ -314,6 +315,7 @@ app.get('/pokemon', (request, response) => {
 		if (error) {
 			console.log(error)
 			response.send({ error: "There was an sql error."})
+		}
 		else {
 			console.log(results)
 			response.send(results[0])
@@ -332,6 +334,7 @@ app.get('/pokemon/3', (request, response) => {
 		if (error) {
 			console.log(error)
 			response.send({ error: "There was an sql error."})
+		}
 		else {
 			console.log(results)
 			response.send(results[0])
@@ -377,6 +380,7 @@ app.get('/pokemon/:number', (request, response) => {
 		if (error) {
 			console.log(error)
 			response.send({ error: "There was an sql error."})
+		}
 		else {
 			console.log(results)
 			response.send(results[0])
@@ -422,6 +426,7 @@ app.get('/type/:typeName', (request, response) => {
 		if (error) {
 			console.log(error)
 			response.send({ error: "There was an sql error."})
+		}
 		else {
 			console.log(results)
 			response.send(results[0])
@@ -456,4 +461,3 @@ Mysql2 is a package that allows us to connect to a MySQL database.
 
 An API endpoint is a URL that we can use to access data in our database.
 </details>
-
