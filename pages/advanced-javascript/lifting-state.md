@@ -44,7 +44,9 @@ const Greeting = ({ name }) => {
 
 ## Child to Parent Communication
 
-When a child needs to send data back to the parent, we pass a callback function as a prop:
+When a child needs to send data back to the parent, we pass a callback function as a prop.
+
+Here is the [Lifting State Repo](https://github.com/rdappel/ajs-lifting-state-demo) that we will use in the following video:
 
 <details open>
 	<summary class="video">Show/Hide Video</summary>
