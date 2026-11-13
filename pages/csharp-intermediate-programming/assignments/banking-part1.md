@@ -12,32 +12,31 @@ repo: https://github.com/rdappel/courses
 
 Create a multi-project solution for a banking application, including a Windows Forms UI, business layer, models, and unit tests.
 
+<details open>
+	<summary class="video">Show/Hide Video</summary>
+	<div class="video-container">
+		<iframe src="https://www.youtube.com/embed/PrVEKySzgiE" width="100%" height="100%" frameborder="0"
+			allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+		</iframe>
+	</div>
+</details>
+
 ## Solution Structure
 
 1. **User Interface:**
   - Windows Forms Application (.NET)
-  - Form Design: Arrange the controls to closely resemble the following image:
-
-    ![Banking Application Layout](https://raw.githubusercontent.com/rdappel/courses/refs/heads/master/support-files/cs-intermed/banking1-running.png)
+  - Form Design: Arrange the controls to closely resemble the form in the video.
 
 2. **Business Layer:**
-  - `CustomerManager`
-    - `Populate`: Returns a `List<Customer>`
+  - `CustomerList`
+    - `Populate`
       - Creates three customers
-      - Calls `DepositManager.Populate()`
-      - Calls `WithdrawalManager.Populate()`
-  - `DepositManager`
-    - `Populate` method
-  - `WithdrawalManager`
-    - `Populate` method
 
 3. **Business Layer Unit Test:**
-  - `utCustomer`
-    - `PopulateTest`
-  - `utDeposit`
-    - `PopulateTest`
-  - `utWithdrawal`
-    - `PopulateTest`
+  - `Customer Tests`
+  - `CustomerList Tests`
+  - `DepositTests`
+  - `Withdrawal Tests`
 
 4. **Business Layer Models:**
   - `Person`
@@ -77,7 +76,6 @@ All classes should have private intrinsic variables and public getters and sette
 
 - Use proper control naming conventions.
 - Include appropriate comments in your code.
-- Ensure the application does not crash (points deducted per occurrence).
 
 # Submission
 
